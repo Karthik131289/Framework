@@ -1,0 +1,172 @@
+## ######################################################################################
+##  These variables are passed from the code generator
+##   $CARTRIDGE - Name of the cartridge
+##   $REDIST - CPP redist directory = volante\redist\cpp
+##   $CPPFILES - List of cpp files without extension (name only - no path)
+##   $HEADERFILES -  List of header files without extension (name only - no path)
+##   $SRCDIR - relative path of  source directory (WRT this make file)
+##   $PLATFORM - platform for which make file should be generated
+##		WINDOWS_MSVC6, WINDOWS_MSVC2003, HP_UX_ACC, LINUX
+##   REFERENCECARTLIBS
+##   REFERENCECARTDIRS
+##	 $MAIN_CPP_FILE - Name of the Main CPP file
+## ######################################################################################
+##
+## HP-UX  -----------------------------------------------------------------------------
+##
+#if ( $PLATFORM == "HP_UX_ACC" )
+#set ( $REDIST = "/usr/volante" )
+INCLUDE_DIR = ${REDIST}/include 
+LIBS= ${REDIST}/lib
+TRANSFORM_LIB= $(LIBS)/libtransformrt.sl 
+CUSTOM_LIBS = ../custom/*.sl
+REF_LIBS = #foreach($REFCARTLIB in ${REFERENCECARTLIBS}) "${REFCARTLIB}.so"  #end
+OUTPUT_LIB=${CARTRIDGE}.sl
+OUTPUT_EXE=${CARTRIDGE}
+OBJ_DIR = ${SRCDIR}
+OBJ_EXT = o 
+CC = aCC
+CCOPTIONS = -c -Aa  -ext -O +Z -I$(INCLUDE_DIR) -I ./src #foreach($REFCARTDIR in ${REFERENCECARTDIRS}) /I "${REFCARTDIR}"  #end -DUSE_EXCEPTIONS  -D_INCLUDE_LONGLONG -D__HPACC_USING_MULTIPLIES_IN_FUNCTIONAL -DHPUX_SOURCE +DAportable -DPTHREADING -D_REENTRANT -D_THREAD_SAFE -D__HPACC_THREAD_SAFE_RB_TREE
+LINK_LIB = aCC
+LINK_LIB_PREOPTIONS = -L. -b -o lib$(OUTPUT_LIB)
+LINK_LIB_POSTOPTIONS = 
+LINK_EXE = aCC
+LINK_EXE_PREOPTIONS = -Aa  -ext -O +Z -I.
+LINK_EXE_POSTOPTIONS = -L$(LIBS) -L. -l${CARTRIDGE} -lcp -ltransformrt  -lCanonicalApi -lCanonicalTagTables -lCSUtil_EhThreaded -lCSLogMsgSpec -o ${CARTRIDGE}  -L /usr/lib  -l++
+OBJ_EXT = o 
+#end 
+##
+##
+## TANDEM  -----------------------------------------------------------------------------
+##
+#if ( $PLATFORM == "TANDEM" )
+## Separate make for tandem 
+#end
+## LINUX ----------------------------------------------------------------------
+##
+#if ( $PLATFORM == "LINUX" )
+INCLUDE_DIR = ${REDIST}/include
+LIBS= ${REDIST}/lib/linux
+TRANSFORM_LIB= $(LIBS)/libtransformrt.so
+CUSTOM_LIBS = ../custom/*.lib
+OUTPUT_LIB=${CARTRIDGE}.so
+OUTPUT_EXE=${CARTRIDGE}
+OBJ_DIR = ${SRCDIR}
+OBJ_EXT = o 
+
+CC = g++
+CCOPTIONS = -pthread -c -I$(INCLUDE_DIR) #foreach($REFCARTDIR in ${REFERENCECARTDIRS}) -I "${REFCARTDIR}"  #end -fexceptions -shared -O2
+LINK_LIB = g++
+LINK_LIB_PREOPTIONS = 
+LINK_LIB_POSTOPTIONS = -pthread  -fexceptions -shared -o lib${CARTRIDGE}.so
+LINK_EXE = g++
+LINK_EXE_PREOPTIONS = 
+LINK_EXE_POSTOPTIONS = -pthread -fexceptions -L$(LIBS) -L. #foreach($REFCARTDIR in ${REFERENCECARTDIRS}) -L${REFCARTDIR}/..  #end #foreach($REFERENCELIBNAME in ${REFERENCELIBNAMES}) -l${REFERENCELIBNAME}  #end -ltransformrt -lcp -l${CARTRIDGE} -o ${CARTRIDGE}  
+#end 
+##
+## -----------------------------------------------------------------------------------
+##
+## MICROSOFT WINDOWS ----------------------------------------------------------------------
+##
+#if ( $PLATFORM == "WINDOWS_MSVC2003" || $PLATFORM == "WINDOWS_MSVC2008" || $PLATFORM == "WINDOWS_MSVC2010" || $PLATFORM == "WINDOWS_MSVC6")
+INCLUDE_DIR =${REDIST}/include
+#if( $PLATFORM == "WINDOWS_MSVC2010" )
+LIBS= ${REDIST}/lib/vc2010/release
+#elseif( $PLATFORM == "WINDOWS_MSVC2008" )
+LIBS= ${REDIST}/lib/vc2008/release
+#elseif ( $PLATFORM == "WINDOWS_MSVC2003" )
+LIBS= ${REDIST}/lib/vc2003/release
+#else 
+LIBS= ${REDIST}/lib/vc6/release
+#end
+MISC_INCLUDE_DIR=
+MISC_LIB_DIR=
+MISC_LIBS=
+
+## CUSTOM CONFIG
+
+TRANSFORM_LIB= "$(LIBS)/transformrt.lib" "$(LIBS)/CanonicalApi.lib"
+CUSTOM_LIBS = CanonicalApi.lib ../custom/*.lib
+REF_LIBS = #foreach($REFCARTLIB in ${REFERENCECARTLIBS}) "${REFCARTLIB}.lib"  #end
+
+OUTPUT_LIB = ${CARTRIDGE}.lib
+OUTPUT_EXE = ${CARTRIDGE}Test.exe
+OUTPUT_DLL = ${CARTRIDGE}.dll
+OBJ_DIR = ${SRCDIR}
+OBJ_EXT = obj
+
+CC  = cl
+CCOPTIONS = /nologo /MD /W3 /GR /GX /O  /I "$(INCLUDE_DIR)" $(MISC_INCLUDE_DIR) /D "_CARTRIDGE_BUILD" /D "${CARTRIDGE_MACRO}" /D "WIN32" /D "NDEBUG" /D "_LIB" /D "_MBCS" /D "_NT_BUILD" /D "_NT_EXE_BUILD" /c /YX"transform.h" /Fp"${SRCDIR}/transform.pch" #foreach($REFCARTDIR in ${REFERENCECARTDIRS}) /I "${REFCARTDIR}"  #end
+
+LINK_LIB = link
+LINK_LIB_PREOPTIONS = /nologo /DLL /OUT:${CARTRIDGE}.dll   /INCREMENTAL:NO /LIBPATH:"$(LIBS)" $(MISC_LIB_DIR) /MACHINE:X86 cp.lib $(CUSTOM_LIBS) $(REF_LIBS) $(MISC_LIBS) transformrt.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib 
+LINK_LIB_POSTOPTIONS = 
+
+LINK_EXE = link
+LINK_EXE_PREOPTIONS = /nologo /OUT:"$(OUTPUT_EXE)"  /INCREMENTAL:NO /LIBPATH:"$(LIBS)" $(MISC_LIB_DIR) /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /MACHINE:X86 ${CARTRIDGE}.lib  cp.lib $(CUSTOM_LIBS) $(REF_LIBS) $(MISC_LIBS) transformrt.lib CanonicalApi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib 
+LINK_EXE_POSTOPTIONS = 
+
+## 
+## 
+#if( $PLATFORM == "WINDOWS_MSVC2003" )
+## CCOPTIONS = $(CCOPTIONS) /Za
+#end 
+## 
+#end 
+## 
+## -----------------------------------------------------------------------------------
+
+## Suffix rules
+
+.SUFFIXES: .cpp .$(OBJ_EXT)
+
+.cpp.$(OBJ_EXT):
+#if ( $PLATFORM == "WINDOWS_MSVC2010" || $PLATFORM == "WINDOWS_MSVC2008" || $PLATFORM == "WINDOWS_MSVC2003" || $PLATFORM == "WINDOWS_MSVC6")
+	@$(CC)  /Fo"$@" $(CCOPTIONS) $<
+#else
+	@$(CC)  -o "$@" $(CCOPTIONS) $<
+#end
+
+
+## File listing
+
+CPP_FILES = #foreach($cppfile in $CPPFILES)\
+	${SRCDIR}/${cppfile}.cpp #end 
+
+
+HEADER_FILES = #foreach($headerfile in $HEADERFILES)\
+	${SRCDIR}/${headerfile}.h #end \
+	"$(INCLUDE_DIR)/Transform.h"
+
+
+OBJECT_FILES= #foreach($cppfile in $CPPFILES)\
+	$(OBJ_DIR)/${cppfile}.$(OBJ_EXT) #end
+
+MAIN_CPP=$MAIN_CPP_FILE
+
+## Targets
+
+all: $(OUTPUT_LIB) $(OUTPUT_EXE)
+
+clean:
+#if ( $PLATFORM == "WINDOWS_MSVC2003" || $PLATFORM == "WINDOWS_MSVC6")
+	del $(OBJECT_FILES)
+#else
+	rm -rf $(OBJECT_FILES)
+#end
+
+
+#if ( $PLATFORM == "WINDOWS_MSVC2010" || $PLATFORM == "WINDOWS_MSVC2008" || $PLATFORM == "WINDOWS_MSVC2003" || $PLATFORM == "WINDOWS_MSVC6")
+$(OUTPUT_LIB) : $(OBJECT_FILES) $(TRANSFORM_LIB) $(OBJ_DIR)/DynaClient.$(OBJ_EXT)
+	$(LINK_LIB) $(LINK_LIB_PREOPTIONS) $(OBJECT_FILES)  $(OBJ_DIR)/DynaClient.$(OBJ_EXT) $(LINK_LIB_POSTOPTIONS) 
+#else
+$(OUTPUT_LIB) : $(OBJECT_FILES) $(TRANSFORM_LIB)
+	$(LINK_LIB) $(LINK_LIB_PREOPTIONS) $(OBJECT_FILES)  $(LINK_LIB_POSTOPTIONS) 
+#end
+
+$(OUTPUT_EXE) : $(OUTPUT_LIB) $(OBJ_DIR)/$(MAIN_CPP).$(OBJ_EXT)
+	$(LINK_EXE) $(LINK_EXE_PREOPTIONS) $(OBJ_DIR)/$(MAIN_CPP).$(OBJ_EXT) $(LINK_EXE_POSTOPTIONS)
+
+
+$(OBJECT_FILES) : $(HEADER_FILES) $(TRANSFORM_LIB)
+
