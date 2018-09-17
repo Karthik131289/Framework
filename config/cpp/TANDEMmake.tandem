@@ -1,0 +1,84 @@
+## ######################################################################################
+##  These variables are passed from the code generator
+##  $CARTRIDGE - Name of the cartridge
+##  $REDIST - CPP redist directory = volante\cpp
+##  $CPPFILES - List of cpp files without extension (name only - no path)
+##  $HEADERFILES -  List of header files without extension (name only - no path)
+##  $SRCDIR - relative path of  source directory (WRT this make file)
+##  $PLATFORM - platform for which make file should be generated
+##		WINDOWS_MSVC6, WINDOWS_MSVC2003, HP_UX_ACC, LINUX
+## ######################################################################################
+## CARTRIDGE MAKE FILE FOR TANDEM
+
+CXX = c89
+CXXFLAGS = \
+	-D__TANDEM
+ 
+INCLPATHS = \
+	-I../../include \
+	-I /usr/local/include \
+	-I /usr/include
+
+DEFINES = \
+	-DPTHREADING 
+
+OSSPARAMS = \
+	-Wextensions -Wsystype=oss -WIEEE_float \
+	-Wcplusplus -Wversion3 -Wnosuppress -Wverbose -Wr -Woptimize=0
+
+.SUFFIXES: .cpp .o
+
+.cpp.o:
+	$(CXX) -o $@ $(CXXFLAGS) $(INCLPATHS) $(DEFINES) \
+	$(OSSPARAMS) -lc -c $<
+
+## File listing
+
+SRCS = #foreach($cppfile in $CPPFILES)\
+	${SRCDIR}/${cppfile}.cpp #end
+
+
+MAIN = \
+	src/Main.cpp
+
+CRTLMAIN = \
+	/usr/lib/crtlmain.o
+	
+SYMB = \
+
+LIBS = \
+	-bstatic \
+	-L ../../lib -ltransformrt \
+	-L ../../lib -lcp
+
+EXT_SRLS = \
+	-bdynamic \
+	-obey /usr/lib/libc.obey \
+	-lzstlsrl
+
+LINK_FLAGS = \
+	-verbose \
+	-set SAVEABEND ON \
+	-set FLOATTYPE IEEE_FLOAT \
+	-set FLOAT_LIB_OVERRULE ON \
+	-set SYSTYPE OSS
+
+IMPORT = \
+
+all: Main.x
+
+$(SRCS:.cpp=.o): $(SRCS)
+$(MAIN:.cpp=.o): $(MAIN)
+
+Main.x: $(MAIN:.cpp=.o) $(SRCS:.cpp=.o) makefile.oss
+	nld $(CRTLMAIN) \
+	$(MAIN:.cpp=.o) \
+	$(SRCS:.cpp=.o) \
+	-o $@ \
+	$(EXT_SRLS) \
+	$(LIBS) \
+	$(LINK_FLAGS)
+	
+clean:
+	rm -rf $(MAIN:.cpp=.o) $(SRCS:.cpp=.o) *.B *.L *.T *.out *.x
+

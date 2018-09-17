@@ -1,0 +1,93 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified"
+            attributeFormDefault="unqualified">
+    <!-- Start ServicesManager Element -->
+    <xsd:element name="services-manager" type="ServicesManager" substitutionGroup="ServiceElement"/>
+    <xsd:complexType name="ServicesManager">
+        <xsd:complexContent>
+            <xsd:extension base="ServiceElementType">
+                <xsd:sequence>
+                    <xsd:element name="version" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="description" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="service-registries" maxOccurs="1">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="service-registry" minOccurs="0" maxOccurs="unbounded">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element name="name" type="xsd:string"/>
+                                            <xsd:element name="type" type="ServiceRegistryType"/>
+											<xsd:element name="service-protocol" type="ServiceProtocolType"/>
+											<xsd:element name="description" type="xsd:string" minOccurs="0"/>
+											<xsd:element name="detailed-name" type="xsd:string" minOccurs="0"/>
+                                            <xsd:element name="default" type="xsd:boolean" />
+                                            <xsd:element name="properties" type="SMProperties"/>
+										</xsd:sequence>
+									</xsd:complexType>			
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="name" type="xsd:string"/>
+                <xsd:attribute name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+	
+	<xsd:simpleType name="ServiceRegistryType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Consul"/>
+			<xsd:enumeration value="Database"/>
+			<xsd:enumeration value="Eureka"/>
+			<xsd:enumeration value="Zookeeper"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="ServiceProtocolType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="REST"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="CommonProperties">
+        <xsd:sequence>
+            <xsd:element name="server-url" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="root-path" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="datasource" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="region" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="service-URL" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="lease-renew" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="lease-expiration" type="xsd:int" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+	<xsd:complexType name="ClientProperties">
+        <xsd:sequence>
+            <xsd:element name="load-balancer" type="xsd:string"/>
+            <xsd:element name="cache-enable" type="xsd:string"/>
+            <xsd:element name="cache-expiry-duration" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="cache-expiry-unit" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+	<xsd:complexType name="ServerProperties">
+        <xsd:sequence>
+            <xsd:element name="health-check-type" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="ttl-duration" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="ttl-unit" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="time" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="time-unit" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>       
+    </xsd:complexType>
+	
+	<xsd:complexType name="SMProperties">
+		<xsd:sequence>
+			<xsd:element name="common"  type="CommonProperties"/>
+			<xsd:element name="server" type="ServerProperties" minOccurs="0"/>
+			<xsd:element name="client" type="ClientProperties"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+    
+    <!-- End ServicesManager Element -->
+</xsd:schema>

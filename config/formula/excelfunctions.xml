@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+
+
+    <formula name="GetCellRow">
+        <description>Get the row of cell</description>
+        <signature>GetCellRow(cell)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellRow"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetCellColumn">
+        <description>Get the row of cell</description>
+        <signature>GetCellColumn(cell)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellColumn"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetCellValue">
+        <description>Get the value from given cell in given sheet (indicated by index) in given message</description>
+        <signature>GetCellValue (document, sheetIndex, rowNum, colNum)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellValue"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="returns" value="com.tplus.transform.runtime.Variant"/>
+    </formula>
+	<formula name="GetCellValue">
+        <description>Get the value from given cell in given sheet (indicated by name) in given message</description>
+        <signature>GetCellValue (document, sheetName, rowNum, colNum)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellValue"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="returns" value="com.tplus.transform.runtime.Variant"/>
+    </formula>
+	
+    <formula name="GetCellText">
+        <description>Get the text from given cell in given sheet (indicated by index) in given message</description>
+        <signature>GetCellText (document, sheetIndex, rowNum, colNum)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellText"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetCellText">
+        <description>Get the text from given cell in given sheet (indicated by name) in given message</description>
+        <signature>GetCellText (document, sheetName, rowNum, colNum)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellText"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="String"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetCellText">
+        <description>Get the text from given cell</description>
+        <signature>GetCellText (cell)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellText"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetCellText">
+        <description>Get the text from the cell which is offset by the given offset from the given cell. Returns null if the cell indicated by offset is not valid.
+        </description>
+        <signature>GetCellText (cell, offset)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellText"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+
+    <formula name="GetCellText">
+        <description>Get the text from the cell which is pointed to by the given column in the current row of the current table.</description>
+        <signature>GetCellText (row, columnNoInTable)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellText"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetCellComment">
+        <description>Get the comment from given cell in the specified sheet (indicated by index) in the message</description>
+        <signature>GetCellComment (document, sheetIndex, rowNum, colNum)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellComment"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetCellComment">
+        <description>Get the comment from given cell in the specified sheet (indicated by name) in the message</description>
+        <signature>GetCellComment (document, sheetName, rowNum, colNum)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellComment"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="String"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetCellComment">
+        <description>Get the comment from given cell</description>
+        <signature>GetCellComment (cell)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getCellComment"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetRowOffset">
+        <description>Get the offset of the current row from the start row of the current table.</description>
+        <signature>GetRowOffset (row)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getRowOffset"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+    
+    <formula name="GetRowHeader">
+        <description>Get the text from the cell which is one before the first column on this row.</description>
+        <signature>GetRowHeader (row)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getRowHeader"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetRowHeader">
+        <description>Get the text from the cell which is one before the first column on this row.</description>
+        <signature>GetRowHeader (row, colOffset)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getRowHeader"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetStartRow">
+        <description>Get the start row of the given table.</description>
+        <signature>GetStartRow (table)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getStartRow"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetStartColumn">
+        <description>Get the start col of the given table.</description>
+        <signature>GetStartColumn (table)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getStartColumn"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetEndRow">
+        <description>Get the end row of the given table.</description>
+        <signature>GetEndRow (table)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getEndRow"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetEndColumn">
+        <description>Get the end column of the given table.</description>
+        <signature>GetEndColumn (table)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getEndColumn"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetSheetIndex">
+        <description>Get the sheet index of the given table.</description>
+        <signature>GetSheetIndex (tableOrCell)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getSheetIndex"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetSheetName">
+        <description>Get the sheet name of the given table.</description>
+        <signature>GetSheetName (tableOrCell)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getSheetName"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="GetExcelDocument">
+        <description>Get the document object for the given cell or table.</description>
+        <signature>GetExcelDocument (tableOrCell)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getExcelDocument"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.RawMessage"/>
+    </formula>
+    <formula name="GetRowCells">
+        <description>Returns the contents of the cells in the row as string list.(sheet indicated by index)</description>
+        <signature>GetRowCells (document, sheetIndex, rowNum)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getRowCells"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="com.tplus.transform.runtime.collection.StringList"/>
+    </formula>
+
+    <formula name="GetRowCells">
+        <description>Returns the contents of the cells in the row as string list.(sheet indicated by name)</description>
+        <signature>GetRowCells (document, sheetName, rowNum)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getRowCells"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="String"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="com.tplus.transform.runtime.collection.StringList"/>
+    </formula>
+
+
+    <formula name="GetRowCount">
+        <description>Returns the number of rows in the given sheet (indicated by index) in the given message.</description>
+        <signature>GetRowCount (document, sheetIndex)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getRowCount"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetRowCount">
+        <description>Returns the number of rows in the given sheet (indicated by name) in the given message.</description>
+        <signature>GetRowCount (document, sheetName)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getRowCount"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+
+    <formula name="GetColumnCount">
+        <description>Returns the number of columns in the given sheet (indicated by index) in the given message.</description>
+        <signature>GetColumnCount (document, sheet)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getColumnCount"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetColumnCount">
+        <description>Returns the number of columns in the given sheet (indicated by name) in the given message.</description>
+        <signature>GetColumnCount (document, sheetName)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getColumnCount"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="int"/>
+    </formula>
+    <formula name="GetColumnCount">
+        <description>Returns the number of columns in the given sheet given row (indicated by index) in the given message.</description>
+        <signature>GetColumnCount (document, sheetIndex, row)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getColumnCount"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="int"/>
+    </formula>
+    <formula name="GetColumnCount">
+        <description>Returns the number of columns in the given sheet given row (indicated by name) in the given message.</description>
+        <signature>GetColumnCount (document, sheetName, row)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getColumnCount"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="String"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetSheetNames">
+        <description>Returns a list containing the names of all the sheets in the given message.</description>
+        <signature>GetSheetNames (document)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getSheetNames"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="com.tplus.transform.runtime.collection.StringList"/>
+    </formula>
+
+    <formula name="GetSheetName">
+        <description>Returns the name of the sheet indicated by index.</description>
+        <signature>GetSheetName (document, index)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getSheetName"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="String"/>
+    </formula>
+
+    <formula name="IsSheetVisible">
+        <description>Returns true if the sheet is visible.</description>
+        <signature>IsSheetVisible (document, index)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="isSheetVisible"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="boolean"/>
+    </formula>
+
+    <formula name="IsSheetVisible">
+        <description>Returns true if the sheet is visible.</description>
+        <signature>IsSheetVisible (document, name)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="isSheetVisible"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="boolean"/>
+    </formula>
+
+    <formula name="GetSheetIndex">
+        <description>Returns the index of the sheet with given name.</description>
+        <signature>GetSheetIndex (document, sheetName)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getSheetIndex"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="GetSheetCount">
+        <description>Returns the number of sheets in the document.</description>
+        <signature>GetSheetCount (document)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="getSheetCount"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="int"/>
+    </formula>
+
+    <formula name="FindInSheet">
+        <description>Find the first cell containing given text</description>
+        <signature>FindInSheet (document, sheetIndex, textToFind, findOptionOpt)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="findInSheet"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/> <!-- Excel Document -->
+        <property name="arg2" value="int"/> <!-- sheet -->
+        <property name="arg3" value="String"/>  <!-- toFind -->
+        <property name="arg4" value="int"/> <!-- options EXACT = 1, TRIM=2, CASE_INSENSITIVE=4 REGEX = 8, SEARCH_AFTER = 128 -->
+        <property name="returns" value="java.lang.Object"/>  <!-- Excel Cell -->
+    </formula>
+
+    <formula name="FindInSheet">
+        <description>Find the next cell containing given text </description>
+        <signature>FindInSheet (cell, textToFind, findOptionOpt)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="findInSheet"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/> <!-- Excel Cell -->
+        <property name="arg2" value="String"/>  <!-- toFind -->
+        <property name="arg3" value="int"/> <!-- options EXACT = 1, TRIM=2, CASE_INSENSITIVE=4 REGEX = 8, SEARCH_AFTER = 128 -->
+        <property name="returns" value="java.lang.Object"/>  <!-- Excel Cell -->
+    </formula>
+
+    <formula name="FindInSheet">
+        <description>Find the first cell containing given text</description>
+        <signature>FindInSheet (document, sheetIndex, startRow, startCol, endRow, endCol, textToFind, findOptionOpt)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="findInSheet"/>
+        <property name="args" value="8"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/> <!-- Excel Document -->
+        <property name="arg2" value="int"/> <!-- sheet -->
+        <property name="arg3" value="int"/> <!-- startRow -->
+        <property name="arg4" value="int"/> <!-- startCol-->
+        <property name="arg5" value="int"/> <!-- endRow -->
+        <property name="arg6" value="int"/> <!-- endCol-->
+        <property name="arg7" value="String"/>  <!-- toFind -->
+        <property name="arg8" value="int"/> <!-- options EXACT = 1, TRIM=2, CASE_INSENSITIVE=4 REGEX = 8, SEARCH_AFTER = 128 -->
+
+        <property name="returns" value="java.lang.Object"/>  <!-- Excel Cell -->
+    </formula>
+
+    <formula name="FindInRow">
+        <description>Find the cell containing given text </description>
+        <signature>FindInRow (document, sheetIndex, row, textToFind, findOptionOpt)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="findInRow"/>
+        <property name="args" value="5"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/> <!-- Excel Document -->
+        <property name="arg2" value="int"/> <!-- sheet -->
+        <property name="arg3" value="int"/> <!-- Row -->
+        <property name="arg4" value="String"/>  <!-- toFind -->
+        <property name="arg5" value="int"/> <!-- options EXACT = 1, TRIM=2, CASE_INSENSITIVE=4 REGEX = 8, SEARCH_AFTER = 128 -->
+        <property name="returns" value="java.lang.Object"/>  <!-- Excel Cell -->
+    </formula>
+
+    <formula name="FindInRow">
+        <description>Find the cell containing given text </description>
+        <signature>FindInRow (document, sheetIndex, row, startCol, textToFind, findOptionOpt)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="findInRow"/>
+        <property name="args" value="6"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/> <!-- Excel Document -->
+        <property name="arg2" value="int"/> <!-- sheet -->
+        <property name="arg3" value="int"/> <!-- Row -->
+        <property name="arg4" value="int"/> <!-- startCol -->
+        <property name="arg5" value="String"/>  <!-- toFind -->
+        <property name="arg6" value="int"/> <!-- options EXACT = 1, TRIM=2, CASE_INSENSITIVE=4 REGEX = 8, SEARCH_AFTER = 128 -->
+        <property name="returns" value="java.lang.Object"/>  <!-- Excel Cell -->
+    </formula>
+
+    <formula name="FindInRow">
+        <description>Find the cell containing given text </description>
+        <signature>FindInRow (table, rowOffset, textToFind, findOptionOpt)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="findInRow"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.Object"/> <!-- Table -->
+        <property name="arg2" value="int"/> <!-- Row Offset -->
+        <property name="arg3" value="String"/>  <!-- toFind -->
+        <property name="arg4" value="int"/> <!-- options EXACT = 1, TRIM=2, CASE_INSENSITIVE=4 REGEX = 8, SEARCH_AFTER = 128 -->
+        <property name="returns" value="java.lang.Object"/>  <!-- Excel Cell -->
+    </formula>
+
+    <formula name="FindInColumn">
+        <description>Find the cell containing given text in the specified column</description>
+        <signature>FindInColumn (document, sheetIndex, column, textToFind, findOptionOpt)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="findInColumn"/>
+        <property name="args" value="5"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/> <!-- Excel Document -->
+        <property name="arg2" value="int"/> <!-- sheet -->
+        <property name="arg3" value="int"/> <!-- column -->
+        <property name="arg4" value="String"/>  <!-- toFind -->
+        <property name="arg5" value="int"/> <!-- options EXACT = 1, TRIM=2, CASE_INSENSITIVE=4 REGEX = 8, SEARCH_AFTER = 128 -->
+        <property name="returns" value="java.lang.Object"/>  <!-- Excel Cell -->
+    </formula>
+
+
+    <formula name="FindInColumn">
+        <description>Find the cell containing given text in the specified column</description>
+        <signature>FindInColumn (document, sheetIndex, column, startRow, endRow, textToFind, findOptionOpt)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="findInColumn"/>
+        <property name="args" value="7"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/> <!-- Excel Document -->
+        <property name="arg2" value="int"/> <!-- sheet -->
+        <property name="arg3" value="int"/> <!-- column -->
+        <property name="arg4" value="int"/> <!-- startRow -->
+        <property name="arg5" value="int"/> <!-- endRow -->
+        <property name="arg6" value="String"/>  <!-- toFind -->
+        <property name="arg7" value="int"/> <!-- options EXACT = 1, TRIM=2, CASE_INSENSITIVE=4 REGEX = 8, SEARCH_AFTER = 128 -->
+        <property name="returns" value="java.lang.Object"/>  <!-- Excel Cell -->
+    </formula>
+    <formula name="CreateWorkbookMessage">
+        <description>[Deprecated]Create a Workbook wrapper message which can be used with Read/Write/Serialize Workbook message. This workbook message can be used both for reading from the XLS and for writing to it.</description>
+        <signature>CreateWorkbookMessage(binaryMessage)</signature>
+        <category>Excel</category>
+		<functionState>Deprecated</functionState>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="createWorkbookMessage"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="lib" value="excelrt"/>
+    </formula>
+
+    <formula name="NewWorkbookMessage">
+        <description>[Deprecated]Create a new Workbook message which can be used with Write/Serialize Workbookmessage. Since it is a new XLS this is typically used for writing.</description>
+        <signature>NewWorkbookMessage()</signature>
+        <category>Excel</category>
+		<functionState>Deprecated</functionState>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="newWorkbookMessage"/>
+        <property name="args" value="0"/>
+        <property name="returns" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="lib" value="excelrt"/>
+    </formula>
+    <formula name="ReadWorkbookMessage">
+        <description>[Deprecated]Reads specified table (row * columns) from a worksheet and returns a collection of internal messages. The internal message should have same number of fields and fields should also be of the same as the corresponding column in the worksheet.</description>
+        <signature>ReadWorkbookMessage(messageName, workbookMessage, worksheet, columnStart, nColumns, skipFirstRow, rowStart, nRows)</signature>
+        <category>Excel</category>
+		<functionState>Deprecated</functionState>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="readWorkbookMessage"/>
+        <property name="args" value="8"/>
+        <property name="arg1" value="String"/>
+        <property name="arg2" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="arg5" value="int"/>
+        <property name="arg6" value="boolean"/>
+        <property name="arg7" value="int"/>
+        <property name="arg8" value="int"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="lib" value="excelrt"/>
+    </formula>
+
+    <formula name="WriteWorkbookMessage">
+        <description>[Deprecated]Write the given set of internal messages ot a specified location in the worksheet</description>
+        <signature>WriteWorkbookMessage(messages, workbookMessage, worksheet, columnStart, rowStart, nRows)</signature>
+        <category>Excel</category>
+		<functionState>Deprecated</functionState>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="writeWorkbookMessage"/>
+        <property name="args" value="6"/>
+        <property name="arg1" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="arg2" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="arg5" value="int"/>
+        <property name="arg6" value="int"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="excelrt"/>
+    </formula>
+
+    <formula name="SerializeWorkbookMessage">
+        <description>[Deprecated]Serialize the excel message.</description>
+        <signature>SerializeWorkbookMessage(workbookMessage)</signature>
+        <category>Excel</category>
+		<functionState>Deprecated</functionState>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="serializeWorkbookMessage"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="binary"/>
+        <property name="lib" value="excelrt"/>
+    </formula>
+
+    <formula name="SetDefaultExcelLib">
+        <description>Sets the default library to JXL, ASPOSE or POI. Subsequent calls to functions such as CreateWorkbookMessage use this as the library. This function needs to be called just once before any other call to excel library is made</description>
+        <signature>setDefaultExcelLib(libName)</signature>
+        <category>Excel</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.excel.ExcelDataFunctions"/>
+        <property name="method" value="setDefaultExcelLib"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="excelrt"/>
+    </formula>
+
+    
+</formulae>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="IdentifyFastMessage">
+        <description>Identifies the template Id of the given FAST message.</description>
+        <signature>IdentifyFastMessage(binary, pmapIndexOpt)</signature>
+        <category>FAST</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.fast.FastMessageIdentifier"/>
+        <property name="method" value="identifyMessage"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="java.lang.Object"/>
+        <property name="returns" value="int"/>
+    </formula>
+    <formula name="IdentifyFastMessage">
+        <description>Identifies the template Id of the given FAST message.</description>
+        <signature>IdentifyFastMessage(rawMessage, pmapIndexOpt)</signature>
+        <category>FAST</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.fast.FastMessageIdentifier"/>
+        <property name="method" value="identifyMessage"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="java.lang.Object"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="int"/>
+    </formula>
+    <formula name="ResetFastDictionary">
+        <description>Used to reset the FAST dictionary in the current context to its initial state; that is the values are changed to Undefined state.</description>
+        <signature>ResetFastDictionary()</signature>
+        <category>FAST</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.fast.FastMessageIdentifier"/>
+        <property name="method" value="resetDictionary"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="returns" value="void"/>
+    </formula>
+</formulae> 

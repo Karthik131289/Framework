@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="put">
+        <description>Puts a key value pair in the cache.</description>
+        <signature>put(key, value)</signature>
+        <category>Map</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.cache.MapFunctions"/>
+        <property name="method" value="put"/>
+    </formula>
+
+    <formula name="get">
+        <description>Gets the value for the specified key from the cache.</description>
+        <signature>get(key)</signature>
+        <category>Map</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.cache.MapFunctions"/>
+        <property name="method" value="get"/>
+    </formula>
+
+    <formula name="createMap">
+        <description>Creates a new map</description>
+        <signature>createMap()</signature>
+        <category>Map</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.cache.MapFunctions"/>
+        <property name="method" value="createMap"/>
+    </formula>
+    <formula name="createMap">
+        <description>Variable number of key value pairs pre-filled using this function. The key value pair must be passed in even number of arguments.
+            Creates and returns a map with specified 'key, value' pairs pre-filled.</description>
+        <signature>createMap(keyValueList...)</signature>
+        <category>Map</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.cache.MapFunctions"/>
+        <property name="method" value="createMap"/>
+    </formula>    
+	<formula name="getKeyIterator">
+        <description>Returns a Iterator for key values in map</description>
+        <signature>getKeyIterator()</signature>
+        <category>Map</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.cache.MapFunctions"/>
+        <property name="method" value="getKeyIterator"/>
+    </formula>    
+	<formula name="hasNext">
+        <description> Returns true, if the iteration has more elements.</description>
+        <signature>hasNext()</signature>
+        <category>Map</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.cache.MapFunctions"/>
+        <property name="method" value="hasNext"/>
+    </formula>    
+	<formula name="next">
+        <description>Returns the next element in the iteration</description>
+        <signature>next()</signature>
+        <category>Map</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.cache.MapFunctions"/>
+        <property name="method" value="next"/>
+    </formula>
+	<formula name="remove">
+        <description>Returns true. If the key is removed from the map, otherwise false</description>
+        <signature>remove(key)</signature>
+        <category>Map</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.cache.MapFunctions"/>
+        <property name="method" value="remove"/>
+    </formula>
+</formulae>

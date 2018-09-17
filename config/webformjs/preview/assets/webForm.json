@@ -1,0 +1,11 @@
+{
+    "urlRoot": "",
+    "urlOptions": {
+      "metaInfoURL": "assets/preview.json",
+      "createURL": "https://localhost:3000/calendars",
+      "updateURL": "https://localhost:3000/calendars",
+      "readURL": "https://localhost:3000/calendars/read",
+      "deleteURL": "https://localhost:3000/calendars/delete",
+      "errorURL": "assets/errmsgPI.json"
+    }
+}

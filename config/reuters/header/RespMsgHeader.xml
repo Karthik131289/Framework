@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataformat type="reutersfields">
+		<field>
+			<name>MsgType</name>
+			<datatype>Integer</datatype>
+			<rwfType>INT32</rwfType>
+			<required>true</required>
+      <description>Message type for this message. Allowed values :
+    STREAMING_REQ 	  1
+    NONSTREAMING_REQ 	2
+    PRIORITY_REQ 	    3
+    CLOSE_REQ 	      5
+    REFRESH_RESP 	    6
+    STATUS_RESP 	    7
+    UPDATE_RESP 	    8
+      </description>
+		</field>
+		<field>
+			<name>MsgModelType</name>
+			<datatype>Integer</datatype>
+			<required>true</required>
+			<rwfType>INT32</rwfType>
+      <description>The message model type for this message.
+    LOGIN 	1
+    DIRECTORY 	4
+    DICTIONARY 	5
+    MARKET_PRICE 	6
+    MARKET_BY_ORDER 	7
+    MARKET_BY_PRICE 	8
+    MARKET_MAKER 	9
+    SYMBOL_LIST 	10
+    RANKED_SYMBOL_LIST 	11
+    HISTORY 	12
+      </description>
+		</field>
+  <!--
+		<field>
+			<name>HintMask</name>
+			<datatype>Integer</datatype>
+			<required>true</required>
+			<rwfType>INT32</rwfType>
+		</field>
+		<field>
+			<name>IndicationMask</name>
+			<datatype>Integer</datatype>
+			<required>true</required>
+			<rwfType>INT32</rwfType>
+		</field>
+-->    
+		<field>
+			<name>RespType</name>
+			<datatype>Integer</datatype>
+			<required>true</required>
+			<rwfType>INT32</rwfType>
+      <description>RespType represents the response type for a solicited refresh and for an unsolicited refresh.</description>
+		</field>
+		<field>
+			<name>RespTypeNum</name>
+			<datatype>Integer</datatype>
+			<required>true</required>
+			<rwfType>INT32</rwfType>
+      <description>Response type of this message.
+        Refresh messages response type is either OMMMsg.RespType.SOLICITED or OMMMsg.RespType.UNSOLICITED. Update messages response type is dependant on the message model type. For RDMInstrument types, it is a value between RDMInstrument.Update.UNSPECIFIED  and RDMInstrument.Update.MAX_RESERVED.
+    SOLICITED 	0
+    UNSOLICITED 	1
+      </description>
+    </field>
+		<field>
+			<name>RespStatus</name>
+			<datatype>Section</datatype>
+			<minoccurs>0</minoccurs>
+			<maxoccurs>1</maxoccurs>
+			<fields>
+				<field>
+					<name>DataState</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+          <description>State of Data:
+    OK 	1
+    SUSPECT 	2
+    UNSPECIFIED 	0
+          </description>
+				</field>
+				<field>
+					<name>StatusCode</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+          <description>Status Code :
+    ALREADY_OPEN 	14
+    FAILOVER_COMPLETED 	10
+    FAILOVER_STARTED 	9
+    GAP_DETECTED 	11
+    INVALID_ARGUMENT 	4
+    JIT_CONFLATION_STARTED 	7
+    MAX_RESERVED 	127
+    NO_RESOURCES 	12
+    NONE 	0
+    NOT_ENTITLED 	3
+    NOT_FOUND 	1
+    NOT_OPEN 	16
+    PREEMPTED 	6
+    REALTIME_RESUMED 	8
+    SOURCE_UNKNOWN 	15
+    TIMEOUT 	2
+    TOO_MANY_ITEMS 	13
+    USAGE_ERROR 	5
+          </description>
+				</field>
+				<field>
+					<name>StreamState</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+          <description>State of Stream:
+    CLOSED 	4
+    CLOSED_RECOVER 	3
+    NONSTREAMING 	2
+    OPEN 	1
+    REDIRECT 	5
+    UNSPECIFIED 	0
+          </description>
+				</field>
+				<field>
+					<name>StatusText</name>
+					<datatype>String</datatype>
+					<required>true</required>
+					<rwfType>RMTES_STRING</rwfType>
+          <description>String representing the status text of this OMMState. This text may be localized, or may be copied from different servers on the network. It may be changed with different servers or between versions of RFA, so applications should only use the text for logging and display purposes. Conditional logic should not be based on this text.</description>
+				</field>
+			</fields>
+		</field>
+		<field>
+			<name>AttribInfo</name>
+			<datatype>Section</datatype>
+			<minoccurs>0</minoccurs>
+			<maxoccurs>1</maxoccurs>
+      <description>Highly extensible message key used with MsgModelType to uniquely identify a stream in a request or a response. For getType(), returns OMMTypes.ATTRIB_INFO.</description>
+			<fields>
+				<field>
+					<name>ServiceName</name>
+					<datatype>String</datatype>
+					<required>true</required>
+					<rwfType>RMTES_STRING</rwfType>
+          <description>Name of the service</description>
+        </field>
+<!--        
+				<field>
+					<name>DataMask</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+        </field>
+-->
+       
+				<field>
+					<name>Name</name>
+					<datatype>String</datatype>
+					<required>true</required>
+					<rwfType>RMTES_STRING</rwfType>
+          <desription>item name</desription>
+				</field>
+				<field>
+					<name>NameType</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+          <description>Symbology from RDM</description>
+				</field>
+				<field>
+					<name>ID</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+          <description>General-purpose identifier</description>
+				</field>
+				<field>
+					<name>Attrib</name>
+					<datatype>Binary</datatype>
+					<required>true</required>
+					<rwfType>BUFFER</rwfType>
+          <description>The extensible data format in attribute info. It is encoded after OMMEncoder.encodeMsgInit(OMMMsg, short, short)  when the second argument is not OMMTypes.NO_DATA.</description>
+				</field>
+			</fields>
+		</field>
+		<field>
+			<name>Manifest</name>
+			<datatype>Section</datatype>
+			<minoccurs>0</minoccurs>
+			<maxoccurs>1</maxoccurs>
+			<fields>
+				<field>
+					<name>SeqNum</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+          <description>The sequence number associated with this refresh or update message.</description>
+				</field>
+				<field>
+					<name>FilteredCount</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+          <description>the conflation count.</description>
+				</field>
+				<field>
+					<name>FilteredTime</name>
+					<datatype>Integer</datatype>
+					<required>true</required>
+					<rwfType>INT32</rwfType>
+          <description>the conflation time.</description>
+        </field>
+				<field>
+					<name>ItemGroup</name>
+					<datatype>Binary</datatype>
+					<required>true</required>
+					<rwfType>BUFFER</rwfType>
+          <description>ItemGroup for this message stream. All items in this group can be changed with a status in a Directory GROUP FilterEntry.</description>
+				</field>
+				<field>
+					<name>PermissionData</name>
+					<datatype>Binary</datatype>
+					<required>true</required>
+          <description>Permission data for refresh, status, or update message.</description>
+				</field>
+			</fields>
+		</field>
+</dataformat>
+
+
+

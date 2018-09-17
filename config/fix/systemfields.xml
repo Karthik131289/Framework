@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<systemfields>
+	<!-- Specify all mandatory fields whose value will be provided by the FIX engine
+		While writing a FIX message, mandatory field checks will not be made for these
+        fields. That is a message without these fields will be written (though 
+        it is techinally not a valid FIX message).
+		Note that the name attribute is for information purpose only. 
+	-->
+	<field tag= "9" name="BodyLength"/>
+	<field tag= "10" name="Checksum"/>
+	<field tag= "49" name="SenderCompID"/>
+	<field tag= "56" name="TargetCompID"/>
+	<field tag= "34" name="MsgSeqNum"/>
+	<field tag= "52" name="SendingTime"/>
+</systemfields>
+

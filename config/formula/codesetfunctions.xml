@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="VerifyExternalCodeSet">
+        <description>Verify that the specified code is present in the code set</description>
+        <signature>VerifyExternalCodeSet(codeSetName, code)</signature>
+        <category>Util</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.formula.CodeSetFunctions"/>
+        <property name="method" value="verifyExternalCodeSet"/>
+    </formula>
+
+    <formula name="GetExternalCodeSet">
+        <description>Get the code set as a list</description>
+        <signature>GetExternalCodeSet(codeSetName)</signature>
+        <category>Util</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.formula.CodeSetFunctions"/>
+        <property name="method" value="getExternalCodeSet"/>
+    </formula>
+    <formula name="GetExternalCodes">
+        <description>Get all the codes as a string list</description>
+        <signature>GetExternalCodes(codeSetName)</signature>
+        <category>Util</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.formula.CodeSetFunctions"/>
+        <property name="method" value="getExternalCodes"/>
+    </formula>
+</formulae>

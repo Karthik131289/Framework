@@ -1,0 +1,84 @@
+## #######################################################
+## The following variables are made available by the code generator
+## OutputFormat
+## InputFormat
+## BusinessTransaction
+## Cartridge
+## #######################################################
+
+
+#set ( $InputFormatClass = "${InputFormatNameSpace}.${BusinessTransaction}${InputFormat}InputFormat" )
+
+using System;
+using System.IO;
+using com.tplus.transform.runtime;
+using com.tplus.transform.runtime.io;
+
+namespace test
+{
+
+	/// <summary>
+	/// Summary description for Class1.
+	/// </summary>
+	class MainClass
+	{
+		static com.tplus.transform.runtime.log.Logger log = com.tplus.transform.runtime.log.LogFactory.getLog("Main");
+		/// <summary>
+		/// The main entry point for the application.
+		/// </summary>
+		[STAThread]
+		static void Main(string[] args)
+		{
+			try {
+				Cartridge.loadCart("${Cartridge}");
+				string testFile = "data.txt";			
+				if(args.Length > 0) {
+					testFile = args[0];
+				} 
+				LookupContext lcxt =	LookupContextFactory.getLookupContext();
+				String outputDeviceName = "${OutputFormat}Out";
+				//com.tplus.transform.runtime.client.MemoryOutputDeviceFactory device = new com.tplus.transform.runtime.client.MemoryOutputDeviceFactory();
+				ContextOutputDeviceFactory device = new ContextOutputDeviceFactory();
+				lcxt.bind(outputDeviceName, device);
+				TransformContextImpl cxt = new TransformContextImpl();
+				cxt.setProperty(TransformContext_Fields.INPUT_SOURCE_PROPERTY, "input");
+				cxt.setProperty(TransformContext_Fields.INPUT_FORMAT_PROPERTY, "${InputFormat}");
+				cxt.setProperty(TransformContext_Fields.OUTPUT_FORMAT_PROPERTY, "${OutputFormat}");
+				cxt.setProperty(TransformContext_Fields.OUTPUT_DEVICE_PROPERTY, outputDeviceName);
+				FileInputSource fileSource = new FileInputSource(testFile);
+
+				InputFormat inputFormat = lcxt.lookupInputFormat("${InputFormat}");
+				try {
+					cxt.createOutputContext();
+					inputFormat.processInput(fileSource, cxt);
+					ByteArrayOutputDevice outDevice = cxt.OutputContext.getOutputDevice(outputDeviceName);
+					System.Console.WriteLine(System.Console.Out.Encoding.GetChars((byte[]) outDevice.Bytes));
+				}
+				catch(Exception e) {
+					log.error(e.Message);
+				}				
+				int LOOP_COUNT = 10000;
+				DateTime start= DateTime.Now;
+				for(int i =0; i<LOOP_COUNT; ++i) 
+				{
+					try {
+						cxt.createOutputContext();
+						inputFormat.processInput(fileSource, cxt);
+					}
+					catch(Exception e) {
+						log.error(e.Message);
+						log.error(e.ToString());
+					}				
+					
+				}
+				DateTime end = DateTime.Now;
+				TimeSpan elapsed = end-start;
+				Console.WriteLine("Transformation/sec = " + (double)LOOP_COUNT * 1000/elapsed.TotalMilliseconds);
+			}
+			catch(Exception e) {
+				log.error(e.ToString());
+			}				
+		}
+	}
+}
+

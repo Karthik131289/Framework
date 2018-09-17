@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="${flowName}" type="MessageFlow">
+	<version>1.0</version>
+	<transaction>Required</transaction>
+	<message-flow-ports>
+		<port name="outdevice">
+			<protocol>rmiprotocol</protocol>
+			<device>outdevice</device>
+		</port>
+	</message-flow-ports>
+	<variables>
+		<fields>
+			<field>
+				<name>${rawInputName}</name>
+				<type>Binary</type>
+				<notnull>false</notnull>
+				<variabletype>INPUT</variabletype>
+			</field>
+			<field>
+				<name>OrderCSVInObj</name>
+				<type>DataObject</type>
+				<minoccurs>0</minoccurs>
+				<maxoccurs>1</maxoccurs>
+				<variabletype>LOCAL</variabletype>
+				<message>OrderCSV</message>
+				<fields>
+				</fields>
+			</field>
+			<field>
+				<name>OrderIMObj</name>
+				<type>DataObject</type>
+				<minoccurs>0</minoccurs>
+				<maxoccurs>1</maxoccurs>
+				<variabletype>LOCAL</variabletype>
+				<message>OrderIM</message>
+				<fields>
+				</fields>
+			</field>
+			<field>
+				<name>OrderCSVOutObj</name>
+				<type>DataObject</type>
+				<minoccurs>0</minoccurs>
+				<maxoccurs>1</maxoccurs>
+				<variabletype>LOCAL</variabletype>
+				<message>OrderCSV</message>
+				<fields>
+				</fields>
+			</field>
+			<field>
+				<name>RawOut</name>
+				<type>Binary</type>
+				<notnull>false</notnull>
+				<variabletype>OUTPUT</variabletype>
+			</field>
+		</fields>
+	</variables>
+	<additional-properties>
+		<property name="remotable" value="false"/>
+		<property name="vrpc-protocol" value="REST"/>
+		<property name="main-flow" value="false"/>
+	</additional-properties>
+	<flowelement name="Start1" uid="6e082e67-ad01-4a64-87cc-0bc29118ddba" type="Start" xsi:type="Start" >
+		<label>Start</label>
+		<visual>
+			<position x="713" y="38"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Stop1" uid="04274e97-730e-44eb-ac02-e4119fa25037" type="Stop" xsi:type="Stop" >
+		<label>Stop</label>
+		<visual>
+			<position x="709" y="713"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Parse1" uid="9935f704-e402-44e8-b74c-b7ebc9dcbf91" type="Parse" xsi:type="Parse" >
+		<label>Parse OrderCSV</label>
+		<description><![CDATA[]]></description>
+		<in>${rawInputName}</in>
+		<out>OrderCSVInObj</out>
+		<message>OrderCSV</message>
+		<cascade-exceptions>false</cascade-exceptions>
+		<visual>
+			<position x="713" y="176"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Validate1" uid="324bc11f-3152-4afb-90d1-1bf8582cfa03" type="Validate" xsi:type="Validate" >
+		<label>Validate OrderCSV</label>
+		<in>OrderCSVInObj</in>
+		<message>OrderCSV</message>
+		<cascade-exceptions>false</cascade-exceptions>
+		<visual>
+			<position x="712" y="258"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Serialize1" uid="eecbdbd7-338e-4dfd-ac6d-fba39fa4f4bc" type="Serialize" xsi:type="Serialize" >
+		<label>Serialize OrderCSV</label>
+		<in>OrderCSVOutObj</in>
+		<out>RawOut</out>
+		<message>OrderCSV</message>
+		<cascade-exceptions>false</cascade-exceptions>
+		<visual>
+			<position x="710" y="575"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Mapping1" uid="0b2b230d-afb2-4f5e-91ca-7a5ae42f9b67" type="Mapping" xsi:type="Mapping" >
+		<label>OrderCSV To OrderIM</label>
+		<description><![CDATA[]]></description>
+		<in>OrderCSVInObj</in>
+		<out>OrderIMObj</out>
+		<messagemapping>="OrderCSVToOrderIM"</messagemapping>
+		<create-destination>true</create-destination>
+		<visual>
+			<position x="711" y="340"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Mapping2" uid="95dfb4c8-bc8a-4cfb-a3ad-6ce205d2368d" type="Mapping" xsi:type="Mapping" >
+		<label>OrderIM To OrderCSV</label>
+		<in>OrderIMObj</in>
+		<out>OrderCSVOutObj</out>
+		<messagemapping>OrderIMToOrderCSV</messagemapping>
+		<create-destination>true</create-destination>
+		<visual>
+			<position x="710" y="493"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Custom2" uid="6ea54b42-3b9e-4edd-b993-d3771c896e01" type="Custom" xsi:type="Custom" >
+		<label>Custom</label>
+		<description><![CDATA[]]></description>
+		<code><![CDATA[def recordsSec = OrderIMObj.Records;
+for (def i=0; i < recordsSec.$size; ++i) {
+	def recordsElm = recordsSec[i];
+	recordsElm.Account_Number = "A/X." + recordsElm.Account_Number;
+}]]></code>
+		<visual>
+			<position x="710" y="417"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Custom1" uid="2dfc1dc0-2622-4cf1-a736-aa935870533f" type="Custom" xsi:type="Custom" >
+		<label>Custom</label>
+		<description><![CDATA[]]></description>
+		<code><![CDATA[error("This is a error log")]]></code>
+		<visual>
+			<position x="713" y="100"/>
+		</visual>
+	</flowelement>
+	<flowelement name="Custom3" uid="a95de1c6-0448-4f0d-813a-ac977b5abe4c" type="Custom" xsi:type="Custom" >
+		<label>Custom</label>
+		<description><![CDATA[]]></description>
+		<code><![CDATA[info("OUTPUT:???")]]></code>
+		<visual>
+			<position x="709" y="652"/>
+		</visual>
+	</flowelement>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="9935f704-e402-44e8-b74c-b7ebc9dcbf91" portindex="1"/>
+		<inputport uid="324bc11f-3152-4afb-90d1-1bf8582cfa03" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+		<note>
+			<value>OrderCSVObj</value>
+			<visual>
+				<location x="36" y="-2"/>
+			</visual>
+		</note>
+	</link>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="324bc11f-3152-4afb-90d1-1bf8582cfa03" portindex="1"/>
+		<inputport uid="0b2b230d-afb2-4f5e-91ca-7a5ae42f9b67" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+		<note>
+			<value>OrderCSVObj</value>
+			<visual>
+				<location x="37" y="-2"/>
+			</visual>
+		</note>
+	</link>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="95dfb4c8-bc8a-4cfb-a3ad-6ce205d2368d" portindex="1"/>
+		<inputport uid="eecbdbd7-338e-4dfd-ac6d-fba39fa4f4bc" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+		<note>
+			<value>OrderCSVOutObj</value>
+			<visual>
+				<location x="45" y="-1"/>
+			</visual>
+		</note>
+	</link>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="0b2b230d-afb2-4f5e-91ca-7a5ae42f9b67" portindex="1"/>
+		<inputport uid="6ea54b42-3b9e-4edd-b993-d3771c896e01" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+		<note>
+			<value>OrderIMObj</value>
+			<visual>
+				<location x="32" y="-3"/>
+			</visual>
+		</note>
+	</link>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="6ea54b42-3b9e-4edd-b993-d3771c896e01" portindex="1"/>
+		<inputport uid="95dfb4c8-bc8a-4cfb-a3ad-6ce205d2368d" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+	</link>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="6e082e67-ad01-4a64-87cc-0bc29118ddba" portindex="0"/>
+		<inputport uid="2dfc1dc0-2622-4cf1-a736-aa935870533f" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+	</link>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="2dfc1dc0-2622-4cf1-a736-aa935870533f" portindex="1"/>
+		<inputport uid="9935f704-e402-44e8-b74c-b7ebc9dcbf91" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+	</link>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="eecbdbd7-338e-4dfd-ac6d-fba39fa4f4bc" portindex="1"/>
+		<inputport uid="a95de1c6-0448-4f0d-813a-ac977b5abe4c" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+	</link>
+	<link type="Default" xsi:type="Default">
+		<outputport uid="a95de1c6-0448-4f0d-813a-ac977b5abe4c" portindex="1"/>
+		<inputport uid="04274e97-730e-44eb-ac02-e4119fa25037" portindex="0"/>
+		<edge-type>DIRECT</edge-type>
+	</link>
+	<visual>
+		<bounds x="672" y="25" width="82" height="702"/>
+	</visual>
+	<elementproperties>
+		<propertymap>
+			<property name="codegen.java.properties">
+				<value>
+					<propertymap type="com.tplus.transform.design.PropertiesDef">
+						<property name="Java Package Name" value="com.transform.flow"/>
+						<property name="Jar Name" value="%c.jar"/>
+						<property name="Manifest Entries" value="transformrt.jar"/>
+						<property name="Data Source" value=""/>
+						<property name="Generate MDB" value="false"/>
+						<property name="Webservice" value=""/>
+					</propertymap>
+				</value>
+			</property>
+			<property name="codegen.cpp.properties">
+				<value>
+					<propertymap type="com.tplus.transform.design.PropertiesDef">
+					</propertymap>
+				</value>
+			</property>
+		</propertymap>
+	</elementproperties>
+</messageflow>
+

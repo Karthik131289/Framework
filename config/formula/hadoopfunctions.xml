@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="HadoopGetUniqueFile">
+        <description>Gets a unique file name by combingin given string and task ID. Use this function in conjunction with NewHDFSFileMessage when you want to create your own file.</description>
+        <signature>HadoopGetUniqueFile (name, extension)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getUniqueFile"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    
+    <formula name="HBaseGet">
+        <description>Gets the record corresponding to the given row key and the columns as specified by defaultFamilyName and reference object.</description>
+        <signature>HBaseGet (tableName, defaultFamilyName, keyAsString, referenceObj)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hBaseGet"/>
+        <property name="args" value="5"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="java.lang.String"/>
+        <property name="arg5" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    
+    <formula name="HBaseGet">
+        <description>Gets the record corresponding to the given row key and the columns as specified by defaultFamilyName and reference object.</description>
+        <signature>HBaseGet (tableName, defaultFamilyName, keyAsBytes, referenceObj)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hBaseGet"/>
+        <property name="args" value="5"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="byte[]"/>
+        <property name="arg5" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>       
+
+
+    <formula name="HBasePut">
+        <description>Inserts into HBase</description>
+        <signature>HBasePut (tableName, defaultFamilyName, keyAsString, referenceObj)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hBasePut"/>
+        <property name="args" value="5"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="java.lang.String"/>
+        <property name="arg5" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    
+    <formula name="HBasePut">
+        <description>Inserts into HBase</description>
+        <signature>HBasePut (tableName, defaultFamilyName, keyAsBytes, referenceObj)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hBasePut"/>
+        <property name="args" value="5"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="byte[]"/>
+        <property name="arg5" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>    
+
+    <formula name="HBaseScan">
+        <description>Gets the scanner that can be used to iterate over the result set for a given HBase query.</description>
+        <signature>HBaseScan(tableName, defaultFamilyName, referenceObj)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hbaseGetScanner"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="java.lang.Object"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+   
+
+    <formula name="HBaseMoveNext">
+        <description>Gets the scanner that can be used to iterate over the result set for a given HBase query.</description>
+        <signature>HBaseMoveNext (hBaseResultSetWrapper)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hbaseMoveNext"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Object"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>   
+    
+    
+    <formula name="HBaseGetKey">
+        <description>Gets the scanner that can be used to iterate over the result set for a given HBase query.</description>
+        <signature>HBaseGetKey (hBaseResultSetWrapper)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hbaseGetKey"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Object"/>
+        <property name="returns" value="byte[]"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula> 
+    
+    <formula name="HBaseGetKeyString">
+        <description>Gets the scanner that can be used to iterate over the result set for a given HBase query.</description>
+        <signature>HBaseGetKeyString (hBaseResultSetWrapper)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hbaseGetKeyString"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>         
+    
+
+    <formula name="HBaseGetValue">
+        <description>Gets the scanner that can be used to iterate over the result set for a given HBase query.</description>
+        <signature>HBaseGetValue (hBaseResultSetWrapper)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.hbase.HadoopDBFunctions"/>
+        <property name="method" value="hbaseGetValue"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>   
+    
+
+    <formula name="NewHDFSFileMessage">
+        <description>Depending on the mode either opens the specified hadoop file for reading (when mode is 'r') or creates the hadoop file message for writing (when mode is 'w'). If file is already present when mode is
+            'w', the existing file is deleted and new file is created.
+        </description>
+        <signature>NewHDFSFileMessage(fileName, mode)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="newHDFSFileMessage"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="NewHDFSFileMessage">
+        <description>Opens the specified hadoop file for reading.</description>
+        <signature>NewHDFSFileMessage(fileName)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="newHDFSFileMessage"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="returns" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="GetHadoopProperty">
+        <description>Gets the property from job configuration.</description>
+        <signature>GetHadoopProperty(propName)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getHadoopProperty"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <!-- deprecated -->
+    <formula name="GetHDFSProperty">
+        <description>Gets the property from job configuration.</description>
+        <signature>GetHadoopProperty(propName)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getHadoopProperty"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopHasNext">
+        <description>Returns a boolean based on whether the hadoop iterator has a next element to be given to the flow. This is applicable only when run under Hadoop environment.</description>
+        <signature>HadoopHasNext()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="hasNext"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopMoveNext">
+        <description>Moves the cursor to next element (key/value) and returns true if next element is available. This is applicable only when run under Hadoop environment.</description>
+        <signature>HadoopMoveNext()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="moveNext"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueString">
+        <description>Returns the current value as string from the hadoop iterator.</description>
+        <signature>HadoopGetValueString()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueString"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="HadoopGetValueObject">
+        <description>Returns the current value as variant from the hadoop iterator.</description>
+        <signature>HadoopGetValueObject()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueObject"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.Variant"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueBinary">
+        <description>Returns the current value as binary from the hadoop iterator.</description>
+        <signature>HadoopGetValueBinary()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueBinary"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.Binary"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueLong">
+        <description>Returns the current value as long from the hadoop iterator.</description>
+        <signature>HadoopGetValueLong()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueLong"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Long"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueInt">
+        <description>Returns the current value as int from the hadoop iterator.</description>
+        <signature>HadoopGetValueInt()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueInt"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Integer"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueDouble">
+        <description>Returns the current value as double from the hadoop iterator.</description>
+        <signature>HadoopGetValueDouble()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueDouble"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Double"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueFloat">
+        <description>Returns the current value as float from the hadoop iterator.</description>
+        <signature>HadoopGetValueFloat()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueFloat"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Float"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueDataObject">
+        <description>Returns the current value as data object from the hadoop iterator.</description>
+        <signature>HadoopGetValueDataObject()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueDataObject"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="HadoopGetValueDataObject">
+        <description>Returns the current value as data object from the hadoop iterator.</description>
+        <signature>HadoopGetValueDataObject()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueDataObject"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueDataObjectSection">
+        <description>Returns the current value as data object section from the hadoop iterator.</description>
+        <signature>HadoopGetValueDataObjectSection()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueDataObjectSection"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetValueRawMessage">
+        <description>Returns the current value as RawMessagefrom the hadoop iterator.</description>
+        <signature>HadoopGetValueRawMessage()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getValueRawMessage"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+
+    <formula name="HadoopGetKeyString">
+        <description>Returns the current key as string from the hadoop iterator.</description>
+        <signature>HadoopGetKeyString()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyString"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="HadoopGetKeyObject">
+        <description>Returns the current key as variant from the hadoop iterator.</description>
+        <signature>HadoopGetKeyObject()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyObject"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.Variant"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetKeyBinary">
+        <description>Returns the current key as binary from the hadoop iterator.</description>
+        <signature>HadoopGetKeyBinary()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyBinary"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.Binary"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetKeyLong">
+        <description>Returns the current key as long from the hadoop iterator.</description>
+        <signature>HadoopGetKeyLong()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyLong"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Long"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetKeyInt">
+        <description>Returns the current key as int from the hadoop iterator.</description>
+        <signature>HadoopGetKeyInt()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyInt"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Integer"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetKeyDouble">
+        <description>Returns the current key as double from the hadoop iterator.</description>
+        <signature>HadoopGetKeyDouble()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyDouble"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Double"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetKeyFloat">
+        <description>Returns the current key as float from the hadoop iterator.</description>
+        <signature>HadoopGetKeyFloat()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyFloat"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Float"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetKeyDataObject">
+        <description>Returns the current key as data object from the hadoop iterator.</description>
+        <signature>HadoopGetKeyDataObject()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyDataObject"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetKeyDataObjectSection">
+        <description>Returns the current key as data object section from the hadoop iterator.</description>
+        <signature>HadoopGetKeyDataObjectSection()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyDataObjectSection"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="HadoopGetKeyRawMessage">
+        <description>Returns the current key as RawMessagefrom the hadoop iterator.</description>
+        <signature>HadoopGetKeyRawMessage()</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="getKeyRawMessage"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    
+
+
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (name, key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Variant"/>
+        <property name="arg4" value="com.tplus.transform.runtime.Variant"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="EmitToHadoopFile">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoopFile (filePath, key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoopFile"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Variant"/>
+        <property name="arg4" value="com.tplus.transform.runtime.Variant"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Variant"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Variant"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Variant"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Binary"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.Long"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.Integer"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.Double"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.Float"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Binary"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="java.lang.Long"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="java.lang.Integer"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="java.lang.Double"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="com.tplus.transform.runtime.Binary"/>
+        <property name="arg3" value="java.lang.Float"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Binary"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="java.lang.Long"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="java.lang.Integer"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="java.lang.Double"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Long"/>
+        <property name="arg3" value="java.lang.Float"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Binary"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="java.lang.Long"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="java.lang.Integer"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="java.lang.Double"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Integer"/>
+        <property name="arg3" value="java.lang.Float"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Binary"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="java.lang.Long"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="java.lang.Integer"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="java.lang.Double"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Double"/>
+        <property name="arg3" value="java.lang.Float"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Binary"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="java.lang.Long"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="java.lang.Integer"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="java.lang.Double"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+    <formula name="EmitToHadoop">
+        <description>Emits the given key-value pair into the Hadoop context.</description>
+        <signature>EmitToHadoop (key, vall)</signature>
+        <category>Hadoop</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.hadoop.functions.HadoopFunctionsDesigner"/>
+        <property name="method" value="emitToHadoop"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.Float"/>
+        <property name="arg3" value="java.lang.Float"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-hadooprt"/>
+    </formula>
+</formulae>

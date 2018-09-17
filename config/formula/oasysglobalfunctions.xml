@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="OasysGlobal_IsValidCharSet_n">
+        <description>Checks if every character in the given input string belongs to the OGD character set 'n'.</description>
+        <signature>OasysGlobal_IsValidCharSet_n (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalCharSets"/>
+        <property name="method" value="OasysGlobal_IsValidCharSet_n"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_IsValidCharSet_a">
+        <description>Checks if every character in the given input string belongs to the OGD character set 'a'.</description>
+        <signature>OasysGlobal_IsValidCharSet_a (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalCharSets"/>
+        <property name="method" value="OasysGlobal_IsValidCharSet_a"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_IsValidCharSet_c">
+        <description>Checks if every character in the given input string belongs to the OGD character set 'c'.</description>
+        <signature>OasysGlobal_IsValidCharSet_c (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalCharSets"/>
+        <property name="method" value="OasysGlobal_IsValidCharSet_c"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+	<formula name="OasysGlobal_IsValidCharSet_d">
+        <description>Checks if every character in the given input string belongs to the OGD character set 'd'.</description>
+        <signature>OasysGlobal_IsValidCharSet_d (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalCharSets"/>
+        <property name="method" value="OasysGlobal_IsValidCharSet_d"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_IsValidCharSet_p">
+        <description>Checks if every character in the given input string belongs to the OGD character set 'p'.</description>
+        <signature>OasysGlobal_IsValidCharSet_p (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalCharSets"/>
+        <property name="method" value="OasysGlobal_IsValidCharSet_p"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+	<formula name="OasysGlobal_IsValidCharSet_p">
+        <description>Checks if every character in the given input string belongs to the OGD character set 'p'.</description>
+        <signature>OasysGlobal_IsValidCharSet_p (str, allowCRLF)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalCharSets"/>
+        <property name="method" value="OasysGlobal_IsValidCharSet_p"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+	<formula name="OasysGlobal_IsValidCharSet_y">
+        <description>Checks if every character in the given input string belongs to the OGD character set 'y'.</description>
+        <signature>OasysGlobal_IsValidCharSet_y (str, allowCRLF)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalCharSets"/>
+        <property name="method" value="OasysGlobal_IsValidCharSet_y"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+	<formula name="OasysGlobal_IsValidCharSet_z">
+        <description>Checks if every character in the given input string belongs to the OGD character set 'z'.</description>
+        <signature>OasysGlobal_IsValidCharSet_z (str, allowCRLF)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalCharSets"/>
+        <property name="method" value="OasysGlobal_IsValidCharSet_z"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+
+    <formula name="OasysGlobal_IsValidMultiLineField">
+        <description>Returns true if the given string is a valid multi-line field: can contain at most 'maxLines' number of lines and the length of each line can at most be 'maxCharsPerLine'. In addition, all characters excepting the line delimiter ("\r\n") should belong to the SWIFT character set 'x'.</description>
+        <signature>OasysGlobal_IsValidMultiLineField (str, maxLines, maxCharsPerLine)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_IsValidMultiLineField"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_GetMultiLineFieldLength">
+        <description>This function takes in the yet to be parsed part of the message as input and returns the number of characters till the end of the upcoming multi-line field.</description>
+        <signature>OasysGlobal_GetMultiLineFieldLength (peekStr)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_GetMultiLineFieldLength"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_EliminateTrailingNewLine">
+        <description>If the input text ends with "\r\n", eliminates the same and returns the rest. If not, the input string is returned as is.</description>
+        <signature>OasysGlobal_EliminateTrailingNewLine (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_EliminateTrailingNewLine"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_AppendNewLine">
+        <description>Appends "\r\n" to the input string and returns the resultant string.</description>
+        <signature>OasysGlobal_AppendNewLine (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_AppendNewLine"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_IsPartyNamePresent">
+        <description>If peekStr starts with (":23K:" + partyName), returns true. If not and if peekStr starts with ":23K:" returns false. If not, if second line (first line terminated by "\r\n") starts with (":23K:" + partyName), returns true. Finally, if nothing else, returns false.</description>
+        <signature>OasysGlobal_IsPartyNamePresent (partyName, peekStr)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_IsPartyNamePresent"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula> 
+    <formula name="OasysGlobal_GetSignFieldLength">
+        <description>If peekStr starts with '+' or '-', returns 1. If not, returns 0.</description>
+        <signature>OasysGlobal_GetSignFieldLength (peekStr)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_GetSignFieldLength"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>      
+    <formula name="OasysGlobal_ParseNumeric">
+        <description>If field is a valid numeric field and if field has '+' or '-' as its first character, throws an exception. If not, returns the input value as is.</description>
+        <signature>OasysGlobal_ParseNumeric (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_ParseNumeric"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>    
+    <formula name="OasysGlobal_ParseDecimal">
+        <description>If field is a valid decimal and if any of the following conditions fail, throws an exception. If not, returns the input value as is.
+1.) Field has '+' or '-' as its first character
+2.) Field must contain decimal point (comma)
+3.) Decimal point must have at least one digit preceding it.
+4.) Exponential notation must not be present.</description>
+        <signature>OasysGlobal_ParseDecimal (str)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_ParseDecimal"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>        
+    <formula name="OasysGlobal_SerializeDecimal">
+        <description>Ensures that the decimal field has the decimal point (comma) and at least one digit before the same.</description>
+        <signature>OasysGlobal_SerializeDecimal (amount)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_SerializeDecimal"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_SerializeDecimal">
+        <description>Ensures that the decimal field has the decimal point (comma) and at least one digit before the same.</description>
+        <signature>OasysGlobal_SerializeDecimal (amount)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_SerializeDecimal"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="double"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>    
+    <formula name="OasysGlobal_IdentifyOGDMessage">
+        <description>Identifies a OGD (Oasys Global Direct) message (input designer type is Binary). See detailed help for field names inside returned object.</description>
+        <signature>OasysGlobal_IdentifyOGDMessage (binaryOGDMessage)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_IdentifyOGDMessage"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="byte[]"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>   
+    <formula name="OasysGlobal_IdentifyOGDMessage">
+        <description>Identifies a OGD (Oasys Global Direct) message (input designer type is RawMessage). See detailed help for field names inside returned object.</description>
+        <signature>OasysGlobal_IdentifyOGDMessage (rawMessageOGDMessage)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_IdentifyOGDMessage"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="com.tplus.transform.runtime.RawMessage"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>  
+    <formula name="OasysGlobal_IdentifyOGDMessage">
+        <description>Identifies a OGD (Oasys Global Direct) message (input designer type is String). See detailed help for field names inside returned object.</description>
+        <signature>OasysGlobal_IdentifyOGDMessage (stringOGDMessage)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_IdentifyOGDMessage"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_ValidateDecimalFormat">
+        <description>Validates if the given double field does not violate the given format. If invalid format is passed, throws exception. Format is of structure 'n.m', where n and m are integers.</description>
+        <signature>OasysGlobal_ValidateDecimalFormat (OGDMessage)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_ValidateDecimalFormat"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="double"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>
+    <formula name="OasysGlobal_ValidateDecimalFormat">
+        <description>Validates if the given BigDecimal field does not violate the given format. If invalid format is passed, throws exception. Format is of structure 'n.m', where n and m are integers.</description>
+        <signature>OasysGlobal_ValidateDecimalFormat (OGDMessage)</signature>
+        <category>OasysGlobal</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.oasysglobal.OasysGlobalFunctions"/>
+        <property name="method" value="OasysGlobal_ValidateDecimalFormat"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="oasysglobalrt"/>
+    </formula>     
+</formulae>

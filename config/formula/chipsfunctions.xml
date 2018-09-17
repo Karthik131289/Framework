@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="CHIPS_SerializeDelimitedField">
+        <description>Appends an asterisk to the input string and returns the same.</description>
+        <signature>CHIPS_SerializeDelimitedField (value)</signature>
+        <category>CHIPS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.chips.CHIPSFunctions"/>
+        <property name="method" value="CHIPS_SerializeDelimitedField"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="chipsrt"/>
+    </formula>
+    <formula name="CHIPS_ParseDelimitedField">
+        <description>If the input value ends with an asterisk, removes it and returns the same. If not, returns the input value as is.</description>
+        <signature>CHIPS_ParseDelimitedField (text)</signature>
+        <category>CHIPS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.chips.CHIPSFunctions"/>
+        <property name="method" value="CHIPS_ParseDelimitedField"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="chipsrt"/>
+    </formula>
+    <formula name="CHIPS_IsRepeating">
+        <description>Returns true if the length of the input is greater than three and if it does not start with '['.</description>
+        <signature>CHIPS_IsRepeating (peekStr)</signature>
+        <category>CHIPS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.chips.CHIPSFunctions"/>
+        <property name="method" value="CHIPS_IsRepeating"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="chipsrt"/>
+    </formula>
+    <formula name="CHIPS_GetLenUntilNextDelimOrTag">
+        <description>If asterisk is present in the input and is present before the first occurrence of '[', then returns the number of characters until and including the asterisk. If * is present after '[' or is not present, returns the number of characters until but not including '['. If both asterisk and '[' are absent, returns 3 (length of trailer) less than the length of the input.</description>
+        <signature>CHIPS_GetLenUntilNextDelimOrTag (peekStr)</signature>
+        <category>CHIPS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.chips.CHIPSFunctions"/>
+        <property name="method" value="CHIPS_GetLenUntilNextDelimOrTag"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="chipsrt"/>
+    </formula>
+<!--    <formula name="CHIPS_GetLenUntilNextTag">
+        <description>If '[' is present, returns the number of characters until but not including '['. If it is absent, returns the length of the input.</description>
+        <signature>CHIPS_GetLenUntilNextTag (peekStr)</signature>
+        <category>CHIPS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.chips.CHIPSFunctions"/>
+        <property name="method" value="CHIPS_GetLenUntilNextTag"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="chipsrt"/>
+    </formula>    -->
+</formulae>

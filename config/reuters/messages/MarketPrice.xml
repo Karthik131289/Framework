@@ -1,0 +1,5004 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ReutersMessageFormat name="MarketPrice">
+	<DescriptiveName>MarketPrice</DescriptiveName>
+	<Category>Level 1</Category>
+	<Description><![CDATA[MarketPrice provides access to trades and quotes from exchanges. It also can provide access to other types of
+record data that is structured as field-value pairs.]]></Description>
+	<reutersfields>
+		<headerfields>
+		</headerfields>
+		<datafields>
+			<field-type>FieldList</field-type>
+			<field>
+				<name>PERMISSION</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Product permissions information.]]></description>
+				<required>true</required>
+				<acronym>PROD_PERM</acronym>
+				<ddeAcronym>PERMISSION</ddeAcronym>
+				<id>1</id>
+				<rwfType>UINT32</rwfType>
+				<mfType>INTEGER</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>DISPLAYTEMPLATE</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Display information for the IDN terminal device.]]></description>
+				<required>true</required>
+				<acronym>RDNDISPLAY</acronym>
+				<ddeAcronym>DISPLAYTEMPLATE</ddeAcronym>
+				<id>2</id>
+				<rwfType>UINT32</rwfType>
+				<mfType>INTEGER</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>DISPLAY NAME</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Expanded name for the instrument.]]></description>
+				<required>true</required>
+				<acronym>DSPLY_NAME</acronym>
+				<ddeAcronym>DISPLAY NAME</ddeAcronym>
+				<id>3</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>IDN EXCHANGE ID</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Identifier for the exchange on which the instrument trades.]]></description>
+				<required>true</required>
+				<acronym>RDN_EXCHID</acronym>
+				<ddeAcronym>IDN EXCHANGE ID</ddeAcronym>
+				<id>4</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASE"/>
+					<enum value="2" display="NYS"/>
+					<enum value="3" display="BOS"/>
+					<enum value="4" display="CIN"/>
+					<enum value="5" display="PSE"/>
+					<enum value="6" display="XPH"/>
+					<enum value="7" display="THM"/>
+					<enum value="8" display="MID"/>
+					<enum value="9" display="NYQ"/>
+					<enum value="10" display="TOR"/>
+					<enum value="11" display="MON"/>
+					<enum value="12" display="TSX"/>
+					<enum value="13" display="ALB"/>
+					<enum value="14" display="AOE"/>
+					<enum value="15" display="NYO"/>
+					<enum value="16" display="PHO"/>
+					<enum value="17" display="PAO"/>
+					<enum value="18" display="WCB"/>
+					<enum value="19" display="ASQ"/>
+					<enum value="20" display="CME"/>
+					<enum value="21" display="IMM"/>
+					<enum value="22" display="IOM"/>
+					<enum value="23" display="CBT"/>
+					<enum value="24" display="ITS"/>
+					<enum value="25" display="WPG"/>
+					<enum value="26" display="MGE"/>
+					<enum value="27" display="PBT"/>
+					<enum value="28" display="CMX"/>
+					<enum value="29" display="CSC"/>
+					<enum value="30" display="NYC"/>
+					<enum value="31" display="NYM"/>
+					<enum value="32" display="032"/>
+					<enum value="33" display="CSO"/>
+					<enum value="34" display="CEO"/>
+					<enum value="35" display="SHC"/>
+					<enum value="36" display="NYF"/>
+					<enum value="37" display="TFE"/>
+					<enum value="38" display="MIO"/>
+					<enum value="39" display="NMS"/>
+					<enum value="40" display="TOE"/>
+					<enum value="41" display="MOE"/>
+					<enum value="42" display="VAO"/>
+					<enum value="43" display="NAS"/>
+					<enum value="44" display="MDM"/>
+					<enum value="45" display="SCE"/>
+					<enum value="46" display="BSQ"/>
+					<enum value="47" display="INS"/>
+					<enum value="48" display="WCQ"/>
+					<enum value="49" display="CRC"/>
+					<enum value="50" display="KBT"/>
+					<enum value="51" display="SOM"/>
+					<enum value="52" display="ADS"/>
+					<enum value="53" display="ADF"/>
+					<enum value="54" display="MIF"/>
+					<enum value="55" display="JSF"/>
+					<enum value="56" display="TCE"/>
+					<enum value="57" display="TFF"/>
+					<enum value="58" display="EME"/>
+					<enum value="59" display="HOM"/>
+					<enum value="60" display="FOM"/>
+					<enum value="61" display="FIR"/>
+					<enum value="62" display="ATH"/>
+					<enum value="63" display="SFF"/>
+					<enum value="64" display="LSE"/>
+					<enum value="65" display="JNB"/>
+					<enum value="66" display="LIF"/>
+					<enum value="67" display="TLV"/>
+					<enum value="68" display="CPH"/>
+					<enum value="69" display="OSL"/>
+					<enum value="70" display="STO"/>
+					<enum value="71" display="071"/>
+					<enum value="72" display="LUX"/>
+					<enum value="73" display="BRU"/>
+					<enum value="74" display="PAR"/>
+					<enum value="75" display="MAD"/>
+					<enum value="76" display="BAR"/>
+					<enum value="77" display="AMS"/>
+					<enum value="78" display="EOE"/>
+					<enum value="79" display="ATA"/>
+					<enum value="80" display="VIE"/>
+					<enum value="81" display="DUS"/>
+					<enum value="82" display="FRA"/>
+					<enum value="83" display="HAM"/>
+					<enum value="84" display="MUN"/>
+					<enum value="85" display="ZRH"/>
+					<enum value="86" display="GVA"/>
+					<enum value="87" display="BSL"/>
+					<enum value="88" display="MIL"/>
+					<enum value="89" display="089"/>
+					<enum value="90" display="090"/>
+					<enum value="91" display="NZE"/>
+					<enum value="92" display="HKG"/>
+					<enum value="93" display="SIM"/>
+					<enum value="94" display="KLC"/>
+					<enum value="95" display="095"/>
+					<enum value="96" display="096"/>
+					<enum value="97" display="097"/>
+					<enum value="98" display="098"/>
+					<enum value="99" display="LME"/>
+					<enum value="100" display="100"/>
+					<enum value="101" display="LCE"/>
+					<enum value="102" display="102"/>
+					<enum value="103" display="103"/>
+					<enum value="104" display="104"/>
+					<enum value="105" display="SFE"/>
+					<enum value="106" display="TYO"/>
+					<enum value="107" display="NGO"/>
+					<enum value="108" display="SAP"/>
+					<enum value="109" display="NII"/>
+					<enum value="110" display="KYO"/>
+					<enum value="111" display="HIR"/>
+					<enum value="112" display="FKA"/>
+					<enum value="113" display="OSA"/>
+					<enum value="114" display="HFE"/>
+					<enum value="115" display="BER"/>
+					<enum value="116" display="HAN"/>
+					<enum value="117" display="STU"/>
+					<enum value="118" display="BRE"/>
+					<enum value="119" display="119"/>
+					<enum value="120" display="BRN"/>
+					<enum value="121" display="121"/>
+					<enum value="122" display="122"/>
+					<enum value="123" display="123"/>
+					<enum value="124" display="ROM"/>
+					<enum value="125" display="TRN"/>
+					<enum value="126" display="GOA"/>
+					<enum value="127" display="NAP"/>
+					<enum value="128" display="PAL"/>
+					<enum value="129" display="BLO"/>
+					<enum value="130" display="VCE"/>
+					<enum value="131" display="ISF"/>
+					<enum value="132" display="AQC"/>
+					<enum value="133" display="HEX"/>
+					<enum value="134" display="WSE"/>
+					<enum value="135" display="BOR"/>
+					<enum value="136" display="LIL"/>
+					<enum value="137" display="LYO"/>
+					<enum value="138" display="MRS"/>
+					<enum value="139" display="NAY"/>
+					<enum value="140" display="NAN"/>
+					<enum value="141" display="JDE"/>
+					<enum value="142" display="LAG"/>
+					<enum value="143" display="ZSE"/>
+					<enum value="144" display="SHH"/>
+					<enum value="145" display="BSE"/>
+					<enum value="146" display="CAL"/>
+					<enum value="147" display="DES"/>
+					<enum value="148" display="MDS"/>
+					<enum value="149" display="JKT"/>
+					<enum value="150" display="KLS"/>
+					<enum value="151" display="KAR"/>
+					<enum value="152" display="MAK"/>
+					<enum value="153" display="MNL"/>
+					<enum value="154" display="FTM"/>
+					<enum value="155" display="SES"/>
+					<enum value="156" display="KSC"/>
+					<enum value="157" display="MAU"/>
+					<enum value="158" display="SET"/>
+					<enum value="159" display="BAH"/>
+					<enum value="160" display="CAI"/>
+					<enum value="161" display="AMM"/>
+					<enum value="162" display="KUW"/>
+					<enum value="163" display="BUE"/>
+					<enum value="164" display="RIO"/>
+					<enum value="165" display="SAO"/>
+					<enum value="166" display="SGO"/>
+					<enum value="167" display="BOG"/>
+					<enum value="168" display="MEX"/>
+					<enum value="169" display="CCS"/>
+					<enum value="170" display="NFE"/>
+					<enum value="171" display="IND"/>
+					<enum value="172" display="FIX"/>
+					<enum value="173" display="LOT"/>
+					<enum value="174" display="MAT"/>
+					<enum value="175" display="TAI"/>
+					<enum value="176" display="IPE"/>
+					<enum value="177" display="177"/>
+					<enum value="178" display="178"/>
+					<enum value="179" display="179"/>
+					<enum value="180" display="SOP"/>
+					<enum value="181" display="REU"/>
+					<enum value="182" display="LIS"/>
+					<enum value="183" display="OPO"/>
+					<enum value="184" display="NOM"/>
+					<enum value="185" display="185"/>
+					<enum value="186" display="RTS"/>
+					<enum value="187" display="ASX"/>
+					<enum value="188" display="IFX"/>
+					<enum value="189" display="PmI"/>
+					<enum value="190" display="MCE"/>
+					<enum value="191" display="191"/>
+					<enum value="192" display="TGE"/>
+					<enum value="193" display="TSU"/>
+					<enum value="194" display="KRE"/>
+					<enum value="195" display="MRV"/>
+					<enum value="196" display="AOM"/>
+					<enum value="197" display="BFX"/>
+					<enum value="198" display="BRT"/>
+					<enum value="199" display="DTB"/>
+					<enum value="200" display="MRF"/>
+					<enum value="201" display="201"/>
+					<enum value="202" display="GER"/>
+					<enum value="203" display="MTS"/>
+					<enum value="204" display="IST"/>
+					<enum value="205" display="MUS"/>
+					<enum value="206" display="ABJ"/>
+					<enum value="207" display="NAI"/>
+					<enum value="208" display="TUN"/>
+					<enum value="209" display="FSI"/>
+					<enum value="210" display="NIN"/>
+					<enum value="211" display="MCP"/>
+					<enum value="212" display="OTB"/>
+					<enum value="213" display="SIC"/>
+					<enum value="214" display="RCT"/>
+					<enum value="215" display="IGF"/>
+					<enum value="216" display="MWQ"/>
+					<enum value="217" display="PSQ"/>
+					<enum value="218" display="PHQ"/>
+					<enum value="219" display="JSD"/>
+					<enum value="220" display="ECM"/>
+					<enum value="221" display="OBB"/>
+					<enum value="222" display="IFM"/>
+					<enum value="223" display="MFI"/>
+					<enum value="224" display="SME"/>
+					<enum value="225" display="SHZ"/>
+					<enum value="226" display="RSA"/>
+					<enum value="227" display="BUD"/>
+					<enum value="228" display="PHS"/>
+					<enum value="229" display="MLT"/>
+					<enum value="230" display="230"/>
+					<enum value="231" display="SZM"/>
+					<enum value="232" display="SZF"/>
+					<enum value="233" display="JBT"/>
+					<enum value="234" display="MDC"/>
+					<enum value="235" display="NTC"/>
+					<enum value="236" display="YSE"/>
+					<enum value="237" display="OTE"/>
+					<enum value="238" display="NAK"/>
+					<enum value="239" display="239"/>
+					<enum value="240" display="TOT"/>
+					<enum value="241" display="AHM"/>
+					<enum value="242" display="KLF"/>
+					<enum value="243" display="CSE"/>
+					<enum value="244" display="BEC"/>
+					<enum value="245" display="MXI"/>
+					<enum value="246" display="ZHC"/>
+					<enum value="247" display="BJC"/>
+					<enum value="248" display="248"/>
+					<enum value="249" display="GUF"/>
+					<enum value="250" display="BMF"/>
+					<enum value="251" display="VSE"/>
+					<enum value="252" display="SFX"/>
+					<enum value="253" display="253"/>
+					<enum value="254" display="DLC"/>
+					<enum value="255" display="CSW"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>LAST</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Last trade price or value.]]></description>
+				<required>true</required>
+				<acronym>TRDPRC_1</acronym>
+				<ddeAcronym>LAST</ddeAcronym>
+				<id>6</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>NET CHANGE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Difference between latest trading price or value and the historic closing value or
+settlement price.]]></description>
+				<required>true</required>
+				<acronym>NETCHNG_1</acronym>
+				<ddeAcronym>NET CHANGE</ddeAcronym>
+				<id>11</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TODAY'S HIGH</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Today's highest transaction value.]]></description>
+				<required>true</required>
+				<acronym>HIGH_1</acronym>
+				<ddeAcronym>TODAY'S HIGH</ddeAcronym>
+				<id>12</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TODAY'S LOW</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Today's lowest transaction value.]]></description>
+				<required>true</required>
+				<acronym>LOW_1</acronym>
+				<ddeAcronym>TODAY'S LOW</ddeAcronym>
+				<id>13</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>CURRENCY</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[The currency in which the instrument is quoted.]]></description>
+				<required>true</required>
+				<acronym>CURRENCY</acronym>
+				<ddeAcronym>CURRENCY</ddeAcronym>
+				<id>15</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="4" display="AFA"/>
+					<enum value="8" display="ALL"/>
+					<enum value="12" display="DZD"/>
+					<enum value="20" display="ADP"/>
+					<enum value="24" display="AON"/>
+					<enum value="32" display="ARS"/>
+					<enum value="36" display="AUD"/>
+					<enum value="37" display="AUc"/>
+					<enum value="40" display="ATS"/>
+					<enum value="44" display="BSD"/>
+					<enum value="48" display="BHD"/>
+					<enum value="50" display="BDT"/>
+					<enum value="52" display="BBD"/>
+					<enum value="56" display="BEF"/>
+					<enum value="60" display="BMD"/>
+					<enum value="64" display="BTN"/>
+					<enum value="68" display="BOB"/>
+					<enum value="70" display="BAD"/>
+					<enum value="72" display="BWP"/>
+					<enum value="76" display="BRL"/>
+					<enum value="84" display="BZD"/>
+					<enum value="90" display="SBD"/>
+					<enum value="96" display="BND"/>
+					<enum value="100" display="BGL"/>
+					<enum value="104" display="MMK"/>
+					<enum value="108" display="BIF"/>
+					<enum value="116" display="KHR"/>
+					<enum value="124" display="CAD"/>
+					<enum value="132" display="CVE"/>
+					<enum value="136" display="KYD"/>
+					<enum value="144" display="LKR"/>
+					<enum value="152" display="CLP"/>
+					<enum value="156" display="CNY"/>
+					<enum value="170" display="COP"/>
+					<enum value="174" display="KMF"/>
+					<enum value="180" display="ZRN"/>
+					<enum value="188" display="CRC"/>
+					<enum value="191" display="HRK"/>
+					<enum value="192" display="CUP"/>
+					<enum value="196" display="CYP"/>
+					<enum value="200" display="200"/>
+					<enum value="203" display="CZK"/>
+					<enum value="208" display="DKK"/>
+					<enum value="214" display="DOP"/>
+					<enum value="218" display="ECS"/>
+					<enum value="222" display="SVC"/>
+					<enum value="226" display="EEK"/>
+					<enum value="230" display="ETB"/>
+					<enum value="238" display="FKP"/>
+					<enum value="242" display="FJD"/>
+					<enum value="246" display="FIM"/>
+					<enum value="250" display="FRF"/>
+					<enum value="262" display="DJF"/>
+					<enum value="270" display="GMD"/>
+					<enum value="280" display="DEM"/>
+					<enum value="288" display="GHC"/>
+					<enum value="292" display="GIP"/>
+					<enum value="300" display="GRD"/>
+					<enum value="320" display="GTQ"/>
+					<enum value="324" display="GNF"/>
+					<enum value="328" display="GYD"/>
+					<enum value="332" display="HTG"/>
+					<enum value="340" display="HNL"/>
+					<enum value="344" display="HKD"/>
+					<enum value="345" display="HKc"/>
+					<enum value="348" display="HUF"/>
+					<enum value="352" display="ISK"/>
+					<enum value="356" display="INR"/>
+					<enum value="360" display="IDR"/>
+					<enum value="364" display="IRR"/>
+					<enum value="368" display="IQD"/>
+					<enum value="372" display="IEP"/>
+					<enum value="373" display="IEp"/>
+					<enum value="376" display="ILS"/>
+					<enum value="380" display="ITL"/>
+					<enum value="388" display="JMD"/>
+					<enum value="392" display="JPY"/>
+					<enum value="398" display="KZT"/>
+					<enum value="400" display="JOD"/>
+					<enum value="404" display="KES"/>
+					<enum value="408" display="KPW"/>
+					<enum value="410" display="KRW"/>
+					<enum value="414" display="KWD"/>
+					<enum value="418" display="LAK"/>
+					<enum value="422" display="LBP"/>
+					<enum value="426" display="LSL"/>
+					<enum value="428" display="LVL"/>
+					<enum value="430" display="LRD"/>
+					<enum value="434" display="LYD"/>
+					<enum value="440" display="LTL"/>
+					<enum value="442" display="LUF"/>
+					<enum value="446" display="MOP"/>
+					<enum value="450" display="450"/>
+					<enum value="454" display="MWK"/>
+					<enum value="458" display="MYR"/>
+					<enum value="459" display="MYc"/>
+					<enum value="462" display="MVR"/>
+					<enum value="466" display="MLF"/>
+					<enum value="470" display="MTL"/>
+					<enum value="478" display="MRO"/>
+					<enum value="480" display="MUR"/>
+					<enum value="484" display="MXN"/>
+					<enum value="496" display="MNT"/>
+					<enum value="498" display="MDL"/>
+					<enum value="504" display="MAD"/>
+					<enum value="508" display="MZM"/>
+					<enum value="512" display="OMR"/>
+					<enum value="516" display="NAD"/>
+					<enum value="524" display="NPR"/>
+					<enum value="528" display="NLG"/>
+					<enum value="532" display="ANG"/>
+					<enum value="533" display="AWG"/>
+					<enum value="548" display="VUV"/>
+					<enum value="554" display="NZD"/>
+					<enum value="558" display="NIO"/>
+					<enum value="566" display="NGN"/>
+					<enum value="578" display="NOK"/>
+					<enum value="586" display="PKR"/>
+					<enum value="590" display="PAB"/>
+					<enum value="598" display="PGK"/>
+					<enum value="600" display="PYG"/>
+					<enum value="604" display="PEN"/>
+					<enum value="608" display="PHP"/>
+					<enum value="616" display="PLZ"/>
+					<enum value="620" display="PTE"/>
+					<enum value="624" display="GWP"/>
+					<enum value="626" display="TPE"/>
+					<enum value="634" display="QAR"/>
+					<enum value="642" display="ROL"/>
+					<enum value="646" display="RWF"/>
+					<enum value="654" display="SHP"/>
+					<enum value="678" display="STD"/>
+					<enum value="682" display="SAR"/>
+					<enum value="690" display="SCR"/>
+					<enum value="694" display="SLL"/>
+					<enum value="702" display="SGD"/>
+					<enum value="703" display="SKK"/>
+					<enum value="704" display="VND"/>
+					<enum value="705" display="SIT"/>
+					<enum value="706" display="SOS"/>
+					<enum value="710" display="ZAR"/>
+					<enum value="716" display="ZWD"/>
+					<enum value="720" display="720"/>
+					<enum value="724" display="ESP"/>
+					<enum value="736" display="SDD"/>
+					<enum value="740" display="SRG"/>
+					<enum value="748" display="SZL"/>
+					<enum value="752" display="SEK"/>
+					<enum value="756" display="CHF"/>
+					<enum value="760" display="SYP"/>
+					<enum value="764" display="THB"/>
+					<enum value="776" display="TOP"/>
+					<enum value="780" display="TTD"/>
+					<enum value="784" display="AED"/>
+					<enum value="788" display="TND"/>
+					<enum value="792" display="TRL"/>
+					<enum value="795" display="TMM"/>
+					<enum value="800" display="UGX"/>
+					<enum value="804" display="UAK"/>
+					<enum value="807" display="MKD"/>
+					<enum value="810" display="RUR"/>
+					<enum value="818" display="EGP"/>
+					<enum value="826" display="GBP"/>
+					<enum value="827" display="GBp"/>
+					<enum value="834" display="TZS"/>
+					<enum value="840" display="USD"/>
+					<enum value="841" display="USc"/>
+					<enum value="858" display="UYU"/>
+					<enum value="862" display="VEB"/>
+					<enum value="882" display="WST"/>
+					<enum value="886" display="YER"/>
+					<enum value="890" display="890"/>
+					<enum value="891" display="CSD"/>
+					<enum value="894" display="ZMK"/>
+					<enum value="900" display="ROb"/>
+					<enum value="901" display="TWD"/>
+					<enum value="902" display="BHf"/>
+					<enum value="903" display="KWf"/>
+					<enum value="904" display="OMb"/>
+					<enum value="905" display="SAh"/>
+					<enum value="906" display="QAd"/>
+					<enum value="907" display="AEf"/>
+					<enum value="942" display="ZWN"/>
+					<enum value="943" display="MZN"/>
+					<enum value="944" display="AZN"/>
+					<enum value="946" display="RON"/>
+					<enum value="949" display="TRY"/>
+					<enum value="950" display="XAF"/>
+					<enum value="951" display="XCD"/>
+					<enum value="952" display="XOF"/>
+					<enum value="953" display="XPF"/>
+					<enum value="954" display="XEU"/>
+					<enum value="955" display="XBA"/>
+					<enum value="956" display="XBB"/>
+					<enum value="957" display="XBC"/>
+					<enum value="958" display="XBD"/>
+					<enum value="959" display="XAU"/>
+					<enum value="960" display="XDR"/>
+					<enum value="961" display="XAG"/>
+					<enum value="962" display="XPT"/>
+					<enum value="963" display="XTS"/>
+					<enum value="964" display="XPD"/>
+					<enum value="969" display="MGA"/>
+					<enum value="971" display="AFN"/>
+					<enum value="974" display="BYR"/>
+					<enum value="975" display="BGN"/>
+					<enum value="978" display="EUR"/>
+					<enum value="979" display="MXV"/>
+					<enum value="980" display="UAH"/>
+					<enum value="985" display="PLN"/>
+					<enum value="990" display="CLF"/>
+					<enum value="991" display="ZAL"/>
+					<enum value="995" display="ESB"/>
+					<enum value="996" display="ESA"/>
+					<enum value="997" display="USN"/>
+					<enum value="998" display="USS"/>
+					<enum value="999" display="XXX"/>
+					<enum value="2000" display="tst"/>
+					<enum value="2001" display="AUc"/>
+					<enum value="2002" display="CAc"/>
+					<enum value="2003" display="HKc"/>
+					<enum value="2004" display="IEp"/>
+					<enum value="2005" display="MYc"/>
+					<enum value="2006" display="NZc"/>
+					<enum value="2007" display="SGc"/>
+					<enum value="2008" display="GBp"/>
+					<enum value="2009" display="USc"/>
+					<enum value="2010" display="ZAc"/>
+					<enum value="2011" display="ZWc"/>
+					<enum value="2012" display="EUc"/>
+					<enum value="2013" display="NAc"/>
+					<enum value="2014" display="ILa"/>
+					<enum value="2015" display="RUB"/>
+					<enum value="2016" display="HRL"/>
+					<enum value="2017" display="BWt"/>
+					<enum value="2018" display="018"/>
+					<enum value="2019" display="TRk"/>
+					<enum value="2020" display="COU"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TRADE DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[The date of the value in the field TRDPRC_1.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>TRADE_DATE</acronym>
+				<ddeAcronym>TRADE DATE</ddeAcronym>
+				<id>16</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TRADE TIME</name>
+				<datatype>TimeOnly</datatype>
+				<description><![CDATA[Time of the value in the TRDPRC_1.]]></description>
+				<required>true</required>
+				<dateformat>HH:mm:ss</dateformat>
+				<acronym>TRDTIM_1</acronym>
+				<ddeAcronym>TRADE TIME</ddeAcronym>
+				<id>18</id>
+				<rwfType>TIME</rwfType>
+				<mfType>TIME</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>OPENING PRICE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Today's opening price or value. The source of this field depends upon the market and
+instrument type.]]></description>
+				<required>true</required>
+				<acronym>OPEN_PRC</acronym>
+				<ddeAcronym>OPENING PRICE</ddeAcronym>
+				<id>19</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>HISTORIC CLOSE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Most recent non-zero closing value or settlement price.]]></description>
+				<required>true</required>
+				<acronym>HST_CLOSE</acronym>
+				<ddeAcronym>HISTORIC CLOSE</ddeAcronym>
+				<id>21</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BID</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Latest bid price.For US Composite stock and equity market maker super records the
+best bid price. For OM type option markets the block bid price.]]></description>
+				<required>true</required>
+				<acronym>BID</acronym>
+				<ddeAcronym>BID</ddeAcronym>
+				<id>22</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>ASK</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Latest ask price.For US Composite stock and equity market maker super records the
+best ask price. For OM type option markets the block ask price.]]></description>
+				<required>true</required>
+				<acronym>ASK</acronym>
+				<ddeAcronym>ASK</ddeAcronym>
+				<id>25</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BID SIZE</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[The quantity bid at the latest bid price - in the case of equity market maker super
+records the total quantity bid at the best bid price. For Australian futures the
+number of buying contracts.]]></description>
+				<required>true</required>
+				<acronym>BIDSIZE</acronym>
+				<ddeAcronym>BID SIZE</ddeAcronym>
+				<id>30</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>ASK SIZE</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[The quantity offered at the latest ask price - in the case of equity market maker
+super records the total quantity offered at the best ask price. For Australian
+futures the number of selling contracts.]]></description>
+				<required>true</required>
+				<acronym>ASKSIZE</acronym>
+				<ddeAcronym>ASK SIZE</ddeAcronym>
+				<id>31</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>VOL ACCUMULATED</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[Today's total trading volume.]]></description>
+				<required>true</required>
+				<acronym>ACVOL_1</acronym>
+				<ddeAcronym>VOL ACCUMULATED</ddeAcronym>
+				<id>32</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>EARNINGS</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Latest reported earnings per share.]]></description>
+				<required>true</required>
+				<acronym>EARNINGS</acronym>
+				<ddeAcronym>EARNINGS</ddeAcronym>
+				<id>34</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>P E</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Ratio of stock price to earnings per share.]]></description>
+				<required>true</required>
+				<acronym>PERATIO</acronym>
+				<ddeAcronym>P.E.</ddeAcronym>
+				<id>36</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>DIVIDEND DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[Date on which dividend will be paid.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>DIVPAYDATE</acronym>
+				<ddeAcronym>DIVIDEND DATE</ddeAcronym>
+				<id>38</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>EX DIV DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[The date on which the issue will trade ex-dividend.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>EXDIVDATE</acronym>
+				<ddeAcronym>EX DIV DATE</ddeAcronym>
+				<id>39</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TRADE EXCH ID</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Exchange identifier of the latest trade.US Composites only.]]></description>
+				<required>true</required>
+				<acronym>TRDXID_1</acronym>
+				<ddeAcronym>TRADE EXCH ID</ddeAcronym>
+				<id>44</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASE"/>
+					<enum value="2" display="NYS"/>
+					<enum value="3" display="BOS"/>
+					<enum value="4" display="CIN"/>
+					<enum value="5" display="PSE"/>
+					<enum value="6" display="XPH"/>
+					<enum value="7" display="THM"/>
+					<enum value="8" display="MID"/>
+					<enum value="18" display="WCB"/>
+					<enum value="37" display="ISS"/>
+					<enum value="43" display="NAS"/>
+					<enum value="47" display="u  "/>
+					<enum value="53" display="ADF"/>
+					<enum value="132" display="AQC"/>
+					<enum value="220" display="TRF"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>CLOSE BID</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Last bid price of the day. For US Composites the last best bid price.]]></description>
+				<required>true</required>
+				<acronym>CLOSE_BID</acronym>
+				<ddeAcronym>CLOSE BID</ddeAcronym>
+				<id>60</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>CLOSE ASK</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Last ask price of the day. For US Composites the last best ask price.]]></description>
+				<required>true</required>
+				<acronym>CLOSE_ASK</acronym>
+				<ddeAcronym>CLOSE ASK</ddeAcronym>
+				<id>61</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>OPEN INTEREST</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[Open interest. The total number of option or futures contracts that have not been
+closed or in the case of commodities  liquidated or offset by delivery.]]></description>
+				<required>true</required>
+				<acronym>OPINT_1</acronym>
+				<ddeAcronym>OPEN INTEREST</ddeAcronym>
+				<id>64</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>STRIKE PRICE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Strike price; the price at which an option is exercisable.]]></description>
+				<required>true</required>
+				<acronym>STRIKE_PRC</acronym>
+				<ddeAcronym>STRIKE PRICE</ddeAcronym>
+				<id>66</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>EXPIRE DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[The date on which the future option or warrant expires.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>EXPIR_DATE</acronym>
+				<ddeAcronym>EXPIRE DATE</ddeAcronym>
+				<id>67</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>MATURITY DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[The date on which a bond matures.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>MATUR_DATE</acronym>
+				<ddeAcronym>MATURITY DATE</ddeAcronym>
+				<id>68</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>COUPON RATE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[The interest rate assigned to a bond when it is issued.]]></description>
+				<required>true</required>
+				<acronym>COUPN_RATE</acronym>
+				<ddeAcronym>COUPON RATE</ddeAcronym>
+				<id>69</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SETTLEMENT PRC</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Settlement price. The official closing price of a futures or option contract set by
+the clearing house at the end of the trading day.]]></description>
+				<required>true</required>
+				<acronym>SETTLE</acronym>
+				<ddeAcronym>SETTLEMENT PRC</ddeAcronym>
+				<id>70</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>DIVIDEND</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[The latest reported dividend to be paid per share to shareholders.]]></description>
+				<required>true</required>
+				<acronym>DIVIDEND</acronym>
+				<ddeAcronym>DIVIDEND</ddeAcronym>
+				<id>71</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>UPPER TRD LIMIT</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Upper trading limit for today's trading.]]></description>
+				<required>true</required>
+				<acronym>UPLIMIT</acronym>
+				<ddeAcronym>UPPER TRD LIMIT</ddeAcronym>
+				<id>75</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>LOWER TRD LIMIT</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Lower limit for today's trading.]]></description>
+				<required>true</required>
+				<acronym>LOLIMIT</acronym>
+				<ddeAcronym>LOWER TRD LIMIT</ddeAcronym>
+				<id>76</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>NUMBER TRADES</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[Number of trades today. For indices the number of tmes the index has been calculated.]]></description>
+				<required>true</required>
+				<acronym>NUM_MOVES</acronym>
+				<ddeAcronym>NUMBER TRADES</ddeAcronym>
+				<id>77</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>OFFICIAL CODE</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Unique numeric code assigned to the instrument.]]></description>
+				<required>true</required>
+				<acronym>OFFCL_CODE</acronym>
+				<ddeAcronym>OFFICIAL CODE</ddeAcronym>
+				<id>78</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>HIST CLOSE DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[Date of the most recent non-zero closing price as held in HST_CLOSE FID 20 and
+HST_CLOSE2 FID 963.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>HSTCLSDATE</acronym>
+				<ddeAcronym>HIST CLOSE DATE</ddeAcronym>
+				<id>79</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TURNOVER</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[The daily turnover revenue or value of all shares for either a particular instrument
+or an exchange. Currently supplied by New Zealand SE Hong Kong SE and Copenhagen SE.
+Cleared during the pre-market clear. The value is scaled according to the field TN]]></description>
+				<required>true</required>
+				<acronym>TURNOVER</acronym>
+				<ddeAcronym>TURNOVER</ddeAcronym>
+				<id>100</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>ISSUE DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[The date on which the bond prospectus was issued.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>ISSUE_DATE</acronym>
+				<ddeAcronym>ISSUE DATE</ddeAcronym>
+				<id>107</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>PUT/CALL FLAG</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Indicates whether option is a put or a call.]]></description>
+				<required>true</required>
+				<acronym>PUTCALLIND</acronym>
+				<ddeAcronym>PUT/CALL FLAG</ddeAcronym>
+				<id>109</id>
+				<enumeration>
+					<enum value="0" display="CALL"/>
+					<enum value="1" display="PUT "/>
+					<enum value="2" display="CERT"/>
+					<enum value="3" display="C-AM"/>
+					<enum value="4" display="P-AM"/>
+					<enum value="5" display="C-EU"/>
+					<enum value="6" display="P-EU"/>
+					<enum value="7" display="WRNT"/>
+					<enum value="8" display="CALL"/>
+					<enum value="9" display="PUT "/>
+					<enum value="10" display="RGHT"/>
+					<enum value="11" display="F   "/>
+					<enum value="12" display="FWD "/>
+					<enum value="13" display="FUT "/>
+					<enum value="14" display="UND "/>
+					<enum value="15" display="  15"/>
+					<enum value="16" display="  16"/>
+					<enum value="17" display="  17"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>NAV:NT ASSET VL</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Net asset value for US over the counter mutual funds.]]></description>
+				<required>true</required>
+				<acronym>NAVALUE</acronym>
+				<ddeAcronym>NAV:NT ASSET VL</ddeAcronym>
+				<id>120</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>MARKET STAT</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Indicates the current futures market status including whether a fast market
+condition exists.]]></description>
+				<required>true</required>
+				<acronym>MKT_ST_IND</acronym>
+				<ddeAcronym>MARKET STAT</ddeAcronym>
+				<id>133</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="FAS"/>
+					<enum value="2" display="FAL"/>
+					<enum value="3" display="THA"/>
+					<enum value="4" display="TRE"/>
+					<enum value="5" display="BSC"/>
+					<enum value="6" display="CCP"/>
+					<enum value="7" display="CIP"/>
+					<enum value="8" display="CLS"/>
+					<enum value="9" display="OCL"/>
+					<enum value="10" display="UCL"/>
+					<enum value="11" display="SC "/>
+					<enum value="12" display="IND"/>
+					<enum value="13" display="RFQ"/>
+					<enum value="14" display="PSS"/>
+					<enum value="15" display="APT"/>
+					<enum value="16" display="BBO"/>
+					<enum value="17" display="IMB"/>
+					<enum value="18" display="IMA"/>
+					<enum value="19" display="IMQ"/>
+					<enum value="20" display="BBO"/>
+					<enum value="21" display="L  "/>
+					<enum value="22" display="ERT"/>
+					<enum value="23" display="STL"/>
+					<enum value="24" display="GTO"/>
+					<enum value="25" display="GOR"/>
+					<enum value="26" display="GLO"/>
+					<enum value="27" display="GO+"/>
+					<enum value="28" display="FLR"/>
+					<enum value="29" display="DTA"/>
+					<enum value="30" display="GLD"/>
+					<enum value="31" display="GD+"/>
+					<enum value="32" display="AUE"/>
+					<enum value="33" display="SBB"/>
+					<enum value="34" display="SBA"/>
+					<enum value="35" display="BBA"/>
+					<enum value="36" display="INA"/>
+					<enum value="37" display="ROT"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>MID-PRICE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[The mid-price between the bid and ask prices supplied by the London ISE. Cleared
+during the pre-market clear.]]></description>
+				<required>true</required>
+				<acronym>MID_PRICE</acronym>
+				<ddeAcronym>MID-PRICE</ddeAcronym>
+				<id>134</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>OFFICIAL CLS</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Today's official closing price reported for Italian equities.]]></description>
+				<required>true</required>
+				<acronym>TDY_OF_CLS</acronym>
+				<ddeAcronym>OFFICIAL CLS</ddeAcronym>
+				<id>143</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>NAV DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[Date of net asset value.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>NAVDATE</acronym>
+				<ddeAcronym>NAV DATE</ddeAcronym>
+				<id>150</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BUYER ID</name>
+				<datatype>String</datatype>
+				<required>true</required>
+				<acronym>BUYER_ID</acronym>
+				<ddeAcronym>BUYER ID</ddeAcronym>
+				<id>162</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SELLER ID</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Codes identifying the broker on the buy/sell side of a trade reported by the
+Consolidated Canadian ticker CCN.]]></description>
+				<required>true</required>
+				<acronym>SELLER_ID</acronym>
+				<ddeAcronym>SELLER ID</ddeAcronym>
+				<id>163</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>KERB 1st PRICE</name>
+				<datatype>Float</datatype>
+				<required>true</required>
+				<acronym>KERB_PRC1</acronym>
+				<ddeAcronym>KERB 1st PRICE</ddeAcronym>
+				<id>173</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TRADE VOL</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[Transactional volume of the trade price reported in TRDPRC_1.]]></description>
+				<required>true</required>
+				<acronym>TRDVOL_1</acronym>
+				<ddeAcronym>TRADE VOL</ddeAcronym>
+				<id>178</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>OPEN XID</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[For US composite quotes the exchange identifier of the exchange where the opening
+price was made.]]></description>
+				<required>true</required>
+				<acronym>OPENEXID</acronym>
+				<ddeAcronym>OPEN XID</ddeAcronym>
+				<id>199</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASE"/>
+					<enum value="2" display="NYS"/>
+					<enum value="3" display="BOS"/>
+					<enum value="4" display="CIN"/>
+					<enum value="5" display="PSE"/>
+					<enum value="6" display="XPH"/>
+					<enum value="7" display="THM"/>
+					<enum value="8" display="MID"/>
+					<enum value="18" display="WCB"/>
+					<enum value="37" display="ISS"/>
+					<enum value="43" display="NAS"/>
+					<enum value="47" display="u  "/>
+					<enum value="53" display="ADF"/>
+					<enum value="132" display="AQC"/>
+					<enum value="220" display="TRF"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BID TIME</name>
+				<datatype>TimeOnly</datatype>
+				<description><![CDATA[Time of the latest update to the BID field FID 22.]]></description>
+				<required>true</required>
+				<dateformat>HH:mm:ss</dateformat>
+				<acronym>BID_TIME</acronym>
+				<ddeAcronym>BID TIME</ddeAcronym>
+				<id>266</id>
+				<rwfType>TIME</rwfType>
+				<mfType>TIME</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>ASK TIME</name>
+				<datatype>TimeOnly</datatype>
+				<description><![CDATA[Time of the latest update to the ASK field FID 25.]]></description>
+				<required>true</required>
+				<dateformat>HH:mm:ss</dateformat>
+				<acronym>ASK_TIME</acronym>
+				<ddeAcronym>ASK TIME</ddeAcronym>
+				<id>267</id>
+				<rwfType>TIME</rwfType>
+				<mfType>TIME</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>IRG PRICE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[A cancelled inserted retransmitted or irregular price.]]></description>
+				<required>true</required>
+				<acronym>IRGPRC</acronym>
+				<ddeAcronym>IRG PRICE</ddeAcronym>
+				<id>372</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>IRG VOLUME</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[The volume associated with the price held in the field IRGPRC (FID 372).]]></description>
+				<required>true</required>
+				<acronym>IRGVOL</acronym>
+				<ddeAcronym>IRG VOLUME</ddeAcronym>
+				<id>373</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>IRG PRICE TYPE</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[An indicator of the type of price held in the field IRGPRC (FID 372).]]></description>
+				<required>true</required>
+				<acronym>IRGCOND</acronym>
+				<ddeAcronym>IRG PRICE TYPE</ddeAcronym>
+				<id>374</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="  1"/>
+					<enum value="2" display="  2"/>
+					<enum value="3" display="  3"/>
+					<enum value="4" display="  4"/>
+					<enum value="5" display="  5"/>
+					<enum value="6" display="  6"/>
+					<enum value="7" display="  7"/>
+					<enum value="8" display="  8"/>
+					<enum value="9" display="  9"/>
+					<enum value="10" display=" 10"/>
+					<enum value="11" display=" 11"/>
+					<enum value="12" display=" 12"/>
+					<enum value="13" display=" 13"/>
+					<enum value="14" display=" 14"/>
+					<enum value="15" display=" 15"/>
+					<enum value="16" display=" 16"/>
+					<enum value="17" display=" 17"/>
+					<enum value="18" display=" 18"/>
+					<enum value="19" display=" 19"/>
+					<enum value="20" display=" 20"/>
+					<enum value="21" display=" 21"/>
+					<enum value="22" display=" 22"/>
+					<enum value="23" display=" 23"/>
+					<enum value="24" display=" 24"/>
+					<enum value="25" display=" 25"/>
+					<enum value="26" display=" 26"/>
+					<enum value="27" display=" 27"/>
+					<enum value="28" display=" 28"/>
+					<enum value="29" display=" 29"/>
+					<enum value="30" display=" 30"/>
+					<enum value="31" display=" 31"/>
+					<enum value="32" display=" 32"/>
+					<enum value="33" display=" 33"/>
+					<enum value="34" display=" 34"/>
+					<enum value="35" display=" 35"/>
+					<enum value="36" display=" 36"/>
+					<enum value="37" display=" 37"/>
+					<enum value="38" display=" 38"/>
+					<enum value="39" display=" 39"/>
+					<enum value="40" display=" 40"/>
+					<enum value="41" display=" 41"/>
+					<enum value="42" display=" 42"/>
+					<enum value="43" display=" 43"/>
+					<enum value="44" display=" 44"/>
+					<enum value="45" display=" 45"/>
+					<enum value="46" display=" 46"/>
+					<enum value="47" display=" 47"/>
+					<enum value="48" display=" 48"/>
+					<enum value="49" display=" 49"/>
+					<enum value="50" display=" 50"/>
+					<enum value="51" display=" 51"/>
+					<enum value="52" display=" 52"/>
+					<enum value="53" display=" 53"/>
+					<enum value="54" display=" 54"/>
+					<enum value="55" display=" 55"/>
+					<enum value="56" display=" 56"/>
+					<enum value="57" display=" 57"/>
+					<enum value="58" display=" 58"/>
+					<enum value="59" display=" 59"/>
+					<enum value="60" display=" 60"/>
+					<enum value="61" display=" 61"/>
+					<enum value="62" display=" 62"/>
+					<enum value="63" display=" 63"/>
+					<enum value="64" display=" 64"/>
+					<enum value="65" display=" 65"/>
+					<enum value="66" display=" 66"/>
+					<enum value="67" display=" 67"/>
+					<enum value="68" display=" 68"/>
+					<enum value="69" display=" 69"/>
+					<enum value="70" display=" 70"/>
+					<enum value="71" display=" 71"/>
+					<enum value="72" display=" 72"/>
+					<enum value="73" display=" 73"/>
+					<enum value="74" display=" 74"/>
+					<enum value="75" display=" 75"/>
+					<enum value="76" display=" 76"/>
+					<enum value="77" display=" 77"/>
+					<enum value="78" display=" 78"/>
+					<enum value="79" display=" 79"/>
+					<enum value="80" display=" 80"/>
+					<enum value="81" display=" 81"/>
+					<enum value="82" display=" 82"/>
+					<enum value="83" display=" 83"/>
+					<enum value="84" display=" 84"/>
+					<enum value="85" display=" 85"/>
+					<enum value="86" display=" 86"/>
+					<enum value="87" display=" 87"/>
+					<enum value="88" display=" 88"/>
+					<enum value="89" display=" 89"/>
+					<enum value="90" display=" 90"/>
+					<enum value="91" display=" 91"/>
+					<enum value="92" display=" 92"/>
+					<enum value="93" display=" 93"/>
+					<enum value="94" display=" 94"/>
+					<enum value="95" display=" 95"/>
+					<enum value="96" display=" 96"/>
+					<enum value="97" display=" 97"/>
+					<enum value="98" display=" 98"/>
+					<enum value="99" display=" 99"/>
+					<enum value="100" display="100"/>
+					<enum value="101" display="101"/>
+					<enum value="102" display="102"/>
+					<enum value="103" display="103"/>
+					<enum value="104" display="104"/>
+					<enum value="105" display="105"/>
+					<enum value="106" display="106"/>
+					<enum value="107" display="107"/>
+					<enum value="108" display="108"/>
+					<enum value="109" display="109"/>
+					<enum value="110" display="110"/>
+					<enum value="111" display="111"/>
+					<enum value="112" display="112"/>
+					<enum value="113" display="113"/>
+					<enum value="114" display="114"/>
+					<enum value="115" display="115"/>
+					<enum value="116" display="116"/>
+					<enum value="117" display="117"/>
+					<enum value="118" display="118"/>
+					<enum value="119" display="119"/>
+					<enum value="120" display="120"/>
+					<enum value="121" display="121"/>
+					<enum value="122" display="122"/>
+					<enum value="123" display="123"/>
+					<enum value="124" display="124"/>
+					<enum value="125" display="125"/>
+					<enum value="126" display="126"/>
+					<enum value="127" display="127"/>
+					<enum value="128" display="128"/>
+					<enum value="129" display="129"/>
+					<enum value="130" display="130"/>
+					<enum value="131" display="131"/>
+					<enum value="132" display="132"/>
+					<enum value="133" display="133"/>
+					<enum value="134" display="134"/>
+					<enum value="135" display="135"/>
+					<enum value="136" display="136"/>
+					<enum value="137" display="137"/>
+					<enum value="138" display="138"/>
+					<enum value="139" display="139"/>
+					<enum value="140" display="140"/>
+					<enum value="141" display="141"/>
+					<enum value="142" display="142"/>
+					<enum value="143" display="143"/>
+					<enum value="144" display="144"/>
+					<enum value="145" display="145"/>
+					<enum value="146" display="146"/>
+					<enum value="147" display="147"/>
+					<enum value="148" display="148"/>
+					<enum value="149" display="149"/>
+					<enum value="150" display="150"/>
+					<enum value="151" display="STP"/>
+					<enum value="152" display="STN"/>
+					<enum value="153" display="SPR"/>
+					<enum value="154" display="SNR"/>
+					<enum value="155" display="SPQ"/>
+					<enum value="156" display="SNQ"/>
+					<enum value="157" display="157"/>
+					<enum value="158" display="158"/>
+					<enum value="159" display="SNX"/>
+					<enum value="160" display="SPX"/>
+					<enum value="161" display="161"/>
+					<enum value="162" display="162"/>
+					<enum value="163" display="163"/>
+					<enum value="164" display="164"/>
+					<enum value="165" display="165"/>
+					<enum value="166" display="166"/>
+					<enum value="167" display="167"/>
+					<enum value="168" display="168"/>
+					<enum value="169" display="169"/>
+					<enum value="170" display="170"/>
+					<enum value="171" display="171"/>
+					<enum value="172" display="172"/>
+					<enum value="173" display="173"/>
+					<enum value="174" display="174"/>
+					<enum value="175" display="175"/>
+					<enum value="176" display="176"/>
+					<enum value="177" display="177"/>
+					<enum value="178" display="178"/>
+					<enum value="179" display="179"/>
+					<enum value="180" display="180"/>
+					<enum value="181" display="181"/>
+					<enum value="182" display="182"/>
+					<enum value="183" display="183"/>
+					<enum value="184" display="184"/>
+					<enum value="185" display="185"/>
+					<enum value="186" display="186"/>
+					<enum value="187" display="187"/>
+					<enum value="188" display="188"/>
+					<enum value="189" display="189"/>
+					<enum value="190" display="190"/>
+					<enum value="191" display="191"/>
+					<enum value="192" display="192"/>
+					<enum value="193" display="193"/>
+					<enum value="194" display="194"/>
+					<enum value="195" display="195"/>
+					<enum value="196" display="196"/>
+					<enum value="197" display="197"/>
+					<enum value="198" display="198"/>
+					<enum value="199" display="199"/>
+					<enum value="200" display="200"/>
+					<enum value="201" display="201"/>
+					<enum value="202" display="202"/>
+					<enum value="203" display="203"/>
+					<enum value="204" display="204"/>
+					<enum value="205" display="205"/>
+					<enum value="206" display="206"/>
+					<enum value="207" display="207"/>
+					<enum value="208" display="208"/>
+					<enum value="209" display="209"/>
+					<enum value="210" display="210"/>
+					<enum value="211" display="211"/>
+					<enum value="212" display="212"/>
+					<enum value="213" display="213"/>
+					<enum value="214" display="214"/>
+					<enum value="215" display="215"/>
+					<enum value="216" display="216"/>
+					<enum value="217" display="217"/>
+					<enum value="218" display="218"/>
+					<enum value="219" display="219"/>
+					<enum value="220" display="220"/>
+					<enum value="221" display="221"/>
+					<enum value="222" display="222"/>
+					<enum value="223" display="223"/>
+					<enum value="224" display="224"/>
+					<enum value="225" display="225"/>
+					<enum value="226" display="226"/>
+					<enum value="227" display="227"/>
+					<enum value="228" display="228"/>
+					<enum value="229" display="229"/>
+					<enum value="230" display="230"/>
+					<enum value="231" display="231"/>
+					<enum value="232" display="232"/>
+					<enum value="233" display="233"/>
+					<enum value="234" display="234"/>
+					<enum value="235" display="235"/>
+					<enum value="236" display="236"/>
+					<enum value="237" display="237"/>
+					<enum value="238" display="238"/>
+					<enum value="239" display="239"/>
+					<enum value="240" display="240"/>
+					<enum value="241" display="241"/>
+					<enum value="242" display="242"/>
+					<enum value="243" display="243"/>
+					<enum value="244" display="244"/>
+					<enum value="245" display="245"/>
+					<enum value="246" display="246"/>
+					<enum value="247" display="247"/>
+					<enum value="248" display="248"/>
+					<enum value="249" display="249"/>
+					<enum value="250" display="250"/>
+					<enum value="251" display="251"/>
+					<enum value="252" display="252"/>
+					<enum value="253" display="253"/>
+					<enum value="254" display="254"/>
+					<enum value="255" display="255"/>
+					<enum value="256" display="256"/>
+					<enum value="257" display="257"/>
+					<enum value="258" display="258"/>
+					<enum value="259" display="259"/>
+					<enum value="260" display="260"/>
+					<enum value="261" display="261"/>
+					<enum value="262" display="262"/>
+					<enum value="263" display="263"/>
+					<enum value="264" display="264"/>
+					<enum value="265" display="265"/>
+					<enum value="266" display="266"/>
+					<enum value="267" display="267"/>
+					<enum value="268" display="268"/>
+					<enum value="269" display="269"/>
+					<enum value="270" display="270"/>
+					<enum value="271" display="271"/>
+					<enum value="272" display="272"/>
+					<enum value="273" display="273"/>
+					<enum value="274" display="274"/>
+					<enum value="275" display="275"/>
+					<enum value="276" display="276"/>
+					<enum value="277" display="277"/>
+					<enum value="278" display="278"/>
+					<enum value="279" display="279"/>
+					<enum value="280" display="280"/>
+					<enum value="281" display="281"/>
+					<enum value="282" display="282"/>
+					<enum value="283" display="283"/>
+					<enum value="284" display="284"/>
+					<enum value="285" display="285"/>
+					<enum value="286" display="286"/>
+					<enum value="287" display="287"/>
+					<enum value="288" display="288"/>
+					<enum value="289" display="289"/>
+					<enum value="290" display="290"/>
+					<enum value="291" display="291"/>
+					<enum value="292" display="292"/>
+					<enum value="293" display="293"/>
+					<enum value="294" display="294"/>
+					<enum value="295" display="295"/>
+					<enum value="296" display="296"/>
+					<enum value="297" display="297"/>
+					<enum value="298" display="298"/>
+					<enum value="299" display="299"/>
+					<enum value="300" display="300"/>
+					<enum value="301" display="301"/>
+					<enum value="302" display="302"/>
+					<enum value="303" display="303"/>
+					<enum value="304" display="304"/>
+					<enum value="305" display="305"/>
+					<enum value="306" display="306"/>
+					<enum value="307" display="307"/>
+					<enum value="308" display="308"/>
+					<enum value="309" display="309"/>
+					<enum value="310" display="310"/>
+					<enum value="311" display="311"/>
+					<enum value="312" display="312"/>
+					<enum value="313" display="313"/>
+					<enum value="314" display="314"/>
+					<enum value="315" display="315"/>
+					<enum value="316" display="316"/>
+					<enum value="317" display="317"/>
+					<enum value="318" display="318"/>
+					<enum value="319" display="319"/>
+					<enum value="320" display="320"/>
+					<enum value="321" display="321"/>
+					<enum value="322" display="322"/>
+					<enum value="323" display="323"/>
+					<enum value="324" display="324"/>
+					<enum value="325" display="325"/>
+					<enum value="326" display="326"/>
+					<enum value="327" display="327"/>
+					<enum value="328" display="328"/>
+					<enum value="329" display="329"/>
+					<enum value="330" display="330"/>
+					<enum value="331" display="331"/>
+					<enum value="332" display="332"/>
+					<enum value="333" display="333"/>
+					<enum value="334" display="334"/>
+					<enum value="335" display="335"/>
+					<enum value="336" display="336"/>
+					<enum value="337" display="337"/>
+					<enum value="338" display="338"/>
+					<enum value="339" display="339"/>
+					<enum value="340" display="340"/>
+					<enum value="341" display="341"/>
+					<enum value="342" display="342"/>
+					<enum value="343" display="343"/>
+					<enum value="344" display="344"/>
+					<enum value="345" display="345"/>
+					<enum value="346" display="346"/>
+					<enum value="347" display="347"/>
+					<enum value="348" display="348"/>
+					<enum value="349" display="349"/>
+					<enum value="350" display="350"/>
+					<enum value="351" display="351"/>
+					<enum value="352" display="352"/>
+					<enum value="353" display="353"/>
+					<enum value="354" display="354"/>
+					<enum value="355" display="355"/>
+					<enum value="356" display="356"/>
+					<enum value="357" display="357"/>
+					<enum value="358" display="358"/>
+					<enum value="359" display="359"/>
+					<enum value="360" display="360"/>
+					<enum value="361" display="361"/>
+					<enum value="362" display="362"/>
+					<enum value="363" display="363"/>
+					<enum value="364" display="364"/>
+					<enum value="365" display="365"/>
+					<enum value="366" display="366"/>
+					<enum value="367" display="367"/>
+					<enum value="368" display="368"/>
+					<enum value="369" display="369"/>
+					<enum value="370" display="370"/>
+					<enum value="371" display="371"/>
+					<enum value="372" display="372"/>
+					<enum value="373" display="373"/>
+					<enum value="374" display="374"/>
+					<enum value="375" display="375"/>
+					<enum value="376" display="376"/>
+					<enum value="377" display="377"/>
+					<enum value="378" display="378"/>
+					<enum value="379" display="379"/>
+					<enum value="380" display="380"/>
+					<enum value="381" display="381"/>
+					<enum value="382" display="382"/>
+					<enum value="383" display="383"/>
+					<enum value="384" display="384"/>
+					<enum value="385" display="385"/>
+					<enum value="386" display="386"/>
+					<enum value="387" display="387"/>
+					<enum value="388" display="388"/>
+					<enum value="389" display="389"/>
+					<enum value="390" display="390"/>
+					<enum value="391" display="391"/>
+					<enum value="392" display="392"/>
+					<enum value="393" display="393"/>
+					<enum value="394" display="394"/>
+					<enum value="395" display="395"/>
+					<enum value="396" display="396"/>
+					<enum value="397" display="397"/>
+					<enum value="398" display="398"/>
+					<enum value="399" display="399"/>
+					<enum value="400" display="400"/>
+					<enum value="401" display="401"/>
+					<enum value="402" display="402"/>
+					<enum value="403" display="403"/>
+					<enum value="404" display="404"/>
+					<enum value="405" display="405"/>
+					<enum value="406" display="406"/>
+					<enum value="407" display="407"/>
+					<enum value="408" display="408"/>
+					<enum value="409" display="409"/>
+					<enum value="410" display="410"/>
+					<enum value="411" display="411"/>
+					<enum value="412" display="412"/>
+					<enum value="413" display="413"/>
+					<enum value="414" display="414"/>
+					<enum value="415" display="415"/>
+					<enum value="416" display="416"/>
+					<enum value="417" display="417"/>
+					<enum value="418" display="418"/>
+					<enum value="419" display="419"/>
+					<enum value="420" display="420"/>
+					<enum value="421" display="421"/>
+					<enum value="422" display="422"/>
+					<enum value="423" display="423"/>
+					<enum value="424" display="424"/>
+					<enum value="425" display="425"/>
+					<enum value="426" display="426"/>
+					<enum value="427" display="427"/>
+					<enum value="428" display="428"/>
+					<enum value="429" display="429"/>
+					<enum value="430" display="430"/>
+					<enum value="431" display="431"/>
+					<enum value="432" display="432"/>
+					<enum value="433" display="433"/>
+					<enum value="434" display="434"/>
+					<enum value="435" display="435"/>
+					<enum value="436" display="436"/>
+					<enum value="437" display="437"/>
+					<enum value="438" display="438"/>
+					<enum value="439" display="439"/>
+					<enum value="440" display="440"/>
+					<enum value="441" display="441"/>
+					<enum value="442" display="442"/>
+					<enum value="443" display="443"/>
+					<enum value="444" display="444"/>
+					<enum value="445" display="445"/>
+					<enum value="446" display="446"/>
+					<enum value="447" display="447"/>
+					<enum value="448" display="448"/>
+					<enum value="449" display="449"/>
+					<enum value="450" display="450"/>
+					<enum value="451" display="451"/>
+					<enum value="452" display="452"/>
+					<enum value="453" display="453"/>
+					<enum value="454" display="454"/>
+					<enum value="455" display="455"/>
+					<enum value="456" display="456"/>
+					<enum value="457" display="457"/>
+					<enum value="458" display="458"/>
+					<enum value="459" display="459"/>
+					<enum value="460" display="460"/>
+					<enum value="461" display="461"/>
+					<enum value="462" display="462"/>
+					<enum value="463" display="463"/>
+					<enum value="464" display="464"/>
+					<enum value="465" display="465"/>
+					<enum value="466" display="466"/>
+					<enum value="467" display="467"/>
+					<enum value="468" display="468"/>
+					<enum value="469" display="469"/>
+					<enum value="470" display="470"/>
+					<enum value="471" display="471"/>
+					<enum value="472" display="472"/>
+					<enum value="473" display="473"/>
+					<enum value="474" display="474"/>
+					<enum value="475" display="475"/>
+					<enum value="476" display="476"/>
+					<enum value="477" display="477"/>
+					<enum value="478" display="478"/>
+					<enum value="479" display="479"/>
+					<enum value="480" display="480"/>
+					<enum value="481" display="481"/>
+					<enum value="482" display="482"/>
+					<enum value="483" display="483"/>
+					<enum value="484" display="484"/>
+					<enum value="485" display="485"/>
+					<enum value="486" display="486"/>
+					<enum value="487" display="487"/>
+					<enum value="488" display="488"/>
+					<enum value="489" display="489"/>
+					<enum value="490" display="490"/>
+					<enum value="491" display="491"/>
+					<enum value="492" display="492"/>
+					<enum value="493" display="493"/>
+					<enum value="494" display="494"/>
+					<enum value="495" display="495"/>
+					<enum value="496" display="496"/>
+					<enum value="497" display="497"/>
+					<enum value="498" display="498"/>
+					<enum value="499" display="499"/>
+					<enum value="500" display="500"/>
+					<enum value="501" display="501"/>
+					<enum value="502" display="502"/>
+					<enum value="503" display="503"/>
+					<enum value="504" display="504"/>
+					<enum value="505" display="505"/>
+					<enum value="506" display="506"/>
+					<enum value="507" display="507"/>
+					<enum value="508" display="508"/>
+					<enum value="509" display="509"/>
+					<enum value="510" display="510"/>
+					<enum value="511" display="511"/>
+					<enum value="512" display="512"/>
+					<enum value="513" display="513"/>
+					<enum value="514" display="514"/>
+					<enum value="515" display="515"/>
+					<enum value="516" display="516"/>
+					<enum value="517" display="517"/>
+					<enum value="518" display="518"/>
+					<enum value="519" display="519"/>
+					<enum value="520" display="520"/>
+					<enum value="521" display="521"/>
+					<enum value="522" display="522"/>
+					<enum value="523" display="523"/>
+					<enum value="524" display="524"/>
+					<enum value="525" display="525"/>
+					<enum value="526" display="526"/>
+					<enum value="527" display="527"/>
+					<enum value="528" display="528"/>
+					<enum value="529" display="529"/>
+					<enum value="530" display="530"/>
+					<enum value="531" display="531"/>
+					<enum value="532" display="532"/>
+					<enum value="533" display="533"/>
+					<enum value="534" display="POS"/>
+					<enum value="535" display="BAS"/>
+					<enum value="536" display="VWP"/>
+					<enum value="537" display="CON"/>
+					<enum value="538" display="STS"/>
+					<enum value="539" display="STL"/>
+					<enum value="540" display="STO"/>
+					<enum value="541" display="STX"/>
+					<enum value="542" display="SLR"/>
+					<enum value="543" display="SOR"/>
+					<enum value="544" display="SXR"/>
+					<enum value="545" display="SLX"/>
+					<enum value="546" display="SOX"/>
+					<enum value="547" display="SXX"/>
+					<enum value="548" display="SLQ"/>
+					<enum value="549" display="SOQ"/>
+					<enum value="550" display="SXQ"/>
+					<enum value="551" display="AOR"/>
+					<enum value="552" display="AXR"/>
+					<enum value="553" display="MNR"/>
+					<enum value="554" display="MXR"/>
+					<enum value="555" display="MOR"/>
+					<enum value="556" display="RMN"/>
+					<enum value="557" display="RAO"/>
+					<enum value="558" display="RMX"/>
+					<enum value="559" display="RAX"/>
+					<enum value="560" display="RMO"/>
+					<enum value="561" display="RAN"/>
+					<enum value="562" display="ANC"/>
+					<enum value="563" display="XMO"/>
+					<enum value="564" display="AXC"/>
+					<enum value="565" display="XMX"/>
+					<enum value="566" display="AOC"/>
+					<enum value="567" display="XMN"/>
+					<enum value="568" display="MNC"/>
+					<enum value="569" display="XAO"/>
+					<enum value="570" display="MXC"/>
+					<enum value="571" display="XAX"/>
+					<enum value="572" display="ROC"/>
+					<enum value="573" display="RXC"/>
+					<enum value="574" display="RNC"/>
+					<enum value="575" display="COR"/>
+					<enum value="576" display="CXR"/>
+					<enum value="577" display="CNR"/>
+					<enum value="578" display="MOC"/>
+					<enum value="579" display="XAN"/>
+					<enum value="580" display="ANR"/>
+					<enum value="581" display="MOP"/>
+					<enum value="582" display="MXV"/>
+					<enum value="583" display="MNO"/>
+					<enum value="584" display="AOP"/>
+					<enum value="585" display="AXV"/>
+					<enum value="586" display="ANO"/>
+					<enum value="587" display="TNS"/>
+					<enum value="588" display="XTS"/>
+					<enum value="589" display="RSN"/>
+					<enum value="590" display="RNS"/>
+					<enum value="591" display="PON"/>
+					<enum value="592" display="POP"/>
+					<enum value="593" display="ABO"/>
+					<enum value="594" display="AAO"/>
+					<enum value="595" display="QOQ"/>
+					<enum value="596" display="PNR"/>
+					<enum value="597" display="POR"/>
+					<enum value="598" display="ABR"/>
+					<enum value="599" display="AAR"/>
+					<enum value="600" display="QOR"/>
+					<enum value="601" display="XPN"/>
+					<enum value="602" display="XPO"/>
+					<enum value="603" display="XAB"/>
+					<enum value="604" display="XAA"/>
+					<enum value="605" display="XQO"/>
+					<enum value="606" display="RPN"/>
+					<enum value="607" display="RPO"/>
+					<enum value="608" display="RAB"/>
+					<enum value="609" display="RAA"/>
+					<enum value="610" display="RQO"/>
+					<enum value="611" display="611"/>
+					<enum value="612" display="612"/>
+					<enum value="613" display="613"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>PRC CORRECT TIME</name>
+				<datatype>TimeOnly</datatype>
+				<description><![CDATA[The time of a price correction - the time of update to either the IRGPRC (FID 372)
+or INSPRC (FID 376) fields.]]></description>
+				<required>true</required>
+				<dateformat>HH:mm:ss</dateformat>
+				<acronym>TIMCOR</acronym>
+				<ddeAcronym>PRC CORRECT TIME</ddeAcronym>
+				<id>375</id>
+				<rwfType>TIME</rwfType>
+				<mfType>TIME</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>LAST TIME</name>
+				<datatype>TimeOnly</datatype>
+				<description><![CDATA[Time of the last trade with precision in seconds - the time of the last update to
+the field TRDPRC_1 (FID 6).]]></description>
+				<required>true</required>
+				<dateformat>HH:mm:ss</dateformat>
+				<acronym>SALTIM</acronym>
+				<ddeAcronym>LAST TIME</ddeAcronym>
+				<id>379</id>
+				<rwfType>TIME</rwfType>
+				<mfType>TIME</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>VOL ACC 2</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[The previous day's accumulated volume.]]></description>
+				<required>true</required>
+				<acronym>HST_VOL</acronym>
+				<ddeAcronym>VOL ACC 2</ddeAcronym>
+				<id>383</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>VOLUME DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[The date when a particular volume occurred  at present that held in HST_VOL.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>VOL_DATE</acronym>
+				<ddeAcronym>VOLUME DATE</ddeAcronym>
+				<id>392</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>IRGBUY</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Canadian Equity Exchanges 'New Buyer' field for 'not last' trades/cancellation
+messages.]]></description>
+				<required>true</required>
+				<acronym>IRGBUY</acronym>
+				<ddeAcronym>IRGBUY</ddeAcronym>
+				<id>1019</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>IRGSELL</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Canadian Equity Exchanges 'New Seller' field for 'not last' trades/cancellation
+messages.]]></description>
+				<required>true</required>
+				<acronym>IRGSELL</acronym>
+				<ddeAcronym>IRGSELL</ddeAcronym>
+				<id>1020</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>UPC-71 RSTRCTED</name>
+				<datatype>String</datatype>
+				<description><![CDATA[A flag which indicates whether or not a Nasdaq security is UPC-71 "RESTRICTED".]]></description>
+				<required>true</required>
+				<acronym>UPC71_REST</acronym>
+				<ddeAcronym>UPC-71 RSTRCTED</ddeAcronym>
+				<id>1425</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>COLID 7</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Sixth & seventh colour indicators. Similar to COLID_1.]]></description>
+				<required>true</required>
+				<acronym>COLID_7</acronym>
+				<ddeAcronym>COLID 7</ddeAcronym>
+				<id>1423</id>
+				<enumeration>
+					<enum value="0" display="  0"/>
+					<enum value="1" display="  1"/>
+					<enum value="2" display="  2"/>
+					<enum value="3" display="  3"/>
+					<enum value="4" display="  4"/>
+					<enum value="5" display="  5"/>
+					<enum value="6" display="  6"/>
+					<enum value="7" display="  7"/>
+					<enum value="8" display="  8"/>
+					<enum value="9" display="  9"/>
+					<enum value="10" display=" 10"/>
+					<enum value="11" display=" 11"/>
+					<enum value="12" display=" 12"/>
+					<enum value="13" display=" 13"/>
+					<enum value="14" display=" 14"/>
+					<enum value="15" display=" 15"/>
+					<enum value="16" display=" 16"/>
+					<enum value="17" display=" 17"/>
+					<enum value="18" display=" 18"/>
+					<enum value="19" display=" 19"/>
+					<enum value="20" display=" 20"/>
+					<enum value="21" display=" 21"/>
+					<enum value="22" display=" 22"/>
+					<enum value="23" display=" 23"/>
+					<enum value="24" display=" 24"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SOURCE FEED NME</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Source feed name.]]></description>
+				<required>true</required>
+				<acronym>SF_NAME</acronym>
+				<ddeAcronym>SOURCE FEED NME</ddeAcronym>
+				<id>1686</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SHRS OUTSDING</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Total value of outstanding shares.]]></description>
+				<required>true</required>
+				<acronym>SHROUTG</acronym>
+				<ddeAcronym>SHRS OUTSDING</ddeAcronym>
+				<id>1715</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SECURITY NAME</name>
+				<datatype>String</datatype>
+				<description><![CDATA[The complete name of the security.]]></description>
+				<required>true</required>
+				<acronym>SECUR_NAME</acronym>
+				<ddeAcronym>SECURITY NAME</ddeAcronym>
+				<id>2267</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SECURITY ISSUER</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Issuer of the security.]]></description>
+				<required>true</required>
+				<acronym>ISSR_NAME</acronym>
+				<ddeAcronym>SECURITY ISSUER</ddeAcronym>
+				<id>2268</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SHORT DESCRIPTN</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Short Description - short item description.]]></description>
+				<required>true</required>
+				<acronym>SHORT_DESC</acronym>
+				<ddeAcronym>SHORT DESCRIPTN</ddeAcronym>
+				<id>2947</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>INSTRUMENT CLASS</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Instrument classification]]></description>
+				<required>true</required>
+				<acronym>CLASS_CODE</acronym>
+				<ddeAcronym>INSTRUMENT CLASS</ddeAcronym>
+				<id>3308</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>DISPLAY NAME 2</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Display Name 2]]></description>
+				<required>true</required>
+				<acronym>DSPLY_NME2</acronym>
+				<ddeAcronym>DISPLAY NAME 2</ddeAcronym>
+				<id>3320</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>ISSUER DOMOCILE</name>
+				<datatype>String</datatype>
+				<description><![CDATA[The country a company/entity originates from.]]></description>
+				<required>true</required>
+				<acronym>ISSUER_DOM</acronym>
+				<ddeAcronym>ISSUER DOMOCILE</ddeAcronym>
+				<id>3344</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>OFFICIAL CLOSE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[The official closing price from Exchange]]></description>
+				<required>true</required>
+				<acronym>OFF_CLOSE</acronym>
+				<ddeAcronym>OFFICIAL CLOSE</ddeAcronym>
+				<id>3372</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>RECORD DATE</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[Record date.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>REC_DATE</acronym>
+				<ddeAcronym>RECORD DATE</ddeAcronym>
+				<id>3388</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BOND TICKER</name>
+				<datatype>String</datatype>
+				<description><![CDATA[The ticker associated with a bond issue]]></description>
+				<required>true</required>
+				<acronym>TICKER</acronym>
+				<ddeAcronym>BOND TICKER</ddeAcronym>
+				<id>3398</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TRDTIM MS</name>
+				<datatype>Integer</datatype>
+				<required>true</required>
+				<acronym>TRDTIM_MS</acronym>
+				<ddeAcronym>TRDTIM MS</ddeAcronym>
+				<id>3853</id>
+				<rwfType>UINT32</rwfType>
+				<mfType>INTEGER</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SALTIM MS</name>
+				<datatype>Integer</datatype>
+				<required>true</required>
+				<acronym>SALTIM_MS</acronym>
+				<ddeAcronym>SALTIM MS</ddeAcronym>
+				<id>3854</id>
+				<rwfType>UINT32</rwfType>
+				<mfType>INTEGER</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>QUOTIM MS</name>
+				<datatype>Integer</datatype>
+				<required>true</required>
+				<acronym>QUOTIM_MS</acronym>
+				<ddeAcronym>QUOTIM MS</ddeAcronym>
+				<id>3855</id>
+				<rwfType>UINT32</rwfType>
+				<mfType>INTEGER</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TIMCOR MS</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Millisecond time FIDs.]]></description>
+				<required>true</required>
+				<acronym>TIMCOR_MS</acronym>
+				<ddeAcronym>TIMCOR MS</ddeAcronym>
+				<id>3856</id>
+				<rwfType>UINT32</rwfType>
+				<mfType>INTEGER</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SOURCE ASK PRICE</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Source IDs for Ask Prices. Use same Enum table as TRDXID_1 (FID 44)]]></description>
+				<required>true</required>
+				<acronym>ASKXID</acronym>
+				<ddeAcronym>SOURCE ASK PRICE</ddeAcronym>
+				<id>3297</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASE"/>
+					<enum value="2" display="NYS"/>
+					<enum value="3" display="BOS"/>
+					<enum value="4" display="CIN"/>
+					<enum value="5" display="PSE"/>
+					<enum value="6" display="XPH"/>
+					<enum value="7" display="THM"/>
+					<enum value="8" display="MID"/>
+					<enum value="18" display="WCB"/>
+					<enum value="37" display="ISS"/>
+					<enum value="43" display="NAS"/>
+					<enum value="47" display="u  "/>
+					<enum value="53" display="ADF"/>
+					<enum value="132" display="AQC"/>
+					<enum value="220" display="TRF"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SOURCE BID PRICE</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Source IDs for Bid Prices. Use same Enum table as TRDXID_1 (FID 44)]]></description>
+				<required>true</required>
+				<acronym>BIDXID</acronym>
+				<ddeAcronym>SOURCE BID PRICE</ddeAcronym>
+				<id>3298</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASE"/>
+					<enum value="2" display="NYS"/>
+					<enum value="3" display="BOS"/>
+					<enum value="4" display="CIN"/>
+					<enum value="5" display="PSE"/>
+					<enum value="6" display="XPH"/>
+					<enum value="7" display="THM"/>
+					<enum value="8" display="MID"/>
+					<enum value="18" display="WCB"/>
+					<enum value="37" display="ISS"/>
+					<enum value="43" display="NAS"/>
+					<enum value="47" display="u  "/>
+					<enum value="53" display="ADF"/>
+					<enum value="132" display="AQC"/>
+					<enum value="220" display="TRF"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BID MMID 1</name>
+				<datatype>String</datatype>
+				<required>true</required>
+				<acronym>BID_MMID1</acronym>
+				<ddeAcronym>BID MMID 1</ddeAcronym>
+				<id>293</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TICK:UP/DOWN</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[The direction of trading from the previous trade.]]></description>
+				<required>true</required>
+				<acronym>PRCTCK_1</acronym>
+				<ddeAcronym>TICK:UP/DOWN</ddeAcronym>
+				<id>14</id>
+				<enumeration>
+					<enum value="0" display=" "/>
+					<enum value="1" display="222"/>
+					<enum value="2" display="254"/>
+					<enum value="3" display=" "/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>ASK MMID 1</name>
+				<datatype>String</datatype>
+				<required>true</required>
+				<acronym>ASK_MMID1</acronym>
+				<ddeAcronym>ASK MMID 1</ddeAcronym>
+				<id>296</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>EXCHANGE TIME</name>
+				<datatype>TimeOnly</datatype>
+				<description><![CDATA[The exchange time with precision in seconds]]></description>
+				<required>true</required>
+				<dateformat>HH:mm:ss</dateformat>
+				<acronym>EXCHTIM</acronym>
+				<ddeAcronym>EXCHANGE TIME</ddeAcronym>
+				<id>1067</id>
+				<rwfType>TIME</rwfType>
+				<mfType>TIME</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>GV1 TEXT</name>
+				<datatype>String</datatype>
+				<required>true</required>
+				<acronym>GV1_TEXT</acronym>
+				<ddeAcronym>GV1 TEXT</ddeAcronym>
+				<id>1000</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>INSERT PRICE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[When an exchange sends a correction report with details of both the cancelled and
+inserted price this field holds the inserted price.]]></description>
+				<required>true</required>
+				<acronym>INSPRC</acronym>
+				<ddeAcronym>INSERT PRICE</ddeAcronym>
+				<id>376</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>INSERT VOLUME</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[The volume associated with the price held in the field INSPRC (FID 376).]]></description>
+				<required>true</required>
+				<acronym>INSVOL</acronym>
+				<ddeAcronym>INSERT VOLUME</ddeAcronym>
+				<id>377</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>INSERT PRC TYPE</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[An indication of the type of price held in the field INSPRC (FID 376).]]></description>
+				<required>true</required>
+				<acronym>INSCOND</acronym>
+				<ddeAcronym>INSERT PRC TYPE</ddeAcronym>
+				<id>378</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="  1"/>
+					<enum value="2" display="  2"/>
+					<enum value="3" display="  3"/>
+					<enum value="4" display="  4"/>
+					<enum value="5" display="  5"/>
+					<enum value="6" display="  6"/>
+					<enum value="7" display="  7"/>
+					<enum value="8" display="  8"/>
+					<enum value="9" display="  9"/>
+					<enum value="10" display=" 10"/>
+					<enum value="11" display=" 11"/>
+					<enum value="12" display=" 12"/>
+					<enum value="13" display=" 13"/>
+					<enum value="14" display=" 14"/>
+					<enum value="15" display=" 15"/>
+					<enum value="16" display=" 16"/>
+					<enum value="17" display=" 17"/>
+					<enum value="18" display=" 18"/>
+					<enum value="19" display=" 19"/>
+					<enum value="20" display=" 20"/>
+					<enum value="21" display=" 21"/>
+					<enum value="22" display=" 22"/>
+					<enum value="23" display=" 23"/>
+					<enum value="24" display=" 24"/>
+					<enum value="25" display=" 25"/>
+					<enum value="26" display=" 26"/>
+					<enum value="27" display=" 27"/>
+					<enum value="28" display=" 28"/>
+					<enum value="29" display=" 29"/>
+					<enum value="30" display=" 30"/>
+					<enum value="31" display=" 31"/>
+					<enum value="32" display=" 32"/>
+					<enum value="33" display=" 33"/>
+					<enum value="34" display=" 34"/>
+					<enum value="35" display=" 35"/>
+					<enum value="36" display=" 36"/>
+					<enum value="37" display=" 37"/>
+					<enum value="38" display=" 38"/>
+					<enum value="39" display=" 39"/>
+					<enum value="40" display=" 40"/>
+					<enum value="41" display=" 41"/>
+					<enum value="42" display=" 42"/>
+					<enum value="43" display=" 43"/>
+					<enum value="44" display=" 44"/>
+					<enum value="45" display=" 45"/>
+					<enum value="46" display=" 46"/>
+					<enum value="47" display=" 47"/>
+					<enum value="48" display=" 48"/>
+					<enum value="49" display=" 49"/>
+					<enum value="50" display=" 50"/>
+					<enum value="51" display=" 51"/>
+					<enum value="52" display=" 52"/>
+					<enum value="53" display=" 53"/>
+					<enum value="54" display=" 54"/>
+					<enum value="55" display=" 55"/>
+					<enum value="56" display=" 56"/>
+					<enum value="57" display=" 57"/>
+					<enum value="58" display=" 58"/>
+					<enum value="59" display=" 59"/>
+					<enum value="60" display=" 60"/>
+					<enum value="61" display=" 61"/>
+					<enum value="62" display=" 62"/>
+					<enum value="63" display=" 63"/>
+					<enum value="64" display=" 64"/>
+					<enum value="65" display=" 65"/>
+					<enum value="66" display=" 66"/>
+					<enum value="67" display=" 67"/>
+					<enum value="68" display=" 68"/>
+					<enum value="69" display=" 69"/>
+					<enum value="70" display=" 70"/>
+					<enum value="71" display=" 71"/>
+					<enum value="72" display=" 72"/>
+					<enum value="73" display=" 73"/>
+					<enum value="74" display=" 74"/>
+					<enum value="75" display=" 75"/>
+					<enum value="76" display=" 76"/>
+					<enum value="77" display=" 77"/>
+					<enum value="78" display=" 78"/>
+					<enum value="79" display=" 79"/>
+					<enum value="80" display=" 80"/>
+					<enum value="81" display=" 81"/>
+					<enum value="82" display=" 82"/>
+					<enum value="83" display=" 83"/>
+					<enum value="84" display=" 84"/>
+					<enum value="85" display=" 85"/>
+					<enum value="86" display=" 86"/>
+					<enum value="87" display=" 87"/>
+					<enum value="88" display=" 88"/>
+					<enum value="89" display=" 89"/>
+					<enum value="90" display=" 90"/>
+					<enum value="91" display=" 91"/>
+					<enum value="92" display=" 92"/>
+					<enum value="93" display=" 93"/>
+					<enum value="94" display=" 94"/>
+					<enum value="95" display=" 95"/>
+					<enum value="96" display=" 96"/>
+					<enum value="97" display=" 97"/>
+					<enum value="98" display=" 98"/>
+					<enum value="99" display=" 99"/>
+					<enum value="100" display="100"/>
+					<enum value="101" display="101"/>
+					<enum value="102" display="102"/>
+					<enum value="103" display="103"/>
+					<enum value="104" display="104"/>
+					<enum value="105" display="105"/>
+					<enum value="106" display="106"/>
+					<enum value="107" display="107"/>
+					<enum value="108" display="108"/>
+					<enum value="109" display="109"/>
+					<enum value="110" display="110"/>
+					<enum value="111" display="111"/>
+					<enum value="112" display="112"/>
+					<enum value="113" display="113"/>
+					<enum value="114" display="114"/>
+					<enum value="115" display="115"/>
+					<enum value="116" display="116"/>
+					<enum value="117" display="117"/>
+					<enum value="118" display="118"/>
+					<enum value="119" display="119"/>
+					<enum value="120" display="120"/>
+					<enum value="121" display="121"/>
+					<enum value="122" display="122"/>
+					<enum value="123" display="123"/>
+					<enum value="124" display="124"/>
+					<enum value="125" display="125"/>
+					<enum value="126" display="126"/>
+					<enum value="127" display="127"/>
+					<enum value="128" display="128"/>
+					<enum value="129" display="129"/>
+					<enum value="130" display="130"/>
+					<enum value="131" display="131"/>
+					<enum value="132" display="132"/>
+					<enum value="133" display="133"/>
+					<enum value="134" display="134"/>
+					<enum value="135" display="135"/>
+					<enum value="136" display="136"/>
+					<enum value="137" display="137"/>
+					<enum value="138" display="138"/>
+					<enum value="139" display="139"/>
+					<enum value="140" display="140"/>
+					<enum value="141" display="141"/>
+					<enum value="142" display="142"/>
+					<enum value="143" display="143"/>
+					<enum value="144" display="144"/>
+					<enum value="145" display="145"/>
+					<enum value="146" display="146"/>
+					<enum value="147" display="147"/>
+					<enum value="148" display="148"/>
+					<enum value="149" display="149"/>
+					<enum value="150" display="150"/>
+					<enum value="151" display="STP"/>
+					<enum value="152" display="STN"/>
+					<enum value="153" display="SPR"/>
+					<enum value="154" display="SNR"/>
+					<enum value="155" display="SPQ"/>
+					<enum value="156" display="SNQ"/>
+					<enum value="157" display="157"/>
+					<enum value="158" display="158"/>
+					<enum value="159" display="SNX"/>
+					<enum value="160" display="SPX"/>
+					<enum value="161" display="161"/>
+					<enum value="162" display="162"/>
+					<enum value="163" display="163"/>
+					<enum value="164" display="164"/>
+					<enum value="165" display="165"/>
+					<enum value="166" display="166"/>
+					<enum value="167" display="167"/>
+					<enum value="168" display="168"/>
+					<enum value="169" display="169"/>
+					<enum value="170" display="170"/>
+					<enum value="171" display="171"/>
+					<enum value="172" display="172"/>
+					<enum value="173" display="173"/>
+					<enum value="174" display="174"/>
+					<enum value="175" display="175"/>
+					<enum value="176" display="176"/>
+					<enum value="177" display="177"/>
+					<enum value="178" display="178"/>
+					<enum value="179" display="179"/>
+					<enum value="180" display="180"/>
+					<enum value="181" display="181"/>
+					<enum value="182" display="182"/>
+					<enum value="183" display="183"/>
+					<enum value="184" display="184"/>
+					<enum value="185" display="185"/>
+					<enum value="186" display="186"/>
+					<enum value="187" display="187"/>
+					<enum value="188" display="188"/>
+					<enum value="189" display="189"/>
+					<enum value="190" display="190"/>
+					<enum value="191" display="191"/>
+					<enum value="192" display="192"/>
+					<enum value="193" display="193"/>
+					<enum value="194" display="194"/>
+					<enum value="195" display="195"/>
+					<enum value="196" display="196"/>
+					<enum value="197" display="197"/>
+					<enum value="198" display="198"/>
+					<enum value="199" display="199"/>
+					<enum value="200" display="200"/>
+					<enum value="201" display="201"/>
+					<enum value="202" display="202"/>
+					<enum value="203" display="203"/>
+					<enum value="204" display="204"/>
+					<enum value="205" display="205"/>
+					<enum value="206" display="206"/>
+					<enum value="207" display="207"/>
+					<enum value="208" display="208"/>
+					<enum value="209" display="209"/>
+					<enum value="210" display="210"/>
+					<enum value="211" display="211"/>
+					<enum value="212" display="212"/>
+					<enum value="213" display="213"/>
+					<enum value="214" display="214"/>
+					<enum value="215" display="215"/>
+					<enum value="216" display="216"/>
+					<enum value="217" display="217"/>
+					<enum value="218" display="218"/>
+					<enum value="219" display="219"/>
+					<enum value="220" display="220"/>
+					<enum value="221" display="221"/>
+					<enum value="222" display="222"/>
+					<enum value="223" display="223"/>
+					<enum value="224" display="224"/>
+					<enum value="225" display="225"/>
+					<enum value="226" display="226"/>
+					<enum value="227" display="227"/>
+					<enum value="228" display="228"/>
+					<enum value="229" display="229"/>
+					<enum value="230" display="230"/>
+					<enum value="231" display="231"/>
+					<enum value="232" display="232"/>
+					<enum value="233" display="233"/>
+					<enum value="234" display="234"/>
+					<enum value="235" display="235"/>
+					<enum value="236" display="236"/>
+					<enum value="237" display="237"/>
+					<enum value="238" display="238"/>
+					<enum value="239" display="239"/>
+					<enum value="240" display="240"/>
+					<enum value="241" display="241"/>
+					<enum value="242" display="242"/>
+					<enum value="243" display="243"/>
+					<enum value="244" display="244"/>
+					<enum value="245" display="245"/>
+					<enum value="246" display="246"/>
+					<enum value="247" display="247"/>
+					<enum value="248" display="248"/>
+					<enum value="249" display="249"/>
+					<enum value="250" display="250"/>
+					<enum value="251" display="251"/>
+					<enum value="252" display="252"/>
+					<enum value="253" display="253"/>
+					<enum value="254" display="254"/>
+					<enum value="255" display="255"/>
+					<enum value="256" display="256"/>
+					<enum value="257" display="257"/>
+					<enum value="258" display="258"/>
+					<enum value="259" display="259"/>
+					<enum value="260" display="260"/>
+					<enum value="261" display="261"/>
+					<enum value="262" display="262"/>
+					<enum value="263" display="263"/>
+					<enum value="264" display="264"/>
+					<enum value="265" display="265"/>
+					<enum value="266" display="266"/>
+					<enum value="267" display="267"/>
+					<enum value="268" display="268"/>
+					<enum value="269" display="269"/>
+					<enum value="270" display="270"/>
+					<enum value="271" display="271"/>
+					<enum value="272" display="272"/>
+					<enum value="273" display="273"/>
+					<enum value="274" display="274"/>
+					<enum value="275" display="275"/>
+					<enum value="276" display="276"/>
+					<enum value="277" display="277"/>
+					<enum value="278" display="278"/>
+					<enum value="279" display="279"/>
+					<enum value="280" display="280"/>
+					<enum value="281" display="281"/>
+					<enum value="282" display="282"/>
+					<enum value="283" display="283"/>
+					<enum value="284" display="284"/>
+					<enum value="285" display="285"/>
+					<enum value="286" display="286"/>
+					<enum value="287" display="287"/>
+					<enum value="288" display="288"/>
+					<enum value="289" display="289"/>
+					<enum value="290" display="290"/>
+					<enum value="291" display="291"/>
+					<enum value="292" display="292"/>
+					<enum value="293" display="293"/>
+					<enum value="294" display="294"/>
+					<enum value="295" display="295"/>
+					<enum value="296" display="296"/>
+					<enum value="297" display="297"/>
+					<enum value="298" display="298"/>
+					<enum value="299" display="299"/>
+					<enum value="300" display="300"/>
+					<enum value="301" display="301"/>
+					<enum value="302" display="302"/>
+					<enum value="303" display="303"/>
+					<enum value="304" display="304"/>
+					<enum value="305" display="305"/>
+					<enum value="306" display="306"/>
+					<enum value="307" display="307"/>
+					<enum value="308" display="308"/>
+					<enum value="309" display="309"/>
+					<enum value="310" display="310"/>
+					<enum value="311" display="311"/>
+					<enum value="312" display="312"/>
+					<enum value="313" display="313"/>
+					<enum value="314" display="314"/>
+					<enum value="315" display="315"/>
+					<enum value="316" display="316"/>
+					<enum value="317" display="317"/>
+					<enum value="318" display="318"/>
+					<enum value="319" display="319"/>
+					<enum value="320" display="320"/>
+					<enum value="321" display="321"/>
+					<enum value="322" display="322"/>
+					<enum value="323" display="323"/>
+					<enum value="324" display="324"/>
+					<enum value="325" display="325"/>
+					<enum value="326" display="326"/>
+					<enum value="327" display="327"/>
+					<enum value="328" display="328"/>
+					<enum value="329" display="329"/>
+					<enum value="330" display="330"/>
+					<enum value="331" display="331"/>
+					<enum value="332" display="332"/>
+					<enum value="333" display="333"/>
+					<enum value="334" display="334"/>
+					<enum value="335" display="335"/>
+					<enum value="336" display="336"/>
+					<enum value="337" display="337"/>
+					<enum value="338" display="338"/>
+					<enum value="339" display="339"/>
+					<enum value="340" display="340"/>
+					<enum value="341" display="341"/>
+					<enum value="342" display="342"/>
+					<enum value="343" display="343"/>
+					<enum value="344" display="344"/>
+					<enum value="345" display="345"/>
+					<enum value="346" display="346"/>
+					<enum value="347" display="347"/>
+					<enum value="348" display="348"/>
+					<enum value="349" display="349"/>
+					<enum value="350" display="350"/>
+					<enum value="351" display="351"/>
+					<enum value="352" display="352"/>
+					<enum value="353" display="353"/>
+					<enum value="354" display="354"/>
+					<enum value="355" display="355"/>
+					<enum value="356" display="356"/>
+					<enum value="357" display="357"/>
+					<enum value="358" display="358"/>
+					<enum value="359" display="359"/>
+					<enum value="360" display="360"/>
+					<enum value="361" display="361"/>
+					<enum value="362" display="362"/>
+					<enum value="363" display="363"/>
+					<enum value="364" display="364"/>
+					<enum value="365" display="365"/>
+					<enum value="366" display="366"/>
+					<enum value="367" display="367"/>
+					<enum value="368" display="368"/>
+					<enum value="369" display="369"/>
+					<enum value="370" display="370"/>
+					<enum value="371" display="371"/>
+					<enum value="372" display="372"/>
+					<enum value="373" display="373"/>
+					<enum value="374" display="374"/>
+					<enum value="375" display="375"/>
+					<enum value="376" display="376"/>
+					<enum value="377" display="377"/>
+					<enum value="378" display="378"/>
+					<enum value="379" display="379"/>
+					<enum value="380" display="380"/>
+					<enum value="381" display="381"/>
+					<enum value="382" display="382"/>
+					<enum value="383" display="383"/>
+					<enum value="384" display="384"/>
+					<enum value="385" display="385"/>
+					<enum value="386" display="386"/>
+					<enum value="387" display="387"/>
+					<enum value="388" display="388"/>
+					<enum value="389" display="389"/>
+					<enum value="390" display="390"/>
+					<enum value="391" display="391"/>
+					<enum value="392" display="392"/>
+					<enum value="393" display="393"/>
+					<enum value="394" display="394"/>
+					<enum value="395" display="395"/>
+					<enum value="396" display="396"/>
+					<enum value="397" display="397"/>
+					<enum value="398" display="398"/>
+					<enum value="399" display="399"/>
+					<enum value="400" display="400"/>
+					<enum value="401" display="401"/>
+					<enum value="402" display="402"/>
+					<enum value="403" display="403"/>
+					<enum value="404" display="404"/>
+					<enum value="405" display="405"/>
+					<enum value="406" display="406"/>
+					<enum value="407" display="407"/>
+					<enum value="408" display="408"/>
+					<enum value="409" display="409"/>
+					<enum value="410" display="410"/>
+					<enum value="411" display="411"/>
+					<enum value="412" display="412"/>
+					<enum value="413" display="413"/>
+					<enum value="414" display="414"/>
+					<enum value="415" display="415"/>
+					<enum value="416" display="416"/>
+					<enum value="417" display="417"/>
+					<enum value="418" display="418"/>
+					<enum value="419" display="419"/>
+					<enum value="420" display="420"/>
+					<enum value="421" display="421"/>
+					<enum value="422" display="422"/>
+					<enum value="423" display="423"/>
+					<enum value="424" display="424"/>
+					<enum value="425" display="425"/>
+					<enum value="426" display="426"/>
+					<enum value="427" display="427"/>
+					<enum value="428" display="428"/>
+					<enum value="429" display="429"/>
+					<enum value="430" display="430"/>
+					<enum value="431" display="431"/>
+					<enum value="432" display="432"/>
+					<enum value="433" display="433"/>
+					<enum value="434" display="434"/>
+					<enum value="435" display="435"/>
+					<enum value="436" display="436"/>
+					<enum value="437" display="437"/>
+					<enum value="438" display="438"/>
+					<enum value="439" display="439"/>
+					<enum value="440" display="440"/>
+					<enum value="441" display="441"/>
+					<enum value="442" display="442"/>
+					<enum value="443" display="443"/>
+					<enum value="444" display="444"/>
+					<enum value="445" display="445"/>
+					<enum value="446" display="446"/>
+					<enum value="447" display="447"/>
+					<enum value="448" display="448"/>
+					<enum value="449" display="449"/>
+					<enum value="450" display="450"/>
+					<enum value="451" display="451"/>
+					<enum value="452" display="452"/>
+					<enum value="453" display="453"/>
+					<enum value="454" display="454"/>
+					<enum value="455" display="455"/>
+					<enum value="456" display="456"/>
+					<enum value="457" display="457"/>
+					<enum value="458" display="458"/>
+					<enum value="459" display="459"/>
+					<enum value="460" display="460"/>
+					<enum value="461" display="461"/>
+					<enum value="462" display="462"/>
+					<enum value="463" display="463"/>
+					<enum value="464" display="464"/>
+					<enum value="465" display="465"/>
+					<enum value="466" display="466"/>
+					<enum value="467" display="467"/>
+					<enum value="468" display="468"/>
+					<enum value="469" display="469"/>
+					<enum value="470" display="470"/>
+					<enum value="471" display="471"/>
+					<enum value="472" display="472"/>
+					<enum value="473" display="473"/>
+					<enum value="474" display="474"/>
+					<enum value="475" display="475"/>
+					<enum value="476" display="476"/>
+					<enum value="477" display="477"/>
+					<enum value="478" display="478"/>
+					<enum value="479" display="479"/>
+					<enum value="480" display="480"/>
+					<enum value="481" display="481"/>
+					<enum value="482" display="482"/>
+					<enum value="483" display="483"/>
+					<enum value="484" display="484"/>
+					<enum value="485" display="485"/>
+					<enum value="486" display="486"/>
+					<enum value="487" display="487"/>
+					<enum value="488" display="488"/>
+					<enum value="489" display="489"/>
+					<enum value="490" display="490"/>
+					<enum value="491" display="491"/>
+					<enum value="492" display="492"/>
+					<enum value="493" display="493"/>
+					<enum value="494" display="494"/>
+					<enum value="495" display="495"/>
+					<enum value="496" display="496"/>
+					<enum value="497" display="497"/>
+					<enum value="498" display="498"/>
+					<enum value="499" display="499"/>
+					<enum value="500" display="500"/>
+					<enum value="501" display="501"/>
+					<enum value="502" display="502"/>
+					<enum value="503" display="503"/>
+					<enum value="504" display="504"/>
+					<enum value="505" display="505"/>
+					<enum value="506" display="506"/>
+					<enum value="507" display="507"/>
+					<enum value="508" display="508"/>
+					<enum value="509" display="509"/>
+					<enum value="510" display="510"/>
+					<enum value="511" display="511"/>
+					<enum value="512" display="512"/>
+					<enum value="513" display="513"/>
+					<enum value="514" display="514"/>
+					<enum value="515" display="515"/>
+					<enum value="516" display="516"/>
+					<enum value="517" display="517"/>
+					<enum value="518" display="518"/>
+					<enum value="519" display="519"/>
+					<enum value="520" display="520"/>
+					<enum value="521" display="521"/>
+					<enum value="522" display="522"/>
+					<enum value="523" display="523"/>
+					<enum value="524" display="524"/>
+					<enum value="525" display="525"/>
+					<enum value="526" display="526"/>
+					<enum value="527" display="527"/>
+					<enum value="528" display="528"/>
+					<enum value="529" display="529"/>
+					<enum value="530" display="530"/>
+					<enum value="531" display="531"/>
+					<enum value="532" display="532"/>
+					<enum value="533" display="533"/>
+					<enum value="534" display="POS"/>
+					<enum value="535" display="BAS"/>
+					<enum value="536" display="VWP"/>
+					<enum value="537" display="CON"/>
+					<enum value="538" display="STS"/>
+					<enum value="539" display="STL"/>
+					<enum value="540" display="STO"/>
+					<enum value="541" display="STX"/>
+					<enum value="542" display="SLR"/>
+					<enum value="543" display="SOR"/>
+					<enum value="544" display="SXR"/>
+					<enum value="545" display="SLX"/>
+					<enum value="546" display="SOX"/>
+					<enum value="547" display="SXX"/>
+					<enum value="548" display="SLQ"/>
+					<enum value="549" display="SOQ"/>
+					<enum value="550" display="SXQ"/>
+					<enum value="551" display="AOR"/>
+					<enum value="552" display="AXR"/>
+					<enum value="553" display="MNR"/>
+					<enum value="554" display="MXR"/>
+					<enum value="555" display="MOR"/>
+					<enum value="556" display="RMN"/>
+					<enum value="557" display="RAO"/>
+					<enum value="558" display="RMX"/>
+					<enum value="559" display="RAX"/>
+					<enum value="560" display="RMO"/>
+					<enum value="561" display="RAN"/>
+					<enum value="562" display="ANC"/>
+					<enum value="563" display="XMO"/>
+					<enum value="564" display="AXC"/>
+					<enum value="565" display="XMX"/>
+					<enum value="566" display="AOC"/>
+					<enum value="567" display="XMN"/>
+					<enum value="568" display="MNC"/>
+					<enum value="569" display="XAO"/>
+					<enum value="570" display="MXC"/>
+					<enum value="571" display="XAX"/>
+					<enum value="572" display="ROC"/>
+					<enum value="573" display="RXC"/>
+					<enum value="574" display="RNC"/>
+					<enum value="575" display="COR"/>
+					<enum value="576" display="CXR"/>
+					<enum value="577" display="CNR"/>
+					<enum value="578" display="MOC"/>
+					<enum value="579" display="XAN"/>
+					<enum value="580" display="ANR"/>
+					<enum value="581" display="MOP"/>
+					<enum value="582" display="MXV"/>
+					<enum value="583" display="MNO"/>
+					<enum value="584" display="AOP"/>
+					<enum value="585" display="AXV"/>
+					<enum value="586" display="ANO"/>
+					<enum value="587" display="TNS"/>
+					<enum value="588" display="XTS"/>
+					<enum value="589" display="RSN"/>
+					<enum value="590" display="RNS"/>
+					<enum value="591" display="PON"/>
+					<enum value="592" display="POP"/>
+					<enum value="593" display="ABO"/>
+					<enum value="594" display="AAO"/>
+					<enum value="595" display="QOQ"/>
+					<enum value="596" display="PNR"/>
+					<enum value="597" display="POR"/>
+					<enum value="598" display="ABR"/>
+					<enum value="599" display="AAR"/>
+					<enum value="600" display="QOR"/>
+					<enum value="601" display="XPN"/>
+					<enum value="602" display="XPO"/>
+					<enum value="603" display="XAB"/>
+					<enum value="604" display="XAA"/>
+					<enum value="605" display="XQO"/>
+					<enum value="606" display="RPN"/>
+					<enum value="607" display="RPO"/>
+					<enum value="608" display="RAB"/>
+					<enum value="609" display="RAA"/>
+					<enum value="610" display="RQO"/>
+					<enum value="611" display="611"/>
+					<enum value="612" display="612"/>
+					<enum value="613" display="613"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>EXCHANGE ID 2</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Identifier for the exchange on which the instrument trades. This field is a two-byte
+replacement for FID4 RDN_EXCHID and contains a super-set of this field's range of
+values.]]></description>
+				<required>true</required>
+				<acronym>RDN_EXCHD2</acronym>
+				<ddeAcronym>EXCHANGE ID 2</ddeAcronym>
+				<id>1709</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASE"/>
+					<enum value="2" display="NYS"/>
+					<enum value="3" display="BOS"/>
+					<enum value="4" display="CIN"/>
+					<enum value="5" display="PSE"/>
+					<enum value="6" display="XPH"/>
+					<enum value="7" display="THM"/>
+					<enum value="8" display="MID"/>
+					<enum value="9" display="NYQ"/>
+					<enum value="10" display="TOR"/>
+					<enum value="11" display="MON"/>
+					<enum value="12" display="TSX"/>
+					<enum value="13" display="ALB"/>
+					<enum value="14" display="AOE"/>
+					<enum value="15" display="NYO"/>
+					<enum value="16" display="PHO"/>
+					<enum value="17" display="PAO"/>
+					<enum value="18" display="WCB"/>
+					<enum value="19" display="ASQ"/>
+					<enum value="20" display="CME"/>
+					<enum value="21" display="IMM"/>
+					<enum value="22" display="IOM"/>
+					<enum value="23" display="CBT"/>
+					<enum value="24" display="ITS"/>
+					<enum value="25" display="WPG"/>
+					<enum value="26" display="MGE"/>
+					<enum value="27" display="PBT"/>
+					<enum value="28" display="CMX"/>
+					<enum value="29" display="CSC"/>
+					<enum value="30" display="NYC"/>
+					<enum value="31" display="NYM"/>
+					<enum value="32" display="032"/>
+					<enum value="33" display="CSO"/>
+					<enum value="34" display="CEO"/>
+					<enum value="35" display="SHC"/>
+					<enum value="36" display="NYF"/>
+					<enum value="37" display="TFE"/>
+					<enum value="38" display="MIO"/>
+					<enum value="39" display="NMS"/>
+					<enum value="40" display="TOE"/>
+					<enum value="41" display="MOE"/>
+					<enum value="42" display="VAO"/>
+					<enum value="43" display="NAS"/>
+					<enum value="44" display="MDM"/>
+					<enum value="45" display="SCE"/>
+					<enum value="46" display="BSQ"/>
+					<enum value="47" display="INS"/>
+					<enum value="48" display="WCQ"/>
+					<enum value="49" display="CRC"/>
+					<enum value="50" display="KBT"/>
+					<enum value="51" display="SOM"/>
+					<enum value="52" display="ADS"/>
+					<enum value="53" display="ADF"/>
+					<enum value="54" display="MIF"/>
+					<enum value="55" display="JSF"/>
+					<enum value="56" display="TCE"/>
+					<enum value="57" display="TFF"/>
+					<enum value="58" display="EME"/>
+					<enum value="59" display="HOM"/>
+					<enum value="60" display="FOM"/>
+					<enum value="61" display="FIR"/>
+					<enum value="62" display="ATH"/>
+					<enum value="63" display="SFF"/>
+					<enum value="64" display="LSE"/>
+					<enum value="65" display="JNB"/>
+					<enum value="66" display="LIF"/>
+					<enum value="67" display="TLV"/>
+					<enum value="68" display="CPH"/>
+					<enum value="69" display="OSL"/>
+					<enum value="70" display="STO"/>
+					<enum value="71" display="071"/>
+					<enum value="72" display="LUX"/>
+					<enum value="73" display="BRU"/>
+					<enum value="74" display="PAR"/>
+					<enum value="75" display="MAD"/>
+					<enum value="76" display="BAR"/>
+					<enum value="77" display="AMS"/>
+					<enum value="78" display="EOE"/>
+					<enum value="79" display="ATA"/>
+					<enum value="80" display="VIE"/>
+					<enum value="81" display="DUS"/>
+					<enum value="82" display="FRA"/>
+					<enum value="83" display="HAM"/>
+					<enum value="84" display="MUN"/>
+					<enum value="85" display="ZRH"/>
+					<enum value="86" display="GVA"/>
+					<enum value="87" display="BSL"/>
+					<enum value="88" display="MIL"/>
+					<enum value="89" display="089"/>
+					<enum value="90" display="090"/>
+					<enum value="91" display="NZE"/>
+					<enum value="92" display="HKG"/>
+					<enum value="93" display="SIM"/>
+					<enum value="94" display="KLC"/>
+					<enum value="95" display="095"/>
+					<enum value="96" display="096"/>
+					<enum value="97" display="097"/>
+					<enum value="98" display="098"/>
+					<enum value="99" display="LME"/>
+					<enum value="100" display="100"/>
+					<enum value="101" display="LCE"/>
+					<enum value="102" display="102"/>
+					<enum value="103" display="103"/>
+					<enum value="104" display="104"/>
+					<enum value="105" display="SFE"/>
+					<enum value="106" display="TYO"/>
+					<enum value="107" display="NGO"/>
+					<enum value="108" display="SAP"/>
+					<enum value="109" display="NII"/>
+					<enum value="110" display="KYO"/>
+					<enum value="111" display="HIR"/>
+					<enum value="112" display="FKA"/>
+					<enum value="113" display="OSA"/>
+					<enum value="114" display="HFE"/>
+					<enum value="115" display="BER"/>
+					<enum value="116" display="HAN"/>
+					<enum value="117" display="STU"/>
+					<enum value="118" display="BRE"/>
+					<enum value="119" display="119"/>
+					<enum value="120" display="BRN"/>
+					<enum value="121" display="121"/>
+					<enum value="122" display="122"/>
+					<enum value="123" display="123"/>
+					<enum value="124" display="ROM"/>
+					<enum value="125" display="TRN"/>
+					<enum value="126" display="GOA"/>
+					<enum value="127" display="NAP"/>
+					<enum value="128" display="PAL"/>
+					<enum value="129" display="BLO"/>
+					<enum value="130" display="VCE"/>
+					<enum value="131" display="ISF"/>
+					<enum value="132" display="AQC"/>
+					<enum value="133" display="HEX"/>
+					<enum value="134" display="WSE"/>
+					<enum value="135" display="BOR"/>
+					<enum value="136" display="LIL"/>
+					<enum value="137" display="LYO"/>
+					<enum value="138" display="MRS"/>
+					<enum value="139" display="NAY"/>
+					<enum value="140" display="NAN"/>
+					<enum value="141" display="JDE"/>
+					<enum value="142" display="LAG"/>
+					<enum value="143" display="ZSE"/>
+					<enum value="144" display="SHH"/>
+					<enum value="145" display="BSE"/>
+					<enum value="146" display="CAL"/>
+					<enum value="147" display="DES"/>
+					<enum value="148" display="MDS"/>
+					<enum value="149" display="JKT"/>
+					<enum value="150" display="KLS"/>
+					<enum value="151" display="KAR"/>
+					<enum value="152" display="MAK"/>
+					<enum value="153" display="MNL"/>
+					<enum value="154" display="FTM"/>
+					<enum value="155" display="SES"/>
+					<enum value="156" display="KSC"/>
+					<enum value="157" display="MAU"/>
+					<enum value="158" display="SET"/>
+					<enum value="159" display="BAH"/>
+					<enum value="160" display="CAI"/>
+					<enum value="161" display="AMM"/>
+					<enum value="162" display="KUW"/>
+					<enum value="163" display="BUE"/>
+					<enum value="164" display="RIO"/>
+					<enum value="165" display="SAO"/>
+					<enum value="166" display="SGO"/>
+					<enum value="167" display="BOG"/>
+					<enum value="168" display="MEX"/>
+					<enum value="169" display="CCS"/>
+					<enum value="170" display="NFE"/>
+					<enum value="171" display="IND"/>
+					<enum value="172" display="FIX"/>
+					<enum value="173" display="LOT"/>
+					<enum value="174" display="MAT"/>
+					<enum value="175" display="TAI"/>
+					<enum value="176" display="IPE"/>
+					<enum value="177" display="177"/>
+					<enum value="178" display="178"/>
+					<enum value="179" display="179"/>
+					<enum value="180" display="SOP"/>
+					<enum value="181" display="REU"/>
+					<enum value="182" display="LIS"/>
+					<enum value="183" display="OPO"/>
+					<enum value="184" display="NOM"/>
+					<enum value="185" display="185"/>
+					<enum value="186" display="RTS"/>
+					<enum value="187" display="ASX"/>
+					<enum value="188" display="IFX"/>
+					<enum value="189" display="PmI"/>
+					<enum value="190" display="MCE"/>
+					<enum value="191" display="191"/>
+					<enum value="192" display="TGE"/>
+					<enum value="193" display="TSU"/>
+					<enum value="194" display="KRE"/>
+					<enum value="195" display="MRV"/>
+					<enum value="196" display="AOM"/>
+					<enum value="197" display="BFX"/>
+					<enum value="198" display="BRT"/>
+					<enum value="199" display="DTB"/>
+					<enum value="200" display="MRF"/>
+					<enum value="201" display="201"/>
+					<enum value="202" display="GER"/>
+					<enum value="203" display="MTS"/>
+					<enum value="204" display="IST"/>
+					<enum value="205" display="MUS"/>
+					<enum value="206" display="ABJ"/>
+					<enum value="207" display="NAI"/>
+					<enum value="208" display="TUN"/>
+					<enum value="209" display="FSI"/>
+					<enum value="210" display="NIN"/>
+					<enum value="211" display="MCP"/>
+					<enum value="212" display="OTB"/>
+					<enum value="213" display="SIC"/>
+					<enum value="214" display="RCT"/>
+					<enum value="215" display="IGF"/>
+					<enum value="216" display="MWQ"/>
+					<enum value="217" display="PSQ"/>
+					<enum value="218" display="PHQ"/>
+					<enum value="219" display="JSD"/>
+					<enum value="220" display="ECM"/>
+					<enum value="221" display="OBB"/>
+					<enum value="222" display="IFM"/>
+					<enum value="223" display="MFI"/>
+					<enum value="224" display="SME"/>
+					<enum value="225" display="SHZ"/>
+					<enum value="226" display="RSA"/>
+					<enum value="227" display="BUD"/>
+					<enum value="228" display="PHS"/>
+					<enum value="229" display="MLT"/>
+					<enum value="230" display="230"/>
+					<enum value="231" display="SZM"/>
+					<enum value="232" display="SZF"/>
+					<enum value="233" display="JBT"/>
+					<enum value="234" display="MDC"/>
+					<enum value="235" display="NTC"/>
+					<enum value="236" display="YSE"/>
+					<enum value="237" display="OTE"/>
+					<enum value="238" display="NAK"/>
+					<enum value="239" display="239"/>
+					<enum value="240" display="TOT"/>
+					<enum value="241" display="AHM"/>
+					<enum value="242" display="KLF"/>
+					<enum value="243" display="CSE"/>
+					<enum value="244" display="BEC"/>
+					<enum value="245" display="MXI"/>
+					<enum value="246" display="ZHC"/>
+					<enum value="247" display="BJC"/>
+					<enum value="248" display="248"/>
+					<enum value="249" display="GUF"/>
+					<enum value="250" display="BMF"/>
+					<enum value="251" display="VSE"/>
+					<enum value="252" display="SFX"/>
+					<enum value="253" display="253"/>
+					<enum value="254" display="DLC"/>
+					<enum value="255" display="CSW"/>
+					<enum value="256" display="256"/>
+					<enum value="257" display="NIK"/>
+					<enum value="258" display="OGE"/>
+					<enum value="259" display="OSU"/>
+					<enum value="260" display="DPG"/>
+					<enum value="261" display="ISE"/>
+					<enum value="262" display="CAS"/>
+					<enum value="263" display="BSM"/>
+					<enum value="264" display="NSE"/>
+					<enum value="265" display="265"/>
+					<enum value="266" display="266"/>
+					<enum value="267" display="267"/>
+					<enum value="268" display="268"/>
+					<enum value="269" display="269"/>
+					<enum value="270" display="BSW"/>
+					<enum value="271" display="271"/>
+					<enum value="272" display="OML"/>
+					<enum value="273" display="PRA"/>
+					<enum value="274" display="CDN"/>
+					<enum value="275" display="TMO"/>
+					<enum value="276" display="BSC"/>
+					<enum value="277" display="RCR"/>
+					<enum value="278" display="RUS"/>
+					<enum value="279" display="RIM"/>
+					<enum value="280" display="MCS"/>
+					<enum value="281" display="MOS"/>
+					<enum value="282" display="SPS"/>
+					<enum value="283" display="STP"/>
+					<enum value="284" display="SAR"/>
+					<enum value="285" display="NIZ"/>
+					<enum value="286" display="NCS"/>
+					<enum value="287" display="SUE"/>
+					<enum value="288" display="UKR"/>
+					<enum value="289" display="EKA"/>
+					<enum value="290" display="SIB"/>
+					<enum value="291" display="WSS"/>
+					<enum value="292" display="VLA"/>
+					<enum value="293" display="ISI"/>
+					<enum value="294" display="BCE"/>
+					<enum value="295" display="CFE"/>
+					<enum value="296" display="SUC"/>
+					<enum value="297" display="CUC"/>
+					<enum value="298" display="298"/>
+					<enum value="299" display="SYC"/>
+					<enum value="300" display="CUF"/>
+					<enum value="301" display="NET"/>
+					<enum value="302" display="MAE"/>
+					<enum value="303" display="CYS"/>
+					<enum value="304" display="BES"/>
+					<enum value="305" display="BBF"/>
+					<enum value="306" display="LMA"/>
+					<enum value="307" display="PP "/>
+					<enum value="308" display="MED"/>
+					<enum value="309" display="QTO"/>
+					<enum value="310" display="GYQ"/>
+					<enum value="311" display="OSE"/>
+					<enum value="312" display="MRC"/>
+					<enum value="313" display="BEV"/>
+					<enum value="314" display="MTV"/>
+					<enum value="315" display="NFM"/>
+					<enum value="316" display="ANT"/>
+					<enum value="317" display="BAS"/>
+					<enum value="318" display="RCN"/>
+					<enum value="319" display="GTQ"/>
+					<enum value="320" display="OTC"/>
+					<enum value="321" display="TUF"/>
+					<enum value="322" display="NSI"/>
+					<enum value="323" display="OTI"/>
+					<enum value="324" display="VAL"/>
+					<enum value="325" display="tst"/>
+					<enum value="326" display="CQC"/>
+					<enum value="327" display="BOB"/>
+					<enum value="328" display="BRA"/>
+					<enum value="329" display="BLG"/>
+					<enum value="330" display="BUH"/>
+					<enum value="331" display="331"/>
+					<enum value="332" display="ZAG"/>
+					<enum value="333" display="MME"/>
+					<enum value="334" display="BIL"/>
+					<enum value="335" display="SWX"/>
+					<enum value="336" display="FCM"/>
+					<enum value="337" display="BDP"/>
+					<enum value="338" display="FDI"/>
+					<enum value="339" display="BDC"/>
+					<enum value="340" display="BDB"/>
+					<enum value="341" display="LJU"/>
+					<enum value="342" display="MCX"/>
+					<enum value="343" display="343"/>
+					<enum value="344" display="WCE"/>
+					<enum value="345" display="LJC"/>
+					<enum value="346" display="SUB"/>
+					<enum value="347" display="BCC"/>
+					<enum value="348" display="LAH"/>
+					<enum value="349" display="CHT"/>
+					<enum value="350" display="350"/>
+					<enum value="351" display="DSE"/>
+					<enum value="352" display="MNP"/>
+					<enum value="353" display="LNM"/>
+					<enum value="354" display="TPT"/>
+					<enum value="355" display="GEM"/>
+					<enum value="356" display="RUO"/>
+					<enum value="357" display="IGE"/>
+					<enum value="358" display="KEX"/>
+					<enum value="359" display="NGE"/>
+					<enum value="360" display="360"/>
+					<enum value="361" display="361"/>
+					<enum value="362" display="TDC"/>
+					<enum value="363" display="IZC"/>
+					<enum value="364" display="364"/>
+					<enum value="365" display="EAS"/>
+					<enum value="366" display="TIR"/>
+					<enum value="367" display="ELX"/>
+					<enum value="368" display="ICX"/>
+					<enum value="369" display="HKO"/>
+					<enum value="370" display="CCX"/>
+					<enum value="371" display="WPE"/>
+					<enum value="372" display="AIF"/>
+					<enum value="373" display="RIX"/>
+					<enum value="374" display="VLX"/>
+					<enum value="375" display="TLX"/>
+					<enum value="376" display="SNC"/>
+					<enum value="377" display="GSE"/>
+					<enum value="378" display="NCE"/>
+					<enum value="379" display="BZA"/>
+					<enum value="380" display="KOE"/>
+					<enum value="381" display="ASG"/>
+					<enum value="382" display="SMA"/>
+					<enum value="383" display="383"/>
+					<enum value="384" display="BFO"/>
+					<enum value="385" display="MFE"/>
+					<enum value="386" display="ROS"/>
+					<enum value="387" display="387"/>
+					<enum value="388" display="DPP"/>
+					<enum value="389" display="AEX"/>
+					<enum value="390" display="TWO"/>
+					<enum value="391" display="NPX"/>
+					<enum value="392" display="PUX"/>
+					<enum value="393" display="SPC"/>
+					<enum value="394" display="AVK"/>
+					<enum value="395" display="NEO"/>
+					<enum value="396" display="OME"/>
+					<enum value="397" display="TIM"/>
+					<enum value="398" display="IBS"/>
+					<enum value="399" display="DJI"/>
+					<enum value="400" display="NZI"/>
+					<enum value="401" display="FMF"/>
+					<enum value="402" display="LUS"/>
+					<enum value="403" display="RSQ"/>
+					<enum value="404" display="CT1"/>
+					<enum value="405" display="SSU"/>
+					<enum value="406" display="MSE"/>
+					<enum value="407" display="407"/>
+					<enum value="408" display="408"/>
+					<enum value="409" display="OTK"/>
+					<enum value="410" display="WTB"/>
+					<enum value="411" display="STX"/>
+					<enum value="412" display="ENM"/>
+					<enum value="413" display="ANM"/>
+					<enum value="414" display="BNM"/>
+					<enum value="415" display="FNM"/>
+					<enum value="416" display="RUX"/>
+					<enum value="417" display="FST"/>
+					<enum value="418" display="EUX"/>
+					<enum value="419" display="CFF"/>
+					<enum value="420" display="SAU"/>
+					<enum value="421" display="SPF"/>
+					<enum value="422" display="BFE"/>
+					<enum value="423" display="KAZ"/>
+					<enum value="424" display="CIE"/>
+					<enum value="425" display="YCE"/>
+					<enum value="426" display="CMM"/>
+					<enum value="427" display="APX"/>
+					<enum value="428" display="MDE"/>
+					<enum value="429" display="KFE"/>
+					<enum value="430" display="BEL"/>
+					<enum value="431" display="RMS"/>
+					<enum value="432" display="BXS"/>
+					<enum value="433" display="433"/>
+					<enum value="434" display="MDQ"/>
+					<enum value="435" display="EWX"/>
+					<enum value="436" display="DBX"/>
+					<enum value="437" display="TNL"/>
+					<enum value="438" display="ADE"/>
+					<enum value="439" display="FFE"/>
+					<enum value="440" display="PNK"/>
+					<enum value="441" display="MSI"/>
+					<enum value="442" display="LIF"/>
+					<enum value="443" display="IBK"/>
+					<enum value="444" display="DSM"/>
+					<enum value="445" display="TOS"/>
+					<enum value="446" display="WBT"/>
+					<enum value="447" display="ISO"/>
+					<enum value="448" display="UVR"/>
+					<enum value="449" display="BNC"/>
+					<enum value="450" display="MLS"/>
+					<enum value="451" display="NAJ"/>
+					<enum value="452" display="LAT"/>
+					<enum value="453" display="CVE"/>
+					<enum value="454" display="EMT"/>
+					<enum value="455" display="#KR"/>
+					<enum value="456" display="HSI"/>
+					<enum value="457" display="CAE"/>
+					<enum value="458" display="#PH"/>
+					<enum value="459" display="MPL"/>
+					<enum value="460" display="ABD"/>
+					<enum value="461" display="ARC"/>
+					<enum value="462" display="ISL"/>
+					<enum value="463" display="MNM"/>
+					<enum value="464" display="EEX"/>
+					<enum value="465" display="LPX"/>
+					<enum value="466" display="CMF"/>
+					<enum value="467" display="PFT"/>
+					<enum value="468" display="ALG"/>
+					<enum value="469" display="T0$"/>
+					<enum value="470" display="PWX"/>
+					<enum value="471" display="NQB"/>
+					<enum value="472" display="LIP"/>
+					<enum value="473" display="NGM"/>
+					<enum value="474" display="MTE"/>
+					<enum value="475" display="MTA"/>
+					<enum value="476" display="ADX"/>
+					<enum value="477" display="NFF"/>
+					<enum value="478" display="CUQ"/>
+					<enum value="479" display="CEQ"/>
+					<enum value="480" display="480"/>
+					<enum value="481" display="JK$"/>
+					<enum value="482" display="GBE"/>
+					<enum value="483" display="SPD"/>
+					<enum value="484" display="BIX"/>
+					<enum value="485" display="MT1"/>
+					<enum value="486" display="NXT"/>
+					<enum value="487" display="WMC"/>
+					<enum value="488" display="CHX"/>
+					<enum value="489" display="IMD"/>
+					<enum value="490" display="ITX"/>
+					<enum value="491" display="JIW"/>
+					<enum value="492" display="NWX"/>
+					<enum value="493" display="AU$"/>
+					<enum value="494" display="JFX"/>
+					<enum value="495" display="UIT"/>
+					<enum value="496" display="VTX"/>
+					<enum value="497" display="EAX"/>
+					<enum value="498" display="OFX"/>
+					<enum value="499" display="ENR"/>
+					<enum value="500" display="TH$"/>
+					<enum value="501" display="MY$"/>
+					<enum value="502" display="LK$"/>
+					<enum value="503" display="EBI"/>
+					<enum value="504" display="PH$"/>
+					<enum value="505" display="VN$"/>
+					<enum value="506" display="CN$"/>
+					<enum value="507" display="GPR"/>
+					<enum value="508" display="UEX"/>
+					<enum value="509" display="SFC"/>
+					<enum value="510" display="510"/>
+					<enum value="511" display="#KS"/>
+					<enum value="512" display="JAQ"/>
+					<enum value="513" display="COL"/>
+					<enum value="514" display="KSB"/>
+					<enum value="515" display="NLX"/>
+					<enum value="516" display="SHF"/>
+					<enum value="517" display="PLS"/>
+					<enum value="518" display="NY2"/>
+					<enum value="519" display="TW$"/>
+					<enum value="520" display="NBI"/>
+					<enum value="521" display="#SA"/>
+					<enum value="522" display="BSX"/>
+					<enum value="523" display="MDX"/>
+					<enum value="524" display="NQE"/>
+					<enum value="525" display="AIM"/>
+					<enum value="526" display="NBT"/>
+					<enum value="527" display="MTF"/>
+					<enum value="528" display="MTC"/>
+					<enum value="529" display="SPN"/>
+					<enum value="530" display="APE"/>
+					<enum value="531" display="POX"/>
+					<enum value="532" display="RED"/>
+					<enum value="533" display="IBX"/>
+					<enum value="534" display="PNX"/>
+					<enum value="535" display="BQT"/>
+					<enum value="536" display="#RO"/>
+					<enum value="537" display="ILT"/>
+					<enum value="538" display="TXX"/>
+					<enum value="539" display="EMO"/>
+					<enum value="540" display="ONE"/>
+					<enum value="541" display="GS1"/>
+					<enum value="542" display="GS2"/>
+					<enum value="543" display="RSM"/>
+					<enum value="544" display="IFE"/>
+					<enum value="545" display="EXA"/>
+					<enum value="546" display="AFE"/>
+					<enum value="547" display="DSS"/>
+					<enum value="548" display="NL2"/>
+					<enum value="549" display="ADC"/>
+					<enum value="550" display="IMQ"/>
+					<enum value="551" display="LCA"/>
+					<enum value="552" display="LCB"/>
+					<enum value="553" display="LCC"/>
+					<enum value="554" display="LCM"/>
+					<enum value="555" display="LCN"/>
+					<enum value="556" display="LCP"/>
+					<enum value="557" display="LCW"/>
+					<enum value="558" display="LCX"/>
+					<enum value="559" display="NAQ"/>
+					<enum value="560" display="NMQ"/>
+					<enum value="561" display="SCA"/>
+					<enum value="562" display="SCB"/>
+					<enum value="563" display="SCC"/>
+					<enum value="564" display="SCM"/>
+					<enum value="565" display="SCN"/>
+					<enum value="566" display="SCP"/>
+					<enum value="567" display="SCW"/>
+					<enum value="568" display="SCX"/>
+					<enum value="569" display="LPR"/>
+					<enum value="570" display="NSD"/>
+					<enum value="571" display="NDV"/>
+					<enum value="572" display="NTV"/>
+					<enum value="573" display="NQS"/>
+					<enum value="574" display="BOX"/>
+					<enum value="575" display="OPQ"/>
+					<enum value="576" display="FBF"/>
+					<enum value="577" display="IBU"/>
+					<enum value="578" display="TEJ"/>
+					<enum value="579" display="HER"/>
+					<enum value="580" display="SGE"/>
+					<enum value="581" display="NQD"/>
+					<enum value="582" display="LPC"/>
+					<enum value="583" display="583"/>
+					<enum value="584" display="POD"/>
+					<enum value="585" display="BNL"/>
+					<enum value="586" display="BCS"/>
+					<enum value="587" display="KEC"/>
+					<enum value="588" display="NEX"/>
+					<enum value="589" display="CVC"/>
+					<enum value="590" display="CVT"/>
+					<enum value="591" display="CNQ"/>
+					<enum value="592" display="BRR"/>
+					<enum value="593" display="AFT"/>
+					<enum value="594" display="CDG"/>
+					<enum value="595" display="CBF"/>
+					<enum value="596" display="EUS"/>
+					<enum value="597" display="CPX"/>
+					<enum value="598" display="UGS"/>
+					<enum value="599" display="MCI"/>
+					<enum value="600" display="POS"/>
+					<enum value="601" display="SEN"/>
+					<enum value="602" display="RTE"/>
+					<enum value="603" display="ISG"/>
+					<enum value="604" display="ITE"/>
+					<enum value="605" display="DJW"/>
+					<enum value="606" display="XEF"/>
+					<enum value="607" display="NCX"/>
+					<enum value="608" display="#IN"/>
+					<enum value="609" display="PCQ"/>
+					<enum value="610" display="NSX"/>
+					<enum value="611" display="ISX"/>
+					<enum value="612" display="TOJ"/>
+					<enum value="613" display="DEU"/>
+					<enum value="614" display="JSY"/>
+					<enum value="615" display="CCE"/>
+					<enum value="616" display="JEP"/>
+					<enum value="617" display="EPD"/>
+					<enum value="618" display="LFX"/>
+					<enum value="619" display="KRX"/>
+					<enum value="620" display="TDE"/>
+					<enum value="621" display="CBC"/>
+					<enum value="622" display="HAS"/>
+					<enum value="623" display="KRB"/>
+					<enum value="624" display="LOP"/>
+					<enum value="625" display="RCU"/>
+					<enum value="626" display="RCV"/>
+					<enum value="627" display="FTY"/>
+					<enum value="628" display="PLU"/>
+					<enum value="629" display="DIX"/>
+					<enum value="630" display="TYP"/>
+					<enum value="631" display="TKS"/>
+					<enum value="632" display="RRC"/>
+					<enum value="633" display="TFX"/>
+					<enum value="634" display="DGX"/>
+					<enum value="635" display="ISS"/>
+					<enum value="636" display="LCI"/>
+					<enum value="637" display="SCI"/>
+					<enum value="638" display="TRF"/>
+					<enum value="639" display="LCL"/>
+					<enum value="640" display="SCL"/>
+					<enum value="641" display="VIX"/>
+					<enum value="642" display="PTX"/>
+					<enum value="643" display="NMC"/>
+					<enum value="644" display="NSM"/>
+					<enum value="645" display="GSX"/>
+					<enum value="646" display="NSQ"/>
+					<enum value="647" display="GSN"/>
+					<enum value="648" display="GSA"/>
+					<enum value="649" display="GSB"/>
+					<enum value="650" display="GSW"/>
+					<enum value="651" display="GSM"/>
+					<enum value="652" display="GSC"/>
+					<enum value="653" display="GSI"/>
+					<enum value="654" display="GSL"/>
+					<enum value="655" display="GSP"/>
+					<enum value="656" display="GSD"/>
+					<enum value="657" display="CCI"/>
+					<enum value="658" display="DDT"/>
+					<enum value="659" display="ETX"/>
+					<enum value="660" display="SAC"/>
+					<enum value="661" display="MKE"/>
+					<enum value="662" display="MTT"/>
+					<enum value="663" display="MTX"/>
+					<enum value="664" display="SPX"/>
+					<enum value="665" display="CDC"/>
+					<enum value="666" display="666"/>
+					<enum value="667" display="667"/>
+					<enum value="668" display="668"/>
+					<enum value="669" display="669"/>
+					<enum value="670" display="670"/>
+					<enum value="671" display="671"/>
+					<enum value="672" display="672"/>
+					<enum value="673" display="673"/>
+					<enum value="674" display="674"/>
+					<enum value="675" display="675"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>PREF DISP TMPLT</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[The 'preferred' display template number.]]></description>
+				<required>true</required>
+				<acronym>PREF_DISP</acronym>
+				<ddeAcronym>PREF DISP TMPLT</ddeAcronym>
+				<id>1080</id>
+				<rwfType>UINT32</rwfType>
+				<mfType>INTEGER</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>OPN NET CH</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Difference between open price and the previous close price.]]></description>
+				<required>true</required>
+				<acronym>OPN_NETCH</acronym>
+				<ddeAcronym>OPN NET CH</ddeAcronym>
+				<id>3256</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>OFF CD IND</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[An indication of the source of the code in the official code field OFFCL_CODE FID 78.]]></description>
+				<required>true</required>
+				<acronym>OFF_CD_IND</acronym>
+				<ddeAcronym>OFF CD IND</ddeAcronym>
+				<id>869</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="AUT"/>
+					<enum value="2" display="AUS"/>
+					<enum value="3" display="BEL"/>
+					<enum value="4" display="CUS"/>
+					<enum value="5" display="CED"/>
+					<enum value="6" display="DNK"/>
+					<enum value="7" display="FRA"/>
+					<enum value="8" display="HKG"/>
+					<enum value="9" display="ITA"/>
+					<enum value="10" display="MEX"/>
+					<enum value="11" display="NLD"/>
+					<enum value="12" display="NOR"/>
+					<enum value="13" display="SGP"/>
+					<enum value="14" display="ZAF"/>
+					<enum value="15" display="ESP"/>
+					<enum value="16" display="SWE"/>
+					<enum value="17" display="TWN"/>
+					<enum value="18" display="FIN"/>
+					<enum value="19" display="KOR"/>
+					<enum value="20" display="NZL"/>
+					<enum value="21" display="PRT"/>
+					<enum value="22" display="LUX"/>
+					<enum value="23" display="CIN"/>
+					<enum value="24" display="EUR"/>
+					<enum value="25" display="ISN"/>
+					<enum value="26" display="SIC"/>
+					<enum value="27" display="SDL"/>
+					<enum value="28" display="VAL"/>
+					<enum value="29" display="WRT"/>
+					<enum value="30" display="CCE"/>
+					<enum value="31" display="MAL"/>
+					<enum value="32" display="THA"/>
+					<enum value="33" display="IND"/>
+					<enum value="34" display="PAK"/>
+					<enum value="35" display="SLK"/>
+					<enum value="36" display="INA"/>
+					<enum value="37" display="PHL"/>
+					<enum value="38" display="VNM"/>
+					<enum value="39" display="CAC"/>
+					<enum value="40" display="LOC"/>
+					<enum value="41" display="MSI"/>
+					<enum value="42" display="TUR"/>
+					<enum value="43" display="BRA"/>
+					<enum value="44" display="BDH"/>
+					<enum value="45" display="STX"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>IRGXID</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[This field will be used to transmit the Exchange Identifier of all CTS trades
+designated as 'not last' trades.]]></description>
+				<required>true</required>
+				<acronym>IRGXID</acronym>
+				<ddeAcronym>IRGXID</ddeAcronym>
+				<id>1018</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASE"/>
+					<enum value="2" display="NYS"/>
+					<enum value="3" display="BOS"/>
+					<enum value="4" display="CIN"/>
+					<enum value="5" display="PSE"/>
+					<enum value="6" display="XPH"/>
+					<enum value="7" display="THM"/>
+					<enum value="8" display="MID"/>
+					<enum value="18" display="WCB"/>
+					<enum value="37" display="ISS"/>
+					<enum value="43" display="NAS"/>
+					<enum value="47" display="u  "/>
+					<enum value="53" display="ADF"/>
+					<enum value="132" display="AQC"/>
+					<enum value="220" display="TRF"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>CTS QUALIFIER</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[For US stock  the CTS ticker price qualifier.]]></description>
+				<required>true</required>
+				<acronym>CTS_QUAL</acronym>
+				<ddeAcronym>CTS QUALIFIER</ddeAcronym>
+				<id>40</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="SL "/>
+					<enum value="2" display="O  "/>
+					<enum value="3" display="CS "/>
+					<enum value="4" display="NXT"/>
+					<enum value="5" display="ACQ"/>
+					<enum value="6" display="DST"/>
+					<enum value="7" display="SLR"/>
+					<enum value="8" display="SPL"/>
+					<enum value="9" display="SLD"/>
+					<enum value="10" display="RCK"/>
+					<enum value="11" display="TH "/>
+					<enum value="12" display="IND"/>
+					<enum value="13" display="ADJ"/>
+					<enum value="14" display="AUT"/>
+					<enum value="15" display="BSK"/>
+					<enum value="16" display="BCH"/>
+					<enum value="17" display="ODD"/>
+					<enum value="18" display="REO"/>
+					<enum value="19" display="SPC"/>
+					<enum value="20" display="STP"/>
+					<enum value="21" display="CAT"/>
+					<enum value="22" display="VCT"/>
+					<enum value="23" display="127"/>
+					<enum value="24" display="155"/>
+					<enum value="25" display="NAX"/>
+					<enum value="26" display="MSW"/>
+					<enum value="27" display="CL "/>
+					<enum value="28" display="CO "/>
+					<enum value="29" display="CS "/>
+					<enum value="30" display="NL "/>
+					<enum value="31" display="NO "/>
+					<enum value="32" display="NS "/>
+					<enum value="33" display="RL "/>
+					<enum value="34" display="RO "/>
+					<enum value="35" display="RS "/>
+					<enum value="36" display="C7 "/>
+					<enum value="37" display="CA "/>
+					<enum value="38" display="C5 "/>
+					<enum value="39" display="CP "/>
+					<enum value="40" display="N7 "/>
+					<enum value="41" display="NA "/>
+					<enum value="42" display="N5 "/>
+					<enum value="43" display="NP "/>
+					<enum value="44" display="R7 "/>
+					<enum value="45" display="A  "/>
+					<enum value="46" display="R5 "/>
+					<enum value="47" display="RP "/>
+					<enum value="48" display="L7 "/>
+					<enum value="49" display="LA "/>
+					<enum value="50" display="L5 "/>
+					<enum value="51" display="LP "/>
+					<enum value="52" display="O7 "/>
+					<enum value="53" display="OA "/>
+					<enum value="54" display="O5 "/>
+					<enum value="55" display="OP "/>
+					<enum value="56" display="S7 "/>
+					<enum value="57" display="SA "/>
+					<enum value="58" display="S5 "/>
+					<enum value="59" display="SP "/>
+					<enum value="60" display="CL7"/>
+					<enum value="61" display="CLA"/>
+					<enum value="62" display="CL5"/>
+					<enum value="63" display="CLP"/>
+					<enum value="64" display="CO7"/>
+					<enum value="65" display="COA"/>
+					<enum value="66" display="CO5"/>
+					<enum value="67" display="COP"/>
+					<enum value="68" display="CS7"/>
+					<enum value="69" display="CSA"/>
+					<enum value="70" display="CS5"/>
+					<enum value="71" display="CSP"/>
+					<enum value="72" display="NL7"/>
+					<enum value="73" display="NLA"/>
+					<enum value="74" display="NL5"/>
+					<enum value="75" display="NLP"/>
+					<enum value="76" display="NO7"/>
+					<enum value="77" display="NOA"/>
+					<enum value="78" display="NO5"/>
+					<enum value="79" display="NOP"/>
+					<enum value="80" display="NS7"/>
+					<enum value="81" display="NSA"/>
+					<enum value="82" display="NS5"/>
+					<enum value="83" display="NSP"/>
+					<enum value="84" display="RL7"/>
+					<enum value="85" display="RL5"/>
+					<enum value="86" display="RLP"/>
+					<enum value="87" display="RO7"/>
+					<enum value="88" display="RO5"/>
+					<enum value="89" display="ROP"/>
+					<enum value="90" display="RS7"/>
+					<enum value="91" display="RS5"/>
+					<enum value="92" display="RSP"/>
+					<enum value="93" display="XC "/>
+					<enum value="94" display="XN "/>
+					<enum value="95" display="XR "/>
+					<enum value="96" display="XL "/>
+					<enum value="97" display="XO "/>
+					<enum value="98" display="XS "/>
+					<enum value="99" display="XSW"/>
+					<enum value="100" display="X7 "/>
+					<enum value="101" display="XA "/>
+					<enum value="102" display="X5 "/>
+					<enum value="103" display="XP "/>
+					<enum value="104" display="XCL"/>
+					<enum value="105" display="XCO"/>
+					<enum value="106" display="XCS"/>
+					<enum value="107" display="XNL"/>
+					<enum value="108" display="XNO"/>
+					<enum value="109" display="XNS"/>
+					<enum value="110" display="XRL"/>
+					<enum value="111" display="XRO"/>
+					<enum value="112" display="XRS"/>
+					<enum value="113" display="XC7"/>
+					<enum value="114" display="XCA"/>
+					<enum value="115" display="XC5"/>
+					<enum value="116" display="XCP"/>
+					<enum value="117" display="XN7"/>
+					<enum value="118" display="XNA"/>
+					<enum value="119" display="XN5"/>
+					<enum value="120" display="XNP"/>
+					<enum value="121" display="XR7"/>
+					<enum value="122" display="XR5"/>
+					<enum value="123" display="XRP"/>
+					<enum value="124" display="XL7"/>
+					<enum value="125" display="XLA"/>
+					<enum value="126" display="XL5"/>
+					<enum value="127" display="XLP"/>
+					<enum value="128" display="XO7"/>
+					<enum value="129" display="XOA"/>
+					<enum value="130" display="XO5"/>
+					<enum value="131" display="XOP"/>
+					<enum value="132" display="XS7"/>
+					<enum value="133" display="XSA"/>
+					<enum value="134" display="XS5"/>
+					<enum value="135" display="XSP"/>
+					<enum value="136" display="cl7"/>
+					<enum value="137" display="cla"/>
+					<enum value="138" display="cl5"/>
+					<enum value="139" display="clp"/>
+					<enum value="140" display="co7"/>
+					<enum value="141" display="coa"/>
+					<enum value="142" display="co5"/>
+					<enum value="143" display="cop"/>
+					<enum value="144" display="cs7"/>
+					<enum value="145" display="csa"/>
+					<enum value="146" display="cs5"/>
+					<enum value="147" display="csp"/>
+					<enum value="148" display="nl7"/>
+					<enum value="149" display="nla"/>
+					<enum value="150" display="nl5"/>
+					<enum value="151" display="nlp"/>
+					<enum value="152" display="no7"/>
+					<enum value="153" display="noa"/>
+					<enum value="154" display="no5"/>
+					<enum value="155" display="nop"/>
+					<enum value="156" display="ns7"/>
+					<enum value="157" display="nsa"/>
+					<enum value="158" display="ns5"/>
+					<enum value="159" display="nsp"/>
+					<enum value="160" display="rl7"/>
+					<enum value="161" display="rl5"/>
+					<enum value="162" display="rlp"/>
+					<enum value="163" display="ro7"/>
+					<enum value="164" display="ro5"/>
+					<enum value="165" display="rop"/>
+					<enum value="166" display="rs7"/>
+					<enum value="167" display="rs5"/>
+					<enum value="168" display="rsp"/>
+					<enum value="169" display="XAU"/>
+					<enum value="170" display="CAU"/>
+					<enum value="171" display="XAC"/>
+					<enum value="172" display="NAU"/>
+					<enum value="173" display="XAN"/>
+					<enum value="174" display="LAU"/>
+					<enum value="175" display="XAL"/>
+					<enum value="176" display="OAU"/>
+					<enum value="177" display="XAO"/>
+					<enum value="178" display="SRU"/>
+					<enum value="179" display="XAR"/>
+					<enum value="180" display="SAU"/>
+					<enum value="181" display="XAS"/>
+					<enum value="182" display="CLU"/>
+					<enum value="183" display="clu"/>
+					<enum value="184" display="COU"/>
+					<enum value="185" display="cou"/>
+					<enum value="186" display="CSU"/>
+					<enum value="187" display="csu"/>
+					<enum value="188" display="NLU"/>
+					<enum value="189" display="nlu"/>
+					<enum value="190" display="NOU"/>
+					<enum value="191" display="nou"/>
+					<enum value="192" display="NSU"/>
+					<enum value="193" display="nsu"/>
+					<enum value="194" display="RLU"/>
+					<enum value="195" display="rlu"/>
+					<enum value="196" display="ROU"/>
+					<enum value="197" display="rou"/>
+					<enum value="198" display="RSU"/>
+					<enum value="199" display="rsu"/>
+					<enum value="200" display="ITS"/>
+					<enum value="201" display="QOP"/>
+					<enum value="202" display="PRP"/>
+					<enum value="203" display="XPR"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>SEQNUM</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[This field contains the message sequence number. For NMTS this is a six-digit number.]]></description>
+				<required>true</required>
+				<acronym>SEQNUM</acronym>
+				<ddeAcronym>SEQNUM</ddeAcronym>
+				<id>1021</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BLOCK COUNT</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[Number of block trades today.]]></description>
+				<required>true</required>
+				<acronym>BLKCOUNT</acronym>
+				<ddeAcronym>BLOCK COUNT</ddeAcronym>
+				<id>42</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>PRNTBCK</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[A field transmitted by RQS on receipt of a correction message from SIAC containing
+the 'print back' count. This count is derived by SIAC and directly references the
+erroneous print received from the participating Exchange.]]></description>
+				<required>true</required>
+				<acronym>PRNTBCK</acronym>
+				<ddeAcronym>PRNTBCK</ddeAcronym>
+				<id>1023</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BLOCK VOLUME</name>
+				<datatype>Double</datatype>
+				<description><![CDATA[Today's total block trading volume.Updated whenever a trade of over 10 000 shares
+occurs.]]></description>
+				<required>true</required>
+				<acronym>BLKVOLUM</acronym>
+				<ddeAcronym>BLOCK VOLUME</ddeAcronym>
+				<id>43</id>
+				<rwfType>REAL64</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>BID NET CHANGE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[The difference between the latest bid and the historic closing bid.]]></description>
+				<required>true</required>
+				<acronym>BID_NET_CH</acronym>
+				<ddeAcronym>BID NET CHANGE</ddeAcronym>
+				<id>114</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>QUOTIM</name>
+				<datatype>TimeOnly</datatype>
+				<description><![CDATA[Quote time given in seconds.]]></description>
+				<required>true</required>
+				<dateformat>HH:mm:ss</dateformat>
+				<acronym>QUOTIM</acronym>
+				<ddeAcronym>QUOTIM</ddeAcronym>
+				<id>1025</id>
+				<rwfType>TIME</rwfType>
+				<mfType>TIME</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TICK:BID</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[The direction of bidding from the previous bid. Can be calculated from either the
+bid price or  for forward rates the offset from the bid price.]]></description>
+				<required>true</required>
+				<acronym>BID_TICK_1</acronym>
+				<ddeAcronym>TICK:BID</ddeAcronym>
+				<id>115</id>
+				<enumeration>
+					<enum value="0" display=" "/>
+					<enum value="1" display="222"/>
+					<enum value="2" display="254"/>
+					<enum value="3" display=" "/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>CUM/EX MARKER</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Cum/ex security marker.]]></description>
+				<required>true</required>
+				<acronym>CUM_EX_MKR</acronym>
+				<ddeAcronym>CUM/EX MARKER</ddeAcronym>
+				<id>117</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="XD "/>
+					<enum value="2" display="PXD"/>
+					<enum value="3" display="CD "/>
+					<enum value="4" display="CC "/>
+					<enum value="5" display="XC "/>
+					<enum value="6" display="CR "/>
+					<enum value="7" display="XR "/>
+					<enum value="8" display="XA "/>
+					<enum value="9" display="XV "/>
+					<enum value="10" display="CTO"/>
+					<enum value="11" display="XTO"/>
+					<enum value="12" display="CCV"/>
+					<enum value="13" display="XCV"/>
+					<enum value="14" display="CPR"/>
+					<enum value="15" display="XPR"/>
+					<enum value="16" display="NXI"/>
+					<enum value="17" display="XI "/>
+					<enum value="18" display="CI "/>
+					<enum value="19" display="CL "/>
+					<enum value="20" display="CP "/>
+					<enum value="21" display="CW "/>
+					<enum value="22" display="XW "/>
+					<enum value="23" display="CE "/>
+					<enum value="24" display="XE "/>
+					<enum value="25" display="CB "/>
+					<enum value="26" display="XB "/>
+					<enum value="27" display="XCD"/>
+					<enum value="28" display="XDD"/>
+					<enum value="29" display="XDC"/>
+					<enum value="30" display="XDR"/>
+					<enum value="31" display="XDI"/>
+					<enum value="32" display="XZ "/>
+					<enum value="33" display="XO "/>
+					<enum value="34" display="XP "/>
+					<enum value="35" display="XS "/>
+					<enum value="36" display="XSD"/>
+					<enum value="37" display="XSS"/>
+					<enum value="38" display="CSS"/>
+					<enum value="39" display="CCR"/>
+					<enum value="40" display="XCR"/>
+					<enum value="41" display="CA "/>
+					<enum value="42" display="CLD"/>
+					<enum value="43" display="XLD"/>
+					<enum value="44" display="XRC"/>
+					<enum value="45" display="XAZ"/>
+					<enum value="46" display="XBR"/>
+					<enum value="47" display="RE "/>
+					<enum value="48" display="RA "/>
+					<enum value="49" display="XK "/>
+					<enum value="50" display="XGR"/>
+					<enum value="51" display="CXE"/>
+					<enum value="52" display="EEB"/>
+					<enum value="53" display="EBE"/>
+					<enum value="54" display="EEE"/>
+					<enum value="55" display="BGB"/>
+					<enum value="56" display="EGB"/>
+					<enum value="57" display="EGE"/>
+					<enum value="58" display="EHB"/>
+					<enum value="59" display="EHE"/>
+					<enum value="60" display="BEE"/>
+					<enum value="61" display="EA "/>
+					<enum value="62" display="S  "/>
+					<enum value="63" display="XSR"/>
+					<enum value="64" display="XAR"/>
+					<enum value="65" display="XAJ"/>
+					<enum value="66" display="CSR"/>
+					<enum value="67" display="H  "/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>PRICE CODE</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Price qualifier code for equities bonds and options]]></description>
+				<required>true</required>
+				<acronym>PRC_QL_CD</acronym>
+				<ddeAcronym>PRICE CODE</ddeAcronym>
+				<id>118</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASK"/>
+					<enum value="2" display="B* "/>
+					<enum value="3" display="ALT"/>
+					<enum value="4" display="POS"/>
+					<enum value="5" display="BID"/>
+					<enum value="6" display="G* "/>
+					<enum value="7" display="BLT"/>
+					<enum value="8" display="MCP"/>
+					<enum value="9" display="QEX"/>
+					<enum value="10" display="CFR"/>
+					<enum value="11" display="CAN"/>
+					<enum value="12" display="CM "/>
+					<enum value="13" display="DEF"/>
+					<enum value="14" display="SBS"/>
+					<enum value="15" display="SOS"/>
+					<enum value="16" display="SBO"/>
+					<enum value="17" display="FAS"/>
+					<enum value="18" display="GEL"/>
+					<enum value="19" display="SDL"/>
+					<enum value="20" display="TSU"/>
+					<enum value="21" display="LM "/>
+					<enum value="22" display="eG "/>
+					<enum value="23" display="eG*"/>
+					<enum value="24" display="eB "/>
+					<enum value="25" display="eB*"/>
+					<enum value="26" display="NAD"/>
+					<enum value="27" display="ND "/>
+					<enum value="28" display="NP "/>
+					<enum value="29" display="Z  "/>
+					<enum value="30" display="NQ "/>
+					<enum value="31" display="-G "/>
+					<enum value="32" display="-B "/>
+					<enum value="33" display="T  "/>
+					<enum value="34" display="NWO"/>
+					<enum value="35" display="NF "/>
+					<enum value="36" display="IMB"/>
+					<enum value="37" display="EQP"/>
+					<enum value="38" display="bB "/>
+					<enum value="39" display="bB*"/>
+					<enum value="40" display="bG "/>
+					<enum value="41" display="bG*"/>
+					<enum value="42" display="b  "/>
+					<enum value="43" display=" - "/>
+					<enum value="44" display="PB "/>
+					<enum value="45" display="PSB"/>
+					<enum value="46" display="DLY"/>
+					<enum value="47" display="MTP"/>
+					<enum value="48" display="RAM"/>
+					<enum value="49" display="RA "/>
+					<enum value="50" display="RE "/>
+					<enum value="51" display="RAP"/>
+					<enum value="52" display="RBP"/>
+					<enum value="53" display="b* "/>
+					<enum value="54" display="SUS"/>
+					<enum value="55" display="SB "/>
+					<enum value="56" display="TF "/>
+					<enum value="57" display="HRS"/>
+					<enum value="58" display="IVC"/>
+					<enum value="59" display="TH "/>
+					<enum value="60" display="R  "/>
+					<enum value="61" display="MMC"/>
+					<enum value="62" display="CQ "/>
+					<enum value="63" display="OQ "/>
+					<enum value="64" display="L  "/>
+					<enum value="65" display="IND"/>
+					<enum value="66" display="SPR"/>
+					<enum value="67" display="STR"/>
+					<enum value="68" display="ROT"/>
+					<enum value="69" display="LT "/>
+					<enum value="70" display="BKB"/>
+					<enum value="71" display="BKA"/>
+					<enum value="72" display="BKQ"/>
+					<enum value="73" display="AUT"/>
+					<enum value="74" display="NQR"/>
+					<enum value="75" display="INP"/>
+					<enum value="76" display="SS "/>
+					<enum value="77" display="TS "/>
+					<enum value="78" display="SP "/>
+					<enum value="79" display="ST "/>
+					<enum value="80" display="rB "/>
+					<enum value="81" display="rB*"/>
+					<enum value="82" display="rG "/>
+					<enum value="83" display="rG*"/>
+					<enum value="84" display="-T "/>
+					<enum value="85" display="-Z "/>
+					<enum value="86" display="-GT"/>
+					<enum value="87" display="-BT"/>
+					<enum value="88" display="BV "/>
+					<enum value="89" display="GV "/>
+					<enum value="90" display="TZ "/>
+					<enum value="91" display="TA "/>
+					<enum value="92" display="CCP"/>
+					<enum value="93" display="CIP"/>
+					<enum value="94" display="CLS"/>
+					<enum value="95" display="SC "/>
+					<enum value="96" display="TRE"/>
+					<enum value="97" display="FAL"/>
+					<enum value="98" display="BSC"/>
+					<enum value="99" display="RCK"/>
+					<enum value="100" display="MAT"/>
+					<enum value="101" display="ACC"/>
+					<enum value="102" display="REP"/>
+					<enum value="103" display="GD "/>
+					<enum value="104" display="OUT"/>
+					<enum value="105" display="TRD"/>
+					<enum value="106" display="SBJ"/>
+					<enum value="107" display="MBS"/>
+					<enum value="108" display="MSB"/>
+					<enum value="109" display="RFQ"/>
+					<enum value="110" display="NAM"/>
+					<enum value="111" display="DEL"/>
+					<enum value="112" display="pOQ"/>
+					<enum value="113" display="A  "/>
+					<enum value="114" display="HIT"/>
+					<enum value="115" display="TKE"/>
+					<enum value="116" display="B&gt;A"/>
+					<enum value="117" display="FOR"/>
+					<enum value="118" display="SPB"/>
+					<enum value="119" display="OVR"/>
+					<enum value="120" display="AGX"/>
+					<enum value="121" display="A  "/>
+					<enum value="122" display="F  "/>
+					<enum value="123" display="N  "/>
+					<enum value="124" display="I  "/>
+					<enum value="125" display="O  "/>
+					<enum value="126" display="NAX"/>
+					<enum value="127" display="PSS"/>
+					<enum value="128" display="PBO"/>
+					<enum value="129" display="PAC"/>
+					<enum value="130" display="ISP"/>
+					<enum value="131" display="OSP"/>
+					<enum value="132" display="PP "/>
+					<enum value="133" display="PP-"/>
+					<enum value="134" display="PP+"/>
+					<enum value="135" display="NOM"/>
+					<enum value="136" display="NCA"/>
+					<enum value="137" display="AVE"/>
+					<enum value="138" display="STL"/>
+					<enum value="139" display="UFF"/>
+					<enum value="140" display=" * "/>
+					<enum value="141" display="TG "/>
+					<enum value="142" display="TB "/>
+					<enum value="143" display="B  "/>
+					<enum value="144" display="G  "/>
+					<enum value="145" display="MNO"/>
+					<enum value="146" display="FXD"/>
+					<enum value="147" display="COB"/>
+					<enum value="148" display="COR"/>
+					<enum value="149" display="ACQ"/>
+					<enum value="150" display="OS "/>
+					<enum value="151" display="PBD"/>
+					<enum value="152" display="APT"/>
+					<enum value="153" display="-  "/>
+					<enum value="154" display="B  "/>
+					<enum value="155" display="C  "/>
+					<enum value="156" display="x  "/>
+					<enum value="157" display="a  "/>
+					<enum value="158" display="b  "/>
+					<enum value="159" display="+  "/>
+					<enum value="160" display="OPN"/>
+					<enum value="161" display="PAS"/>
+					<enum value="162" display="TFA"/>
+					<enum value="163" display="TFB"/>
+					<enum value="164" display="OTS"/>
+					<enum value="165" display="ADV"/>
+					<enum value="166" display="OFF"/>
+					<enum value="167" display="ODD"/>
+					<enum value="168" display="OE "/>
+					<enum value="169" display="DC "/>
+					<enum value="170" display="AF "/>
+					<enum value="171" display="PT "/>
+					<enum value="172" display="DCP"/>
+					<enum value="173" display="BBO"/>
+					<enum value="174" display="IMB"/>
+					<enum value="175" display="IMA"/>
+					<enum value="176" display="IMQ"/>
+					<enum value="177" display="RPT"/>
+					<enum value="178" display="CNS"/>
+					<enum value="179" display="NN "/>
+					<enum value="180" display="UNS"/>
+					<enum value="181" display="OW "/>
+					<enum value="182" display="BW "/>
+					<enum value="183" display="OBW"/>
+					<enum value="184" display="NSS"/>
+					<enum value="185" display="DLO"/>
+					<enum value="186" display="FIN"/>
+					<enum value="187" display="NSA"/>
+					<enum value="188" display="SBL"/>
+					<enum value="189" display="NDR"/>
+					<enum value="190" display="NPR"/>
+					<enum value="191" display="S  "/>
+					<enum value="192" display="URG"/>
+					<enum value="193" display="OS "/>
+					<enum value="194" display="RS "/>
+					<enum value="195" display="NS "/>
+					<enum value="196" display="OK "/>
+					<enum value="197" display="RK "/>
+					<enum value="198" display="NK "/>
+					<enum value="199" display="REF"/>
+					<enum value="200" display="LIQ"/>
+					<enum value="201" display="SPT"/>
+					<enum value="202" display="NRM"/>
+					<enum value="203" display="PRE"/>
+					<enum value="204" display="ESO"/>
+					<enum value="205" display="EST"/>
+					<enum value="206" display="TMS"/>
+					<enum value="207" display="CB "/>
+					<enum value="208" display="POP"/>
+					<enum value="209" display="BRK"/>
+					<enum value="210" display="NOP"/>
+					<enum value="211" display="STP"/>
+					<enum value="212" display="UNT"/>
+					<enum value="213" display="NYT"/>
+					<enum value="214" display="AUC"/>
+					<enum value="215" display="SDL"/>
+					<enum value="216" display="NEW"/>
+					<enum value="217" display="BSH"/>
+					<enum value="218" display="FIX"/>
+					<enum value="219" display="FIL"/>
+					<enum value="220" display="LIS"/>
+					<enum value="221" display="OHL"/>
+					<enum value="222" display="SEC"/>
+					<enum value="223" display="DNR"/>
+					<enum value="224" display="OTH"/>
+					<enum value="225" display="PIN"/>
+					<enum value="226" display="BIG"/>
+					<enum value="227" display="BWA"/>
+					<enum value="228" display="OWB"/>
+					<enum value="229" display="UNB"/>
+					<enum value="230" display="UNA"/>
+					<enum value="231" display="MMK"/>
+					<enum value="232" display="ITM"/>
+					<enum value="233" display="SPL"/>
+					<enum value="234" display="OTC"/>
+					<enum value="235" display="ADJ"/>
+					<enum value="236" display="HAI"/>
+					<enum value="237" display="AIS"/>
+					<enum value="238" display="CAB"/>
+					<enum value="239" display="COM"/>
+					<enum value="240" display="ONE"/>
+					<enum value="241" display="UNC"/>
+					<enum value="242" display="PRM"/>
+					<enum value="243" display="RTY"/>
+					<enum value="244" display="LST"/>
+					<enum value="245" display="Bid"/>
+					<enum value="246" display="Frm"/>
+					<enum value="247" display="Cls"/>
+					<enum value="248" display="Hld"/>
+					<enum value="249" display="Ind"/>
+					<enum value="250" display="Prt"/>
+					<enum value="251" display="SOL"/>
+					<enum value="252" display="SQL"/>
+					<enum value="253" display="SSL"/>
+					<enum value="255" display="HOL"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>VOLUME1xPRICE1</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Numeric field to contain a value equivalent to the product of latest trade volume
+and latest trade price (TRDVOL_1 x TRDPRC_1).]]></description>
+				<required>true</required>
+				<acronym>VOL_X_PRC1</acronym>
+				<ddeAcronym>VOLUME1xPRICE1</ddeAcronym>
+				<id>1379</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>RECORDTYPE</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Field which indicates the type of record and also the type of data in that record.]]></description>
+				<required>true</required>
+				<acronym>RECORDTYPE</acronym>
+				<ddeAcronym>RECORDTYPE</ddeAcronym>
+				<id>259</id>
+				<rwfType>UINT32</rwfType>
+				<mfType>INTEGER</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>TRADING UNITS</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[The price units in which the issue trades.]]></description>
+				<required>true</required>
+				<acronym>TRD_UNITS</acronym>
+				<ddeAcronym>TRADING UNITS</ddeAcronym>
+				<id>53</id>
+				<enumeration>
+					<enum value="0" display="INT "/>
+					<enum value="1" display="1DP "/>
+					<enum value="2" display="2DP "/>
+					<enum value="3" display="3DP "/>
+					<enum value="4" display="4DP "/>
+					<enum value="5" display="5DP "/>
+					<enum value="6" display="6DP "/>
+					<enum value="7" display="7DP "/>
+					<enum value="8" display="   8"/>
+					<enum value="9" display="   9"/>
+					<enum value="10" display="  10"/>
+					<enum value="11" display="1/2 "/>
+					<enum value="12" display="1/4 "/>
+					<enum value="13" display="1/8 "/>
+					<enum value="14" display="1/16"/>
+					<enum value="15" display="1/32"/>
+					<enum value="16" display="1/64"/>
+					<enum value="17" display="/128"/>
+					<enum value="18" display="/256"/>
+					<enum value="19" display="  19"/>
+					<enum value="20" display="   v"/>
+					<enum value="21" display="5c  "/>
+					<enum value="22" display="1c  "/>
+					<enum value="23" display="10c "/>
+					<enum value="24" display="Dlr "/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>PERCENT CHANGE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[Percentage change in the latest trade price or value from the historic close.]]></description>
+				<required>true</required>
+				<acronym>PCTCHNG</acronym>
+				<ddeAcronym>PERCENT CHANGE</ddeAcronym>
+				<id>56</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>PRICE CODE 2</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Second price qualifier code. Defined for US Government securities.]]></description>
+				<required>true</required>
+				<acronym>PRC_QL2</acronym>
+				<ddeAcronym>PRICE CODE 2</ddeAcronym>
+				<id>131</id>
+				<enumeration>
+					<enum value="0" display="   "/>
+					<enum value="1" display="ASK"/>
+					<enum value="2" display="B* "/>
+					<enum value="3" display="3  "/>
+					<enum value="4" display="4  "/>
+					<enum value="5" display="BID"/>
+					<enum value="6" display="G* "/>
+					<enum value="7" display="7  "/>
+					<enum value="8" display="8  "/>
+					<enum value="9" display="9  "/>
+					<enum value="10" display="CFR"/>
+					<enum value="11" display="CAN"/>
+					<enum value="12" display="CM "/>
+					<enum value="13" display="DEF"/>
+					<enum value="14" display="SBS"/>
+					<enum value="15" display="SOS"/>
+					<enum value="16" display="SBO"/>
+					<enum value="17" display="FAS"/>
+					<enum value="18" display="GEL"/>
+					<enum value="19" display="SDL"/>
+					<enum value="20" display="TSU"/>
+					<enum value="21" display="LM "/>
+					<enum value="22" display="eG "/>
+					<enum value="23" display="eG*"/>
+					<enum value="24" display="eB "/>
+					<enum value="25" display="eB*"/>
+					<enum value="26" display="NAD"/>
+					<enum value="27" display="ND "/>
+					<enum value="28" display="NP "/>
+					<enum value="29" display="Z  "/>
+					<enum value="30" display="NQ "/>
+					<enum value="31" display="-G "/>
+					<enum value="32" display="-B "/>
+					<enum value="33" display="T  "/>
+					<enum value="34" display="NWO"/>
+					<enum value="35" display="NF "/>
+					<enum value="36" display="IMB"/>
+					<enum value="37" display="EQP"/>
+					<enum value="38" display="bB "/>
+					<enum value="39" display="bB*"/>
+					<enum value="40" display="bG "/>
+					<enum value="41" display="bG*"/>
+					<enum value="42" display="b  "/>
+					<enum value="43" display=" - "/>
+					<enum value="44" display="PB "/>
+					<enum value="45" display="PSB"/>
+					<enum value="46" display="DLY"/>
+					<enum value="47" display="POP"/>
+					<enum value="48" display="RAM"/>
+					<enum value="49" display="RA "/>
+					<enum value="50" display="RE "/>
+					<enum value="51" display="RAP"/>
+					<enum value="52" display="RBP"/>
+					<enum value="53" display="b* "/>
+					<enum value="54" display="SUS"/>
+					<enum value="55" display="SB "/>
+					<enum value="56" display="TF "/>
+					<enum value="57" display="HRS"/>
+					<enum value="58" display="IVC"/>
+					<enum value="59" display="TH "/>
+					<enum value="60" display="R  "/>
+					<enum value="61" display="MMC"/>
+					<enum value="62" display="CQ "/>
+					<enum value="63" display="OQ "/>
+					<enum value="64" display="L  "/>
+					<enum value="65" display="IND"/>
+					<enum value="66" display="SPR"/>
+					<enum value="67" display="STR"/>
+					<enum value="68" display="ROT"/>
+					<enum value="69" display="LT "/>
+					<enum value="70" display="BKB"/>
+					<enum value="71" display="BKA"/>
+					<enum value="72" display="BKQ"/>
+					<enum value="73" display="AUT"/>
+					<enum value="74" display="NQR"/>
+					<enum value="75" display="INP"/>
+					<enum value="76" display="SS "/>
+					<enum value="77" display="TS "/>
+					<enum value="78" display="SP "/>
+					<enum value="79" display="ST "/>
+					<enum value="80" display="rB "/>
+					<enum value="81" display="rB*"/>
+					<enum value="82" display="rG "/>
+					<enum value="83" display="rG*"/>
+					<enum value="84" display="-T "/>
+					<enum value="85" display="-Z "/>
+					<enum value="86" display="-GT"/>
+					<enum value="87" display="-BT"/>
+					<enum value="88" display="BV "/>
+					<enum value="89" display="GV "/>
+					<enum value="90" display="TZ "/>
+					<enum value="91" display="TA "/>
+					<enum value="92" display="CCP"/>
+					<enum value="93" display="CIP"/>
+					<enum value="94" display="CLS"/>
+					<enum value="95" display="SC "/>
+					<enum value="96" display="TRE"/>
+					<enum value="97" display="FAL"/>
+					<enum value="98" display="BSC"/>
+					<enum value="99" display="RCK"/>
+					<enum value="100" display="MAT"/>
+					<enum value="101" display="ACC"/>
+					<enum value="102" display="REP"/>
+					<enum value="103" display="GD "/>
+					<enum value="104" display="OUT"/>
+					<enum value="105" display="TRD"/>
+					<enum value="106" display="SBJ"/>
+					<enum value="107" display="MBS"/>
+					<enum value="108" display="MSB"/>
+					<enum value="109" display="RFQ"/>
+					<enum value="110" display="CMB"/>
+					<enum value="111" display="111"/>
+					<enum value="112" display="112"/>
+					<enum value="113" display="113"/>
+					<enum value="114" display="HIT"/>
+					<enum value="115" display="TKE"/>
+					<enum value="116" display="B&gt;A"/>
+					<enum value="117" display="FOR"/>
+					<enum value="118" display="SPB"/>
+					<enum value="119" display="OVR"/>
+					<enum value="120" display="AGX"/>
+					<enum value="121" display="A  "/>
+					<enum value="122" display="F  "/>
+					<enum value="123" display="N  "/>
+					<enum value="124" display="I  "/>
+					<enum value="125" display="O  "/>
+					<enum value="126" display="NAX"/>
+					<enum value="127" display="PSS"/>
+					<enum value="128" display="NOP"/>
+					<enum value="129" display="WI "/>
+					<enum value="130" display="SKP"/>
+					<enum value="131" display="SL "/>
+					<enum value="132" display="O  "/>
+					<enum value="133" display="CS "/>
+					<enum value="134" display="NXT"/>
+					<enum value="135" display="ACQ"/>
+					<enum value="136" display="DST"/>
+					<enum value="137" display="SLR"/>
+					<enum value="138" display="SPL"/>
+					<enum value="139" display="SLD"/>
+					<enum value="140" display="ADJ"/>
+					<enum value="141" display="BSK"/>
+					<enum value="142" display="MSW"/>
+					<enum value="143" display="BCH"/>
+					<enum value="144" display="BSL"/>
+					<enum value="145" display="DLY"/>
+					<enum value="146" display="MCS"/>
+					<enum value="147" display="NBL"/>
+					<enum value="148" display="SPS"/>
+					<enum value="149" display="REO"/>
+					<enum value="150" display="SPC"/>
+					<enum value="151" display="STP"/>
+					<enum value="152" display="CAT"/>
+					<enum value="153" display="VCT"/>
+					<enum value="154" display="127"/>
+					<enum value="155" display="155"/>
+					<enum value="156" display="LUP"/>
+					<enum value="157" display="LDN"/>
+					<enum value="158" display="LRE"/>
+					<enum value="159" display="ODD"/>
+					<enum value="160" display="UTQ"/>
+					<enum value="161" display="D10"/>
+					<enum value="162" display="D15"/>
+					<enum value="163" display="D20"/>
+					<enum value="164" display="D30"/>
+					<enum value="165" display="D2H"/>
+					<enum value="166" display="S10"/>
+					<enum value="167" display="S30"/>
+					<enum value="168" display="CLS"/>
+					<enum value="169" display="DLY"/>
+					<enum value="170" display="B/W"/>
+					<enum value="171" display="AVG"/>
+					<enum value="172" display="PMM"/>
+					<enum value="173" display="BIG"/>
+					<enum value="174" display="COM"/>
+					<enum value="175" display="MMK"/>
+					<enum value="176" display="ITM"/>
+					<enum value="177" display="SPL"/>
+					<enum value="178" display="OTC"/>
+					<enum value="179" display="ADJ"/>
+					<enum value="180" display="MKA"/>
+					<enum value="181" display="MKB"/>
+					<enum value="182" display="OFE"/>
+					<enum value="183" display="DOG"/>
+					<enum value="184" display="OFZ"/>
+					<enum value="185" display="DOZ"/>
+					<enum value="186" display="BDG"/>
+					<enum value="187" display="OFK"/>
+					<enum value="188" display="DOK"/>
+					<enum value="189" display="ONO"/>
+					<enum value="190" display="OTW"/>
+					<enum value="191" display="SES"/>
+					<enum value="192" display="S+-"/>
+					<enum value="193" display="SEZ"/>
+					<enum value="194" display="ZAW"/>
+					<enum value="195" display="S**"/>
+					<enum value="196" display="KON"/>
+					<enum value="197" display="HTT"/>
+					<enum value="198" display="CAB"/>
+					<enum value="199" display="PRC"/>
+					<enum value="200" display="YLD"/>
+					<enum value="201" display="DIS"/>
+					<enum value="202" display="DPR"/>
+					<enum value="203" display="CPR"/>
+					<enum value="204" display="sP "/>
+					<enum value="205" display="dP "/>
+					<enum value="206" display="tP "/>
+					<enum value="207" display="BAU"/>
+					<enum value="208" display="sM "/>
+					<enum value="209" display="dM "/>
+					<enum value="210" display="tM "/>
+					<enum value="211" display="PTR"/>
+					<enum value="212" display="Bid"/>
+					<enum value="213" display="OBI"/>
+					<enum value="214" display="OBC"/>
+					<enum value="215" display="OBA"/>
+					<enum value="216" display="REV"/>
+					<enum value="217" display="BPD"/>
+					<enum value="218" display="SDC"/>
+					<enum value="219" display="SIN"/>
+					<enum value="220" display="EDC"/>
+					<enum value="221" display="INT"/>
+					<enum value="222" display="FRB"/>
+					<enum value="223" display="TR1"/>
+					<enum value="224" display="TR2"/>
+					<enum value="225" display="TR3"/>
+					<enum value="226" display=" IN"/>
+					<enum value="227" display="INY"/>
+					<enum value="228" display="INF"/>
+					<enum value="229" display="INH"/>
+					<enum value="230" display=" AU"/>
+					<enum value="231" display="AUY"/>
+					<enum value="232" display="AUF"/>
+					<enum value="233" display="AUH"/>
+					<enum value="234" display="UPC"/>
+					<enum value="235" display="XQ "/>
+					<enum value="236" display="XB "/>
+					<enum value="237" display="XA "/>
+					<enum value="238" display="AUC"/>
+					<enum value="239" display="QOP"/>
+					<enum value="240" display="BAS"/>
+					<enum value="241" display="VWP"/>
+					<enum value="242" display="CON"/>
+					<enum value="243" display="STS"/>
+					<enum value="244" display="STL"/>
+					<enum value="245" display="STO"/>
+					<enum value="246" display="G  "/>
+					<enum value="247" display="MOC"/>
+					<enum value="248" display="CTH"/>
+					<enum value="249" display="CQO"/>
+					<enum value="250" display="CTR"/>
+					<enum value="251" display="CBP"/>
+					<enum value="252" display="  M"/>
+					<enum value="253" display="  B"/>
+					<enum value="254" display="XSW"/>
+					<enum value="255" display="YFL"/>
+				</enumeration>
+				<rwfType>ENUM</rwfType>
+				<mfType>ENUMERATED</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>GV1 FLAG</name>
+				<datatype>String</datatype>
+				<required>true</required>
+				<acronym>GV1_FLAG</acronym>
+				<ddeAcronym>GV1 FLAG</ddeAcronym>
+				<id>1041</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>PROVIDER SYMBOL</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Original symbol of tradable entity provided by exchange/contributor.]]></description>
+				<required>true</required>
+				<acronym>PROV_SYMB</acronym>
+				<ddeAcronym>PROVIDER SYMBOL</ddeAcronym>
+				<id>3422</id>
+				<rwfType>RMTES_STRING</rwfType>
+				<mfType>ALPHANUMERIC</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>ADJUSTED CLOSE</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[The last value available for close which is stored for Graphics also adjusted for
+capital changes.]]></description>
+				<required>true</required>
+				<acronym>ADJUST_CLS</acronym>
+				<ddeAcronym>ADJUSTED CLOSE</ddeAcronym>
+				<id>1465</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>HIST CLOSE BID</name>
+				<datatype>Float</datatype>
+				<description><![CDATA[The historic closing bid i.e. the last non-zero closing bid.]]></description>
+				<required>true</required>
+				<acronym>HST_CLSBID</acronym>
+				<ddeAcronym>HIST CLOSE BID</ddeAcronym>
+				<id>207</id>
+				<rwfType>REAL32</rwfType>
+				<mfType>PRICE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+			<field>
+				<name>HIST CLS BID DT</name>
+				<datatype>DateOnly</datatype>
+				<description><![CDATA[The historic closing bid date.]]></description>
+				<required>true</required>
+				<dateformat>yyyyMMdd</dateformat>
+				<acronym>HSTCLBDDAT</acronym>
+				<ddeAcronym>HIST CLS BID DT</ddeAcronym>
+				<id>208</id>
+				<rwfType>DATE</rwfType>
+				<mfType>DATE</mfType>
+				<mfMaxLength>0</mfMaxLength>
+				<rwfLength>0</rwfLength>
+			</field>
+		</datafields>
+		<trailerfields>
+		</trailerfields>
+	</reutersfields>
+	<validationrules name="Default">
+		<hdrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</hdrvalidationrules>
+		<datavalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</datavalidationrules>
+		<tlrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</tlrvalidationrules>
+	</validationrules>
+</ReutersMessageFormat>
+

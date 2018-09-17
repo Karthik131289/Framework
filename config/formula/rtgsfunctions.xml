@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="RTGS_IsValidCharSet_x">
+        <description>Checks if every character in the given input string belongs to the SWIFT character set 'x'. If 'allowCRLF' is true, the substring "\r\n" is allowed, else they are not allowed. 'allowCRLF' is typically set to true while validating multi-line fields.</description>
+        <signature>RTGS_IsCharSet_x (str, allowCRLF)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSCharSets"/>
+        <property name="method" value="RTGS_IsValidCharSet_x"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_IsValidCharSet_a">
+        <description>Checks if every character in the given input string belongs to the SWIFT character set 'a' i.e. all characters should be upper case alphabets.</description>
+        <signature>RTGS_IsCharSet_a (str)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSCharSets"/>
+        <property name="method" value="RTGS_IsValidCharSet_a"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+	<formula name="RTGS_IsValidCharSet_c">
+        <description>Checks if every character in the given input string belongs to the SWIFT character set 'c' i.e. all characters should be upper case alphabets and digits only.</description>
+        <signature>RTGS_IsCharSet_c (str)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSCharSets"/>
+        <property name="method" value="RTGS_IsValidCharSet_c"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_IsValidAmount">
+        <description>Checks if the given BigDecimal value is a valid SWIFT amount for the currency INR - decimal point must be present, at least one digit should be present before and at most two digits after.</description>
+        <signature>RTGS_IsValidAmount (amount)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_IsValidAmount"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_IsValidMultiLineField">
+        <description>Returns true if the given string is a valid multi-line field: can contain at most 'maxLines' number of lines and the length of each line can at most be 'maxCharsPerLine'. In addition, all characters excepting the line delimiter ("\r\n") should belong to the SWIFT character set 'x'.</description>
+        <signature>RTGS_IsValidMultiLineField (str, maxLines, maxCharsPerLine)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_IsValidMultiLineField"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_IsValidPartyID">
+        <description>Returns true if the given value conforms to the Party Identifier format - '[/1!a]/34x]'</description>
+        <signature>RTGS_IsValidPartyID (str)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_IsValidPartyID"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_IsValidIFSCCode">
+        <description>Returns true if the given value conforms to the IFSC code format - '4!a06!c' (four upper case alphabets, followed by zero, followed by six upper case alphabets or digits)</description>
+        <signature>RTGS_IsValidIFSCCode (str)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_IsValidIFSCCode"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_IsValidSndrToRcvrInfoFmt">
+        <description>Returns true if the given value is as follows: 'The first line must begin with a single slash, followed by a code word of eight letters and followed by a second slash (/8a/). Free text may follow this up to the maximum number of allowed characters'.</description>
+        <signature>RTGS_IsValidSndrToRcvrInfoFmt (senderToReceiveInfo)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_IsValidSndrToRcvrInfoFmt"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_GetMultiLineFieldLength">
+        <description>This function takes in the yet to be parsed part of the message as input and returns the number of characters till the end of the upcoming multi-line field.</description>
+        <signature>RTGS_GetMultiLineFieldLength (peekStr)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_GetMultiLineFieldLength"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_GetPartyIDLength">
+        <description>This function takes in the yet to be parsed part of the message as input and returns the number of characters till the end of the upcoming multi-line field. If the field is not found, returns field length of 0.</description>
+        <signature>RTGS_GetPartyIDLength (peekStr)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_GetPartyIDLength"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_GetLocationLength">
+        <description>This function takes in the yet to be parsed part of the message as input and returns the number of characters till the end of the upcoming location field. If the field is not found, returns field length of 0. If the yet to be parsed part of the message begins with a tag (colon, followed by four digits which in turn is followed by another colon), the field is considered to be absent.</description>
+        <signature>RTGS_GetLocationLength (peekStr)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_GetLocationLength"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_EliminateTrailingNewLine">
+        <description>If the input text ends with "\r\n", eliminates the same and returns the rest. If not, the input string is returned as is.</description>
+        <signature>RTGS_EliminateTrailingNewLine (str)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_EliminateTrailingNewLine"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_AppendNewLine">
+        <description>Appends "\r\n" to the input string and returns the resultant string.</description>
+        <signature>RTGS_AppendNewLine (str)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_AppendNewLine"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+    <formula name="RTGS_SerializeAmount">
+        <description>Amount fields need to follow swift specifications for currency INR: decimal point (comma) should be present and there must be at least one digit before the decimal point. If more than two digits are present after the decimal point, the value is rounded off to two digits after decimal point. This function returns a value with these conditions satisfied.</description>
+        <signature>RTGS_SerializeAmount (amount)</signature>
+        <category>RTGS</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.rtgs.RTGSFunctions"/>
+        <property name="method" value="RTGS_SerializeAmount"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="rtgsrt"/>
+    </formula>
+</formulae>

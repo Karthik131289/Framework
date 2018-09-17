@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="DSFI_ParseField">
+        <description>Replaces embedded "*PIPE*" and "*NL*" with | and \n character (to be used during parsing)</description>
+        <signature>DSFI_ParseField (value)</signature>
+        <category>DSFI</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.dsfi.DSFIFunctions"/>
+        <property name="method" value="DSFI_ParseField"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="String"/>
+        <property name="lib" value="dsfirt"/>
+    </formula>
+    <formula name="DSFI_SerializeField">
+        <description>Replaces embedded | and \n characters with "*PIPE*" and "*NL*" (to be used during serialization)</description>
+        <signature>DSFI_SerializeField (str)</signature>
+        <category>DSFI</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.dsfi.DSFIFunctions"/>
+        <property name="method" value="DSFI_SerializeField"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="String"/>
+        <property name="returns" value="String"/>
+        <property name="lib" value="dsfirt"/>
+    </formula>
+</formulae>

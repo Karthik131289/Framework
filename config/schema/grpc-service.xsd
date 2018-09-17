@@ -1,0 +1,137 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified"
+            attributeFormDefault="unqualified">
+    <!-- include constructs -->
+    <xsd:include schemaLocation="xml-data.xsd"/>
+    <!-- Dependency on xml plugin -->
+    <xsd:include schemaLocation="messageflow.xsd"/>
+    <!-- for extending conductor -->
+    <!-- GRPC Client Element -->
+    <xsd:element name="grpcclient" type="GrpcClient" substitutionGroup="ServiceElement"/>
+    <xsd:complexType name="GrpcClient">
+        <xsd:complexContent>
+            <xsd:extension base="ServiceElementType">
+                <xsd:sequence>
+                    <xsd:element name="version" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="description" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="application-info">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="host" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="port" type="xsd:int" minOccurs="0"/>
+                                <xsd:element name="package" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="syntax" type="xsd:string" />
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+					<xsd:element name="service-defs">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="service" minOccurs="0" maxOccurs="unbounded">
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element name="name" type="xsd:string"/>
+											<xsd:element name="full-name" type="xsd:string"/>
+											<xsd:element name="description" type="xsd:string" minOccurs="0"/>
+											<xsd:element name="method" type="GrpcMethodType" minOccurs="0" maxOccurs="unbounded"/>
+										</xsd:sequence>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="name" type="xsd:string"/>
+                <xsd:attribute name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+	<!-- End GRPC Client Element -->
+
+	<!-- GRPC Server Element -->
+    <xsd:element name="grpcserver" type="GrpcServer" substitutionGroup="ServiceElement"/>
+    <xsd:complexType name="GrpcServer">
+        <xsd:complexContent>
+            <xsd:extension base="ServiceElementType">
+                <xsd:sequence>
+                    <xsd:element name="version" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="description" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="application-info">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="package" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="syntax" type="xsd:string" />
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+					<xsd:element name="service-defs">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="service" minOccurs="0" maxOccurs="unbounded">
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element name="name" type="xsd:string"/>
+											<xsd:element name="full-name" type="xsd:string"/>
+											<xsd:element name="description" type="xsd:string" minOccurs="0"/>
+											<xsd:element name="method" minOccurs="0" maxOccurs="unbounded">
+												<xsd:complexType>
+													<xsd:complexContent>
+														<xsd:extension base="GrpcMethodType">
+															<xsd:sequence>
+																<xsd:element name="message-flow" type="xsd:string" />
+															</xsd:sequence>
+														</xsd:extension>
+													</xsd:complexContent>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="name" type="xsd:string"/>
+                <xsd:attribute name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+	<!-- End GRPC Client Element -->
+	
+	<xsd:complexType name="GrpcMethodType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="full-name" type="xsd:string"/>
+			<xsd:element name="input-type" type="xsd:string"/>
+			<xsd:element name="output-type" type="xsd:string"/>
+			<xsd:element name="client-streaming" type="xsd:boolean"/>
+			<xsd:element name="server-streaming" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+    <!-- GRPCService Flow Element -->
+    <xsd:complexType name="GRPCClient">
+        <xsd:complexContent>
+            <xsd:extension base="FlowElementType">
+                <xsd:sequence>
+                    <xsd:element name="in" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="out" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="options" type="FlowOptionsType" minOccurs="0"/>
+                    <xsd:element name="grpcclient" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="service" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="method" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="input-type" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="output-type" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="visual" type="FlowVisualType"/>
+                    <xsd:element name="property" minOccurs="0">
+                        <xsd:complexType>
+                            <xsd:attribute name="name" type="xsd:string" use="required"/>
+                            <xsd:attribute name="value" type="xsd:string" use="required"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="type" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <!-- End GRPCService Flow Element -->
+</xsd:schema>

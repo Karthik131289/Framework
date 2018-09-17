@@ -1,0 +1,2523 @@
+{
+  "formTitle": "payment",
+  "width": "98%",
+  "columnCount": 1,
+  "errorReportingStyle": "Style2",
+  "helpTextStyle": "Style4",
+  "sectionLayoutStyle": "Style2",
+  "sectionCollapsible": "Expanded",
+  "mandatoryIndicator": true,
+  "eagerValidationInd" : true,
+  "customStyle": {
+    "fieldStyle": "",
+    "labelStyle": "formLabel bold",
+    "errorStyle": "errMsg bg-danger-error4 col-md-offset-2 offset-md-2",
+    "helpStyle": "fa fa-question-circle"
+  },
+  "fieldList": [
+    {
+      "fieldName": "Templates",
+      "type": "SearchSelect",
+      "messageType": "String",
+      "label": "Templates",
+      "maxLength": 0,
+      "mandatory": true,
+      "helpText": " Fill up the template...",
+      "width": 12,
+      "height": 4,
+      "labelPositioning": null,
+      "rowSpan": 1,
+      "colSpan": 1,
+      "tooltip": "Template Tooltip",
+      "disabled": false,
+      "visible": true,
+      "multiple": true,
+      "defaultValue": "",
+      "dependentFieldList": [
+        "$root.PaymentDetails.ChargeCode",
+        "PaymentDetails.SampleInnerSection.SampleInnerField"
+      ],
+      "format": null,
+      "placeholder": "Sample Placeholder",
+      "sectionProperties": null,
+      "choiceList": [
+        {
+          "actualValue": "T1",
+          "displayValue": "Template1"
+        },
+        {
+          "actualValue": "T2",
+          "displayValue": "Template2"
+        }
+      ],
+      "fieldList": null,
+      "customPropertyList": [],
+      "customStyle": {
+        "fieldStyle": "",
+        "labelStyle": "formLabel",
+        "errorStyle": "ads"
+      }
+    },
+    {
+      "fieldName": "Button",
+      "type": "Button",
+      "label": "Click",
+      "width": 12,
+      "visible": true,
+      "customStyle": {
+        "fieldStyle": "btn btnStyle btnForm",
+        "labelStyle": "formLabel",
+        "errorStyle": ""
+      }
+    },
+    {
+      "fieldName": "Total",
+      "type": "TextField",
+      "messageType": "String",
+      "label": "Total",
+      "maxLength": 0,
+      "mandatory": false,
+      "width": 20,
+      "height": 4,
+      "labelPositioning": null,
+      "rowSpan": 1,
+      "colSpan": 1,
+      "tooltip": "Total Tooltip",
+      "disabled": false,
+      "visible": true,
+      "multiple": false,
+      "defaultValue": "",
+      "format": null,
+      "placeholder": "Total",
+      "sectionProperties": null,
+      "choiceList": [],
+      "fieldList": null,
+      "eventPropertiesList": [
+        {
+          "condition": "dataRoot.PaymentDetails.ChargeCode === \"Charge1\"",
+          "property": "tooltip",
+          "value": "metaData('metaRoot.PaymentDetails.ChargeCode', 'type')"
+        },
+        {
+          "condition": "dataRoot.PaymentDetails.ChargeCode === \"Charge2\"",
+          "property": "tooltip",
+          "value": "metaData('metaRoot.PaymentDetails.ChargeCode', 'messageType')"
+        }
+      ],
+      "customPropertyList": [],
+      "customStyle": {
+        "fieldStyle": "form-control",
+        "labelStyle": "formLabel",
+        "errorStyle": "ads"
+      }
+    },
+    {
+          "fieldName": "SampleRadio",
+          "type": "Radio Button",
+          "messageType": "Boolean",
+          "label": "SampleRadio",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "helpText": "Fill up the SampleRadio...",
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "tooltip": "SampleRadio ToolTip",
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "true",
+              "displayValue": "Yes"
+            },
+            {
+              "actualValue": "false",
+              "displayValue": "No"
+            }
+          ],
+          "dependentFieldList": [],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+      "fieldName": "SampleCombo",
+      "type": "SearchSelect",
+      "messageType": "Boolean",
+      "label": "SampleCombo",
+      "maxLength": 0,
+      "mandatory": false,
+      "width": null,
+      "height": 4,
+      "labelPositioning": null,
+      "rowSpan": 1,
+      "colSpan": 1,
+      "disabled": false,
+      "helpText": "Fill up the SampleRadio...",
+      "visible": true,
+      "multiple": false,
+      "defaultValue": null,
+      "tooltip": "SampleCombo ToolTip",
+      "format": null,
+      "placeholder": "SampleCombo Placeholder",
+      "sectionProperties": null,
+      "choiceList": [
+        {
+          "actualValue": "true",
+          "displayValue": "Yes"
+        },
+        {
+          "actualValue": "false",
+          "displayValue": "No"
+        },
+        {
+          "actualValue": "true",
+          "displayValue": "Yes"
+        },
+        {
+          "actualValue": "false",
+          "displayValue": "No"
+        }
+      ],
+      "dependentFieldList": [],
+      "fieldList": null,
+      "customPropertyList": [],
+      "customStyle": {
+        "fieldStyle": "",
+        "labelStyle": null,
+        "errorStyle": null
+      }
+    },
+    {
+      "fieldName": "SampleCombo2",
+      "type": "SearchSelect",
+      "messageType": "String",
+      "label": "SampleCombo2",
+      "maxLength": 0,
+      "mandatory": false,
+      "width": null,
+      "height": 4,
+      "labelPositioning": null,
+      "rowSpan": 1,
+      "colSpan": 1,
+      "disabled": false,
+      "helpText": "Fill up the SampleCombo2...",
+      "visible": true,
+      "multiple": false,
+      "defaultValue": null,
+      "tooltip": "SampleCombo2 ToolTip",
+      "format": null,
+      "placeholder": "SampleCombo2 PlaceHolder",
+      "sectionProperties": null,
+      "choiceList": [
+        {
+          "actualValue": "true",
+          "displayValue": "Yes"
+        },
+        {
+          "actualValue": "false",
+          "displayValue": "No"
+        },
+        {
+          "actualValue": "true",
+          "displayValue": "Yes"
+        },
+        {
+          "actualValue": "false",
+          "displayValue": "No"
+        },
+        {
+          "actualValue": "true",
+          "displayValue": "Yes"
+        },
+        {
+          "actualValue": "false",
+          "displayValue": "No"
+        },
+        {
+          "actualValue": "true",
+          "displayValue": "Yes"
+        },
+        {
+          "actualValue": "false",
+          "displayValue": "No"
+        }
+      ],
+      "dependentFieldList": ["PaymentDetails.Branch"],
+      "fieldList": null,
+      "customPropertyList": [],
+      "customStyle": {
+        "fieldStyle": "",
+        "labelStyle": null,
+        "errorStyle": null
+      }
+    },
+    {
+      "fieldName": "Button2",
+      "type": "Button",
+      "label": "Click Once",
+      "width": 12,
+      "visible": true,
+      "customStyle": {
+        "fieldStyle": "btn btnStyle btnForm",
+        "labelStyle": "formLabel",
+        "errorStyle": ""
+      }
+    },
+    {
+      "fieldName": "PaymentDetails",
+      "type": "Section",
+      "messageType": "Section",
+      "label": "Payment Details",
+      "maxLength": 0,
+      "mandatory": true,
+      "width": null,
+      "height": 0,
+      "labelPositioning": null,
+      "rowSpan": 0,
+      "colSpan": 0,
+      "disabled": false,
+      "visible": true,
+      "multiple": false,
+      "defaultValue": null,
+      "format": null,
+      "placeholder": null,
+      "sectionProperties": {
+        "sectionRepeatable": false,
+        "sectionMaxRepeats": 1,
+        "sectionMinRepeats": 1,
+        "sectionColumnCount": null,
+        "sectionCollapsible": "Expanded"
+      },
+      "choiceList": null,
+      "fieldList": [
+        {
+          "type": "FieldGroupStart",
+          "fieldName": "FieldGroupStart",
+          "label": "Start",
+          "sectionProperties" : {
+            "sectionRepeatable" : false,
+            "sectionMaxRepeats" : 0,
+            "sectionMinRepeats" : 0,
+            "sectionColumnCount": 2,
+            "sectionCollapsible" : "Auto"
+          },
+          "customStyle" : {
+            "fieldStyle" : "style2",
+            "labelStyle" : "style1",
+            "errorStyle" : "style3",
+            "helpStyle" : null
+          }
+        },
+        {
+          "fieldName": "Party",
+          "type": "SearchSelect",
+          "messageType": "String",
+          "label": "Party",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "helpText": "Fill up the party...",
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "tooltip": "Party ToolTip",
+          "format": null,
+          "placeholder": "unchanged",
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Party1",
+              "displayValue": "Party1"
+            },
+            {
+              "actualValue": "Party2",
+              "displayValue": "Party2"
+            }
+          ],
+          "dependentFieldList": [
+            "PaymentDetails.Service",
+            "PaymentDetails.PartyServiceAssociationCode",
+            "PaymentDetails.Branch",
+            "PaymentDetails.EndToEndId",
+            "PaymentDetails.MessagesType",
+            "PaymentDetails.Party"
+          ],
+          "fieldList": null,
+          "eventPropertiesList": [{
+            "condition": "",
+            "property": "placeholder",
+            "value": "console.log('Party SELF : '); console.log(dataRoot); 'Enter Party'"
+          }],
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "Service",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Service",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter the Service",
+          "sectionProperties": null,
+          "dependentFieldList": ["PaymentDetails.Amount", "PaymentDetails.MessagesType"],
+          "choiceList": [
+            {
+              "actualValue": "Service1",
+              "displayValue": "Service 1"
+            },
+            {
+              "actualValue": "Service2",
+              "displayValue": "Service 2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          },
+          "eventPropertiesList": [
+            {
+              "condition": " console.log(\" Test FINDDATA : - \" + findData('Templates') + \" & \" + findData('PaymentDetails.SampleInnerSection.SampleInnerField')) ; findData('PaymentDetails.Party') === 'Party1';",
+              "property": "mandatory",
+              "value": "false"
+            },
+            {
+              "condition": "findData('PaymentDetails.Party') === 'Party2'",
+              "property": "mandatory",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "fieldName": "MessagesType",
+          "type": "SearchSelect",
+          "messageType": "String",
+          "label": "Messages Type",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": "MsgREST1",
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "restChoiceProperties": {
+            "url": "(\"/MessagesTypeChoiceList\" + ((data.Party) ? (\"_\" + data.Party) : \"\") + \".json\")",
+            "restMethod": null,
+            "postParams": null,
+            "labelProperty": "displayValueDup",
+            "valueProperty": "actualValueDup",
+            "forwardDependencies": ["PaymentDetails.Party", "PaymentDetails.Service"]
+          },
+          "eventPropertiesList": [
+            {
+              "condition": "data.Service !== undefined && data.Party !== undefined",
+              "property": "fieldValue",
+              "value": "if (data.Party === 'Party1') { (data.Service === 'Service1')? 'MsgParty1REST1' : 'MsgParty1REST2' } else if (data.Party === 'Party2') { (data.Service === 'Service1')? 'MsgParty2REST1' : 'MsgParty2REST2' }"
+            }
+          ],
+          "choiceList": [
+            {
+              "actualValue": "Msg1",
+              "displayValue": "Msg1"
+            },
+            {
+              "actualValue": "Msg2",
+              "displayValue": "Msg2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "type": "FieldGroupEnd",
+          "label": "End"
+        },
+        {
+          "fieldName": "PartyServiceAssociationCode",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Party Service Association Code",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "readOnly": true,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "eventPropertiesList": [
+            {
+              "condition": "data.Party === 'Party1'",
+              "property": "visible",
+              "value": "false"
+            },
+            {
+              "condition": "data.Party === 'Party2'",
+              "property": "visible",
+              "value": "true"
+            }
+          ],
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "AssociationCode1",
+              "displayValue": "AssociationCode1"
+            },
+            {
+              "actualValue": "AssociationCode2",
+              "displayValue": "AssociationCode2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "Branch",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Branch",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter the Branch",
+          "sectionProperties": null,
+          "restChoiceProperties": {
+            "url": "(\"/MessagesTypeChoiceList.json\")",
+            "restMethod": null,
+            "postParams": null,
+            "labelProperty": "displayValueDup",
+            "valueProperty": "actualValueDup",
+            "forwardDependencies": ["SampleCombo2"]
+          },
+          "choiceList": [
+            {
+              "actualValue": "Branch1",
+              "displayValue": "Branch1"
+            },
+            {
+              "actualValue": "Branch2",
+              "displayValue": "Branch2"
+            }
+          ],
+          "fieldList": null,
+          "eventPropertiesList": [
+            {
+              "condition": "data.Party === 'Party1'",
+              "property": "fieldValue",
+              "value": "\"Branch1\""
+            },
+            {
+              "condition": "data.Party === 'Party2'",
+              "property": "fieldValue",
+              "value": "\"Branch2\""
+            }
+          ],
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "ProductsSupported",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Products Supported",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter the Products which are Supported",
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Product1",
+              "displayValue": "Product1"
+            },
+            {
+              "actualValue": "Product2",
+              "displayValue": "Product2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "ValueDate",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Value Date",
+          "maxLength": 10,
+          "mandatory": false,
+          "width": null,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": "/^[0-9]+$/",
+          "validationProperties" : [ {
+            "validationType" : "RegEx",
+            "validationText" : "/^[0-9]+$/",
+            "errMessage" : "Invalid"
+            },{
+            "validationType" : "Formula",
+            "validationText" : "data.ValueDate && data.ValueDate >= 100",
+            "errMessage" : "Invalid Text"
+          } ],
+          "placeholder": "Enter Value Date",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "DebtorCustomerProprietaryCode",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Debtor Customer Proprietary Code",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "validationProperties" : {
+            "errMessage" : "",
+            "regExValidation" : false,
+            "regExText" : "",
+            "formulaText" : "false"
+          },
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Debtor1",
+              "displayValue": "Debtor1"
+            },
+            {
+              "actualValue": "Debtor2",
+              "displayValue": "Debtor2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "PaymentCurrency",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Payment Currency",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Curr1",
+              "displayValue": "Curr1"
+            },
+            {
+              "actualValue": "Curr2",
+              "displayValue": "Curr2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "dependentFieldList": ["PaymentDetails.Amount"],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "Amount",
+          "type": "TextField",
+          "messageType": "Integer",
+          "label": "Amount",
+          "maxLength": null,
+          "mandatory": false,
+          "width": null,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "helpText": "Fill up the party...",
+          "defaultValue": null,
+          "format": "/^[0-9]+$/",
+          "placeholder": "Amount",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "eventPropertiesList": [
+            {
+              "condition": "metaData('Service', 'mandatory')",
+              "property": "type",
+              "value": "\"TextArea\""
+            },
+            {
+              "condition": "!metaData('Service', 'mandatory')",
+              "property": "type",
+              "value": "\"TextField\""
+            },
+            {
+              "condition": "true",
+              "property": "fieldValue",
+              "value": "((data.PaymentCurrency === \"Curr1\") ? 12 : ((data.PaymentCurrency === \"Curr2\") ? 1 : undefined) )"
+            }
+          ],
+          "dependentFieldList": ["$root.PaymentDetails.EndToEndId", "$root.PaymentDetails.ChargeCode", "PaymentDetails.SampleInnerSection.MessagesType"],
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": "resize-none form-control",
+            "labelStyle": null,
+            "errorStyle": null,
+            "helpStyle": "bold"
+          }
+        },
+        {
+          "fieldName": "myDynamic abc",
+          "type": "myDynamic",
+          "label": "Dynamic Sample"
+        },
+        {
+          "fieldName": "EndToEndId",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "End to End Id",
+          "maxLength": 10,
+          "mandatory": false,
+          "width": null,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter End to End ID",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "eventPropertiesList": [
+            {
+              "condition": "metaData('Amount', 'type') === 'TextArea'",
+              "property": "label",
+              "value": "\"End to End Id \" + metaData('Amount', 'label')"
+            },
+            {
+              "condition": "metaData('Amount', 'type') === 'TextField'",
+              "property": "label",
+              "value": "\"End to End Id \" + metaData('Amount', 'type')"
+            },
+            {
+              "condition": "data.Party === 'Party1'",
+              "property": "fieldValue",
+              "value": "data.Party"
+            },
+            {
+              "condition": "data.Party === 'Party2'",
+              "property": "fieldValue",
+              "value": "data.Party"
+            }
+          ],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "myDynamic2 123",
+          "type": "myDynamic2",
+          "label": "Search Select Dynamic",
+          "multiple": true,
+          "choiceList": [
+            {
+              "actualValue": "S1",
+              "displayValue": "Select 1"
+            },
+            {
+              "actualValue": "S2",
+              "displayValue": "Select 2"
+            }
+          ]
+        },
+        {
+          "fieldName": "ChargeCode",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Charge Code",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "dependentFieldList": ["$parent.Total", "BeneficiaryBankDetails"],
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Charge1",
+              "displayValue": "Charge1"
+            },
+            {
+              "actualValue": "Charge2",
+              "displayValue": "Charge2"
+            }
+          ],
+          "fieldList": null,
+          "eventPropertiesList": [
+            {
+              "condition": "(dataRoot.Templates === 'T1')",
+              "property": "label",
+              "value":
+                "\"Charge Code 1 - \"+ metaData('metaRoot.PaymentDetails.Party', 'label') + \" -- \" + metaData('metaRoot.PaymentDetails.SampleInnerSection.SampleInnerField', 'label')"
+            },
+            {
+              "condition": "(dataRoot.Templates === 'T2')",
+              "property": "label",
+              "value": "\"Charge Code 2 - \" + metaData('metaRoot.Templates', 'label')"
+            },
+            {
+              "condition": "data.Amount && (data.Amount === 12 || data.Amount === '12')",
+              "property": "type",
+              "value": "\"List\""
+            },
+            {
+              "condition": "data.Amount && (data.Amount !== 12 && data.Amount !== '12')",
+              "property": "type",
+              "value": "\"Combo Box\""
+            }
+          ],
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "SampleInnerSection",
+          "type": "Section",
+          "messageType": "Section",
+          "label": "Sample Inner Section",
+          "maxLength": 0,
+          "mandatory": true,
+          "width": null,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 0,
+          "colSpan": 0,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "fieldList": [
+            {
+              "fieldName": "SampleInnerField",
+              "type": "TextField",
+              "messageType": "Integer",
+              "label": "Sample Inner Field",
+              "maxLength": 0,
+              "mandatory": true,
+              "width": null,
+              "height": 0,
+              "labelPositioning": null,
+              "rowSpan": 0,
+              "colSpan": 0,
+              "disabled": false,
+              "visible": true,
+              "tooltip": "Sample Tooltip 123",
+              "multiple": false,
+              "defaultValue": null,
+              "format": null,
+              "placeholder": "Sample Placeholder",
+              "fieldList": [],
+              "choiceList": null,
+              "dependentFieldList": ["Total", "$parent.$parent.OrderingCustomer.Name"],
+              "eventPropertiesList": [
+                {
+                  "condition": "dataRoot.Templates === 'T1';",
+                  "property": "mandatory",
+                  "value": "httpRequest(\"GET\", \"/previewErr.json\").pipe(rxjsOperators.map((res) => { var mandatory =  res.json(); return mandatory['mandatoryIndicator']} ))"
+                },
+                {
+                  "condition": "dataRoot.Templates === 'T2'",
+                  "property": "mandatory",
+                  "value": "false"
+                },
+                {
+                  "condition": "dataRoot.Templates === 'T1'",
+                  "property": "fieldValue",
+                  "value": "999"
+                },
+                {
+                  "condition": "dataRoot.Templates === 'T2'",
+                  "property": "fieldValue",
+                  "value": "1001"
+                },
+                {
+                  "condition": "httpRequest(\"GET\", \"/previewErr.json\").pipe(rxjsOperators.map((res) => { var mandatory =  res.json(); return mandatory['mandatoryIndicator']} ))",
+                  "property": "labelPositioning",
+                  "value": "\"left\""
+                },
+                {
+                  "condition": "false",
+                  "property": "placeholder",
+                  "value": "findData(\"PaymentDetails.SampleInnerSection.myDynamic\")"
+                }
+              ],
+              "customPropertyList": null,
+              "customStyle": {
+                "fieldStyle": null,
+                "labelStyle": null,
+                "errorStyle": null
+              }
+            },
+            {
+          "fieldName": "MessagesType",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Messages Type",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": "MsgREST1",
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "restChoiceProperties": {
+            "url": "(\"/MessagesTypeChoiceList.json\")",
+            "restMethod": null,
+            "postParams": null,
+            "labelProperty": "displayValueDup",
+            "valueProperty": "actualValueDup",
+            "forwardDependencies": []
+          },
+          "eventPropertiesList": [],
+          "choiceList": [
+            {
+              "actualValue": "Msg1",
+              "displayValue": "Msg1"
+            },
+            {
+              "actualValue": "Msg2",
+              "displayValue": "Msg2"
+            }
+          ],
+          "fieldList": null,
+          "dependentFieldList": ["PaymentDetails.SampleInnerSection.myDynamic"],
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "myDynamic",
+          "label": "Dynamic Component Label",
+          "type": "myDynamic",
+          "validationProperties" : [ {
+            "validationType" : "Formula",
+            "validationText" : "data.myDynamic && data.myDynamic == \"Success\" ",
+            "errMessage" : "Invalid Text"
+          } ],
+          "dependentFieldList": ["PaymentDetails.SampleInnerSection.SampleInnerField"],
+          "eventPropertiesList": [
+            {
+              "condition": "",
+              "property": "mandatory",
+              "value": "!findData(\"PaymentDetails.SampleInnerSection.MessagesType\")"
+            },
+            {
+              "condition": "false",
+              "property": "fieldValue",
+              "value": "findData(\"PaymentDetails.SampleInnerSection.MessagesType\")? findData(\"PaymentDetails.SampleInnerSection.MessagesType\") : findMetaInfo(\"type\")"
+            }
+          ]
+        }
+          ],
+          "sectionProperties": {
+            "sectionRepeatable": false,
+            "sectionMaxRepeats": 1,
+            "sectionMinRepeats": 1,
+            "sectionColumnCount": null
+          },
+          "choiceList": null,
+          "customPropertyList": null,
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        }
+      ],
+      "customPropertyList": null,
+      "dependentFieldList": ["OrderingCustomer"],
+      "customStyle": {
+        "fieldStyle": null,
+        "labelStyle": null,
+        "errorStyle": null
+      }
+    },
+    {
+      "fieldName": "OrderingCustomer",
+      "type": "Section",
+      "messageType": "Section",
+      "label": "Ordering Customer",
+      "maxLength": 0,
+      "mandatory": true,
+      "width": null,
+      "height": 0,
+      "labelPositioning": null,
+      "rowSpan": 0,
+      "colSpan": 0,
+      "disabled": false,
+      "visible": true,
+      "multiple": false,
+      "defaultValue": null,
+      "format": null,
+      "placeholder": null,
+      "eventPropertiesList": [
+        {
+          "condition": "false",
+          "property": "visible",
+          "value": "!(dataRoot.PaymentDetails)"
+        }
+      ],
+      "sectionProperties": {
+        "sectionRepeatable": false,
+        "sectionMaxRepeats": 1,
+        "sectionMinRepeats": 1,
+        "sectionColumnCount": null
+      },
+      "choiceList": null,
+      "fieldList": [
+        {
+          "fieldName": "ClientId",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Client Id",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": "LeFt",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Client1",
+              "displayValue": "Client1"
+            },
+            {
+              "actualValue": "Client2",
+              "displayValue": "Client2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "Name",
+          "type": "TextField",
+          "messageType": "ISODate",
+          "label": "Name",
+          "maxLength": null,
+          "mandatory": false,
+          "width": null,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "tooltip": "Name Tooltip",
+          "placeholder": "Enter Name",
+          "eventPropertiesList": [
+            {
+              "condition": "metaData('metaRoot.PaymentDetails.SampleInnerSection.SampleInnerField', 'mandatory')",
+              "property": "placeholder",
+              "value": "\"Full Name\""
+            },
+            {
+              "condition": "!metaData('metaRoot.PaymentDetails.SampleInnerSection.SampleInnerField', 'mandatory')",
+              "property": "placeholder",
+              "value": "\"Name\""
+            }
+          ],
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "movie rating",
+          "label": "Bar Rating",
+          "type": "barRating"
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "type": "horizontalRule"
+        },
+        {
+          "type": "pageBreak"
+        },
+        {
+          "fieldName": "AddressLine1",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Address Line1",
+          "maxLength": "",
+          "mandatory": true,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": "center",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter AddressLine 1",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "AddressLine2",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Address Line2",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": "top",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter AddressLine 2",
+          "validationProperties" : [ {
+            "validationType" : "Formula",
+            "validationText" : "data.AddressLine2 && data.AddressLine2 == \"abc\" ",
+            "errMessage" : "Invalid Text"
+          } ],
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "City",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "City",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "swapLabelField": true,
+          "labelPositioning": "left",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter City",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "dependentFieldList": ["OrderingCustomer.State"],
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "State",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "State",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "eventPropertiesList": [
+            {
+              "condition": "httpRequest(\"GET\",\"/previewErr.json\").pipe(rxjsOperators.map(res => { var title = res.json(); return title['mandatoryIndicator']}))",
+              "property": "label",
+              "value": "httpRequest(\"GET\", \"/test.txt\").pipe(rxjsOperators.map(res => { return res['_body']; } ))"
+            },
+            {
+              "condition": "",
+              "property": "fieldValue",
+              "value": "httpRequest(\"GET\",\"/previewErr.json\").pipe(rxjsOperators.map(res => { var title = res.json(); return title['formTitle']}))"
+            }
+          ],
+          "labelPositioning": null,
+          "fieldPositioning": "center",
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter State",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": "w-50",
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "type": "FieldGroupStart",
+          "fieldName": "FieldGroupStart",
+          "label": "Start",
+          "sectionProperties" : {
+            "sectionRepeatable" : false,
+            "sectionMaxRepeats" : 0,
+            "sectionMinRepeats" : 0,
+            "sectionCollapsible" : "Collapsed"
+          },
+          "customStyle" : {
+            "fieldStyle" : "style2",
+            "labelStyle" : "style1",
+            "errorStyle" : "style3",
+            "helpStyle" : null
+          }
+        },
+        {
+          "fieldName": "PostCode",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Post Code",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter Post Code",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "Country",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Country",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter Country",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "AccountNumber",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Account Number",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Acc1",
+              "displayValue": "Acc1"
+            },
+            {
+              "actualValue": "Acc2",
+              "displayValue": "Acc2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "AccountCurrency",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Account Currency",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Curr1",
+              "displayValue": "Curr1"
+            },
+            {
+              "actualValue": "Curr2",
+              "displayValue": "Curr2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "type": "FieldGroupStart",
+          "fieldName": "FieldGroupStart",
+          "label": "Start",
+          "sectionProperties" : {
+            "sectionRepeatable" : false,
+            "sectionMaxRepeats" : 0,
+            "sectionMinRepeats" : 0,
+            "sectionCollapsible" : "False"
+          },
+          "customStyle" : {
+            "fieldStyle" : "style2",
+            "labelStyle" : "style1",
+            "errorStyle" : "style3",
+            "helpStyle" : null
+          }
+        },
+        {
+          "fieldName": "AccountName",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Account Name",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": "Enter Account Number",
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "AccountDomiciledCountry",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Account Domiciled Country",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "US",
+              "displayValue": "US"
+            },
+            {
+              "actualValue": "UK",
+              "displayValue": "UK"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        }
+      ],
+      "customPropertyList": null,
+      "customStyle": {
+        "fieldStyle": null,
+        "labelStyle": null,
+        "errorStyle": null
+      }
+    },
+    {
+      "fieldName": "BeneficiaryBankDetails",
+      "type": "Section",
+      "messageType": "Section",
+      "label": "Beneficiary Bank Details",
+      "maxLength": 0,
+      "mandatory": true,
+      "width": null,
+      "height": 0,
+      "labelPositioning": null,
+      "rowSpan": 0,
+      "colSpan": 0,
+      "disabled": false,
+      "visible": true,
+      "multiple": false,
+      "defaultValue": null,
+      "format": null,
+      "placeholder": null,
+      "eventPropertiesList": [
+        {
+          "condition": "true",
+          "property": "label",
+          "value": "dataRoot.PaymentDetails.ChargeCode ? (dataRoot.PaymentDetails.ChargeCode + \" -  Beneficiary Bank Details\") : \"Beneficiary Bank Details\""
+        },
+        {
+          "condition": "dataRoot.PaymentDetails.ChargeCode === \"Charge1\"",
+          "property": "sectionProperties",
+          "value": "var obj = {\"sectionRepeatable\" : true, \"sectionMinRepeats\" : 1, \"sectionColumnCount\" : 2}; obj;"
+        },
+        {
+          "condition": "dataRoot.PaymentDetails.ChargeCode === \"Charge2\"",
+          "property": "sectionProperties",
+          "value": "var obj = {\"sectionRepeatable\": false, \"sectionMaxRepeats\": 1, \"sectionMinRepeats\": 0, \"sectionColumnCount\" : 4}; obj"
+        }
+      ],
+      "sectionProperties": {
+        "sectionRepeatable": false,
+        "sectionMaxRepeats": 1,
+        "sectionMinRepeats": 1,
+        "sectionColumnCount": 2
+      },
+      "choiceList": null,
+      "fieldList": [
+        {
+          "fieldName": "BankIdentifierType",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Bank Identifier Type",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Bank1",
+              "displayValue": "Bank1"
+            },
+            {
+              "actualValue": "Bank2",
+              "displayValue": "Bank2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "dependentFieldList": ["BeneficiaryBankDetails.BankIdentifierCode"],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "BankIdentifierCode",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Bank Identifier Code",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "restChoiceProperties": {
+            "url": "(\"/MessagesTypeChoiceList\" + ((data.BankIdentifierType) ? (\"_\" + data.BankIdentifierType) : \"\") + \".json\")",
+            "restMethod": null,
+            "postParams": null,
+            "labelProperty": "displayValueDup",
+            "valueProperty": "actualValueDup",
+            "forwardDependencies": ["BeneficiaryBankDetails.BankIdentifierType", "BeneficiaryBankDetails.AddressLine1"]
+          },
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "BankCode1",
+              "displayValue": "BankCode1"
+            },
+            {
+              "actualValue": "BankCode2",
+              "displayValue": "BankCode2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "AddressLine1",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Address Line1",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "dependentFieldList": ["BeneficiaryBankDetails.BankIdentifierCode"],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "AddressLine2",
+          "type": "TextField",
+          "messageType": "Character",
+          "label": "Address Line2",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "City",
+          "type": "TextField",
+          "messageType": "BigInteger",
+          "label": "City",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "State",
+          "type": "TextField",
+          "messageType": "Binary",
+          "label": "State",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "PostCode",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Post Code",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "Country",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Country",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        }
+      ],
+      "customPropertyList": null,
+      "customStyle": {
+        "fieldStyle": null,
+        "labelStyle": null,
+        "errorStyle": null
+      }
+    },
+    {
+      "fieldName": "BeneficiaryDetails",
+      "type": "Section",
+      "messageType": "Section",
+      "label": "Beneficiary Details",
+      "maxLength": 0,
+      "mandatory": true,
+      "width": null,
+      "height": 0,
+      "labelPositioning": null,
+      "rowSpan": 0,
+      "colSpan": 0,
+      "disabled": false,
+      "visible": true,
+      "multiple": false,
+      "defaultValue": null,
+      "format": null,
+      "placeholder": null,
+      "sectionProperties": {
+        "sectionRepeatable": false,
+        "sectionMaxRepeats": 1,
+        "sectionMinRepeats": 1,
+        "sectionColumnCount": null
+      },
+      "choiceList": null,
+      "fieldList": [
+        {
+          "fieldName": "AccountNumber",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Account Number",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "Acc1",
+              "displayValue": "Acc1"
+            },
+            {
+              "actualValue": "Acc2",
+              "displayValue": "Acc2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "type": "FieldGroupEnd",
+          "label": "End"
+        },
+        {
+          "fieldName": "Name",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Name",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": null,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "BeneficiaryAddressLine1",
+          "type": "TextField",
+          "messageType": "DateOnly",
+          "label": "Beneficiary Address Line1",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "BeneficiaryAddressLine2",
+          "type": "TextField",
+          "messageType": "TimeOnly",
+          "label": "Beneficiary Address Line2",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "City",
+          "type": "TextField",
+          "messageType": "DateTime",
+          "label": "City",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "State",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "State",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "PostCode",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Post Code",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "Country",
+          "type": "TextField",
+          "messageType": "BigInteger",
+          "label": "Country",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        }
+      ],
+      "customPropertyList": null,
+      "customStyle": {
+        "fieldStyle": null,
+        "labelStyle": null,
+        "errorStyle": null
+      }
+    },
+    {
+      "fieldName": "RemittanceInformation",
+      "type": "Section",
+      "messageType": "Section",
+      "label": "Remittance Information",
+      "maxLength": 0,
+      "mandatory": true,
+      "width": null,
+      "height": 0,
+      "labelPositioning": null,
+      "rowSpan": 0,
+      "colSpan": 0,
+      "disabled": false,
+      "visible": true,
+      "multiple": false,
+      "defaultValue": null,
+      "format": null,
+      "placeholder": null,
+      "sectionProperties": {
+        "sectionRepeatable": false,
+        "sectionMaxRepeats": 1,
+        "sectionMinRepeats": 0,
+        "sectionColumnCount": null
+      },
+      "choiceList": null,
+      "fieldList": [
+        {
+          "fieldName": "RemittanceId",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Remittance Id",
+          "maxLength": 5,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "RemittanceInformation",
+          "type": "TextArea",
+          "messageType": "String",
+          "label": "Remittance Information",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        }
+      ],
+      "customPropertyList": null,
+      "customStyle": {
+        "fieldStyle": "resize-none form-control",
+        "labelStyle": "dsfrg",
+        "errorStyle": "xdsfh"
+      }
+    },
+    {
+      "fieldName": "IntermediaryBankDetails",
+      "type": "Section",
+      "messageType": "Section",
+      "label": "Intermediary Bank Detailsdxds",
+      "maxLength": 0,
+      "mandatory": true,
+      "width": null,
+      "height": 0,
+      "labelPositioning": null,
+      "rowSpan": 0,
+      "colSpan": 0,
+      "disabled": false,
+      "visible": true,
+      "multiple": false,
+      "defaultValue": null,
+      "format": null,
+      "placeholder": null,
+      "sectionProperties": {
+        "sectionRepeatable": true,
+        "sectionMaxRepeats": 3,
+        "sectionMinRepeats": 1,
+        "sectionColumnCount": null
+      },
+      "choiceList": null,
+      "fieldList": [
+        {
+          "fieldName": "BankIdentifierType",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Bank Identifier Type",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": 10,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": "",
+            "labelStyle": "",
+            "errorStyle": ""
+          }
+        },
+        {
+          "fieldName": "BankIdentifierCode",
+          "type": "Combo Box",
+          "messageType": "String",
+          "label": "Bank Identifier Code",
+          "maxLength": 0,
+          "mandatory": false,
+          "width": null,
+          "height": 4,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": [
+            {
+              "actualValue": "BankCode1",
+              "displayValue": "BankCode1"
+            },
+            {
+              "actualValue": "BankCode2",
+              "displayValue": "BankCode2"
+            }
+          ],
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "AddressLine1",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Address Line1",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "AddressLine2",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Address Line2",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "City",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "City",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "State",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "State",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "PostCode",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Post Code",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        },
+        {
+          "fieldName": "Country",
+          "type": "TextField",
+          "messageType": "String",
+          "label": "Country",
+          "maxLength": -1,
+          "mandatory": false,
+          "width": -1,
+          "height": 0,
+          "labelPositioning": null,
+          "rowSpan": 1,
+          "colSpan": 1,
+          "disabled": false,
+          "visible": true,
+          "multiple": false,
+          "defaultValue": null,
+          "format": null,
+          "placeholder": null,
+          "sectionProperties": null,
+          "choiceList": null,
+          "fieldList": null,
+          "customPropertyList": [],
+          "customStyle": {
+            "fieldStyle": null,
+            "labelStyle": null,
+            "errorStyle": null
+          }
+        }
+      ],
+      "customPropertyList": null,
+      "customStyle": {
+        "fieldStyle": "2w54",
+        "labelStyle": "sfh",
+        "errorStyle": "sfh4"
+      }
+    }
+  ]
+}

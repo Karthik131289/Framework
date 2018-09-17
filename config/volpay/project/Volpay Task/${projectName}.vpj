@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+${cartridgeName}
+${flowName}
+-->
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="${projectName}" type="VolanteProject">
+	<version>1.0</version>
+	<folder-set root=".">
+	</folder-set>
+	<workspace>
+		<selected-element root="E:\DesignerEnhancements-Krishnan\Cartridges\VolpayProject\SimpleFlow\SimpleFlow.car">SimpleFlow/SimpleFlow</selected-element>
+		<open-files>
+			<file>SimpleFlow\SimpleFlow.car</file>
+		</open-files>
+		<recent-files>
+			<file>C:\Users\lekha\Volante\Proj3\Messages\Messages.car</file>
+			<file>C:\Users\lekha\Volante\Proj3\Messages\AllMessages.car</file>
+			<file>C:\Users\lekha\Volante\Proj3\Mappings\AllMappings.car</file>
+			<file>C:\Users\lekha\Volante\Proj3\Main\ss.car</file>
+			<file>C:\Users\lekha\Volante\Proj3\FFAdapter.car</file>
+			<file>C:\Users\lekha\Volante\Volpay4\FFAdapter.car</file>
+		</recent-files>
+	</workspace>
+	<elementproperties>
+		<propertymap>
+			<property name="DOCUMENT_PROPERTIES">
+				<value>
+					<propertymap>
+						<property name="Creation Time" value="Thu Oct 12 15:06:00 IST 2017"/>
+						<property name="Author" value="lekha"/>
+						<property name="Title" value="VolpayProject"/>
+						<property name="Client Id" value="lekha@volantetech.net"/>
+						<property name="Last Author" value="lekha"/>
+						<property name="Last Save Time" value="Thu Oct 12 15:07:10 IST 2017"/>
+						<property name="Designer Build" value="1635"/>
+						<property name="Revision Number" value="3"/>
+					</propertymap>
+				</value>
+			</property>
+		</propertymap>
+	</elementproperties>
+</project>
+

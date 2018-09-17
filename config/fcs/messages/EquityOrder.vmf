@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FCSMessageFormat name="EquityOrder">
+	<DescriptiveName><![CDATA[CMS Equity Order]]></DescriptiveName>
+	<Category><![CDATA[Trade]]></Category>
+	<Description><![CDATA[Every order contains a number of lines; each numbered line in the format structure represents a line of text in a standard order.  Depending on an order's complexity, each line may be separated into one or more fields that present discrete pieces of information. Each field is a series of continuous uppercase letters, numbers and as specified  linking spaces (depicted with the symbol ^).]]></Description>
+	<FCSFields>
+		<HeaderAndTrailerType>FIRM_TO_CMS_HEADER_TRAILER</HeaderAndTrailerType>
+		<Header>
+			<Fields>
+			</Fields>
+		</Header>
+		<Data>
+			<Fields>
+				<FCSLine Name="Shared_Interface_Firm_Identifier">
+					<LineNumber>0</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Use Line 0 if your firm specifically needs to segregate order flow into SIAC.]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Shared_Interface_Firm_Identifier</LineName>
+					<LineField FieldType="Simple">
+						<Name>Shared_Interface_Firm_ID</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[If your firm elects to use the shared approach, this mnemonic must be defined in the CMS database to indicate a shared user, and all of your transmissions into CMS must contain this identifier on Line 0; CMS will reject any transmission without it.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[4c]]></Format>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Branch_Code_Sequence_Number">
+					<LineNumber>1</LineNumber>
+					<Optional>false</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[The branch code and branch sequence number appear on Line 1.  Taken togeth-er, these pieces of information identify one specific order for a firm on a given day.  This particular combination of code and number should not be repeated during the day.  This identifying information continues to be associated with its specific order until the order is canceled, executed, deleted or expires.]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Branch_Code_Sequence_Number</LineName>
+					<LineField FieldType="Simple">
+						<Name>Branch_Code</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Identifies an order's originating branch.
+Note:  Do not use YYY, ZZZ, QQQ, or ZYX; CMS will reject your transmission because these mnemonics are reserved for Trading Floor operations.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[3c]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Sequence_Number</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Identifies a specific order from the originating branch.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[4n]]></Format>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Routing_Information">
+					<LineNumber>1A</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Line 1A can be used to route traffic specifically to the Post or to the Booth.  Member Firms should make the distinction of how the order should be routed.  See the examples below.  If you do not enter information for Line 1A, CMS routes the order to its proper destination based upon its stock symbol, quantity and price.  If you use Field 1, you must use Field 2.  Fields 3 and 4 are optional.]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Routing_Information</LineName>
+					<LineField FieldType="Simple">
+						<Name>Exchange_Code</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[This is always 'NY'.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[2!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="AR" MappedValue="P">
+								<Description><![CDATA[ARCA Exchange]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Routing_Code</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Mandatory if Field 1 is present.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[4c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="OL" MappedValue="1">
+								<Description><![CDATA[Identifies a NYSE Odd Lot order.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="RPX" MappedValue="2">
+								<Description><![CDATA[Routes an order to the Specialist's Post unless other routing overrides.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="RPXV" MappedValue="3">
+								<Description><![CDATA[Same as RPX, with error filtering added.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="OVR" MappedValue="4">
+								<Description><![CDATA[Overrides all preset Booth routing parameters.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="OS" MappedValue="5">
+								<Description><![CDATA[Identifies a Crossing Session One-sided order; valid only between 1615 hours and 1700 hours New York time and only with a Time-in-force of DAY.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="TS" MappedValue="6">
+								<Description><![CDATA[Identifies a Crossing Session two-sided order; valid only between 1615 hours and 1700 hours New York time and only with a Time-in-force of DAY
+Note:  Each TS order must include Line 4A, the RE line.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="NX" MappedValue="7">
+								<Description><![CDATA[NYSE Direct]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="A" MappedValue="8">
+								<Description><![CDATA[Indicates routing for firms that use algorithmic routing based on firm-chosen values.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="AV" MappedValue="9">
+								<Description><![CDATA[Same as algorithmic routing, with error filtering added.]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Competing_Specialist</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Used if more than one Specialist trades a particular equity.
+Note: This field is currently not used.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[4c]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Booth_Code_ID</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Identifies the Booth to which you are sending an equity order - used by firms that subscribe to Booth routing.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[formula]]></Format>
+						<FormulaValues>
+							<Formula><![CDATA[]]></Formula>
+							<Condition><![CDATA[StartsWith($t, "B-") && length($t) <= 4]]></Condition>
+						</FormulaValues>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Empty Line311">
+					<Empty>true</Empty>
+					<Optional>false</Optional>
+					<Repeating>true</Repeating>
+				</FCSLine>
+				<FCSLine Name="Order_Instruction_Line">
+					<LineNumber>2</LineNumber>
+					<Optional>false</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[These instructions indicate the type of action to be taken on this order.]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Order_Instruction_Line</LineName>
+					<LineField FieldType="Simple">
+						<Name>Possible_Duplicate</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Tells the Host system that this transmission may duplicate a previous transmission during the present day.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[9!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="POSS DUPE" MappedValue="Y">
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Cancel</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Note:  All Cancel and Cancel-with-replacement orders must contain appropriate corresponding information on the RE line, Line 4A.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[7c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="CXL" MappedValue="CXL">
+								<Description><![CDATA[Instructs Host system to cancel a previous order.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="CXL BAL" MappedValue="CXL BAL">
+								<Description><![CDATA[Instructs Host system to cancel remaining balance on a previous order.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="ADD" MappedValue="ADD">
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Order_Instruction</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Order instruction.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[12c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="BUY" MappedValue="1">
+								<Description><![CDATA[Buy]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="SL" MappedValue="2">
+								<Description><![CDATA[Sell]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="BUY MINUS" MappedValue="3">
+								<Description><![CDATA[Buy on a minus tick]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="SL PLUS" MappedValue="4">
+								<Description><![CDATA[Sell on a plus tick]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="SSHRT" MappedValue="5">
+								<Description><![CDATA[Sell short]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="SSHRT EXEMPT" MappedValue="6">
+								<Description><![CDATA[Sell short, exempt from short sale rules]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Basic_Order_Data">
+					<LineNumber>3</LineNumber>
+					<Optional>false</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Line 3 provides basic information about the equity order you are placing: the quantity you are entering, a stock identifier and the price you want.]]></Description>
+					<LineLength>57</LineLength>
+					<LineName>Basic_Order_Data</LineName>
+					<LineField FieldType="Simple">
+						<Name>Quantity</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Provides the number of shares in the order.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[7n]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Stock_Symbol</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Identifies the stock for this order; a list appears in the NYSE Stock Symbol Directory.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[3c]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Suffix</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Gives additional information about the stock (for example, preferred, warrants, etc.); a list appears in the NYSE Stock Symbol Directory.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[6c]]></Format>
+					</LineField>
+					<LineField FieldType="Complex">
+						<Name>Price_Delimiter</Name>
+						<DataType>Complex</DataType>
+						<Description><![CDATA[Price delimiter.]]></Description>
+						<Optional>false</Optional>
+						<FCSFieldOption>
+							<Name>OrderTypeLiterals</Name>
+							<LineField FieldType="Simple">
+								<Name>OrderType</Name>
+								<DataType>Character</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[7c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="MKT" MappedValue="1">
+										<Description><![CDATA[Indicates execute at the quoted market]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="MKT CLO" MappedValue="5">
+										<Description><![CDATA[Requests a price as close as possible to the closing Market Price]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="MKT OB" MappedValue="7">
+										<Description><![CDATA[Indicates execute at the quoted market or better]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="MKT WOW" MappedValue="8">
+										<Description><![CDATA[Seeks Market Price, with or without Round Lot sales; only valid for Odd Lots]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="BAS" MappedValue="9">
+										<Description><![CDATA[Specifies a basis order; only valid for Odd Lots]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="CLO" MappedValue="A">
+										<Description><![CDATA[Designates an Odd Lot order to be executed based on the closing Round Lot sale; or indicates a Crossing Session order]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="WOW" MappedValue="6">
+										<Description><![CDATA[Specifies with or without Round Lot sale; only valid for Odd Lots]]></Description>
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>StopLimit</Name>
+							<Description><![CDATA[Stipulates a stop order with a Limit Price.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>StopPrice</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>OrderType</Name>
+								<DataType>Character</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[3!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="STP" MappedValue="4">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>Price</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name></Name>
+								<DataType>String</DataType>
+								<Optional>true</Optional>
+								<Format><![CDATA[3!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="LMT" MappedValue="LMT">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>Stop</Name>
+							<Description><![CDATA[Indicates a Stop Order.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>StopPrice</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>OrderType</Name>
+								<DataType>Character</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[3!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="STP" MappedValue="3">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>Limit</Name>
+							<Description><![CDATA[Limit Price and other associated formats.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>Price</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>OrderType</Name>
+								<DataType>Character</DataType>
+								<Optional>true</Optional>
+								<Format><![CDATA[3c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="CLO" MappedValue="B">
+										<Description><![CDATA[Requests a price as close as possible to the Closing Price (but not worse than the stipulated Limit Price)]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="OB" MappedValue="7">
+										<Description><![CDATA[Seeks Limit Price or better; also overrides Error Filter parameters]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="WOW" MappedValue="8">
+										<Description><![CDATA[Indicates a Limit Price, with or without Round Lot sales; only valid for Odd Lots]]></Description>
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Additional_Order_Information">
+					<LineNumber>3A</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Line 3A comprises several fields that provide specific handling instructions about an order such as:
+- Must it all be executed or none of it?
+- How long will it be in force?  
+- Can it be reduced or increased?  
+- How will it be delivered?  
+- Should the Specialist try to guarantee the price before Ex-e-cution? 
+- What is the account type for the order?  
+You enter this information in sequence, as needed, working from left to right and separating each item from the next with a space (^).]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Additional_Order_Information</LineName>
+					<LineField FieldType="Simple">
+						<Name>All_or_None</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Indicates that this order must be fully executed at the same time.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="CAP" MappedValue="Y">
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Time_in_Force</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Specifies how long the order remains in effect if it is neither executed nor canceled.
+Note:  Orders without this field are assumed to be Day orders.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="DAY" MappedValue="0">
+								<Description><![CDATA[good through the day of entry]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="GTC" MappedValue="1">
+								<Description><![CDATA[good 'til canceled]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="OPG" MappedValue="2">
+								<Description><![CDATA[opening only]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="OC" MappedValue="3">
+								<Description><![CDATA[immediate or cancel]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="FOK" MappedValue="4">
+								<Description><![CDATA[fill or kill]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="GTX" MappedValue="5">
+								<Description><![CDATA[good 'til executed
+Note:  If Limit Price is equal to Close Price, order can participate in Crossing Session 1.]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Do_not_Reduce_or_Increase</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Do not reduce or increase.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="DNI" MappedValue="E">
+								<Description><![CDATA[Not increased by normal dividend adjustments]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="DNR" MappedValue="F">
+								<Description><![CDATA[Not reduced by normal dividend adjustments]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Complex">
+						<Name>Delivery_Instructions</Name>
+						<DataType>Complex</DataType>
+						<Optional>true</Optional>
+						<FCSFieldOption>
+							<Name>CASH and ND</Name>
+							<Description><![CDATA[Indicates an order that must be settled on the same or next business day.
+Note:  In certain instances, particular issues trade either as CASH or ND exclusively; for these issues, you must enter either CASH or ND, or CMS will reject the order.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>Delivery_Instructions</Name>
+								<DataType>Integer</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[4c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="CASH" MappedValue="1">
+										<Description><![CDATA[Indicates an order that must be settled on the same business day]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="ND" MappedValue="2">
+										<Description><![CDATA[Indicates an order that must be settled on the next business day]]></Description>
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>SELLER</Name>
+							<Description><![CDATA[Indicates stock will not be delivered within the normal cycle but, instead, within the number of days specified after SELLER; maximum of sixty days.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>Delivery_Instructions</Name>
+								<DataType>Integer</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[6!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="SELLER" MappedValue="8">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>Seller_Days_Count</Name>
+								<DataType>Integer</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[2n]]></Format>
+							</LineField>
+						</FCSFieldOption>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Try_to_Stop</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Tries to solicit a guaranteed price prior to Execution.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="TTS" MappedValue="T">
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Account_Type</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Account Types reflect the type of trade as well as the relationship between the beneficial owner of the account and the member organization clearing the trade.
+The NYSE requires that all system orders include an Account Type Indicator.  In order to support Member Firms' efforts to comply with this requirement, CMS has been modified to allow firms to set this field as a mandatory field.  If it is set as mandatory, all orders without the Account Type Indicator will be rejected and returned to the firm.  Member Firms can make this selection on a mnemonic basis.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[1!c]]></Format>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Basic_Order_Data_for_Or_Switch_and_Cancel_Orders">
+					<LineNumber>3B</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Line 3B provides identifying information about the kind of complex order you are entering.  You can use it to enter the following:
+-An OR order to execute either of two alternatives (either/or) - such as sell a particular stock at a Limit Price or sell on stop. 
+- A switch order to:
+	a) purchase one stock and sell the same stock at a stipulated price difference, or
+	b) sell one stock and purchase the same stock at a stipulated price difference.
+- A short form Cancel-with-replacement order that only changes the original order's price.
+- A long form Cancel-with-replacement order that completely replaces the original order.]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Basic_Order_Data_for_Or_Switch_and_Cancel_Orders</LineName>
+					<LineField FieldType="Simple">
+						<Name>Additional_Ord_Inst</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Additional order instruction.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[7c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="OR" MappedValue="OR">
+								<Description><![CDATA[Indicates an either/or order to do either of two alternatives - for example:  either sell a particular security at a Limit Price or at Market-on-Close]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="SW" MappedValue="SW">
+								<Description><![CDATA[Signals a switch order to buy/sell one stock and sell/buy the same security at a stipulated price difference]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="CXL" MappedValue="CXL">
+								<Description><![CDATA[Tells the Host system to cancel the original order and replace it with another order, whose information follows.
+Note:  All Cancel and Cancel-with-replacement orders must contain appropriate corresponding information on the RE line, Line 4A.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="CXL BAL" MappedValue="CXL BAL">
+								<Description><![CDATA[Tells the Host system to cancel the remaining balance of the original order and replace it with another order.
+Note:  All Cancel and Cancel-with-replacement orders must contain appropriate corresponding information on the RE line, Line 4A.]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Complex">
+						<Name>Misc_Information</Name>
+						<DataType>Complex</DataType>
+						<Optional>true</Optional>
+						<FCSFieldOption>
+							<Name>Kind of Cancel or Switch Order Literals</Name>
+							<Description><![CDATA[Kind of Cancel or Switch Order.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>Kind_of_Cxl_or_Sw</Name>
+								<DataType>Integer</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[12c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="BUY" MappedValue="1">
+										<Description><![CDATA[Buy]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="SL" MappedValue="2">
+										<Description><![CDATA[Sell]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="BUY MINUS" MappedValue="3">
+										<Description><![CDATA[Buy on a minus tick]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="SL PLUS" MappedValue="4">
+										<Description><![CDATA[Sell on a plus tick]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="SSHRT" MappedValue="5">
+										<Description><![CDATA[Sell short]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="SSHRT EXEMPT" MappedValue="6">
+										<Description><![CDATA[Sell short, exempt from short sale rules]]></Description>
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>StopPrice</Name>
+							<Description><![CDATA[Cancel-with-replacement.
+Changes the price on a replacement order, without changing any of the other original order information.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>StopPrice</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name></Name>
+								<DataType>String</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[3!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="STP" MappedValue="STP">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>Price</Name>
+							<Description><![CDATA[Short form.
+Changes the price on a replacement order, without changing any of the other original order information.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>Price</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+						</FCSFieldOption>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Basic_Order_Data_Required_for_Or_Swith_and_Cancel_Orders">
+					<LineNumber>3C</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Line 3C is similar to Line 3 but contains additional information required for Or, Switch and Cancel orders.]]></Description>
+					<LineLength>57</LineLength>
+					<LineName>Basic_Order_Data_Required_for_Or_Swith_and_Cancel_Orders</LineName>
+					<LineField FieldType="Simple">
+						<Name>Quantity</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Provides the number of shares in the order.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[7n]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Stock_Symbol</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Names the security for this order; a list appears in the NYSE Stock Symbol Directory.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[3c]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Suffix</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Provides additional information about the security (for example, preferred, warrants, etc.); a list appears in the NYSE Stock Symbol Directory.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[6c]]></Format>
+					</LineField>
+					<LineField FieldType="Complex">
+						<Name>Price_Delimiters</Name>
+						<DataType>Complex</DataType>
+						<Optional>false</Optional>
+						<FCSFieldOption>
+							<Name>OrderTypeLiterals</Name>
+							<LineField FieldType="Simple">
+								<Name>OrderType</Name>
+								<DataType>Character</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[7c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="MKT" MappedValue="1">
+										<Description><![CDATA[Indicates execute at the quoted market]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="MKT CLO" MappedValue="5">
+										<Description><![CDATA[Requests a price as close as possible to the closing Market Price]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="MKT OB" MappedValue="7">
+										<Description><![CDATA[Indicates execute at the quoted market or better]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="MKT WOW" MappedValue="8">
+										<Description><![CDATA[Seeks Market Price, with or without a Round Lot sale; only valid for Odd Lots]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="BAS" MappedValue="9">
+										<Description><![CDATA[Specifies a basis order; only valid for Odd Lots]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="CLO" MappedValue="A">
+										<Description><![CDATA[Designates an Odd Lot order to be executed based on the closing Round Lot sale; or indicates a Crossing Session order]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="WOW" MappedValue="6">
+										<Description><![CDATA[Specifies with or without Round Lot sales; only valid for Odd Lots]]></Description>
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>StopLimit</Name>
+							<Description><![CDATA[Stipulates a Stop Price with or without a Limit Price.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>StopPrice</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>OrderType</Name>
+								<DataType>Character</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[3!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="STP" MappedValue="4">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>Price</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name></Name>
+								<DataType>String</DataType>
+								<Optional>true</Optional>
+								<Format><![CDATA[3!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="LMT" MappedValue="LMT">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>Stop</Name>
+							<Description><![CDATA[Indicates a stop order.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>StopPrice</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>OrderType</Name>
+								<DataType>Character</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[3!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="STP" MappedValue="3">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>Limit</Name>
+							<Description><![CDATA[Limit Price and associated formats.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>Price</Name>
+								<DataType>Double</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>OrderType</Name>
+								<DataType>Character</DataType>
+								<Optional>true</Optional>
+								<Format><![CDATA[3c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="CLO" MappedValue="B">
+										<Description><![CDATA[Designates an Odd Lot order to be executed based on the closing Round Lot sale; or indicates a Crossing Session order]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="OB" MappedValue="7">
+										<Description><![CDATA[Seeks Limit Price or better; also overrides Error Filter parameters]]></Description>
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="WOW" MappedValue="8">
+										<Description><![CDATA[Stipulates a Limit Price, with or without Round Lot sales; only valid for Odd Lots]]></Description>
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Additional_Order_Information_Cancel_Orders">
+					<LineNumber>3D</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Line 3D is similar to Line 3A but consists of several fields that provide specific handling instructions about the order being canceled.]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Additional_Order_Information_Cancel_Orders</LineName>
+					<LineField FieldType="Simple">
+						<Name>All_or_None</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Indicates this order must be fully executed at one time.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3!c]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Time_in_Force</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Specifies how long the order remains in effect if it is neither executed or canceled:]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="DAY" MappedValue="0">
+								<Description><![CDATA[good through the day of entry]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="GTC" MappedValue="1">
+								<Description><![CDATA[good 'til canceled]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="OPG" MappedValue="2">
+								<Description><![CDATA[opening only]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="OC" MappedValue="3">
+								<Description><![CDATA[immediate or cancel]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="GTX" MappedValue="5">
+								<Description><![CDATA[good 'til executed]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Do_not_Reduce_or_Increase</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Do not reduce or increase.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="DNI" MappedValue="E">
+								<Description><![CDATA[Not increased by normal dividend adjustments.]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="DNR" MappedValue="F">
+								<Description><![CDATA[Not be reduced by normal dividend adjustments.]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Complex">
+						<Name>Delivery_Instructions</Name>
+						<DataType>Complex</DataType>
+						<Optional>true</Optional>
+						<FCSFieldOption>
+							<Name>CASH and ND </Name>
+							<Description><![CDATA[Indicates an order that must be settled on the same or next business day.
+Note:  In certain instances, particular issues trade either as CASH or ND; for these is-sues, you must enter either CASH or ND, or CMS will reject the order.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>Delivery_Instructions</Name>
+								<DataType>Integer</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[4c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="CASH" MappedValue="1">
+									</FieldInfoValue>
+									<FieldInfoValue ActualValue="ND" MappedValue="2">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+						</FCSFieldOption>
+						<FCSFieldOption>
+							<Name>SELLER</Name>
+							<Description><![CDATA[Indicates stock will not be delivered within the normal cycle but, instead, within the number of days specified after SELLER; maximum of sixty days.]]></Description>
+							<LineField FieldType="Simple">
+								<Name>Delivery_Instructions</Name>
+								<DataType>Integer</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[6!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="SELLER" MappedValue="8">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>Seller_Days_Count</Name>
+								<DataType>Integer</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[2n]]></Format>
+							</LineField>
+						</FCSFieldOption>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Try_to_Stop</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Tries to solicit a guaranteed price prior to Execution.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="TTS" MappedValue="T">
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Account_Type</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Account Types reflect the type of trade as well as the relationship between the beneficial owner of the account and the member organization clearing the trade.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[1!c]]></Format>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Cancel_with_Leaves_Quantity">
+					<LineNumber>3E</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Line 3E sets out several fields of specific handling instructions about this order.]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Cancel_with_Leaves_Quantity</LineName>
+					<LineField FieldType="Simple">
+						<Name>LeaveOrWas</Name>
+						<DataType>String</DataType>
+						<Optional>false</Optional>
+						<Format><![CDATA[3!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="LVS" MappedValue="LVS">
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="WAS" MappedValue="WAS">
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Leaves_Quantity</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Provides the number of shares remaining to be executed in the original order after part is canceled 
+- quantity cannot be an Odd Lot - for example:  50 shares on a 100 share traded security 
+- on a Partial Round Lot (PRL) order, quantity cannot contain an Odd Lot, (for example, 125) on a 100 share traded security]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[7n]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Time_in_Force</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Specifies how long the order remains in effect if it is neither executed nor canceled.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[3c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="DAY" MappedValue="0">
+								<Description><![CDATA[good through the day of entry]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="GTC" MappedValue="1">
+								<Description><![CDATA[good 'til canceled]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="OPG" MappedValue="2">
+								<Description><![CDATA[execute at the Opening only]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="OC" MappedValue="3">
+								<Description><![CDATA[immediate or cancel]]></Description>
+							</FieldInfoValue>
+							<FieldInfoValue ActualValue="GTX" MappedValue="5">
+								<Description><![CDATA[good 'til executed]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Miscellaneous_Order_Information">
+					<LineNumber>3F</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Allows the Member Firm to send miscellaneous information to BBSS for Broker order details.]]></Description>
+					<LineLength>27</LineLength>
+					<LineName>Miscellaneous_Order_Information</LineName>
+					<LineField FieldType="Simple">
+						<Name>Misc_Information</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Miscellaneous order information.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[formula]]></Format>
+						<FormulaValues>
+							<Formula><![CDATA[]]></Formula>
+							<Condition><![CDATA[startsWith($line, "//") && length($line) <= 27]]></Condition>
+						</FormulaValues>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Empty Line292">
+					<Empty>true</Empty>
+					<Optional>false</Optional>
+					<Repeating>true</Repeating>
+				</FCSLine>
+				<FCSLine Name="Account_Information">
+					<LineNumber>4</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Your firm may enter free-form text on Line 4.  More than one Line 4 can appear, if necessary, to identify multiple accounts associated with the order.  (CMS assumes it is receiving Line 4 information unless or until it detects Line 4A, 4B or the trailer line.)]]></Description>
+					<LineLength>27</LineLength>
+					<LineName>Account_Information</LineName>
+					<LineField FieldType="Simple">
+						<Name>Misc_Information</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Miscellaneous information.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[formula]]></Format>
+						<FormulaValues>
+							<Formula><![CDATA[]]></Formula>
+							<Condition><![CDATA[startsWith($t, "RE") == false && startsWith($t, "GU") == false && startsWith($t, "CFN") == false && length($line) <= 27]]></Condition>
+						</FormulaValues>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Reference_Data_and_Miscellaneous_Information">
+					<LineNumber>4A</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[Line 4A is mandatory when you are entering a Cancel or a Cancel-with-replacement order because it contains required reference (RE) data.  The abbreviation RE precedes information that helps the Host system identify the original order.  Line 4A is also mandatory for Crossing Session two-sided (TS) orders.
+In addition to the reference information, Line 4A may also contain any miscellaneous information not specifically covered here but related to the order.  This line cannot contain more than 27 characters, including spaces.]]></Description>
+					<LineLength>35</LineLength>
+					<LineName>Reference_Data_and_Miscellaneous_Information</LineName>
+					<LineField FieldType="Simple">
+						<Name></Name>
+						<DataType>String</DataType>
+						<Optional>false</Optional>
+						<Format><![CDATA[2!c]]></Format>
+						<FieldInfoValues>
+							<FieldInfoValue ActualValue="RE" MappedValue="RE">
+								<Description><![CDATA[Prefix indicates that information about the original order will follow]]></Description>
+							</FieldInfoValue>
+						</FieldInfoValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Branch</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Originating branch.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[3c]]></Format>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>SequenceNumber</Name>
+						<DataType>Integer</DataType>
+						<Description><![CDATA[Sequence number assigned to the order being canceled and the date of the original order.
+Note:  A slash(/) character is used to separate the sequence number from the original order date.]]></Description>
+						<Optional>false</Optional>
+						<Format><![CDATA[formula]]></Format>
+						<FormulaValues>
+							<Formula><![CDATA[ToInt(LeftStr($t, "/"))]]></Formula>
+							<Condition><![CDATA[FindFirst($t, '/') != -1]]></Condition>
+						</FormulaValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>OrderDate</Name>
+						<DataType>Date</DataType>
+						<Optional>false</Optional>
+						<Format><![CDATA[formula]]></Format>
+						<FormulaValues>
+							<Formula><![CDATA[$dateStr = RightStr($p1, "/"); If(Length($dateStr) == 6,     ParseDate($dateStr, "MMddyy"),     ParseDate($dateStr, "MMddyyyy"));]]></Formula>
+							<Condition><![CDATA[FindFirst($p1, '/') != -1]]></Condition>
+						</FormulaValues>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>Misc_Information</Name>
+						<DataType>String</DataType>
+						<Description><![CDATA[Miscellaneous information defined by the firm.]]></Description>
+						<Optional>true</Optional>
+						<Format><![CDATA[formula]]></Format>
+						<FormulaValues>
+							<Formula><![CDATA[]]></Formula>
+							<Condition><![CDATA[length($rest) < 27 && length($rest) > 0]]></Condition>
+						</FormulaValues>
+					</LineField>
+				</FCSLine>
+				<FCSLine Name="Giveup_and_Confirmation_Line">
+					<LineNumber>4B</LineNumber>
+					<Optional>true</Optional>
+					<Repeating>false</Repeating>
+					<Description><![CDATA[The Give up field is used when an entering firm wishes to override - for the particular order being entered - the clearing entity set up in the CMS Member Firm database.]]></Description>
+					<LineLength>57</LineLength>
+					<LineName>Giveup_and_Confirmation_Line</LineName>
+					<LineField FieldType="Complex">
+						<Name>Giveup_Information</Name>
+						<DataType>Complex</DataType>
+						<Optional>true</Optional>
+						<FCSFieldOption>
+							<Name>Giveup Information</Name>
+							<Description><![CDATA[Names the clearing member desig-nated by another clearing or a non-clearing member for settlement of its Exchange transactions. ]]></Description>
+							<LineField FieldType="Simple">
+								<Name></Name>
+								<DataType>String</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[2!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="GU" MappedValue="GU">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>GiveUpID</Name>
+								<DataType>String</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[4c]]></Format>
+							</LineField>
+						</FCSFieldOption>
+					</LineField>
+					<LineField FieldType="Complex">
+						<Name>Confirmation_Line</Name>
+						<DataType>Complex</DataType>
+						<Optional>true</Optional>
+						<FCSFieldOption>
+							<Name>Confirmation Line</Name>
+							<Description><![CDATA[Confirmation prefix, followed by the quantity and stock symbol (and, optionally, suffix and price) that appeared on Line 3 of this order.]]></Description>
+							<LineField FieldType="Simple">
+								<Name></Name>
+								<DataType>String</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[3!c]]></Format>
+								<FieldInfoValues>
+									<FieldInfoValue ActualValue="CFN" MappedValue="CFN">
+									</FieldInfoValue>
+								</FieldInfoValues>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>Quantity</Name>
+								<DataType>Integer</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[7n]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>Stock_Symbol</Name>
+								<DataType>String</DataType>
+								<Optional>false</Optional>
+								<Format><![CDATA[3c]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>Suffix</Name>
+								<DataType>String</DataType>
+								<Optional>true</Optional>
+								<Format><![CDATA[3!c]]></Format>
+							</LineField>
+							<LineField FieldType="Simple">
+								<Name>Price</Name>
+								<DataType>Double</DataType>
+								<Optional>true</Optional>
+								<Format><![CDATA[price]]></Format>
+							</LineField>
+						</FCSFieldOption>
+					</LineField>
+					<LineField FieldType="Simple">
+						<Name>FreeForm</Name>
+						<DataType>String</DataType>
+						<Optional>true</Optional>
+						<Format><![CDATA[formula]]></Format>
+						<FormulaValues>
+							<Formula><![CDATA[]]></Formula>
+							<Condition><![CDATA[startsWith($t, "//")]]></Condition>
+						</FormulaValues>
+					</LineField>
+				</FCSLine>
+			</Fields>
+		</Data>
+		<Trailer>
+			<Fields>
+			</Fields>
+		</Trailer>
+	</FCSFields>
+	<validationrules>
+		<hdrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</hdrvalidationrules>
+		<datavalidationrules>
+			<fieldvalidations>
+				<fieldvalidation>
+					<name>F1</name>
+					<fieldname>Branch_Code_Sequence_Number.Branch_Code</fieldname>
+					<formula><![CDATA[!In(Branch_Code_Sequence_Number.Branch_Code, "YYY", "ZZZ", "QQQ", "ZYX")]]></formula>
+					<severity>error</severity>
+					<cascade>true</cascade>
+					<error-code>F1</error-code>
+					<actionmessage><![CDATA["Line 1 - Field 1 (Branch_Code_Sequence_Number.Branch_Code) is not valid. It should not be YYY, ZZZ, QQQ or ZYX."]]></actionmessage>
+				</fieldvalidation>
+				<fieldvalidation>
+					<name>F2</name>
+					<fieldname>Additional_Order_Information</fieldname>
+					<formula><![CDATA[(IsNull(Additional_Order_Information.All_or_None) &&  
+    IsNull(Additional_Order_Information.Do_not_Reduce_or_Increase)) ||
+(IsNotNull(Additional_Order_Information.All_or_None) !=  
+    IsNotNull(Additional_Order_Information.Do_not_Reduce_or_Increase))]]></formula>
+					<severity>error</severity>
+					<cascade>true</cascade>
+					<error-code>F2</error-code>
+					<actionmessage><![CDATA["Line 3A (Additional Order Information) is not valid. Either field 'All or None' or field 'Do not Reduce or Increase' is allowed. Both of them should not appear in the same message."]]></actionmessage>
+				</fieldvalidation>
+				<fieldvalidation>
+					<name>F3</name>
+					<fieldname>Additional_Order_Information.Seller_Days_Count</fieldname>
+					<formula><![CDATA[If(IsNotNull(Additional_Order_Information.Seller_Days_Count), 
+    Additional_Order_Information.Seller_Days_Count >= 0 && 
+        Additional_Order_Information.Seller_Days_Count <= 60, 
+     true)]]></formula>
+					<severity>error</severity>
+					<cascade>true</cascade>
+					<error-code>F3</error-code>
+					<actionmessage><![CDATA["Line 3A - Field 4 (Additional_Order_Information_3A.Seller_Days_Count) is not valid. It should be between 0 and 60."]]></actionmessage>
+				</fieldvalidation>
+				<fieldvalidation>
+					<name>F4</name>
+					<formula><![CDATA[If(Basic_Order_Data_for_Or_Switch_and_Cancel_Orders.$size != 0, 
+    Basic_Order_Data_Required_for_Or_Swith_and_Cancel_Orders.$size != 0,    
+    true
+  )]]></formula>
+					<severity>error</severity>
+					<cascade>true</cascade>
+					<error-code>F4</error-code>
+					<actionmessage><![CDATA["The Line 3C is necessary if Line 3B is specified as OR, SWITCH, CANCEL."]]></actionmessage>
+				</fieldvalidation>
+				<fieldvalidation>
+					<name>F5</name>
+					<fieldname>Routing_Information.Routing_Code</fieldname>
+					<formula><![CDATA[If(Routing_Information.Routing_Code == 6, 
+    Reference_Data_and_Miscellaneous_Information.$size > 0, 
+    true
+  )]]></formula>
+					<severity>error</severity>
+					<cascade>true</cascade>
+					<error-code>F5</error-code>
+					<actionmessage><![CDATA["Each TS order must include Line 4A (Reference Data and Miscellaneous Information)."]]></actionmessage>
+				</fieldvalidation>
+				<fieldvalidation>
+					<name>F6</name>
+					<fieldname>Routing_Information</fieldname>
+					<formula><![CDATA[If(IsNotNull(Routing_Information.Exchange_Code),
+    IsNotNull(Routing_Information.Routing_Code),
+    true)]]></formula>
+					<severity>error</severity>
+					<cascade>true</cascade>
+					<error-code>F6</error-code>
+					<actionmessage><![CDATA["In Line 1A(Routing Information) if field 'Exchange Code' is present, field 'Routing Code' should also be present."]]></actionmessage>
+				</fieldvalidation>
+				<fieldvalidation>
+					<name>F7</name>
+					<fieldname>Basic_Order_Data_for_Or_Switch_and_Cancel_Orders</fieldname>
+					<formula><![CDATA[If(IsNotNull(Basic_Order_Data_for_Or_Switch_and_Cancel_Orders.StopPrice) ||
+       IsNotNull(Basic_Order_Data_for_Or_Switch_and_Cancel_Orders.Price),
+    Basic_Order_Data_for_Or_Switch_and_Cancel_Orders.Additional_Ord_Inst 
+                                                                                                     == "CXL",
+    true
+)]]></formula>
+					<severity>error</severity>
+					<cascade>true</cascade>
+					<error-code>F7</error-code>
+					<actionmessage><![CDATA["In line 3B (Basic_Order_Data_for_Or_Switch_and_Cancel_Orders), if either 'Price' or 'StopPrice' is not NULL then 'Additional Ord Inst' has to be 'CXL'."]]></actionmessage>
+				</fieldvalidation>
+				<fieldvalidation>
+					<name>F8</name>
+					<fieldname>Additional_Order_Information_Cancel_Orders</fieldname>
+					<formula><![CDATA[(IsNull(Additional_Order_Information_Cancel_Orders.All_or_None) &&  
+    IsNull(Additional_Order_Information_Cancel_Orders.Do_not_Reduce_or_Increase)) ||
+(IsNotNull(Additional_Order_Information_Cancel_Orders.All_or_None) !=  
+    IsNotNull(Additional_Order_Information_Cancel_Orders.Do_not_Reduce_or_Increase))]]></formula>
+					<severity>error</severity>
+					<cascade>true</cascade>
+					<error-code>F8</error-code>
+					<actionmessage><![CDATA["Line 3D (Additional Order Information Cancel Orders) is not valid. Either field 'All or None' or field 'Do not Reduce or Increase' is allowed. Both of them should not appear in the same message."]]></actionmessage>
+				</fieldvalidation>
+			</fieldvalidations>
+		</datavalidationrules>
+		<tlrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</tlrvalidationrules>
+	</validationrules>
+</FCSMessageFormat>
+

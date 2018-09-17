@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<SIACCanonicalMessageFormat name="CanonicalOrder">
+	<DescriptiveName><![CDATA[CanonicalOrder]]></DescriptiveName>
+	<category><![CDATA[General]]></category>
+	<Description><![CDATA[The SIAC Canonical Order Message is the equivalent of NYSE FIX Order Message]]></Description>
+	<siaccanonicalfields>
+		<headerfields>
+			<field tag="10001">
+				<name>CFT_CanonicalVersion</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10002">
+				<name>CFT_BodyLength</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10003">
+				<name>CFT_SIACMsgType</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10004">
+				<name>CFT_MsgSubType</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10005">
+				<name>CFT_MsgOrigin</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10006">
+				<name>CFT_MsgDest</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10007">
+				<name>CFT_MsgSeqNo</name>
+				<type>int</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10008">
+				<name>CFT_Flags</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10010">
+				<name>CFT_MsgSendTime</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10021">
+				<name>CFT_MsgPriority</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10022">
+				<name>CFT_MsgSeverity</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10023">
+				<name>CFT_SourceMsgFmt</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10024">
+				<name>CFT_SessionID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10025">
+				<name>CFT_HostMsgID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10030">
+				<name>CFT_AuthorizeHandle</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10031">
+				<name>CFT_LogMsgPtr</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10032">
+				<name>CFT_DeliveryTimeout</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10035">
+				<name>CFT_HeaderRawDataLen</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10036">
+				<name>CFT_HeaderRawData</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10038">
+				<name>CFT_MsgOrigSystem</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10039">
+				<name>CFT_MsgDestSystem</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10040">
+				<name>CFT_ReplyToAddr</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10045">
+				<name>CFT_SMID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10046">
+				<name>CFT_EventID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10047">
+				<name>CFT_RefID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10225">
+				<name>CFT_FirmSymbol</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10810">
+				<name>CFT_OrderProcessingCode</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10327">
+				<name>CFT_DestBooth</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10380">
+				<name>CFT_PossDupFlag</name>
+				<type>char</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="80001">
+				<name>CFT_SavedFIXDataLen</name>
+				<type>int</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="80000">
+				<name>CFT_SavedFIXData</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+		</headerfields>
+		<datafields>
+			<field tag="10520">
+				<name>CFT_BrCode</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10521">
+				<name>CFT_BrSeq</name>
+				<type>int</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10570">
+				<name>CFT_OrderEntryDate</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10360">
+				<name>CFT_OrderTypes</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10666">
+				<name>CFT_StockSymbolSDOT</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10676">
+				<name>CFT_OrderQuantityShares</name>
+				<type>int</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10358">
+				<name>CFT_OrderInstruction</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10220">
+				<name>CFT_ExchangeCode</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10544">
+				<name>CFT_DniDnr</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10777">
+				<name>CFT_AllNoneInd</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10677">
+				<name>CFT_LimitPx</name>
+				<type>float</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10500">
+				<name>CFT_AccountType</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10489">
+				<name>CFT_MiscDataLine3F</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10488">
+				<name>CFT_MiscDataLine4</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10359">
+				<name>CFT_TIFCodes</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="10262">
+				<name>CFT_SettlementInst</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="80005">
+				<name>CFT_FutSettDate</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10678">
+				<name>CFT_StopPx</name>
+				<type>float</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10700">
+				<name>CFT_GiveUpAlphaID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10458">
+				<name>CFT_ClearingFirmAlphaID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10641">
+				<name>CFT_TryStop</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10725">
+				<name>CFT_SponsorFirmID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10258">
+				<name>CFT_CAPInd</name>
+				<type>char</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10294">
+				<name>CFT_BrokerBadgeID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10518">
+				<name>CFT_BillToFirm</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10299">
+				<name>CFT_ParentOrdXRefID</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10297">
+				<name>CFT_ParentOrderBrSeq</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10296">
+				<name>CFT_ParentOrderBrCode</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="80004">
+				<name>CFT_ParentOrderEntryDate</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10298">
+				<name>CFT_ParentOrderTANumber</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10433">
+				<name>CFT_ParentOrderTACode</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10295">
+				<name>CFT_ParentOrderMFirm</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10349">
+				<name>CFT_SourceOfOrderCode</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+			<field tag="80002">
+				<name>CFT_TransactionEntryTime</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+		</datafields>
+		<trailerfields>
+			<field tag="93">
+				<name>SignatureLength</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="89">
+				<name>Signature</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>false</required>
+			</field>
+			<field tag="10">
+				<name>Checksum</name>
+				<type>String</type>
+				<standard>true</standard>
+				<required>true</required>
+			</field>
+		</trailerfields>
+	</siaccanonicalfields>
+	<validationrules>
+		<hdrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</hdrvalidationrules>
+		<datavalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</datavalidationrules>
+		<tlrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</tlrvalidationrules>
+	</validationrules>
+</SIACCanonicalMessageFormat>
+

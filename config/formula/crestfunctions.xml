@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="CREST_IsCharSet_n">
+        <description>Validates if all characters in the string belong to the character set 'N' i.e., if all characters are digits.</description>
+        <signature>CREST_IsCharSet_n (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_n"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet_a">
+        <description>Validates if all characters in the string belong to the character set 'A' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet_a (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_a"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet_an">
+        <description>Validates if all characters in the string belong to the character set 'AN' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet_an (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_an"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula> 
+    <formula name="CREST_IsCharSet_x">
+        <description>Validates if all characters in the string belong to the character set 'x' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet_x (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_x"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet__X">
+        <description>Validates if all characters in the string belong to the character set 'X' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet__X (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet__X"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet_w">
+        <description>Validates if all characters in the string belong to the character set 'w' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet_w (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_w"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet__W">
+        <description>Validates if all characters in the string belong to the character set 'W' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet__W (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet__W"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet_y">
+        <description>Validates if all characters in the string belong to the character set 'y' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet_y (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_y"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet__Y">
+        <description>Validates if all characters in the string belong to the character set 'Y' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet__Y (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet__Y"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula> 
+    <formula name="CREST_IsCharSet_q">
+        <description>Validates if all characters in the string belong to the character set 'q' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet_q (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_q"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet__Q">
+        <description>Validates if all characters in the string belong to the character set 'Q' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet__Q (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet__Q"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet_S">
+        <description>Validates if all characters in the string belong to the character set 'S' (defined in DEX 19.0).</description>
+        <signature>CREST_IsCharSet_S (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_S"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet_F">
+        <description>Validates if all characters in the string are flags - either 'Y' or 'N'</description>
+        <signature>CREST_IsCharSet_F (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_F"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsCharSet_FS">
+        <description>Validates if all characters in the string are flags or space - either 'Y' or 'N' or ' '</description>
+        <signature>CREST_IsCharSet_FS (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestCharSets"/>
+        <property name="method" value="isCharSet_FS"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>    
+    <formula name="CREST_ValidateAmount">
+        <description>Validates if the given string conforms to the syntax of an amount field. First three characters should be valid currency code and the rest should be a valid double. The double part may be negative, if the field is a type 1 field. Finally, if it is not a price field, the number of digits after the decimal point of the double part should be within the maximum specified for the given currency.</description>
+        <signature>CREST_ValidateAmount (str, isType1, isPriceField)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="ValidateAmount"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="arg3" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt,swiftrt,swiftresources"/>
+    </formula>
+    <formula name="CREST_IsValidISIN">
+        <description>Validates if the first five characters is exactly 'ISIN ' and the rest constitute a valid ISIN code.</description>
+        <signature>CREST_IsValidISIN (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="IsValidISIN"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt,swiftrt,swiftresources"/>
+    </formula>
+    <formula name="CREST_IsValidCurrencyCode">
+        <description>Validates if the given string constitutes a valid currency code, as per ISO 4217.</description>
+        <signature>CREST_IsValidCurrencyCode (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="IsValidCurrencyCode"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt,swiftrt,swiftresources"/>
+    </formula>
+    <formula name="CREST_IsValidCountryCode">
+        <description>Validates if the given string constitutes a valid country code, as per ISO 3166.</description>
+        <signature>CREST_IsValidCountryCode (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="IsValidCountryCode"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt,swiftrt,swiftresources"/>
+    </formula>    
+    <formula name="CREST_IsValidMultiLineField">
+        <description>Validates if the given string constitutes a valid multi line field, subject to the given maximum number of lines and the maximum number of characters per line.</description>
+        <signature>CREST_IsValidMultiLineField (str, maxLines, maxCharPerLine)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="IsValidMultiLineField"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_FindMultiLineFieldLength">
+        <description>Determines the length (in terms of number of characters) of the upcoming multi-line field</description>
+        <signature>CREST_FindMultiLineFieldLength (str, maxLines, maxCharPerLine)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="FindMultiLineFieldLength"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsAnyFieldsTagPresent">
+        <description>Find if the peeked string begins with any tag from the given semi-colon delimited list of tags.</description>
+        <signature>CREST_IsAnyFieldsTagPresent (peekedStr, tags)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="IsAnyFieldsTagPresent"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IsBigDecimal">
+        <description>Validates if the given String is a valid BigDecimal.</description>
+        <signature>CREST_IsBigDecimal (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="IsBigDecimal"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>    
+    <formula name="CREST_IsBigInteger">
+        <description>Validates if the given String is a valid BigInteger.</description>
+        <signature>CREST_IsBigInteger (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestMiscFunctions"/>
+        <property name="method" value="IsBigInteger"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="crestrt"/>
+    </formula>    
+    <formula name="CREST_IntegerParseNegSign">
+        <description>Parses the given string as an integer whose negative value is indicated by the character 'N' being prefixed to the value (instead of the character '-').</description>
+        <signature>CREST_IntegerParseNegSign (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="IntegerParseNegSign"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IntegerSerializeNegSign">
+        <description>Serializes the given integer and if the value is negative, replaces the '-' with 'N'.</description>
+        <signature>CREST_IntegerSerializeNegSign (val)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="IntegerSerializeNegSign"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_IntegerSerializeFixedLen">
+        <description>Pads zeros at the front until the length of the resultant value is the given length.</description>
+        <signature>CREST_IntegerSerializeFixedLen (val, len)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="IntegerSerializeFixedLen"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="int"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_BigIntegerParseNegSign">
+        <description>Parses the given string as a BigInteger whose negative value is indicated by the character 'N' being prefixed to the value (instead of the character '-').</description>
+        <signature>CREST_BigIntegerParseNegSign (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="BigIntegerParseNegSign"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.math.BigInteger"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_BigIntegerSerializeNegSign">
+        <description>Serializes the given BigInteger and if the value is negative, replaces the '-' with 'N'.</description>
+        <signature>CREST_BigIntegerSerializeNegSign (val)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="BigIntegerSerializeNegSign"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigInteger"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_BigIntegerSerializeFixedLen">
+        <description>Pads zeros at the front until the length of the resultant value is the given length.</description>
+        <signature>CREST_BigIntegerSerializeFixedLen (val, len)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="BigIntegerSerializeFixedLen"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.math.BigInteger"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_DoubleParse">
+        <description>Parses the given double value only if it conforms to the specifications of CREST (comma to be used as decimal point, it must occur in the value and must be preceeded by at least one digit).</description>
+        <signature>CREST_DoubleParse (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="DoubleParse"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="double"/>
+        <property name="lib" value="crestrt"/>
+    </formula>    
+    <formula name="CREST_DoubleParseNegSign">
+        <description>Parses the given double value only if it conforms to the specifications of CREST (comma to be used as decimal point, it must occur in the value and must be preceeded by at least one digit). In addition, if the value is negative, it must be indicated by a prefixed 'N' and not '-'.</description>
+        <signature>CREST_DoubleParseNegSign (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="DoubleParseNegSign"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="double"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_DoubleSerializeNegSign">
+        <description>Serializes the given double value. If the value is negative, then this function replaces the '-' with 'N'.</description>
+        <signature>CREST_DoubleSerializeNegSign (val)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="DoubleSerializeNegSign"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="double"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_DoubleStrSerialize">
+        <description>Serializes the given double value in string form. If the input is not a valid double, it is returned as such. If the input is a valid double, it is returned as a valid CREST decimal (comma to be used as decimal point, it must occur in the value and must be preceeded by at least one digit).</description>
+        <signature>CREST_DoubleStrSerialize (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="DoubleStrSerialize"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>      
+    <formula name="CREST_BigDecimalParseNegSign">
+        <description>Parses the given BigDecimal value only if it conforms to the specifications of CREST (comma to be used as decimal point, it must occur in the value and must be preceeded by at least one digit). In addition, if the value is negative, it must be indicated by a prefixed 'N' and not '-'.</description>
+        <signature>CREST_BigDecimalParseNegSign (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="BigDecimalParseNegSign"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.math.BigDecimal"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_BigDecimalSerializeNegSign">
+        <description>Serializes the given BigDecimal value. If the value is negative, then this function replaces the '-' with 'N'.</description>
+        <signature>CREST_BigDecimalSerializeNegSign (val)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="BigDecimalSerializeNegSign"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_BigDecimalSerializeFixedLen">
+        <description>Pads zeros at the front until the length of the resultant value is the given length.</description>
+        <signature>CREST_BigDecimalSerializeFixedLen (val, len)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="BigDecimalSerializeFixedLen"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_BigDecimalParse">
+        <description>Parses the given BigDecimal value only if it conforms to the specifications of CREST (comma to be used as decimal point, it must occur in the value and must be preceeded by at least one digit).</description>
+        <signature>CREST_BigDecimalParse (str)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="BigDecimalParse"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.math.BigDecimal"/>
+        <property name="lib" value="crestrt"/>
+    </formula>    
+    <formula name="CREST_BigDecimalSerialize">
+        <description>Serialized the given BigDecimal value. Differs from the default serialization in that, this function adds a comma and a zero at the end of the given BigDecimal value, if it was originally an integral value.</description>
+        <signature>CREST_BigDecimalSerialize (val)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="BigDecimalSerialize"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>    
+    <formula name="CREST_TimeStampSerialize">
+        <description>If the given TimeStamp value is less than 20 digits long, appends zeros to its right to make it 20 digits long</description>
+        <signature>CREST_TimeStampSerialize (val)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="TimeStampSerialize"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigInteger"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula> 
+    <formula name="CREST_StringSerializeFixedLen">
+        <description>Pads spaces (zeros if it is a forced string field) at the front until the length of the resultant value is the given length.</description>
+        <signature>CREST_StringSerializeFixedLen (str, len, forceAsStringField)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="StringSerializeFixedLen"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="boolean"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt"/>
+    </formula>
+    <formula name="CREST_ParseAmount">
+        <description>Parses the given amount only if this is a valid amount. a.) The first three characters must a valid currency code b.) Rest of the string is a valid CREST double (comma used as decimal point, it must occur in the value, it must be preceeded by at least one digit). c.) The double value may be negative only if this is a type 1 field, and if so, this is indicated by the prefixed character 'N'. d.) Either this is a price field or the number of digits after the decimal point in the double value should be lesser than or equal to the maximum allowed for the given currency.</description>
+        <signature>CREST_ParseAmount (str, isTypeOne, isPriceField)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="ParseAmount"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="arg3" value="boolean"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt,swiftrt,swiftresources"/>
+    </formula>
+    <formula name="CREST_SerializeAmount">
+        <description>Serializes the given amount value only if it can be a valid amount: a.) The first three characters must a valid currency code b.) Rest of the string is a valid double. c.) The double value may be negative only if this is a type 1 field. d.) Either this is a price field or the number of digits after the decimal point in the double value should be lesser than or equal to the maximum allowed for the given currency. It it is a valid amount, the amount is serialized and the double value is represented as per CREST specifications. If the input cannot be a valid amount, the input string is returned.</description>
+        <signature>CREST_SerializeAmount (str, isTypeOne, isPriceField)</signature>
+        <category>Crest</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.crest.CrestParsersandSerializers"/>
+        <property name="method" value="SerializeAmount"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="arg3" value="boolean"/>        
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="crestrt,swiftrt,swiftresources"/>
+    </formula>    
+</formulae>

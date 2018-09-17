@@ -1,0 +1,17 @@
+<RemoteService_CatalogList>   
+    
+<RemoteService_Catalog>
+	<ServiceName>${msgtypeIdentificationFlowname}</ServiceName>
+	<ServiceType>FLOW</ServiceType>		
+	<TemplateFlowName>MessageTypeIdentificationTemplate</TemplateFlowName>
+	<Description>Service to identify type of input</Description>
+</RemoteService_Catalog>
+
+<RemoteService_Catalog>
+	<ServiceName>${msgFormatCode}DebulkFlow</ServiceName>
+	<ServiceType>FLOW</ServiceType>		
+	<TemplateFlowName>ParseTemplate</TemplateFlowName>
+	<Description>Service to parse </Description>
+</RemoteService_Catalog>
+
+</RemoteService_CatalogList> 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<archetypeSet>
+	
+    <name>VPF</name>
+    <location>volpay</location>
+	<!--<image>D:\images\archetype.png</image>-->
+	<displayName>Volpay Archetype</displayName>
+
+	<configSettings>
+	    <entry name="volpaySDK" mandatory="true" fileChooser="true"/>
+	</configSettings>
+	
+</archetypeSet>

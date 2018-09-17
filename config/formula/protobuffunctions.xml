@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+
+    <formula name="getUnknownFieldsByTag">
+        <description>Returns a list of unknown fields for the given the data object and protobuf tag.</description>
+        <signature>getUnknownFieldsByTag(obj, tag)</signature>
+        <category>Protocol Buffers</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.volante.transform.runtime.protobuf.functions.ProtobufFunctions"/>
+        <property name="method" value="getUnknownFieldsByTag"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="com.tplus.transform.runtime.collection.VariantList"/>
+        <property name="lib" value="volante-protobufrt,protobuf-java-3.6.0"/>
+    </formula>
+
+    <formula name="getUnknownFields">
+        <description>Returns a map with key as the tag of unknown field/message/group and value as a list of unknown fields.</description>
+        <signature>getUnknownFields(obj)</signature>
+        <category>Protocol Buffers</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.volante.transform.runtime.protobuf.functions.ProtobufFunctions"/>
+        <property name="method" value="getUnknownFields"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="com.tplus.transform.runtime.cache.Map"/>
+        <property name="lib" value="volante-protobufrt,protobuf-java-3.6.0"/>
+    </formula>
+
+    <formula name="getUnknownFieldsAsText">
+        <description>Returns all the unknown fields in the data object as string.</description>
+        <signature>getUnknownFieldsAsText(obj)</signature>
+        <category>Protocol Buffers</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.volante.transform.runtime.protobuf.functions.ProtobufFunctions"/>
+        <property name="method" value="getUnknownFieldsAsText"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-protobufrt,protobuf-java-3.6.0"/>
+    </formula>
+
+    <formula name="getUnknownFieldsAsText">
+        <description>Returns the unknown fields for the given tag in the data object as string.</description>
+        <signature>getUnknownFieldsAsText(obj, tag)</signature>
+        <category>Protocol Buffers</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.volante.transform.runtime.protobuf.functions.ProtobufFunctions"/>
+        <property name="method" value="getUnknownFieldsAsText"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-protobufrt,protobuf-java-3.6.0"/>
+    </formula>
+
+    <formula name="getUnknownFieldsAsText">
+        <description>Returns the unknown fields for the given tag and index in the data object as string.</description>
+        <signature>getUnknownFieldsAsText(obj, tag, occurenceIndex)</signature>
+        <category>Protocol Buffers</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.volante.transform.runtime.protobuf.functions.ProtobufFunctions"/>
+        <property name="method" value="getUnknownFieldsAsText"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="volante-protobufrt,protobuf-java-3.6.0"/>
+    </formula>
+
+    <formula name="setUnknownValue">
+        <description>Sets Unknown Value for a given tag.  The value should be a variant. Checks if given tag is a well-defined tag and checks for wire type consistency. If there are no unknown values for the given tag creates with the given wire type.</description>
+        <signature>setUnknownValue(obj, value, tag, wireType)</signature>
+        <category>Protocol Buffers</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.volante.transform.runtime.protobuf.functions.ProtobufFunctions"/>
+        <property name="method" value="setUnknownValue"/>
+        <property name="args" value="5"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg3" value="com.tplus.transform.runtime.Variant"/>
+        <property name="arg4" value="int"/>
+        <property name="arg5" value="int"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-protobufrt,protobuf-java-3.6.0"/>
+    </formula>
+
+
+    <formula name="getWireType">
+        <description>Returns the wire type of the field. If no field(unknown fields included) is found with the given tag returns -1.</description>
+        <signature>getWireType(obj, tag)</signature>
+        <category>Protocol Buffers</category>
+        <Class>com.tplus.transform.design.formula.functions.TransformContextFunction</Class>
+        <property name="class" value="com.volante.transform.runtime.protobuf.functions.ProtobufFunctions"/>
+        <property name="method" value="getWireType"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="com.tplus.transform.runtime.TransformContext"/>
+        <property name="arg2" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="volante-protobufrt,protobuf-java-3.6.0"/>
+    </formula>
+
+</formulae>

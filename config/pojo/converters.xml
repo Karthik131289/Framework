@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<converters>
+    <converter>
+        <class>com.tplus.transform.runtime.pojo.TimestampConverter</class>
+        <javaType>java.sql.Timestamp</javaType>
+        <volanteType>DateTime</volanteType>
+    </converter>
+    <converter>
+        <class>com.tplus.transform.runtime.pojo.UUIDConverter</class>
+        <javaType>java.util.UUID</javaType>
+        <volanteType>String</volanteType>
+    </converter>
+</converters>

@@ -1,0 +1,4408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fields>
+	<field>
+		<name>Admin.Client.RemoteHostname</name>
+		<designername>RemoteHostname</designername>
+		<type>string</type>
+		<description><![CDATA[Hostname/IP-address of the remote host that the client connected to.]]></description>
+	</field>
+	<field>
+		<name>Admin.Client.RemotePort</name>
+		<designername>RemotePort</designername>
+		<type>uint32</type>
+		<description><![CDATA[Remote port number for client connection.]]></description>
+	</field>
+	<field>
+		<name>Admin.DataModel.Error</name>
+		<designername>DataModelError</designername>
+		<type>string</type>
+		<description><![CDATA[Description of errors detected when loading data model.]]></description>
+	</field>
+	<field>
+		<name>Admin.DataModel.Version</name>
+		<designername>DataModelVersion</designername>
+		<type>uint32</type>
+		<description><![CDATA[Integer representing nominal data model version.]]></description>
+	</field>
+	<field>
+		<name>Admin.Date</name>
+		<designername>Date</designername>
+		<type>date</type>
+		<description><![CDATA[Date (year/month/day)]]></description>
+	</field>
+	<field>
+		<name>Admin.Destination</name>
+		<designername>Destination</designername>
+		<type>uint32</type>
+		<description><![CDATA[The Destination ID for the client application.]]></description>
+	</field>
+	<field>
+		<name>Admin.Entitlement.Description</name>
+		<designername>Description</designername>
+		<type>string</type>
+		<description><![CDATA[A description of the Entitlement stream code.]]></description>
+	</field>
+	<field>
+		<name>Admin.Entitlement.DescriptionsArray</name>
+		<designername>DescriptionsArray</designername>
+		<type>string</type>
+		<description><![CDATA[An array of entitlement descriptions.]]></description>
+	</field>
+	<field>
+		<name>Admin.Entitlement.Status</name>
+		<designername>Status</designername>
+		<type>string</type>
+		<description><![CDATA[The status of the Entitlement stream code.]]></description>
+	    <enum>INVALID</enum>
+	    <enum>ACTIVE</enum>
+	    <enum>INACTIVE</enum>
+	    <enum>NOTRECOVERING</enum>
+	    <enum>RECOVERYCANCELED</enum>
+	    <enum>RECOVERYINPROGRESS</enum>
+	    <enum>RECOVERYREQUESTED</enum>
+	</field>
+	<field>
+		<name>Admin.Entitlement.StatusesArray</name>
+		<designername>StatusesArray</designername>
+		<type>string</type>
+		<description><![CDATA[Array of entitlement statuses for the associated Entitlement IDs.]]></description>
+	    <enum>INVALID</enum>
+	    <enum>ACTIVE</enum>
+	    <enum>INACTIVE</enum>
+	    <enum>NOTRECOVERING</enum>
+	    <enum>RECOVERYCANCELED</enum>
+	    <enum>RECOVERYINPROGRESS</enum>
+	    <enum>RECOVERYREQUESTED</enum>
+	</field>
+	<field>
+		<name>Admin.Error.Text</name>
+		<designername>ErrorText</designername>
+		<type>string</type>
+		<description><![CDATA[Free text information about a BMDS error.]]></description>
+	</field>
+	<field>
+		<name>Admin.Information.Text</name>
+		<designername>InformationText</designername>
+		<type>string</type>
+		<description><![CDATA[Free text information about the BMDS feed.]]></description>
+	</field>
+	<field>
+		<name>Admin.InternalRecapFailed.Reason</name>
+		<designername>InternalRecapFailedReason</designername>
+		<type>string</type>
+		<description><![CDATA[Gives the possible reason as to why the internal recap attempt failed]]></description>
+	    <enum>TIMEOUT</enum>
+	    <enum>BLOOMBERGSEQRESET</enum>
+	    <enum>CANCELLED</enum>
+	    <enum>DISCONNECT</enum>
+	    <enum>ROUTECHANGE</enum>
+	    <enum>SLOWCONSUMER</enum>
+	</field>
+		<field>
+		<name>Admin.LVC.Canceled.Reason</name>
+		<designername>CanceledReason</designername>
+		<type>string</type>
+		<description><![CDATA[Identifies why the Last Value Cache recovery was canceled.]]></description>
+	    <enum>UNKNOWN</enum>
+	    <enum>BLOOMBERGSEQRESET</enum>
+	    <enum>DATARESET</enum>
+	    <enum>CLIENTREQUEST</enum>
+	    <enum>CLIENTREQUESTNOTFOUND</enum>
+	    <enum>DUPLICATEREQUEST</enum>
+	    <enum>INVALIDENTITLEMENT</enum>
+	    <enum>SYSTEMSHUTDOWN</enum>
+	    <enum>REQUESTTIMEOUT</enum>
+	    <enum>RESTRICTED</enum>
+	    <enum>DISCONNECTED</enum>
+	    <enum>ROUTECHANGE</enum>
+	    <enum>SLOWCONSUMER</enum>
+	    <enum>UNRELIABLE</enum>
+	    <enum>BADREQUEST</enum>
+	    <enum>NOTSUPPORTED</enum>
+	</field>
+		<field>
+		<name>Admin.LVCAckCount</name>
+		<designername>LVCAckCount</designername>
+		<type>uint32</type>
+		<description><![CDATA[If present informs the LVC Recovery Component how many acks to expect.]]></description>
+	</field>
+		<field>
+		<name>Admin.LVCDataRequestType</name>
+		<designername>LVCDataRequestType</designername>
+		<type>string</type>
+		<description><![CDATA[The client can specify if it wishes to recieve Summary and/or Reference data from this LVC recovery request.]]></description>
+	    <enum>SUMMARYREFERENCEDATA</enum>
+	    <enum>REFERENCEDATA</enum>
+	    <enum>SUMMARYDATA</enum>
+	    <enum>EIDDATA</enum>
+	    <enum>EIDREFERENCEDATA</enum>
+	</field>
+	<field>
+		<name>Admin.Missed.Heartbeats</name>
+		<designername>MissedHeartbeats</designername>
+		<type>int16</type>
+		<description><![CDATA[Count of the number of heartbeats missed]]></description>
+	</field>
+		<field>
+		<name>Admin.NumEntitlements</name>
+		<designername>NumEntitlements</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the arrays of Entitlement arrays and descriptions.]]></description>
+	</field>
+	<field>
+		<name>Admin.Publisher</name>
+		<designername>Publisher</designername>
+		<type>uint32</type>
+		<description><![CDATA[Identifier for the BMDS publisher.]]></description>
+	</field>
+		<field>
+		<name>Admin.RequestID</name>
+		<designername>RequestID</designername>
+		<type>uint32</type>
+		<description><![CDATA[The ID assigned to the request that can be used to link responses to a specific request.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.ClientMessage.Text</name>
+		<designername>ClientMessageText</designername>
+		<type>string</type>
+		<description><![CDATA[Message text logged by the client application.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.ClientMessage.Type</name>
+		<designername>ClientMessageType</designername>
+		<type>string</type>
+		<description><![CDATA[Describes the type of information contained in the message.]]></description>
+	    <enum>INFO</enum>
+	    <enum>ERROR</enum>
+	    <enum>STATISTICS</enum>
+	    <enum>WARNING</enum>
+	</field>
+	<field>
+		<name>Admin.SDK.LogLevel</name>
+		<designername>LogLevel</designername>
+		<type>string</type>
+		<description><![CDATA[Log level]]></description>
+	    <enum>ERROR</enum>
+	    <enum>INFO</enum>
+	    <enum>LVCRECOVERY</enum>
+	    <enum>MDSI</enum>
+	    <enum>OTHER</enum>
+	    <enum>TRACE</enum>
+	</field>
+	<field>
+		<name>Admin.SDK.LogMessage.Text</name>
+		<designername>LogMessageText</designername>
+		<type>string</type>
+		<description><![CDATA[Contains the content of the log messge.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.MDSClientMonitorEvents</name>
+		<designername>MDSClientMonitorEvents</designername>
+		<type>string</type>
+		<description><![CDATA[This is an array of event names which are monitored and caught by the MDS client monitor component.  An empty array indicates that there is no support for SDK to MDS messages.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.Message.Text</name>
+		<designername>MessageText</designername>
+		<type>string</type>
+		<description><![CDATA[Message string.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.Properties.Path</name>
+		<designername>PropertiesPath</designername>
+		<type>string</type>
+		<description><![CDATA[Identifies the component instance name and property name.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.Properties.PathsArray</name>
+		<designername>PropertiesPathsArray</designername>
+		<type>string</type>
+		<description><![CDATA[Array of strings each specifying a component property path.]]></description>
+	</field>
+		<field>
+		<name>Admin.SDK.Properties.Value</name>
+		<designername>PropertiesValue</designername>
+		<type>string</type>
+		<description><![CDATA[The value of a component property either read from a component or to be written to a component.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.Properties.ValuesArray</name>
+		<designername>PropertiesValuesArray</designername>
+		<type>string</type>
+		<description><![CDATA[Array of strings each specifying a component property value.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.PropertyReporter.Enable</name>
+		<designername>PropertyReporterEnable</designername>
+		<type>bool</type>
+		<description><![CDATA[Enable/disable the SDK Property Reporter Component.  False = disable ie. no properties will be reported upstream.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.PropertyRequest.Id</name>
+		<designername>PropertyRequestId</designername>
+		<type>int32</type>
+		<description><![CDATA[Unique identifier for the property request - will be returned in the response message.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.PropertyRequest.Result</name>
+		<designername>PropertyRequestResult</designername>
+		<type>string</type>
+		<description><![CDATA[Result (success or failure) of request.]]></description>
+	    <enum>SUCCESS</enum>
+	    <enum>FAILURE</enum>
+	</field>
+	<field>
+		<name>Admin.SDK.PropertyRequest.Result.Text</name>
+		<designername>PropertyRequestResultText</designername>
+		<type>string</type>
+		<description><![CDATA[Additional information as to the success or failure of the property request.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.PSM.PropertiesList</name>
+		<designername>PSMPropertiesList</designername>
+		<type>string</type>
+		<description><![CDATA[Contains a concatenated list of comma-seperated property names.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDK.PSM.PropertyReport</name>
+		<designername>PSMPropertyReport</designername>
+		<type>string</type>
+		<description><![CDATA[Contains a concatenated list of comma-seperated name-value pairs.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDKInterfaceVersion</name>
+		<designername>SDKInterfaceVersion</designername>
+		<type>uint32</type>
+		<description><![CDATA[The version of the SDK interface the client is expecting.]]></description>
+	</field>
+	<field>
+		<name>Admin.SDKVersion</name>
+		<designername>SDKVersion</designername>
+		<type>uint32</type>
+		<description><![CDATA[The version of the SDK installed.]]></description>
+	</field>
+	<field>
+		<name>Admin.Sequence.Number.Expected</name>
+		<designername>SequenceNumberExpected</designername>
+		<type>int32</type>
+		<description><![CDATA[The sequence number the target system was expecting.]]></description>
+	</field>
+	<field>
+		<name>Admin.Sequence.Number.Unexpected</name>
+		<designername>SequenceNumberUnexpected</designername>
+		<type>int32</type>
+		<description><![CDATA[The actual sequence number received (unexpectedly).]]></description>
+	</field>
+	<field>
+		<name>Admin.Subscription.BandwidthWarningHigh</name>
+		<designername>BandwidthWarningHigh</designername>
+		<type>int32</type>
+		<description><![CDATA[The Bandwidth that a warning message will be sent at.]]></description>
+	</field>
+	<field>
+		<name>Admin.Subscription.BandwidthWarningLow</name>
+		<designername>BandwidthWarningLow</designername>
+		<type>int32</type>
+		<description><![CDATA[The Bandwidth that instrument subscription will be allowed again.]]></description>
+	</field>
+	<field>
+		<name>Admin.Subscription.Instrument</name>
+		<designername>Instrument</designername>
+		<type>string</type>
+		<description><![CDATA[Instrument subscription string]]></description>
+	</field>
+	<field>
+		<name>Admin.Subscription.MaxBandwidthAllowed</name>
+		<designername>MaxBandwidthAllowed</designername>
+		<type>int32</type>
+		<description><![CDATA[The maximum bandwidth allowed for this DID.]]></description>
+	</field>
+	<field>
+		<name>Admin.Subscription.MaxSubscriptionsAllowed</name>
+		<designername>MaxSubscriptionsAllowed</designername>
+		<type>int32</type>
+		<description><![CDATA[The Maximum number of instrument subscriptions allowed.]]></description>
+	</field>
+	<field>
+		<name>Admin.Subscription.RequestFailureReason</name>
+		<designername>RequestFailureReason</designername>
+		<type>string</type>
+		<description><![CDATA[Subscription request failure reason]]></description>
+	    <enum>SUBSCRIPTIONLIMITREACHED</enum>
+	    <enum>BANDWIDTHEXCEEDED</enum>
+	    <enum>NOTENTITLED</enum>
+	    <enum>REQUESTTIMEOUT</enum>
+	    <enum>UNRESOLVABLEINSTRUMENT</enum>
+	</field>
+	<field>
+		<name>Admin.Subscription.StateChange</name>
+		<designername>StateChange</designername>
+		<type>string</type>
+		<description><![CDATA[Subscription State Change]]></description>
+	    <enum>SUBSCRIBED</enum>
+	    <enum>UNSUBSCRIBED</enum>
+	</field>
+	<field>
+		<name>Admin.Subscription.StateChangeReason</name>
+		<designername>StateChangeReason</designername>
+		<type>string</type>
+		<description><![CDATA[Subscription state change reason]]></description>
+	    <enum>CLIENTREQUEST</enum>
+	    <enum>AUTOREQUEST</enum>
+	    <enum>LIMITCHANGE</enum>
+	</field>
+	<field>
+		<name>Admin.Subscription.SubscriptionClearTime</name>
+		<designername>SubscriptionClearTime</designername>
+		<type>int32</type>
+		<description><![CDATA[Time before subscriptions will start to be restored to normal.]]></description>
+	</field>
+	<field>
+		<name>Admin.Subscription.SubscriptionReductionStep</name>
+		<designername>SubscriptionReductionStep</designername>
+		<type>int32</type>
+		<description><![CDATA[The number of subscription that will be reduced at a time in case the maximum bandwidth is exceeded.]]></description>
+	</field>
+	<field>
+		<name>Admin.Subscription.SubscriptionReductionStepTime</name>
+		<designername>SubscriptionReductionStepTime</designername>
+		<type>int32</type>
+		<description><![CDATA[Time between successive reductions.]]></description>
+	</field>
+	<field>
+		<name>Admin.System.Source</name>
+		<designername>SystemSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field denotes the name of the Source System.]]></description>
+	</field>
+	<field>
+		<name>Admin.System.Target</name>
+		<designername>SystemTarget</designername>
+		<type>string</type>
+		<description><![CDATA[This field denotes the name of the Target System.]]></description>
+	</field>
+	<field>
+		<name>Admin.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the adminstrative message.]]></description>
+	</field>
+	<field>
+		<name>Admin.TimeInterval.Secs</name>
+		<designername>TimeIntervalSecs</designername>
+		<type>uint32</type>
+		<description><![CDATA[Time interval in seconds.]]></description>
+	</field>
+	<field>
+		<name>Admin.TimeInterval.USecs</name>
+		<designername>TimeIntervalUSecs</designername>
+		<type>uint32</type>
+		<description><![CDATA[Time interval in microseconds.]]></description>
+	</field>
+	<field>
+		<name>Admin.Topic.Sequence</name>
+		<designername>TopicSequence</designername>
+		<type>uint32</type>
+		<description><![CDATA[The Topic ID Sequence number for the data message.]]></description>
+	</field>
+	<field>
+		<name>Admin.Transmission.Service.Name</name>
+		<designername>ServiceName</designername>
+		<type>string</type>
+		<description><![CDATA[Field description: This field identifies the transmission service name. For example, NY-MDS1, NY-MDS2, PRC-MDS1]]></description>
+	</field>
+	<field>
+		<name>BrokerCode.Bloomberg</name>
+		<designername>BrokerCode</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker code.]]></description>
+	</field>
+	<field>
+		<name>BrokerCode.Name</name>
+		<designername>BrokerCodeName</designername>
+		<type>string</type>
+		<description><![CDATA[Name associated with the broker code.]]></description>
+	</field>
+	<field>
+		<name>BrokerCode.Source</name>
+		<designername>BrokerCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg condition code mnemonic(s).]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Provider assigned condition code mnemonic(s).]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.Discount</name>
+		<designername>Discount</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask discount at this level.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.NumberOfOrders</name>
+		<designername>NumberOfOrders</designername>
+		<type>uint32</type>
+		<description><![CDATA[The total number of orders at this ask.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.Position</name>
+		<designername>Position</designername>
+		<type>uint16</type>
+		<description><![CDATA[Position of the ask in the market depth by level book.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.Price</name>
+		<designername>Price</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask price at this level.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.Size</name>
+		<designername>Size</designername>
+		<type>uint32</type>
+		<description><![CDATA[Volume of securities at this ask.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.Spread</name>
+		<designername>Spread</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask spread at this level.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.Value.NotAvailable</name>
+		<designername>ValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable pricing.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Ask.Yield</name>
+		<designername>Yield</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask yield at this level.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg condition code mnemonic(s).]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Provider assigned condition code mnemonic(s).]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.Discount</name>
+		<designername>Discount</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid discount at this level.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.NumberOfOrders</name>
+		<designername>NumberOfOrders</designername>
+		<type>uint32</type>
+		<description><![CDATA[The total number of orders at this bid.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.Position</name>
+		<designername>Position</designername>
+		<type>uint16</type>
+		<description><![CDATA[Position of the bid in the market depth by level book.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.Price</name>
+		<designername>Price</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid price at this level.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.Size</name>
+		<designername>Size</designername>
+		<type>uint32</type>
+		<description><![CDATA[Volume of securities at this bid.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.Spread</name>
+		<designername>Spread</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid spread at this level.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.Value.NotAvailable</name>
+		<designername>ValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable pricing.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Bid.Yield.Value</name>
+		<designername>YieldValue</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid yield at this level.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Sequence</name>
+		<designername>Sequence</designername>
+		<type>uint32</type>
+		<description><![CDATA[Bloomberg sequence number for the market by level book.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the market depth by level message.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByLevel.WindowSize</name>
+		<designername>WindowSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Integer representing the number of levels that are maintained in the market depth cache for a data source or security.
+On the user side, any updates that cause a row to fall into a position outside the depth window should also cause
+deletion of the row.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Broker.Bloomberg</name>
+		<designername>Broker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Broker.Mode</name>
+		<designername>BrokerMode</designername>
+		<type>string</type>
+		<description><![CDATA[Ask broker mode indicates if the ask broker is open or closed at the time of the message.]]></description>
+        <enum>OPEN</enum>
+        <enum>CLOSED</enum>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Broker.Source</name>
+		<designername>BrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg condition code mnemonic(s).]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Provider assigned condition code mnemonic(s).]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Discount</name>
+		<designername>Discount</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask discount for this order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Position</name>
+		<designername>Position</designername>
+		<type>uint16</type>
+		<description><![CDATA[Position of the ask order in the order depth book.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Price</name>
+		<designername>Price</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask price for this order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.PrimaryMarketMaker</name>
+		<designername>PrimaryMarketMaker</designername>
+		<type>bool</type>
+		<description><![CDATA[Is this broker a primary market maker in this security.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Size</name>
+		<designername>Size</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the ask order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Spread</name>
+		<designername>Spread</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask spread for this order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Value.NotAvailable</name>
+		<designername>ValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable pricing.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Ask.Yield</name>
+		<designername>Yield</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask yield for this order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Broker.Bloomberg</name>
+		<designername>Broker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Broker.Mode</name>
+		<designername>BrokerMode</designername>
+		<type>string</type>
+		<description><![CDATA[Bid broker mode indicates if the bid broker is open or closed at the time of the message.]]></description>
+    	<enum>OPEN</enum>
+    	<enum>CLOSED</enum>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Broker.Source</name>
+		<designername>BrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg condition code mnemonic(s).]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Provider assigned condition code mnemonic(s).]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Discount</name>
+		<designername>Discount</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid discount for this order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Position</name>
+		<designername>Position</designername>
+		<type>uint16</type>
+		<description><![CDATA[Position of the bid order in the order depth book.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Price</name>
+		<designername>Price</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid price for this order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.PrimaryMarketMaker</name>
+		<designername>PrimaryMarketMaker</designername>
+		<type>bool</type>
+		<description><![CDATA[Is this broker a primary market maker in this security.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Size</name>
+		<designername>Size</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the bid order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Spread</name>
+		<designername>Spread</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid spread for this order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Value.NotAvailable</name>
+		<designername>ValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable pricing.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Bid.Yield</name>
+		<designername>Yield</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid yield for this order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.OrderID</name>
+		<designername>OrderID</designername>
+		<type>string</type>
+		<description><![CDATA[Unique ID for the order.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Sequence</name>
+		<designername>Sequence</designername>
+		<type>uint32</type>
+		<description><![CDATA[Bloomberg sequence number for the order book.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the market depth by order message.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ByOrder.WindowSize</name>
+		<designername>WindowSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Integer representing the number of order that are maintained in the market depth cache for a data source or security.
+On the user side, any updates that cause a row to fall into a position outside the depth window should also cause
+deletion of the row.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the quote condition.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ConditionCode.ShortName</name>
+		<designername>ConditionCodeShortName</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg short name for the quote condition.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the quote condition.]]></description>
+	</field>
+	<field>
+		<name>MarketDepth.TableCommand</name>
+		<designername>TableCommand</designername>
+		<type>string</type>
+		<description><![CDATA[Indicates the action that should be taken in response to a market depth event.]]></description>
+	    <enum>UNASSIGNED</enum>
+	    <enum>ADD</enum>
+	    <enum>DEL</enum>
+	    <enum>DELALL</enum>
+	    <enum>DELBETTER</enum>
+	    <enum>DELSIDE</enum>
+	    <enum>DELSOURCE</enum>
+	    <enum>EXEC</enum>
+	    <enum>MOD</enum>
+	    <enum>MODBETTER</enum>
+	    <enum>REPLACE</enum>
+	    <enum>REPLACE_BY_BROKER</enum>
+	    <enum>CLEARALL</enum>
+	    <enum>REPLACE_CLEAR</enum>
+	    <enum>REPLACE_BY_PRICE</enum>
+	</field>
+	<field>
+		<name>MD.Bloomberg.Sequence</name>
+		<designername>Sequence</designername>
+		<type>uint64</type>
+		<description><![CDATA[Required Bloomberg defined sequence number for the message. This number will not be monotonically increasing. It
+will be unique for this message.]]></description>
+	</field>
+	<field>
+		<name>MD.Entitlement</name>
+		<designername>Entitlement</designername>
+		<type>uint32</type>
+		<description><![CDATA[The Entitlement Code for the market data message.The entitlement code describes the permissionable entity to which
+users of the BMDS can subscribe. This code is used for billing purposes and internal policing of entitlement rules for
+users at the data-recipient side. The entitlement code is a required field for all BMDS events. A single security can own
+multiple entitlement identifiers such as the case of market depth. A security will have one entitlement identifier on best
+bid, ask, trade and summary messages, but a different identifier on market depth data. This is quite common as a
+number of sources charge users extra for market depth and consider it a separate product (often known as Level 2 data,
+with quotes and trades being deemed level 1 data). Currently, a single security will not have multiple entitlement
+identifiers on the same event.]]></description>
+	</field>
+	<field>
+		<name>MD.Feed</name>
+		<designername>Feed</designername>
+		<type>string</type>
+		<description><![CDATA[Market Data Feed source. This field describes to the source of market data feed providing the data for this event. The
+feed and MD.Source field form the unique key to describe MD.Source such as Archipeligo, UP, that may provide data on
+mulitple venues such the OPRA feed for equity options, NASD feeds for NASDAQ listed securies and SIAC for
+NYSE/AMEX listed securies.]]></description>
+	</field>
+	<field>
+		<name>MD.Feed.BloombergCode</name>
+		<designername>FeedBloombergCode</designername>
+		<type>string</type>
+		<description><![CDATA[The code for the physical or logical datafeed from the source. This field will have a string that describes the logical feed
+as assigned by Bloomberg.
+For example, the NASDAQ UTDF trade feed is divided into 3 feeds, so the feed codes are UTDF1, UTDF2, and UTDF3.]]></description>
+	</field>
+	<field>
+		<name>MD.Security.ID.Bloomberg</name>
+		<designername>SecurityID</designername>
+		<type>string</type>
+		<description><![CDATA[This is the unique real-time Bloomberg identifier.
+This identifier will be unique for a given trading session and MD.Source. It is not guaranteed to be the same identifier
+from a trading session to the next trading session. It is not permanent identifier and can be reused.]]></description>
+	</field>
+	<field>
+		<name>MD.Source</name>
+		<designername>Source</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg identifier for the source of the information.
+The market data source is the exchange or pricing contributor mnemonic that uniquely identifies the market data
+originator. In the case of an NYSE listed security which trade on multiple exchanges, this would be the market center
+originator of the data, such as The Chicago Stock Exchange, The Archipelago Stock Exchange, or the NYSE. In the
+case of a composite market data source such the US composite for exchange-traded securities, it is possible to have a
+local market data source in addition to the composite data source. With a composite daily high price, the security
+reference may be the US composite (such as INTC US), and the exchange that generated the high price may be the
+Cincinnati Stock Exchange or NASDAQ. The local market data source is an optional field, so on non-composite
+securities, it will not be present only the MD.Source will be available. The MD.Source mnemonic will generally be the
+same as the exchange or contributor mnemonic on the Bloomberg professional. In the case of contributor the
+MD.Source mnemonic will be the same mnemonic for fixed income securities as the Price Contributor Source or PCS.
+Similarly, contributed currency market data will have also use the PCS (also known as XDF) code. For exchange
+originated market data, the Bloomberg exchange mnemonic has been used in most cases.]]></description>
+	</field>
+	<field>
+		<name>MD.Source.Sequence</name>
+		<designername>SourceSequence</designername>
+		<type>uint32</type>
+		<description><![CDATA[Optional source defined sequence number for the message.]]></description>
+	</field>
+	<field>
+		<name>MD.Stream</name>
+		<designername>Stream</designername>
+		<type>uint32</type>
+		<description><![CDATA[This field contains the data stream ID. Important points about this value include: (1) MD.Bloomberg.Sequence numbers
+are guaranteed to increment on a per stream id basis (not a per-entitlement basis) (2) An entitlement can be split across
+multiple streams or one stream can include multiple entitlements. (3) A given security will be in only one stream. (4)
+Clients cache should keep track of the latest sequence number received per stream id.]]></description>
+	</field>
+	<field>
+		<name>Page.Category</name>
+		<designername>Category</designername>
+		<type>uint32</type>
+		<description><![CDATA[Category of page data from the contributor.]]></description>
+	</field>
+	<field>
+		<name>Page.ClearRow</name>
+		<designername>ClearRow</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that existing content in the row should be cleared prior to applying the row text update.]]></description>
+	</field>
+	<field>
+		<name>Page.Column</name>
+		<designername>Column</designername>
+		<type>uint16</type>
+		<description><![CDATA[The starting column number of text. Column numbers start at 1.]]></description>
+	</field>
+	<field>
+		<name>Page.Number</name>
+		<designername>Number</designername>
+		<type>uint32</type>
+		<description><![CDATA[Page number used for locating information across multiple pages.]]></description>
+	</field>
+	<field>
+		<name>Page.Row</name>
+		<designername>Row</designername>
+		<type>uint16</type>
+		<description><![CDATA[Row number of the row to be updated. Row numbers start at 1.]]></description>
+	</field>
+	<field>
+		<name>Page.Text</name>
+		<designername>Text</designername>
+		<type>string</type>
+		<description><![CDATA[The text to display in the updated row. This field may include attributes preceded by a { as indicated in page reference
+data.]]></description>
+	</field>
+	<field>
+		<name>Page.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the page update.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Broker.Bloomberg</name>
+		<designername>Broker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Broker.Location</name>
+		<designername>BrokerLocation</designername>
+		<type>string</type>
+		<description><![CDATA[Code for the ask Broker's location.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Broker.Source</name>
+		<designername>BrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source provided mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for special conditions on the quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Provider assigned mnemonic(s) for special conditions on the ask quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Discount</name>
+		<designername>Discount</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask discount.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.LocalSource</name>
+		<designername>LocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Provides the local market center where the ask quote originated.
+Populated in the case where the primary market center on the event is a composite.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Price</name>
+		<designername>Price</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask price.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.QuoteType</name>
+		<designername>QuoteType</designername>
+		<type>string</type>
+		<description><![CDATA[Indicator of quote status relative to the best.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Session</name>
+		<designername>Session</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic indicating what session the quote occurred in.
+Quoting Sessions
+Value Description
+DAY Regular Day Session
+POST Post-Market Session
+PRE Pre-Market Session]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Size</name>
+		<designername>Size</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the ask quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Size.IsBloombergCalculation</name>
+		<designername>SizeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the ask size is a Bloomberg calculated value.
+In the case that a source does not calculate the best, but provided an orderbook, Bloomberg will calculate the best bid
+and offer for that source.
+In the case of the Bloomberg calculated composites a similar calculation algorithm may be employed to aggregate sizes
+from many sources.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Spread</name>
+		<designername>Spread</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask spread.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the ask quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.UpdateActions</name>
+		<designername>UpdateActions</designername>
+		<type>uint32</type>
+		<description><![CDATA[Bit array with bits indicating how the quote information should be handled in the cache.
+Ask Update Actions
+Name Description
+IsAlternateQuote The IsAlternateQuote flag indicates that the value in the tick is quoted in a pricing method other
+than the primary pricing method. In this case, only the value field is copied to the summary in
+the cache.
+UpdateLastQuote The UpdateLastQuote flag indicates that the Value and time shown in the trade message should
+be used to update the Bid/Ask Quote fields in the intraday summary cache.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Value.IsBloombergCalculation</name>
+		<designername>ValueIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the ask value is a Bloomberg calculation and not an exchange or source created value.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Value.NotAvailable</name>
+		<designername>ValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable pricing.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Yield</name>
+		<designername>Yield</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask yield.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Yield.Compound</name>
+		<designername>YieldCompound</designername>
+		<type>float32</type>
+		<description><![CDATA[The yield of certain Japanese bonds based on its ASKprice. Certain Japanese bonds have irregular first or lastcoupons,
+and the yield is calculated compound for theseirregular periods.]]></description>
+	</field>
+	<field>
+		<name>Quote.Ask.Yield.Simple</name>
+		<designername>YieldSimple</designername>
+		<type>float32</type>
+		<description><![CDATA[Japanese (Simple) yield ask. The annualized cashflow, expressed as a percentage of original flat price]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Broker.Bloomberg</name>
+		<designername>Broker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Broker.Location</name>
+		<designername>BrokerLocation</designername>
+		<type>string</type>
+		<description><![CDATA[Code for the bid broker's location.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Broker.Source</name>
+		<designername>BrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source provided mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for special conditions on the quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Provider assigned mnemonic(s) for special conditions on the bid quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Discount</name>
+		<designername>Discount</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid discount.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.LocalSource</name>
+		<designername>LocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Provides the local market center where the bid quote originated.
+Populated in the case where the primary market center on the event is a composite.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Price</name>
+		<designername>Price</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid price.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.QuoteType</name>
+		<designername>QuoteType</designername>
+		<type>string</type>
+		<description><![CDATA[Indicator of quote status relative to the best.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Session</name>
+		<designername>Session</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic indicating what session the bid quote occurred in.
+Quoting Sessions
+Value Description
+DAY Regular Day Session
+POST Post-Market Session
+PRE Pre-Market Session]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Size</name>
+		<designername>Size</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the bid quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Size.IsBloombergCalculation</name>
+		<designername>SizeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the bid size is a Bloomberg calculated value.
+In the case that a source does not calculate the best, but provided an orderbook, Bloomberg will calculate the best bid
+and offer for that source.
+In the case of the Bloomberg calculated composites a similar calculation algorithm may be employed to aggregate sizes
+from many sources.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Spread</name>
+		<designername>Spread</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid spread.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the bid quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.UpdateActions</name>
+		<designername>UpdateActions</designername>
+		<type>uint32</type>
+		<description><![CDATA[Bit array with bits indicating how the quote information should be handled in the cache.
+Bid Update Actions
+Name Description
+IsAlternateQuote The IsAlternateQuote flag indicates that the value in the tick is quoted in a pricing method other
+than the primary pricing method. In this case, only the value field is copied to the summary in
+the cache.
+UpdateLastQuote The UpdateLastQuote flag indicates that the Value and time shown in the trade message should
+be used to update the Bid/Ask Quote fields in the intraday summary cache.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Value.IsBloombergCalculation</name>
+		<designername>ValueIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the bid value is a Bloomberg calculation and not an exchange or source created value.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Value.NotAvailable</name>
+		<designername>ValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable pricing.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Yield</name>
+		<designername>Yield</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid yield.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Yield.Compound</name>
+		<designername>YieldCompound</designername>
+		<type>float32</type>
+		<description><![CDATA[The yield of certain Japanese bonds based on its BIDprice. Certain Japanese bonds have irregular first or lastcoupons,
+and the yield is calculated compound for theseirregular periods.]]></description>
+	</field>
+	<field>
+		<name>Quote.Bid.Yield.Simple</name>
+		<designername>YieldSimple</designername>
+		<type>float32</type>
+		<description><![CDATA[Japanese (Simple) yield ask. The annualized cashflow, expressed as a percentage of original flat price]]></description>
+	</field>
+	<field>
+		<name>Quote.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the quote condition.]]></description>
+	</field>
+	<field>
+		<name>Quote.ConditionCode.ShortName</name>
+		<designername>ConditionCodeShortName</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg short name for the quote condition.]]></description>
+	</field>
+	<field>
+		<name>Quote.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the quote condition.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Broker.Bloomberg</name>
+		<designername>Broker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Broker.Source</name>
+		<designername>BrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source provided mnemonic for the broker.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for special conditions on the quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Provider assigned mnemonic(s) for special conditions on the mid quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Discount</name>
+		<designername>Discount</designername>
+		<type>float32</type>
+		<description><![CDATA[Mid discount.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.LocalSource</name>
+		<designername>LocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Provides the local market center where the mid quote originated.
+Populated in the case where the primary market center on the event is a composite.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Price</name>
+		<designername>Price</designername>
+		<type>float32</type>
+		<description><![CDATA[Mid price.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.QuoteType</name>
+		<designername>QuoteType</designername>
+		<type>string</type>
+		<description><![CDATA[Indicator of quote status relative to the best.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Session</name>
+		<designername>Session</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic indicating what session the mid quote occurred in.
+Quoting Sessions
+Value Description
+DAY Regular Day Session
+POST Post-Market Session
+PRE Pre-Market Session]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Size</name>
+		<designername>Size</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the mid quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Size.IsBloombergCalculation</name>
+		<designername>SizeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the mid size is a Bloomberg calculated value.
+If the source is snapshot record based broadcast mechanism, the size may not be actual.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Spread</name>
+		<designername>Spread</designername>
+		<type>float32</type>
+		<description><![CDATA[Mid spread.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the mid quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.UpdateActions</name>
+		<designername>UpdateActions</designername>
+		<type>uint32</type>
+		<description><![CDATA[Bit array with flags indicating which fields in the intraday cache are eligible to be updated based on information in the mid
+quote.
+Mid Update Actions
+Name Description
+UpdateClose The Update Close flag indicates that the value in this trade updates the Close value in the
+intraday summary. Intraday closing price updates will depend on condition codes and exchange
+rules for official closing price.
+UpdateHigh The UpdateHighTrade flag indicates that the value in the trade message is eligible to be copied
+into the High Trade fields in the intraday summary cache if the current value is higher than the
+existing value.
+UpdateLastPrice The UpdateLastPrice flag indicates that the Value and time shown in the trade message should
+be used to update the Last Price in the intraday summary cache.
+UpdateLastQuote The UpdateLastQuote flag indicates that the Value and time shown in the trade message should
+be used to update the Last Mid Quote fields in the intraday summary cache.
+UpdateLow The Update Low flag indicates that this trade is eligible to update the intraday Low value if the
+price is less than the current intraday Low.
+UpdateOpen The Update Open flag indicates that the price in this trade should be entered as the Open price
+in the intraday summary cache if there has been no prior eligible trade since the start of the
+session.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Value.IsBloombergCalculation</name>
+		<designername>ValueIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the mid value is a Bloomberg calculation and not an exchange or source created value.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Value.NotAvailable</name>
+		<designername>ValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable pricing.]]></description>
+	</field>
+	<field>
+		<name>Quote.Mid.Yield</name>
+		<designername>Yield</designername>
+		<type>float32</type>
+		<description><![CDATA[Mid yield.]]></description>
+	</field>
+	<field>
+		<name>Quote.Paired.ConditionCode.Bloomberg</name>
+		<designername>PairedConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[Local paired quotes have a single condition code that applies to both sides.]]></description>
+	</field>
+	<field>
+		<name>Quote.Paired.QuoteType</name>
+		<designername>PairedQuoteType</designername>
+		<type>string</type>
+		<description><![CDATA[Type of a paired quote.]]></description>
+	</field>
+	<field>
+		<name>Quote.Paired.Time</name>
+		<designername>PairedTime</designername>
+		<type>time</type>
+		<description><![CDATA[Time that the paired quote was received.]]></description>
+	</field>
+	<field>
+		<name>Quote.Paired.UpdateActions</name>
+		<designername>PairedUpdateActions</designername>
+		<type>uint32</type>
+		<description><![CDATA[Indicates header update rules for both the bid and ask quotes.]]></description>
+	</field>
+	<field>
+		<name>Reference.Company.ID.Bloomberg</name>
+		<designername>CompanyID</designername>
+		<type>string</type>
+		<description><![CDATA[A Bloomberg number that is assigned to all companies that issue securities.]]></description>
+	</field>
+	<field>
+		<name>Reference.Company.Name</name>
+		<designername>CompanyName</designername>
+		<type>string</type>
+		<description><![CDATA[The official long name of the company. For equity options, this field is populated by the underlying security's long
+company name.]]></description>
+	</field>
+	<field>
+		<name>Reference.Price.DisplayFormat.FractionDenominator</name>
+		<designername>PriceFractionDenominator</designername>
+		<type>uint16</type>
+		<description><![CDATA[Denominator for fractional display if fractions are the market custom.
+This field should only be used to format the price when Reference.Price.DisplayFormat.Type is FRACTION. This field
+describes the fractional portion of the floating point number. For example, 10.125 with a fractional denominator of 8
+should be displayed as 10 1/8.]]></description>
+	</field>
+	<field>
+		<name>Reference.Price.DisplayFormat.MaxNumDecimals</name>
+		<designername>PriceMaxNumDecimals</designername>
+		<type>uint16</type>
+		<description><![CDATA[Maximum number of places to the right of the decimal recommended for display. This describes the maximum precision
+amount for a security that should be displayed on applications.]]></description>
+	</field>
+	<field>
+		<name>Reference.Price.DisplayFormat.MinNumDecimals</name>
+		<designername>PriceMinNumDecimals</designername>
+		<type>uint16</type>
+		<description><![CDATA[Minimum number of places to the right of the decimal recommended for display.
+This field is intended for marketplaces that have a range of security pricing such as sub-penny securities where the
+minimum increment is much finer granularity than other securities on the same exchange.
+Additionally, some sources price trades or quotes or different event types in finer increments than other events. This field
+will describe the minimum number places of the right of decimal that should be displayed even if all digits are zeroes.
+This value can be used to remove trailing zeros from the price display.]]></description>
+	</field>
+	<field>
+		<name>Reference.Price.DisplayFormat.Type</name>
+		<designername>PriceType</designername>
+		<type>string</type>
+		<description><![CDATA[This field tells the user of B- Pipe data whether the display format for prices on a given security is decimal or fractional.]]></description>
+    	<enum>UNASSIGNED</enum>
+    	<enum>DECIMAL</enum>
+    	<enum>FRACTIONAL</enum>
+	</field>
+	<field>
+		<name>Reference.Security.Barrier</name>
+		<designername>Barrier</designername>
+		<type>float32</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Bloomberg.UniqueID</name>
+		<designername>UniqueID</designername>
+		<type>string</type>
+		<description><![CDATA[A unique number assigned by Bloomberg to all securities.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Country.ISO</name>
+		<designername>CountryISO</designername>
+		<type>string</type>
+		<description><![CDATA[@DS458This field is being deprecated and should not be used. Please refer to Reference.Security.Domicile.Country]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Currency</name>
+		<designername>Currency</designername>
+		<type>string</type>
+		<description><![CDATA[Currency in which the security or a contract is traded. For Fixed Income securities this field returns the currency in which
+the Bond is issued in, not necessarily the currency that the Bond is paid in. For futures contracts, this field returns the
+currency in which the contract value is quoted, not necessarily the currency in which the price is quoted. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Currency.Denominator</name>
+		<designername>CurrencyDenominator</designername>
+		<type>string</type>
+		<description><![CDATA[Base Currency of the security. A currency is always quoted relevant to another currency. The base currency is always
+equal to one unit. A currency is quoted as the units of that currency per base currency. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Currency.IsInverseQuoted</name>
+		<designername>CurrencyIsInverseQuoted</designername>
+		<type>bool</type>
+		<description><![CDATA[Indicates if the currency is inversly quoted. Returns Y or N.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Description</name>
+		<designername>Description</designername>
+		<type>string</type>
+		<description><![CDATA[For Corporate, Government and Preferred bonds this field will return the ticker, coupon, and maturity. For Mortgage
+bonds the field will return the ticker, series, and class. For Municipal bonds this field will return the cusip. For equities,
+equity indices, funds, and futures the field will return the ticker. For non-equity indices this field will return the name. For
+equity options the field returns the ticker, exchange code, expiration month, call type, and strike price. For Options on
+futures the field returns the ticker and strike price. For currencies the field will return the ticker followed by the word
+Curncy. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Domicile.Country</name>
+		<designername>DomicileCountry</designername>
+		<type>string</type>
+		<description><![CDATA[This field returns the ISO code of the country where the company is headquartered. Non-ISO codes will return for
+supranational (SNAT) and multi-national (MULT) securities. For covered warrants the country of the issuer is returned.
+For uncovered warrants, the country of the underlying security is returned. Corporate debt securities will return the
+issuer's ISO country. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.ConsolidatedEarningsAvailable</name>
+		<designername>EquityConsolidatedEarningsAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[@DX936]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Dividend.ExDate</name>
+		<designername>EquityDividendExDate</designername>
+		<type>date</type>
+		<description><![CDATA[The first date the security trades without entitlement to the current dividend.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Dividend.PayDate</name>
+		<designername>EquityDividendPayDate</designername>
+		<type>date</type>
+		<description><![CDATA[The date the company begins distribution of the earlier reported dividend.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Dividend.PerShare</name>
+		<designername>EquityDividendPerShare</designername>
+		<type>float32</type>
+		<description><![CDATA[The gross dividend: the net dividend plus any tax credit where applicable.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Dividend.RecordDate</name>
+		<designername>EquityDividendRecordDate</designername>
+		<type>date</type>
+		<description><![CDATA[The date, on the close of which the company considers holders of the security as being entitled to the dividend payment.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Earnings</name>
+		<designername>EquityEarnings</designername>
+		<type>float32</type>
+		<description><![CDATA[Trailing 12-month basic earnings per share, calculated by adding basic EPS for the most recent four quarters.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.IsUPC</name>
+		<designername>EquityIsUPC</designername>
+		<type>bool</type>
+		<description><![CDATA[Will return 'Y' if Rule 203 of Regulation SHO applies to the security. It will return 'N' of Rule 203 does not apply. Rule
+203 supplants NASR Rule 11830 (formerly known as UPC71). A threshold security is defined as: Any equity security of
+an issuer that is registered under Section 12, or that is required to file reports pursuant to Section 15 (d) of the
+Exchange Act where, for five consecutive settlement days: there are aggregate fails to deliver at a registered clearing
+agency of 10,000 shares or more per security; and that the level of fails is equal to at least one half of one percent of the
+issuer's total shares outstanding. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.PE.Ratio</name>
+		<designername>EquityPERatio</designername>
+		<type>float32</type>
+		<description><![CDATA[The relationship between the price of a stock and its earnings per share. This can be expressed in the formula: P/E
+Ratio = Stock price/Earnings Per Share]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Source.Composite</name>
+		<designername>EquitySourceComposite</designername>
+		<type>string</type>
+		<description><![CDATA[The 2 letter composite exchange code.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Source.Primary</name>
+		<designername>EquitySourcePrimary</designername>
+		<type>string</type>
+		<description><![CDATA[The primary exchange code that the security trades on. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Split.Date</name>
+		<designername>EquitySplitDate</designername>
+		<type>date</type>
+		<description><![CDATA[The effective date on which a company's shares begin trading on a split adjusted basis.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.Split.Ratio</name>
+		<designername>EquitySplitRatio</designername>
+		<type>float32</type>
+		<description><![CDATA[Stock Split Adjustment Factor]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Equity.TotalSharesOutstanding</name>
+		<designername>EquityTotalSharesOutstanding</designername>
+		<type>float64</type>
+		<description><![CDATA[The total amount of current shares outstanding obtained from annual, semi-annual and quarterly reports. Where
+applicable, shares outstanding is updated through exchange feeds.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.ExpirationDate</name>
+		<designername>ExpirationDate</designername>
+		<type>date</type>
+		<description><![CDATA[The day on which an option contract becomes void.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.Benchmark.Description</name>
+		<designername>FixedIncomeBenchmarkDescription</designername>
+		<type>string</type>
+		<description><![CDATA[This field will return the Ticker, Coupon, and Maturity of the Benchmark bond in YAS.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.Coupon.Rate</name>
+		<designername>FixedIncomeCouponRate</designername>
+		<type>float32</type>
+		<description><![CDATA[The current interest rate of the security. Returns the coupon value for swap note futures for commodities.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.Coupon.Type</name>
+		<designername>FixedIncomeCouponType</designername>
+		<type>string</type>
+		<description><![CDATA[The type of coupon on the security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.IsCurrentGovtBond</name>
+		<designername>FixedIncomeIsCurrentGovtBond</designername>
+		<type>bool</type>
+		<description><![CDATA[Indicates whether the bond is considered the current, or on-the-run, government bond. Returns Y or N.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.Issue.Date</name>
+		<designername>FixedIncomeIssueDate</designername>
+		<type>date</type>
+		<description><![CDATA[The date the security was issued.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.Issue.Description</name>
+		<designername>FixedIncomeIssueDescription</designername>
+		<type>string</type>
+		<description><![CDATA[The name of the security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.Maturity.Date</name>
+		<designername>FixedIncomeMaturityDate</designername>
+		<type>date</type>
+		<description><![CDATA[The date on which the security matures.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.PricingSource</name>
+		<designername>FixedIncomePricingSource</designername>
+		<type>string</type>
+		<description><![CDATA[The provider of the current price of the security. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.FixedIncome.Series</name>
+		<designername>FixedIncomeSeries</designername>
+		<type>string</type>
+		<description><![CDATA[The series of the bond.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Fund.EstimatedCashTicker</name>
+		<designername>FundEstimatedCashTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker representing the index whose results the fund tries to mirror. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Fund.FinalDividendPaymentTicker</name>
+		<designername>FundFinalDividendPaymentTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker of the final dividend payment to the holder on record on a per share basis for a specific dividend period. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Fund.INAVTicker</name>
+		<designername>FundINAVTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker that represents the intraday net asset value of the fund. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Fund.NAVTicker</name>
+		<designername>FundNAVTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker representing the net asset value, which is the value of a single fund share calculated at the end of each
+business day, based on the value of the underlying assets of the fund minus its liabilities, divided by the number of
+shares outstanding. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Fund.NetAccruedDividendTicker</name>
+		<designername>FundNetAccruedDividendTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker of the dividends accumulated on securities for a specific time period minus fees and expenses. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Fund.PrimaryTicker</name>
+		<designername>FundPrimaryTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker symbol and source for the underlying excahnge traded fund. Populated for objects that carry fund statistics
+such as NAV, INAV, etc.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Fund.SharesOutstandingTicker</name>
+		<designername>FundSharesOutstandingTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker for the number of stock certificates held by public investors that are available for trading, as of the listed date. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Fund.TotalCashTicker</name>
+		<designername>FundTotalCashTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker representing the cash value of one creation unit share calculated at the close of the trading day. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Future.Category</name>
+		<designername>FutureCategory</designername>
+		<type>string</type>
+		<description><![CDATA[The type of future (or option) the security is.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Future.Contract.Size</name>
+		<designername>FutureContractSize</designername>
+		<type>float32</type>
+		<description><![CDATA[The smallest available value of tradable contract.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Future.ContractSize</name>
+		<designername>FutureContractSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[@FO017 This field will be replaced by Reference.Security.Future.Contract.Size with data type float32 instead of uint32.
+Please migrate any existing applications.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Future.Expiration</name>
+		<designername>FutureExpiration</designername>
+		<type>string</type>
+		<description><![CDATA[The month and year of contract expiration]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Future.Last.Trade.Date</name>
+		<designername>FutureLastTradeDate</designername>
+		<type>date</type>
+		<description><![CDATA[The last date that the contract is available for trade. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Future.Source</name>
+		<designername>FutureSource</designername>
+		<type>string</type>
+		<description><![CDATA[Returns the exchange code of the security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Future.UnderlyingSpotTicker</name>
+		<designername>FutureUnderlyingSpotTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker of the future's underlying spot object]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.ID.Bloomberg</name>
+		<designername>ID</designername>
+		<type>string</type>
+		<description><![CDATA[A Bloomberg number that is assigned to a specific security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.ID.Bloomberg.ParsekeyableDescription</name>
+		<designername>IDParsekeyableDescription</designername>
+		<type>string</type>
+		<description><![CDATA[This identifier is the string that can be entered into the Bloomberg professional to uniquely select this security. This
+description includes the source of the security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.ID.Name</name>
+		<designername>IDName</designername>
+		<type>string</type>
+		<description><![CDATA[The name of a company or contract.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.ID.Ticker.Bloomberg</name>
+		<designername>IDTicker</designername>
+		<type>string</type>
+		<description><![CDATA[For equity securities the field will return the Bloomberg ticker which may or may not be an exchange symbol, such as
+'IBM' for IBM US Equity. For corp, pfd, muni, m-mkt, govt & mtge securities the ticker is created by Bloomberg to store
+and link related securities.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.IssueName</name>
+		<designername>IssueName</designername>
+		<type>string</type>
+		<description><![CDATA[The name of the company or security will be returned in less then 18 characters.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.LotSize.Quote</name>
+		<designername>LotSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[The number of shares represented by the quote or bid/ask price. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.LotSize.Trade</name>
+		<designername>LotSizeTrade</designername>
+		<type>uint32</type>
+		<description><![CDATA[The minimum number of shares that can be purchased, as regulated by an exchange. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Option.ContractSize</name>
+		<designername>OptionContractSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Number of shares that can be exchanged for each option contract exercised.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Option.ExerciseType</name>
+		<designername>OptionExerciseType</designername>
+		<type>string</type>
+		<description><![CDATA[There are two ways an option can be exercised: American Style & European Style.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Option.Last.Trade.Date</name>
+		<designername>OptionLastTradeDate</designername>
+		<type>date</type>
+		<description><![CDATA[The last date that the contract is available for trade. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Option.PositionLimit</name>
+		<designername>OptionPositionLimit</designername>
+		<type>uint32</type>
+		<description><![CDATA[Maximum number of contracts allowed to be held. This number is set by the exchange.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Option.PutCall</name>
+		<designername>OptionPutCall</designername>
+		<type>string</type>
+		<description><![CDATA[Indicates whether the security is a Put or Call.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Option.Underlying.ID.Unique</name>
+		<designername>OptionUnderlyingIDUnique</designername>
+		<type>string</type>
+		<description><![CDATA[The unique Bloomberg ID of the underlying security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Option.Underlying.Source</name>
+		<designername>OptionUnderlyingSource</designername>
+		<type>string</type>
+		<description><![CDATA[The primary exchange code that the security trades on. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.Background</name>
+		<designername>PageBackground</designername>
+		<type>string</type>
+		<description><![CDATA[Indicates the default background color of the page.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Background</name>
+		<designername>PageDisplayAttributeBackground</designername>
+		<type>string</type>
+		<description><![CDATA[Indicates the background color of the page.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Blink</name>
+		<designername>PageDisplayAttributeBlink</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the tagged text should blink.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Bold</name>
+		<designername>PageDisplayAttributeBold</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the tagged text should be bold.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Clickable</name>
+		<designername>PageDisplayAttributeClickable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the tagged text is a clickable link.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Doublewide</name>
+		<designername>PageDisplayAttributeDoublewide</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the tagged text should be displayed in a double wide font.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Foreground</name>
+		<designername>PageDisplayAttributeForeground</designername>
+		<type>string</type>
+		<description><![CDATA[Indicates the foreground color of the page.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Reverse</name>
+		<designername>PageDisplayAttributeReverse</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the tagged text should be displayed in reverse video (foreground & backgroiund colors
+reversed).]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Tag</name>
+		<designername>PageDisplayAttributeTag</designername>
+		<type>string</type>
+		<description><![CDATA[An escape sequence that demarcates a section of text to which the display rule applies. Typical values are {, {, and ^]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.DisplayAttribute.Underline</name>
+		<designername>PageDisplayAttributeUnderline</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the tagged text should be underlined.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.Foreground</name>
+		<designername>PageForeground</designername>
+		<type>string</type>
+		<description><![CDATA[Indicates the default foreground color of the page.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.Header</name>
+		<designername>PageHeader</designername>
+		<type>string</type>
+		<description><![CDATA[An optional page header that can be displayed as the static first line of the page to show column headings for the data.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.Strip</name>
+		<designername>PageStrip</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the attribute should be stripped from the text and not displayed on the user's screen.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Page.Title</name>
+		<designername>PageTitle</designername>
+		<type>string</type>
+		<description><![CDATA[The title of the page.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.PrimaryPricingMethod</name>
+		<designername>PrimaryPricingMethod</designername>
+		<type>string</type>
+		<description><![CDATA[The Primary Pricing Method is the market convention for pricing an instrument.
+The data in this field indicates whether a security is primarily quoted as a price, yield, spread, or discount. Additional
+pricing methods are provided to indicate messages containing Index value, Net Asset Value, Market Volume, and other
+statistical calculations.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Rating.Bloomberg</name>
+		<designername>Rating</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg's Composite Rating is a blend of Moody's and S&P ratings. Canadian issues are comprised of Canadian and
+Dominion ratings if Moody's and S&P ratings are not available. A combination of 35 letter and number grades are used
+as a rating instrument. The Bloomberg Composite Rating is not intended to be a credit opinion. .]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.StrikePrice</name>
+		<designername>StrikePrice</designername>
+		<type>float32</type>
+		<description><![CDATA[The price at which the option holder may buy or sell the underlying security, as defined in the terms of the option
+contract.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Type</name>
+		<designername>Type</designername>
+		<type>string</type>
+		<description><![CDATA[A description of the type of security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Underlying.ID.Ticker</name>
+		<designername>UnderlyingIDTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The ticker and exchange code of the underlying security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Warrant.ExerciseType</name>
+		<designername>WarrantExerciseType</designername>
+		<type>string</type>
+		<description><![CDATA[The possible exercise types are European, American or Bermudan.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Warrant.Issuer</name>
+		<designername>WarrantIssuer</designername>
+		<type>string</type>
+		<description><![CDATA[The name of the issuing entity of the security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Warrant.SharesPerWarrant</name>
+		<designername>WarrantSharesPerWarrant</designername>
+		<type>float32</type>
+		<description><![CDATA[The number of shares the warrant is exercisable into.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Warrant.Ticker</name>
+		<designername>WarrantTicker</designername>
+		<type>string</type>
+		<description><![CDATA[The symbol under which the warrant is described. It may either be the official symbol assigned by the exchange or (in
+case of no official ticker) ticker created by Bloomberg.]]></description>
+	</field>
+	<field>
+		<name>Reference.Security.Warrant.Underlying.ID.Unique</name>
+		<designername>WarrantUnderlyingIDUnique</designername>
+		<type>string</type>
+		<description><![CDATA[The ID_BB_UNIQUE of the warrants underlying security.]]></description>
+	</field>
+	<field>
+		<name>Reference.Source.CacheType</name>
+		<designername>SourceCacheType</designername>
+		<type>string</type>
+		<description><![CDATA[Enumerated value indicating the type of cache/summary data available for a given EID. This information can be used for
+identifying level 1 vs. level 2 data and initializing the cache for an entitlement.]]></description>
+	</field>
+	<field>
+		<name>Reference.Source.Locals</name>
+		<designername>SourceLocals</designername>
+		<type>string</type>
+		<description><![CDATA[Array of strings mapping local MD.Source to composite MD.Source for lookup to condition code and broker.]]></description>
+	</field>
+	<field>
+		<name>Reference.Source.Name</name>
+		<designername>SourceName</designername>
+		<type>string</type>
+		<description><![CDATA[The expanded name of the data contributor.]]></description>
+	</field>
+	<field>
+		<name>Reference.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Date and time of the most recent reference data update.]]></description>
+	</field>
+	<field>
+		<name>Source.TimerTick.Name</name>
+		<designername>TimerTickName</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg timer tick name - from the object id or reference data.]]></description>
+	</field>
+	<field>
+		<name>Source.TimerTick.Time</name>
+		<designername>TimerTickTime</designername>
+		<type>uint32</type>
+		<description><![CDATA[This is the time in milleseconds that the frontend parser recieved the raw packet from the source.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.Allow.Quotes</name>
+		<designername>StatusSecurityAllowQuotes</designername>
+		<type>bool</type>
+		<description><![CDATA[True/False indicator showing whether quoting is allowed for a security.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.Allow.Trades</name>
+		<designername>StatusSecurityAllowTrades</designername>
+		<type>bool</type>
+		<description><![CDATA[True/False indicator showing whether trading is allowed for a security.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.Auction.On</name>
+		<designername>StatusSecurityAuctionOn</designername>
+		<type>bool</type>
+		<description><![CDATA[Boolean value indicating whether the security is in an auction period.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.Bloomberg</name>
+		<designername>StatusSecurity</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg assigned mnemonic for the current trading status of a security.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.LocalSource</name>
+		<designername>StatusSecurityLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market center for the status update.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.MarketCategory</name>
+		<designername>StatusSecurityMarketCategory</designername>
+		<type>string</type>
+		<description><![CDATA[This field is being deprecated and will be populated with garbage data. Values in this field should be dropped from
+further processing.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.Period.Bloomberg</name>
+		<designername>StatusSecurityPeriod</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg assigned mnemonic for the current trading period of a security.
+Periods are regular phases and some irregular phases of market activity. During some periods only certain activity is
+allowed (order entry, trade reporting, etc).]]></description>
+	</field>
+	<field>
+		<name>Status.Security.Period.ShortName</name>
+		<designername>StatusSecurityPeriodShortName</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg short name for the current trading period of a security.
+Periods are regular phases and some irregular phases of market activity. During some periods only certain activity is
+allowed (order entry, trade reporting, etc).]]></description>
+	</field>
+	<field>
+		<name>Status.Security.ShortName</name>
+		<designername>StatusSecurityShortName</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg short name for the market status on a source.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.Simplified</name>
+		<designername>StatusSecuritySimplified</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg assigned simplified status mnemonic for the current market status of a security.]]></description>
+	</field>
+	<field>
+		<name>Status.Security.Source</name>
+		<designername>StatusSecuritySource</designername>
+		<type>string</type>
+		<description><![CDATA[Source provided mnemonic for the current market status of an Security.]]></description>
+	</field>
+	<field>
+		<name>Status.Source.Information.Text</name>
+		<designername>StatusSourceInformationText</designername>
+		<type>string</type>
+		<description><![CDATA[Free text status information passed through from the data source.]]></description>
+	</field>
+	<field>
+		<name>Status.Source.Sequence.Reset.FeedCode</name>
+		<designername>StatusSourceSequenceResetFeedCode</designername>
+		<type>string</type>
+		<description><![CDATA[A.3.248 Status.Source.Sequence.Reset.FeedCode
+Type
+Name of the Sub-Feed whose sequence number is being reset.]]></description>
+	</field>
+	<field>
+		<name>Status.Source.Sequence.Reset.LastValid</name>
+		<designername>StatusSourceSequenceResetLastValid</designername>
+		<type>uint32</type>
+		<description><![CDATA[A.3.249 Status.Source.Sequence.Reset.LastValid
+Type
+The last valid sequence number prior to the reset.]]></description>
+	</field>
+	<field>
+		<name>Status.Source.Sequence.Reset.New</name>
+		<designername>StatusSourceSequenceResetNew</designername>
+		<type>uint32</type>
+		<description><![CDATA[A.3.250 Status.Source.Sequence.Reset.New
+Type
+New sequence number - usually zero, or last valid + 1.]]></description>
+	</field>
+	<field>
+		<name>Status.Source.Session</name>
+		<designername>StatusSourceSession</designername>
+		<type>string</type>
+		<description><![CDATA[A.3.251 Status.Source.Session
+Type
+Bloomberg assigned code for the trading session.]]></description>
+	</field>
+	<field>
+		<name>Status.Time</name>
+		<designername>StatusTime</designername>
+		<type>time</type>
+		<description><![CDATA[A.3.252 Status.Time
+Type
+Time of the status message.]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.BM.Spread</name>
+		<designername>AskBMSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[Bloomberg calculated real-time bid yield spread to worst to the benchmark bond.]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.ChangeOnDay</name>
+		<designername>AskChangeOnDay</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid price change on day]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Imbalance.Size</name>
+		<designername>AskImbalanceSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the ask imbalance.]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Orders.Arbitrage.NotMatched</name>
+		<designername>AskOrdersArbitrageNotMatched</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Orders.Arbitrage.Volume</name>
+		<designername>AskOrdersArbitrageVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Orders.NonArbitrage.NotMatched</name>
+		<designername>AskOrdersNonArbitrageNotMatched</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Orders.NonArbitrage.Volume</name>
+		<designername>AskOrdersNonArbitrageVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Orders.Proprietary.Value</name>
+		<designername>AskOrdersProprietaryValue</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Orders.Proprietary.Volume</name>
+		<designername>AskOrdersProprietaryVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Orders.Trust.Value</name>
+		<designername>AskOrdersTrustValue</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.Orders.Trust.Volume</name>
+		<designername>AskOrdersTrustVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Ask.PreAnnounceNumberOfProgram.Orders</name>
+		<designername>AskPreAnnounceNumberOfProgramOrders</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.BM.Spread</name>
+		<designername>BidBMSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[Bloomberg calculated real-time bid yield spread to worst to the benchmark bond.]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.ChangeOnDay</name>
+		<designername>BidChangeOnDay</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid price change on day]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Imbalance.Size</name>
+		<designername>BidImbalanceSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the bid imbalance.]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Orders.Arbitrage.NotMatched</name>
+		<designername>BidOrdersArbitrageNotMatched</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Orders.Arbitrage.Volume</name>
+		<designername>BidOrdersArbitrageVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Orders.NonArbitrage.NotMatched</name>
+		<designername>BidOrdersNonArbitrageNotMatched</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Orders.NonArbitrage.Volume</name>
+		<designername>BidOrdersNonArbitrageVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Orders.Propreitrary.Value</name>
+		<designername>BidOrdersPropreitraryValue</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Orders.Propreitrary.Volume</name>
+		<designername>BidOrdersPropreitraryVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Orders.Trust.Value</name>
+		<designername>BidOrdersTrustValue</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.Orders.Trust.Volume</name>
+		<designername>BidOrdersTrustVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Bid.PreAnnounceNumberOfProgram.Orders</name>
+		<designername>BidPreAnnounceNumberOfProgramOrders</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Close.ConditionCode.Bloomberg</name>
+		<designername>CloseConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for the official close price.]]></description>
+	</field>
+	<field>
+		<name>Summary.ClosingCross.Eligible</name>
+		<designername>ClosingCrossEligible</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the security is eligible for the closing cross.]]></description>
+	</field>
+	<field>
+		<name>Summary.ConvertibleBondParity</name>
+		<designername>ConvertibleBondParity</designername>
+		<type>float32</type>
+		<description><![CDATA[The bond price at which neither a prift nor a loss is realized ignoring transaction costs]]></description>
+	</field>
+	<field>
+		<name>Summary.ConvertibleBondPremium</name>
+		<designername>ConvertibleBondPremium</designername>
+		<type>float32</type>
+		<description><![CDATA[The dollar amount which you pay above the value of the equity for the fixed income protection afforded by the convertible
+bond]]></description>
+	</field>
+	<field>
+		<name>Summary.CumulativeVolume</name>
+		<designername>CumulativeVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Total number of shares traded intraday.]]></description>
+	</field>
+	<field>
+		<name>Summary.CumulativeVolume.Previous</name>
+		<designername>CumulativeVolumePrevious</designername>
+		<type>uint32</type>
+		<description><![CDATA[Total number of shares traded on the date shown in Summary.CumulativeVolume.Previous.Date]]></description>
+	</field>
+	<field>
+		<name>Summary.CumulativeVolume.Previous.Date</name>
+		<designername>CumulativeVolumePreviousDate</designername>
+		<type>date</type>
+		<description><![CDATA[Date of Summary.CumulativeVolume field.]]></description>
+	</field>
+	<field>
+		<name>Summary.Current.Trading.Date</name>
+		<designername>CurrentTradingDate</designername>
+		<type>date</type>
+		<description><![CDATA[Current local market trading date.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.52Week.High</name>
+		<designername>Discount52WeekHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week high
+discount. In BMDS, this value can show a discount from 52 weeks + 1 day ago and does not always match the value on
+the Bloomberg Terminal.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.52Week.High.Date</name>
+		<designername>Discount52WeekHighDate</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week high discount was recorded. In BMDS, this date can be 52 weeks + 1 day ago.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.52Week.High.Date.Previous</name>
+		<designername>Discount52WeekHighDatePrevious</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.*** Date that the 52
+week high discount was recorded, according to the previous ICS run. Used for recovery of cancelled intraday hi/lo that
+updates the 52 week value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.52Week.High.Previous</name>
+		<designername>Discount52WeekHighPrevious</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week high
+discount as seen in the previous day ICS run - used for recovery of cancelled intraday 52 hi/lo values.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.52Week.Low</name>
+		<designername>Discount52WeekLow</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week low
+discount. In BMDS, this value can show a discount from 52 weeks + 1 day ago and does not always match the value on
+the Bloomberg Terminal.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.52Week.Low.Date</name>
+		<designername>Discount52WeekLowDate</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week low discount was recorded. In BMDS, this date can be 52 weeks + 1 day ago.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.52Week.Low.Date.Previous</name>
+		<designername>Discount52WeekLowDatePrevious</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week low discount was recorded, according to the previous ICS run. Used for recovery of cancelled intraday hi/lo that
+updates the 52 week value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.52Week.Low.Previous</name>
+		<designername>Discount52WeekLowPrevious</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week low
+discount as seen in the previous day ICS run - used for recovery of cancelled intraday 52 hi/lo values.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Ask.Close</name>
+		<designername>DiscountAskClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing ask discount for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Ask.Close.LocalSource</name>
+		<designername>DiscountAskCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local exchange that contributed the closing ask discount to the composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Bid.Close.LocalSource</name>
+		<designername>DiscountBidCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local exchange that contributed the closing bid discount to the composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.ChangeOnDay</name>
+		<designername>DiscountChangeOnDay</designername>
+		<type>float32</type>
+		<description><![CDATA[The change on day for the instrument's discount value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.ChangeOnDay.Percent</name>
+		<designername>DiscountChangeOnDayPercent</designername>
+		<type>float32</type>
+		<description><![CDATA[Percentage change on day.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Close</name>
+		<designername>DiscountClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing discount for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Close.LocalSource</name>
+		<designername>DiscountCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the day or session closing discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.High</name>
+		<designername>DiscountHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday high discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.High.LocalSource</name>
+		<designername>DiscountHighLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the intraday high discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.IndicativeAuction</name>
+		<designername>DiscountIndicativeAuction</designername>
+		<type>float32</type>
+		<description><![CDATA[Theoretical discount for an Security.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last</name>
+		<designername>DiscountLast</designername>
+		<type>float32</type>
+		<description><![CDATA[Last discount value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Ask</name>
+		<designername>DiscountLastAsk</designername>
+		<type>float32</type>
+		<description><![CDATA[Last ask discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Ask.IsBloombergCalculation</name>
+		<designername>DiscountLastAskIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last ask discount value is a Bloomberg calculation and not an exchange or source
+created value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Bid</name>
+		<designername>DiscountLastBid</designername>
+		<type>float32</type>
+		<description><![CDATA[Last bid discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Bid.IsBloombergCalculation</name>
+		<designername>DiscountLastBidIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last bid discount value is a Bloomberg calculation and not an exchange or source
+created value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.IsBloombergCalculation</name>
+		<designername>DiscountLastIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last discount value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.LocalSource</name>
+		<designername>DiscountLastLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the last discount value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Mid</name>
+		<designername>DiscountLastMid</designername>
+		<type>float32</type>
+		<description><![CDATA[Last mid discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Mid.IsBloombergCalculation</name>
+		<designername>DiscountLastMidIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last mid discount value is a Bloomberg calculation and not an exchange or source
+created value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Time</name>
+		<designername>DiscountLastTime</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the last discount value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Trade</name>
+		<designername>DiscountLastTrade</designername>
+		<type>float32</type>
+		<description><![CDATA[Last trade discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Last.Trade.IsBloombergCalculation</name>
+		<designername>DiscountLastTradeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last trade discount value is a Bloomberg calculation and not an exchange or source
+created value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Low</name>
+		<designername>DiscountLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday low discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Low.LocalSource</name>
+		<designername>DiscountLowLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the intraday low discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.MaxLimit</name>
+		<designername>DiscountMaxLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The intraday maximum discount at which trading will be allowed to continue.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.MinLimit</name>
+		<designername>DiscountMinLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The intraday minimum discount at which trading will be allowed to continue.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Open</name>
+		<designername>DiscountOpen</designername>
+		<type>float32</type>
+		<description><![CDATA[Current day's opening discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Open.LocalSource</name>
+		<designername>DiscountOpenLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the day open discount value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.OutOfSessionMaxLimit</name>
+		<designername>DiscountOutOfSessionMaxLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The maximum discount allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.OutOfSessionMinLimit</name>
+		<designername>DiscountOutOfSessionMinLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The minimum discount allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Previous.Close</name>
+		<designername>DiscountPreviousClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing discount for the previous day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Trade.High</name>
+		<designername>DiscountTradeHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[High trade discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Trade.Low</name>
+		<designername>DiscountTradeLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Low trade discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Discount.Trade.Open</name>
+		<designername>DiscountTradeOpen</designername>
+		<type>float32</type>
+		<description><![CDATA[Opening trade discount.]]></description>
+	</field>
+	<field>
+		<name>Summary.Financial.Status</name>
+		<designername>FinancialStatus</designername>
+		<type>string</type>
+		<description><![CDATA[Code indicating the financial status of the issuer.]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.EstimatedCashPerUnit</name>
+		<designername>FundEstimatedCashPerUnit</designername>
+		<type>float32</type>
+		<description><![CDATA[Estimated Cash Amount Per Creation Unit for a Fund.]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.INAV</name>
+		<designername>FundINAV</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday net asset value for a Fund.]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.INAV.High</name>
+		<designername>FundINAVHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[High For INAV]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.INAV.Low</name>
+		<designername>FundINAVLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Low for INAV]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.IPV</name>
+		<designername>FundIPV</designername>
+		<type>float32</type>
+		<description><![CDATA[Intra-day Portfolio Value (IPVs) for a Fund.]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.NAV</name>
+		<designername>FundNAV</designername>
+		<type>float32</type>
+		<description><![CDATA[Net asset value for a Fund.]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.NetAccruedDividend</name>
+		<designername>FundNetAccruedDividend</designername>
+		<type>float32</type>
+		<description><![CDATA[Net Accrued Dividend for a Fund.]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.TotalCashPerUnit</name>
+		<designername>FundTotalCashPerUnit</designername>
+		<type>float32</type>
+		<description><![CDATA[Total Cash Amount Per Creation Unit for a Fund.]]></description>
+	</field>
+	<field>
+		<name>Summary.Fund.TotalSharesOutstanding</name>
+		<designername>FundTotalSharesOutstanding</designername>
+		<type>float64</type>
+		<description><![CDATA[Total Shares Outstanding (TSO) for a Fund.]]></description>
+	</field>
+	<field>
+		<name>Summary.IndicativeAuction.Size</name>
+		<designername>IndicativeAuctionSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Theoretical volume for an Security.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Ask.Broker.Bloomberg</name>
+		<designername>LastAskBroker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker providing the last ask quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Ask.Broker.Source</name>
+		<designername>LastAskBrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the broker providing the last ask quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Ask.ConditionCode.Bloomberg</name>
+		<designername>LastAskConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for special conditions on the last ask quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Ask.ConditionCode.Source</name>
+		<designername>LastAskConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Source mnemonic(s) for special conditions on the last ask quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Ask.LocalSource</name>
+		<designername>LastAskLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Provides the local market center where the last ask quote originated.
+Populated in the case where the primary market center on the event is a composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Ask.Size</name>
+		<designername>LastAskSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the last ask quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Ask.Size.IsBloombergCalculation</name>
+		<designername>LastAskSizeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the size of the last ask quote is a Bloomberg calculated value.
+If the source is snapshot record based broadcast mechanism, the size may not be actual.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Ask.Time</name>
+		<designername>LastAskTime</designername>
+		<type>time</type>
+		<description><![CDATA[The time of the last ask quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.ASW.Spread</name>
+		<designername>LastASWSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[@RQ372]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.BenchmarkSpread</name>
+		<designername>LastBenchmarkSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[LastBenchmarkSpread]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Bid.Broker.Bloomberg</name>
+		<designername>LastBidBroker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker providing the last bid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Bid.Broker.Source</name>
+		<designername>LastBidBrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the broker providing the last bid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Bid.ConditionCode.Bloomberg</name>
+		<designername>LastBidConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for special conditions on the last bid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Bid.ConditionCode.Source</name>
+		<designername>LastBidConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Source mnemonic(s) for special conditions on the last bid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Bid.LocalSource</name>
+		<designername>LastBidLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Provides the local market center where the last bid quote originated.
+Populated in the case where the primary market center on the event is a composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Bid.Size</name>
+		<designername>LastBidSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the last bid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Bid.Size.IsBloombergCalculation</name>
+		<designername>LastBidSizeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the size of the last bid quote is a Bloomberg calculated value.
+If the source is snapshot record based broadcast mechanism, the size may not be actual.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Bid.Time</name>
+		<designername>LastBidTime</designername>
+		<type>time</type>
+		<description><![CDATA[The time of the last bid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.InterpolatedSpreadToSwapId</name>
+		<designername>LastInterpolatedSpreadToSwapId</designername>
+		<type>string</type>
+		<description><![CDATA[InterpolatedSpreadToSwapId]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Mid.Broker.Bloomberg</name>
+		<designername>LastMidBroker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the broker providing the last mid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Mid.Broker.Source</name>
+		<designername>LastMidBrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the broker providing the last mid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Mid.ConditionCode.Bloomberg</name>
+		<designername>LastMidConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for special conditions on the last mid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Mid.ConditionCode.Source</name>
+		<designername>LastMidConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Source mnemonic(s) for special conditions on the last mid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Mid.LocalSource</name>
+		<designername>LastMidLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Provides the local market center where the last mid quote originated.
+Populated in the case where the primary market center on the event is a composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Mid.Size</name>
+		<designername>LastMidSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the last mid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Mid.Size.IsBloombergCalculation</name>
+		<designername>LastMidSizeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the size of the last mid quote is a Bloomberg calculated value.
+If the source is snapshot record based broadcast mechanism, the size may not be actual.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Mid.Time</name>
+		<designername>LastMidTime</designername>
+		<type>time</type>
+		<description><![CDATA[The time of the last mid quote.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Option.Delta</name>
+		<designername>LastOptionDelta</designername>
+		<type>float32</type>
+		<description><![CDATA[The amount by which an option's price will change per share of underlying stock.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.SpreadToBenchmarkShortName</name>
+		<designername>LastSpreadToBenchmarkShortName</designername>
+		<type>string</type>
+		<description><![CDATA[SpreadToBenchmarkShortName - Trace]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.SwapSpread</name>
+		<designername>LastSwapSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[LastSwapSpread]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.ConditionCode.Bloomberg</name>
+		<designername>LastTradeConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for special conditions on the last trade.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.ConditionCode.Source</name>
+		<designername>LastTradeConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Source mnemonic(s) for special conditions on the last trade.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.Date</name>
+		<designername>LastTradeDate</designername>
+		<type>date</type>
+		<description><![CDATA[The date that the trade occurred.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.LocalSource</name>
+		<designername>LastTradeLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Provides the local market center where the last trade message originated.
+Populated in the case where the primary market center on the event is a composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.Received.Time</name>
+		<designername>LastTradeReceivedTime</designername>
+		<type>time</type>
+		<description><![CDATA[The time the last trade was received]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.Session</name>
+		<designername>LastTradeSession</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the Trading Session during which the last trade occurred.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.Size</name>
+		<designername>LastTradeSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the last trade.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.Size.IsBloombergCalculation</name>
+		<designername>LastTradeSizeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the last trade size is a Bloomberg calculated value.
+If the source is snapshot record based broadcast mechanism, the size may not be actual.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.Time</name>
+		<designername>LastTradeTime</designername>
+		<type>time</type>
+		<description><![CDATA[The time of the last trade.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Trade.Value.NotAvailable</name>
+		<designername>LastTradeValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable trade value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Last.Z.Spread</name>
+		<designername>LastZSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[@RQ371]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.ASW.RT.Spread.Change</name>
+		<designername>MidASWRTSpreadChange</designername>
+		<type>float32</type>
+		<description><![CDATA[Change on day from the previous the Bloomberg calculated real-time asset swap spread, in basis points, being
+calculated for the security using the Yield Spread Analysis defaults.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.ASW.RT.Spread.Percent.Change</name>
+		<designername>MidASWRTSpreadPercentChange</designername>
+		<type>float32</type>
+		<description><![CDATA[Percent change on day from the previous the Bloomberg calculated real-time asset swap spread, in basis points, being
+calculated for the security using the Yield Spread Analysis defaults.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.ASW.Spread</name>
+		<designername>MidASWSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[The Bloomberg calculated real-time asset swap spread, in basis points, being calculated for the security using the Yield
+Spread Analysis]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.BM.RT.Spread.Change</name>
+		<designername>MidBMRTSpreadChange</designername>
+		<type>float32</type>
+		<description><![CDATA[Change on day from the previous Bloomberg calculated real-time mid yield spread to worst to the benchmark bond. This
+field will not populate unless the current pricing source delivers spreads.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.BM.RT.Spread.Percent.Change</name>
+		<designername>MidBMRTSpreadPercentChange</designername>
+		<type>float32</type>
+		<description><![CDATA[Percent change on day from the previous Bloomberg calculated real-time mid yield spread to worst to the benchmark
+bond. This field will not populate unless the current pricing source delivers spreads.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.BM.Spread</name>
+		<designername>MidBMSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[Bloomberg calculated real-time mid yield spread to worst to the benchmark bond.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.CDS.Basis</name>
+		<designername>MidCDSBasis</designername>
+		<type>float32</type>
+		<description><![CDATA[The spread between the selected bond and the interpolated yield from the BFV Curve shown in the CRV# field. This
+spread is based on the selected bond's nominal maturity date."]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.I.RT.Spread.Change</name>
+		<designername>MidIRTSpreadChange</designername>
+		<type>float32</type>
+		<description><![CDATA[Change on day from the previous the Bloomberg calculated real-time 'ISPRD', in basis points, being calculated for the
+security using the Yield Spread Analysis defaults.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.I.RT.Spread.Percent.Change</name>
+		<designername>MidIRTSpreadPercentChange</designername>
+		<type>float32</type>
+		<description><![CDATA["Percent change on day from the previous the Bloomberg calculated real-time 'ISPRD', in basis points, being calculated
+for the security using the Yield Spread Analysis defaults.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.I.Spread</name>
+		<designername>MidISpread</designername>
+		<type>float32</type>
+		<description><![CDATA[Bloomberg calculated real-time bThe Bloomberg calculated real-time 'ISPRD', in basis points, being calculated for the
+security using the Yield Spread Analysis]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.Z.RT.Spread.Change</name>
+		<designername>MidZRTSpreadChange</designername>
+		<type>float32</type>
+		<description><![CDATA[Change on day from the previous Bloomberg calculated real-time spread that must be added to the treasury spot rates
+so that a security's discounted cashflows equals its mid price, with each dated cashflow discounted at its own rate. This
+field will not populate unless the current pricing source delivers spreads.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.Z.RT.Spread.Percent.Change</name>
+		<designername>MidZRTSpreadPercentChange</designername>
+		<type>float32</type>
+		<description><![CDATA[Percent change on day from the previous Bloomberg calculated real-time spread that must be added to the treasury
+spot rates so that a security's discounted cashflows equals its mid price, with each dated cashflow discounted at its own
+rate. This field will not populate unless the current pricing source delivers spreads.]]></description>
+	</field>
+	<field>
+		<name>Summary.Mid.Z.Spread</name>
+		<designername>MidZSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[Bloomberg calculated real-time spread that must be added to the treasury spot rates so that a security's discounted
+cashflows equals its mid price, with each dated cashflow discounted at its own rate.]]></description>
+	</field>
+	<field>
+		<name>Summary.MOC.Eligible</name>
+		<designername>MOCEligible</designername>
+		<type>bool</type>
+		<description><![CDATA[This field indicates whether a security is eligible for the Market on Close facility. It returns a Y is the security is MOC
+eligible. It returns N if a security is MOC ineligible. It returns a blank if the secutity is MOC ineligible or if MOC eligibility
+is not applicable to the security.]]></description>
+	</field>
+	<field>
+		<name>Summary.NonOrderBookVolume</name>
+		<designername>NonOrderBookVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[The volume of trades executed off board or off exchange.]]></description>
+	</field>
+	<field>
+		<name>Summary.Number.Of.Listed.Shares</name>
+		<designername>NumberOfListedShares</designername>
+		<type>uint32</type>
+		<description><![CDATA[number of listed shares]]></description>
+	</field>
+	<field>
+		<name>Summary.Open.ConditionCode.Bloomberg</name>
+		<designername>OpenConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for the official open price.]]></description>
+	</field>
+	<field>
+		<name>Summary.OpenInterest</name>
+		<designername>OpenInterest</designername>
+		<type>uint32</type>
+		<description><![CDATA[Total number of outstanding agreements for a contract.]]></description>
+	</field>
+	<field>
+		<name>Summary.OpenInterest.Date</name>
+		<designername>OpenInterestDate</designername>
+		<type>date</type>
+		<description><![CDATA[Date of Summary.OpenInterest.]]></description>
+	</field>
+	<field>
+		<name>Summary.OrderBookVolume</name>
+		<designername>OrderBookVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Cumulative volume of all orders in the order book for a security.]]></description>
+	</field>
+	<field>
+		<name>Summary.OrderImbalanceIndicator</name>
+		<designername>OrderImbalanceIndicator</designername>
+		<type>string</type>
+		<description><![CDATA[@RQ144]]></description>
+	</field>
+	<field>
+		<name>Summary.Ownership.Limit.Ratio</name>
+		<designername>OwnershipLimitRatio</designername>
+		<type>float32</type>
+		<description><![CDATA[ownership limit ratio]]></description>
+	</field>
+	<field>
+		<name>Summary.ParVs6m</name>
+		<designername>ParVs6m</designername>
+		<type>float32</type>
+		<description><![CDATA[6m euribor vs yield of bonds buy with adjustmens for both the curves so that you are comparing alike for like]]></description>
+	</field>
+	<field>
+		<name>Summary.Percentage.Of.Foreign.Holding</name>
+		<designername>PercentageOfForeignHolding</designername>
+		<type>float32</type>
+		<description><![CDATA[Percentage of foreign holding]]></description>
+	</field>
+	<field>
+		<name>Summary.Previous.Corporate.Action.Adjusted</name>
+		<designername>PreviousCorporateActionAdjusted</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the previous close price was adjusted for a corporate action.]]></description>
+	</field>
+	<field>
+		<name>Summary.Previous.Trading.Date</name>
+		<designername>PreviousTradingDate</designername>
+		<type>date</type>
+		<description><![CDATA[Current local market trading date.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.52Week.High</name>
+		<designername>Price52WeekHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[52 week high price. In BMDS, this value can show a price from 52 weeks + 1 day ago and does not always match the
+value on the Bloomberg Terminal.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.52Week.High.Date</name>
+		<designername>Price52WeekHighDate</designername>
+		<type>date</type>
+		<description><![CDATA[Date that the 52 week high price was recorded. In BMDS, this date can be 52 weeks + 1 day ago.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.52Week.Low</name>
+		<designername>Price52WeekLow</designername>
+		<type>float32</type>
+		<description><![CDATA[52 week low price. In BMDS, this value can show a price from 52 weeks + 1 day ago and does not always match the
+value on the Bloomberg Terminal.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.52Week.Low.Date</name>
+		<designername>Price52WeekLowDate</designername>
+		<type>date</type>
+		<description><![CDATA[Date that the 52 week low price was recorded. In BMDS, this date can be 52 weeks + 1 day ago.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Ask.Close</name>
+		<designername>PriceAskClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing ask price for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Ask.Close.LocalSource</name>
+		<designername>PriceAskCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local exchange that contributed the closing ask price to the composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Ask.Imbalance</name>
+		<designername>PriceAskImbalance</designername>
+		<type>float32</type>
+		<description><![CDATA[Ask imbalance price during an auction period.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Ask.Official</name>
+		<designername>PriceAskOfficial</designername>
+		<type>float32</type>
+		<description><![CDATA[Official Ask Price (currently used by LME)]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Ask.Prevailing</name>
+		<designername>PriceAskPrevailing</designername>
+		<type>float32</type>
+		<description><![CDATA[Prevailing ask price during an auction period.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Ask.Unofficial</name>
+		<designername>PriceAskUnofficial</designername>
+		<type>float32</type>
+		<description><![CDATA[Unofficial Ask Price (currently used by LME)]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.AskWeightedAverageSpread</name>
+		<designername>PriceAskWeightedAverageSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[The price at which you can buy or sell a security for a size equal to the NMS. Applies to French Equities only.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Bid.Close</name>
+		<designername>PriceBidClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing bid price for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Bid.Close.LocalSource</name>
+		<designername>PriceBidCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local exchange that contributed the closing bid price to the composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Bid.Imbalance</name>
+		<designername>PriceBidImbalance</designername>
+		<type>float32</type>
+		<description><![CDATA[Bid imbalance price during an auction period.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Bid.Official</name>
+		<designername>PriceBidOfficial</designername>
+		<type>float32</type>
+		<description><![CDATA[Official Bid Price (currently used by LME)]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Bid.Prevailing</name>
+		<designername>PriceBidPrevailing</designername>
+		<type>float32</type>
+		<description><![CDATA[Prevailing bid price during an auction period.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Bid.Unofficial</name>
+		<designername>PriceBidUnofficial</designername>
+		<type>float32</type>
+		<description><![CDATA[Unofficial Bid Price (currently used by LME)]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.BidWeightedAverageSpread</name>
+		<designername>PriceBidWeightedAverageSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[The price at which you can buy or sell a security for a size equal to the NMS. Applies to French Equities only.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.ChangeOnDay</name>
+		<designername>PriceChangeOnDay</designername>
+		<type>float32</type>
+		<description><![CDATA[The change on day for the instrument's price value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.ChangeOnDay.Percent</name>
+		<designername>PriceChangeOnDayPercent</designername>
+		<type>float32</type>
+		<description><![CDATA[Percentage change on day.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Close</name>
+		<designername>PriceClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing price for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Close.LocalSource</name>
+		<designername>PriceCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the day or session closing price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Evaluation</name>
+		<designername>PriceEvaluation</designername>
+		<type>float32</type>
+		<description><![CDATA[Evaluation price for an Security. Based on market specific algorithm.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.High</name>
+		<designername>PriceHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday high price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.High.LocalSource</name>
+		<designername>PriceHighLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the intraday high price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.IndicativeAuction</name>
+		<designername>PriceIndicativeAuction</designername>
+		<type>float32</type>
+		<description><![CDATA[Theoretical price for an Security.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.IndicativeAuction.NasdaqFar</name>
+		<designername>PriceIndicativeAuctionNasdaqFar</designername>
+		<type>float32</type>
+		<description><![CDATA[This field indicates the price level at which the Market On Close, Limit On Close, and Imbalance Only orders would clear
+against themselves.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.IndicativeAuction.NasdaqNear</name>
+		<designername>PriceIndicativeAuctionNasdaqNear</designername>
+		<type>float32</type>
+		<description><![CDATA[This field indicates the price level at which the Market On Close, Limit On Close, and Imbalance Only orders would clear
+against themselves and the continuous SuperMontage book interest.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last</name>
+		<designername>PriceLast</designername>
+		<type>float32</type>
+		<description><![CDATA[Last price value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Ask</name>
+		<designername>PriceLastAsk</designername>
+		<type>float32</type>
+		<description><![CDATA[Last ask price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Ask.IsBloombergCalculation</name>
+		<designername>PriceLastAskIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last ask price value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Bid</name>
+		<designername>PriceLastBid</designername>
+		<type>float32</type>
+		<description><![CDATA[Last bid price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Bid.IsBloombergCalculation</name>
+		<designername>PriceLastBidIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last bid price value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.IsBloombergCalculation</name>
+		<designername>PriceLastIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last price value is a Bloomberg calculation and not an exchange or source created value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.LocalSource</name>
+		<designername>PriceLastLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the last price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Mid</name>
+		<designername>PriceLastMid</designername>
+		<type>float32</type>
+		<description><![CDATA[Last mid price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Mid.IsBloombergCalculation</name>
+		<designername>PriceLastMidIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last mid price value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Time</name>
+		<designername>PriceLastTime</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the last price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Trade</name>
+		<designername>PriceLastTrade</designername>
+		<type>float32</type>
+		<description><![CDATA[Last trade price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Last.Trade.IsBloombergCalculation</name>
+		<designername>PriceLastTradeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last trade price value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Low</name>
+		<designername>PriceLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday low price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Low.LocalSource</name>
+		<designername>PriceLowLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the intraday low price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.MaxLimit</name>
+		<designername>PriceMaxLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The intraday maximum price at which trading will be allowed to continue.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.MinLimit</name>
+		<designername>PriceMinLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The intraday minimum price at which trading will be allowed to continue.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Open</name>
+		<designername>PriceOpen</designername>
+		<type>float32</type>
+		<description><![CDATA[Current day's opening price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Open.LocalSource</name>
+		<designername>PriceOpenLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the day open price value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.OutOfSessionMaxLimit</name>
+		<designername>PriceOutOfSessionMaxLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The maximum price allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.OutOfSessionMinLimit</name>
+		<designername>PriceOutOfSessionMinLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The minimum price allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Previous.Close</name>
+		<designername>PricePreviousClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing price for the previous day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Trade.High</name>
+		<designername>PriceTradeHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[High trade price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Trade.Low</name>
+		<designername>PriceTradeLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Low trade price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Trade.Open</name>
+		<designername>PriceTradeOpen</designername>
+		<type>float32</type>
+		<description><![CDATA[Opening trade price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.Underlying</name>
+		<designername>PriceUnderlying</designername>
+		<type>float32</type>
+		<description><![CDATA[Underlying stock price]]></description>
+	</field>
+	<field>
+		<name>Summary.Price.UnderlyingIndex</name>
+		<designername>PriceUnderlyingIndex</designername>
+		<type>float32</type>
+		<description><![CDATA[Underlying reference index price for a security]]></description>
+	</field>
+	<field>
+		<name>Summary.ProgramTrading.TotalValue</name>
+		<designername>ProgramTradingTotalValue</designername>
+		<type>float32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.ProgramTrading.TotalVolume</name>
+		<designername>ProgramTradingTotalVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Program Trading]]></description>
+	</field>
+	<field>
+		<name>Summary.Shares.Available.To.Foreign.Investors</name>
+		<designername>SharesAvailableToForeignInvestors</designername>
+		<type>uint32</type>
+		<description><![CDATA[Share avialable to foreign investors]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.52Week.High</name>
+		<designername>Spread52WeekHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week high
+spread. In BMDS, this value can show a spread from 52 weeks + 1 day ago and does not always match the value on the
+Bloomberg Terminal.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.52Week.High.Date</name>
+		<designername>Spread52WeekHighDate</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week high spread was recorded. In BMDS, this date can be 52 weeks + 1 day ago.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.52Week.High.Date.Previous</name>
+		<designername>Spread52WeekHighDatePrevious</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week high spread was recorded, according to the previous ICS run. Used for recovery of cancelled intraday hi/lo that
+updates the 52 week value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.52Week.High.Previous</name>
+		<designername>Spread52WeekHighPrevious</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week high
+spread as seen in the previous day ICS run - used for recovery of cancelled intraday 52 hi/lo values.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.52Week.Low</name>
+		<designername>Spread52WeekLow</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week low
+spread. In BMDS, this value can show a spread from 52 weeks + 1 day ago and does not always match the value on the
+Bloomberg Terminal.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.52Week.Low.Date</name>
+		<designername>Spread52WeekLowDate</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week low spread was recorded. In BMDS, this date can be 52 weeks + 1 day ago.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.52Week.Low.Date.Previous</name>
+		<designername>Spread52WeekLowDatePrevious</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week low spread was recorded, according to the previous ICS run. Used for recovery of cancelled intraday hi/lo that
+updates the 52 week value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.52Week.Low.Previous</name>
+		<designername>Spread52WeekLowPrevious</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week low
+spread as seen in the previous day ICS run - used for recovery of cancelled intraday 52 hi/lo values.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Ask.Close</name>
+		<designername>SpreadAskClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing ask spread for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Ask.Close.LocalSource</name>
+		<designername>SpreadAskCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local exchange that contributed the closing ask spread to the composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Benchmark.ID.Bloomberg</name>
+		<designername>SpreadBenchmarkID</designername>
+		<type>string</type>
+		<description><![CDATA[Unique Bloomberg ID for the benchmark security.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Benchmark.ID.Name</name>
+		<designername>SpreadBenchmarkIDName</designername>
+		<type>string</type>
+		<description><![CDATA[Benchmark name used by spread quoted instruments.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Bid.Close</name>
+		<designername>SpreadBidClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing bid spread for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Bid.Close.LocalSource</name>
+		<designername>SpreadBidCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local exchange that contributed the closing bid spread to the composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.ChangeOnDay</name>
+		<designername>SpreadChangeOnDay</designername>
+		<type>float32</type>
+		<description><![CDATA[The change on day for the instrument's spread value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.ChangeOnDay.Percent</name>
+		<designername>SpreadChangeOnDayPercent</designername>
+		<type>float32</type>
+		<description><![CDATA[Percentage change on day.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Close</name>
+		<designername>SpreadClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing spread for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Close.LocalSource</name>
+		<designername>SpreadCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the day or session closing spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.High</name>
+		<designername>SpreadHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday high spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.High.LocalSource</name>
+		<designername>SpreadHighLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the intraday high spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.IndicativeAuction</name>
+		<designername>SpreadIndicativeAuction</designername>
+		<type>float32</type>
+		<description><![CDATA[Theoretical spread for an Security.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.JGB</name>
+		<designername>SpreadJGB</designername>
+		<type>float32</type>
+		<description><![CDATA[it represents spread between the security and a JGB that has similar maturitydate.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last</name>
+		<designername>SpreadLast</designername>
+		<type>float32</type>
+		<description><![CDATA[Last spread value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Ask</name>
+		<designername>SpreadLastAsk</designername>
+		<type>float32</type>
+		<description><![CDATA[Last ask spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Ask.IsBloombergCalculation</name>
+		<designername>SpreadLastAskIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last ask spread value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Bid</name>
+		<designername>SpreadLastBid</designername>
+		<type>float32</type>
+		<description><![CDATA[Last bid spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Bid.IsBloombergCalculation</name>
+		<designername>SpreadLastBidIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last bid spread value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.IsBloombergCalculation</name>
+		<designername>SpreadLastIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last spread value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.LocalSource</name>
+		<designername>SpreadLastLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the last spread value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Mid</name>
+		<designername>SpreadLastMid</designername>
+		<type>float32</type>
+		<description><![CDATA[Last mid spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Mid.IsBloombergCalculation</name>
+		<designername>SpreadLastMidIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last mid spread value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Time</name>
+		<designername>SpreadLastTime</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the last spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Trade</name>
+		<designername>SpreadLastTrade</designername>
+		<type>float32</type>
+		<description><![CDATA[Last trade spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Last.Trade.IsBloombergCalculation</name>
+		<designername>SpreadLastTradeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last trade spread value is a Bloomberg calculation and not an exchange or source
+created value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Low</name>
+		<designername>SpreadLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday low spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Low.LocalSource</name>
+		<designername>SpreadLowLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the intraday low spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.MaxLimit</name>
+		<designername>SpreadMaxLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The intraday maximum spread at which trading will be allowed to continue.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.MinLimit</name>
+		<designername>SpreadMinLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The intraday minimum spread at which trading will be allowed to continue.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.OAS</name>
+		<designername>SpreadOAS</designername>
+		<type>float32</type>
+		<description><![CDATA[OAS measures the yield spread that is not directly attributable to the fixed income's characteristics.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Open</name>
+		<designername>SpreadOpen</designername>
+		<type>float32</type>
+		<description><![CDATA[The maximum spread allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Open.LocalSource</name>
+		<designername>SpreadOpenLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[The minimum spread allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.OutOfSessionMaxLimit</name>
+		<designername>SpreadOutOfSessionMaxLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The maximum trading spread allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.OutOfSessionMinLimit</name>
+		<designername>SpreadOutOfSessionMinLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The minimum trading spread allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Previous.Close</name>
+		<designername>SpreadPreviousClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing spread for the previous day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Trade.High</name>
+		<designername>SpreadTradeHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[High trade spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Trade.Low</name>
+		<designername>SpreadTradeLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Low trade spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Spread.Trade.Open</name>
+		<designername>SpreadTradeOpen</designername>
+		<type>float32</type>
+		<description><![CDATA[Opening trade spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the summary message.]]></description>
+	</field>
+	<field>
+		<name>Summary.TotalTrades</name>
+		<designername>TotalTrades</designername>
+		<type>uint32</type>
+		<description><![CDATA[The total number of trades for a given day. The general rule is real trades that occurred today are included in the total
+trades for today. Trades on a previous day or trades that would result in double counting of a trade. When known the
+definition which trades are included is based on the source definition, else it is based on general market
+conventions.The inclusion or exclusion is determined by trade condition code (Trade.ConditionCode.Bloomberg). Based
+on the condition code of the trade, the IncrementNumberTrades boolean from Trade.UpdateActions is set.]]></description>
+	</field>
+	<field>
+		<name>Summary.Treasury.Spread</name>
+		<designername>TreasurySpread</designername>
+		<type>float32</type>
+		<description><![CDATA[Treasury spread]]></description>
+	</field>
+	<field>
+		<name>Summary.Treasury.Spread.Ask</name>
+		<designername>TreasurySpreadAsk</designername>
+		<type>float32</type>
+		<description><![CDATA[Treasury spread ask]]></description>
+	</field>
+	<field>
+		<name>Summary.Treasury.Spread.Bid</name>
+		<designername>TreasurySpreadBid</designername>
+		<type>float32</type>
+		<description><![CDATA[Treasury spread bid]]></description>
+	</field>
+	<field>
+		<name>Summary.UpdateType</name>
+		<designername>UpdateType</designername>
+		<type>string</type>
+		<description><![CDATA[Indicates the type of summary update, e.g. Open, Intraday, Refresh.]]></description>
+    	<enum>INTRADAY</enum>
+    	<enum>CLOSE</enum>
+    	<enum>PREOPEN</enum>
+    	<enum>REFRESH</enum>
+    	<enum>RETRANS</enum>
+    	<enum>UNASSIGNED</enum>
+	</field>
+	<field>
+		<name>Summary.ValueTraded</name>
+		<designername>ValueTraded</designername>
+		<type>float64</type>
+		<description><![CDATA[Opening trade spread.]]></description>
+	</field>
+	<field>
+		<name>Summary.VWAP.Bloomberg</name>
+		<designername>VWAP</designername>
+		<type>float64</type>
+		<description><![CDATA[Bloomberg calculated VWAP for an Security.]]></description>
+	</field>
+	<field>
+		<name>Summary.VWAP.Bloomberg.CumulativeVolume</name>
+		<designername>VWAPCumulativeVolume</designername>
+		<type>uint32</type>
+		<description><![CDATA[Total Volume for trades included in the Bloomberg VWAP calculation.]]></description>
+	</field>
+	<field>
+		<name>Summary.VWAP.Bloomberg.ValueTraded</name>
+		<designername>VWAPValueTraded</designername>
+		<type>float64</type>
+		<description><![CDATA[Total Value Traded for trades included in the Bloomberg VWAP calculation.]]></description>
+	</field>
+	<field>
+		<name>Summary.VWAP.OfficialPrice</name>
+		<designername>VWAPOfficialPrice</designername>
+		<type>float32</type>
+		<description><![CDATA[Late exchange-calculated VWAP. This value is adjusted for trade cancellations.]]></description>
+	</field>
+	<field>
+		<name>Summary.VWAP.ServicePrice</name>
+		<designername>VWAPServicePrice</designername>
+		<type>float32</type>
+		<description><![CDATA[Early exchange-calculated VWAP published by Copenhagen. This value is not ajusted for trade cancellations.]]></description>
+	</field>
+	<field>
+		<name>Summary.VWAP.Source</name>
+		<designername>VWAPSource</designername>
+		<type>float64</type>
+		<description><![CDATA[Exchange or data provider calculated VWAP for an Security.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.52Week.High</name>
+		<designername>Yield52WeekHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week high
+yield. In BMDS, this value can show a yield from 52 weeks + 1 day ago and does not always match the value on the
+Bloomberg Terminal.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.52Week.High.Date</name>
+		<designername>Yield52WeekHighDate</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week high yield was recorded. In BMDS, this date can be 52 weeks + 1 day ago.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.52Week.High.Date.Previous</name>
+		<designername>Yield52WeekHighDatePrevious</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week high yield was recorded, according to the previous ICS run. Used for recovery of cancelled intraday hi/lo that
+updates the 52 week value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.52Week.High.Previous</name>
+		<designername>Yield52WeekHighPrevious</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week high
+yield as seen in the previous day ICS run - used for recovery of cancelled intraday 52 hi/lo values.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.52Week.Low</name>
+		<designername>Yield52WeekLow</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week low yield.
+In BMDS, this value can show a spread from 52 weeks + 1 day ago and does not always match the value on the
+Bloomberg Terminal.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.52Week.Low.Date</name>
+		<designername>Yield52WeekLowDate</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week low yield was recorded. In BMDS, this date can be 52 weeks + 1 day ago.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.52Week.Low.Date.Previous</name>
+		<designername>Yield52WeekLowDatePrevious</designername>
+		<type>date</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***Date that the 52
+week low yield was recorded, according to the previous ICS run. Used for recovery of cancelled intraday hi/lo that
+updates the 52 week value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.52Week.Low.Previous</name>
+		<designername>Yield52WeekLowPrevious</designername>
+		<type>float32</type>
+		<description><![CDATA[***This field is not supported and will be removed from the model in the next major version upgrade.***52 week low yield
+as seen in the previous day ICS run - used for recovery of cancelled intraday 52 hi/lo values.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Ask.Close</name>
+		<designername>YieldAskClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing ask yield for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Ask.Close.LocalSource</name>
+		<designername>YieldAskCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local exchange that contributed the closing ask yield to the composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.AskWeightedAverageSpread</name>
+		<designername>YieldAskWeightedAverageSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[The yield at which you can buy or sell a security for a size equal to the NMS. Applies to French Equities only.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Bid.Close</name>
+		<designername>YieldBidClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing bid yield for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Bid.Close.LocalSource</name>
+		<designername>YieldBidCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local exchange that contributed the closing bid yield to the composite.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.BidWeightedAverageSpread</name>
+		<designername>YieldBidWeightedAverageSpread</designername>
+		<type>float32</type>
+		<description><![CDATA[The yield at which you can buy or sell a security for a size equal to the NMS. Applies to French Equities only.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Breakeven.ChangeOnDay</name>
+		<designername>YieldBreakevenChangeOnDay</designername>
+		<type>float32</type>
+		<description><![CDATA[The change in the breakeven rate]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Breakeven.Mid</name>
+		<designername>YieldBreakevenMid</designername>
+		<type>float32</type>
+		<description><![CDATA[Mid breakeven is the difference in the mid yield rate between TIPs and normial treasury bonds]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.ChangeOnDay</name>
+		<designername>YieldChangeOnDay</designername>
+		<type>float32</type>
+		<description><![CDATA[The change on day for the instrument's yield value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.ChangeOnDay.Percent</name>
+		<designername>YieldChangeOnDayPercent</designername>
+		<type>float32</type>
+		<description><![CDATA[Percentage change on day.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Close</name>
+		<designername>YieldClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing yield for the day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Close.LocalSource</name>
+		<designername>YieldCloseLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the day or session closing yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Evaluation</name>
+		<designername>YieldEvaluation</designername>
+		<type>float32</type>
+		<description><![CDATA[Evaluation yield for an Security. Based on market specific algorithm.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.High</name>
+		<designername>YieldHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday high yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.High.LocalSource</name>
+		<designername>YieldHighLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the intraday high yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.IndicativeAuction</name>
+		<designername>YieldIndicativeAuction</designername>
+		<type>float32</type>
+		<description><![CDATA[Theoretical yield for an Security.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last</name>
+		<designername>YieldLast</designername>
+		<type>float32</type>
+		<description><![CDATA[Last yield value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Ask</name>
+		<designername>YieldLastAsk</designername>
+		<type>float32</type>
+		<description><![CDATA[Last ask yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Ask.IsBloombergCalculation</name>
+		<designername>YieldLastAskIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last ask yield value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Bid</name>
+		<designername>YieldLastBid</designername>
+		<type>float32</type>
+		<description><![CDATA[Last bid yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Bid.IsBloombergCalculation</name>
+		<designername>YieldLastBidIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last bid yield value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Compound</name>
+		<designername>YieldLastCompound</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday compound yield price.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.IsBloombergCalculation</name>
+		<designername>YieldLastIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last yield value is a Bloomberg calculation and not an exchange or source created value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.LocalSource</name>
+		<designername>YieldLastLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the last yield value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Mid</name>
+		<designername>YieldLastMid</designername>
+		<type>float32</type>
+		<description><![CDATA[Last mid yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Mid.IsBloombergCalculation</name>
+		<designername>YieldLastMidIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last mid yield value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Time</name>
+		<designername>YieldLastTime</designername>
+		<type>time</type>
+		<description><![CDATA[Time of the last yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Trade</name>
+		<designername>YieldLastTrade</designername>
+		<type>float32</type>
+		<description><![CDATA[Last trade yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Last.Trade.IsBloombergCalculation</name>
+		<designername>YieldLastTradeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the last trade yield value is a Bloomberg calculation and not an exchange or source created
+value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Low</name>
+		<designername>YieldLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Intraday low yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Low.LocalSource</name>
+		<designername>YieldLowLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the intraday low yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.MaxLimit</name>
+		<designername>YieldMaxLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The intraday maximum yield at which trading will be allowed to continue.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.MinLimit</name>
+		<designername>YieldMinLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The intraday minimum yield at which trading will be allowed to continue.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Open</name>
+		<designername>YieldOpen</designername>
+		<type>float32</type>
+		<description><![CDATA[Current day's opening yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Open.LocalSource</name>
+		<designername>YieldOpenLocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market source for the day open yield value.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.OutOfSessionMaxLimit</name>
+		<designername>YieldOutOfSessionMaxLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The maximum yield allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.OutOfSessionMinLimit</name>
+		<designername>YieldOutOfSessionMinLimit</designername>
+		<type>float32</type>
+		<description><![CDATA[The minimum yield allowed for the stock outside of the regular trading session.
+The stock will suspend if it crosses the limit. This field applies to out-of-session trades.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Previous.Close</name>
+		<designername>YieldPreviousClose</designername>
+		<type>float32</type>
+		<description><![CDATA[Closing yield for the previous day or session.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Trade.High</name>
+		<designername>YieldTradeHigh</designername>
+		<type>float32</type>
+		<description><![CDATA[High trade yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Trade.Low</name>
+		<designername>YieldTradeLow</designername>
+		<type>float32</type>
+		<description><![CDATA[Low trade yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.Yield.Trade.Open</name>
+		<designername>YieldTradeOpen</designername>
+		<type>float32</type>
+		<description><![CDATA[Opening trade yield.]]></description>
+	</field>
+	<field>
+		<name>Summary.YieldToPutMaturity</name>
+		<designername>YieldToPutMaturity</designername>
+		<type>float32</type>
+		<description><![CDATA[Yield to put or yield to maturity, depending on which one is the highest. a bond's return if it is held until a specific date
+and is then sold back to the issue for a particular price.]]></description>
+	</field>
+	<field>
+		<name>Summary.YieldVs6m</name>
+		<designername>YieldVs6m</designername>
+		<type>float32</type>
+		<description><![CDATA[Value of 6m euribor vs yield of bond]]></description>
+	</field>
+	<field>
+		<name>Summary.Z.Spread.Ask</name>
+		<designername>ZSpreadAsk</designername>
+		<type>float32</type>
+		<description><![CDATA[Summary Z Spread Ask]]></description>
+	</field>
+	<field>
+		<name>Summary.Z.Spread.Bid</name>
+		<designername>ZSpreadBid</designername>
+		<type>float32</type>
+		<description><![CDATA[Summary Z Spread Bid]]></description>
+	</field>
+	<field>
+		<name>Summary.Z.Spread.OneDay.AskChange</name>
+		<designername>ZSpreadOneDayAskChange</designername>
+		<type>float32</type>
+		<description><![CDATA[Summary Z Spread One Day Ask Change]]></description>
+	</field>
+	<field>
+		<name>Trade.Action</name>
+		<designername>Action</designername>
+		<type>string</type>
+		<description><![CDATA[Indicates whether information in a trade event message represents a new trade, cancelled trade, corrected trade or
+advertised trade.]]></description>
+    	<enum>UNASSIGNED</enum>
+    	<enum>ADVERTISEMENT</enum>
+    	<enum>CANCEL</enum>
+    	<enum>CORRECT</enum>
+    	<enum>NEW</enum>
+	</field>
+	<field>
+		<name>Trade.Buy.Broker.Bloomberg</name>
+		<designername>BuyBroker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the buying broker on a trade.]]></description>
+	</field>
+	<field>
+		<name>Trade.Buy.Broker.Source</name>
+		<designername>BuyBrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the buying broker on a trade.]]></description>
+	</field>
+	<field>
+		<name>Trade.ConditionCode.Bloomberg</name>
+		<designername>ConditionCode</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Bloomberg mnemonic(s) for special conditions on the trade.]]></description>
+	</field>
+	<field>
+		<name>Trade.ConditionCode.ShortName</name>
+		<designername>ConditionCodeShortName</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg short name for the sale condition.]]></description>
+	</field>
+	<field>
+		<name>Trade.ConditionCode.Source</name>
+		<designername>ConditionCodeSource</designername>
+		<type>string</type>
+		<description><![CDATA[This field contains the Source mnemonic(s) for special conditions on the trade.]]></description>
+	</field>
+	<field>
+		<name>Trade.Discount</name>
+		<designername>Discount</designername>
+		<type>float32</type>
+		<description><![CDATA[Trade discount.]]></description>
+	</field>
+	<field>
+		<name>Trade.ID.Bloomberg</name>
+		<designername>ID</designername>
+		<type>uint32</type>
+		<description><![CDATA[Bloomberg identification value that uniquely identifies this trade on this source name or security.]]></description>
+	</field>
+	<field>
+		<name>Trade.ID.Correction.Bloomberg</name>
+		<designername>IDCorrection</designername>
+		<type>uint32</type>
+		<description><![CDATA[Bloomberg identification value that uniquely identifies this trade on this source name or security. The Trade.ID in a trade
+message with action CORRECT refers to the original trade so that it can be located in the tick stream.
+Trade.ID.Correction.Bloomberg is the trade id for the correction. It should be used to identify the corrected tick in the tick
+stream should an additional correction be necessary.]]></description>
+	</field>
+	<field>
+		<name>Trade.IsBloombergCalculation</name>
+		<designername>IsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates the trade value is a Bloomberg calculation and not an exchange or source created value.
+This field will only be passed on sources which send trades on a snapshot basis and those trade events do not include
+all trades.]]></description>
+	</field>
+	<field>
+		<name>Trade.LocalSource</name>
+		<designername>LocalSource</designername>
+		<type>string</type>
+		<description><![CDATA[Local market center for composite market trades.]]></description>
+	</field>
+	<field>
+		<name>Trade.Price</name>
+		<designername>Price</designername>
+		<type>float32</type>
+		<description><![CDATA[Trade price.]]></description>
+	</field>
+	<field>
+		<name>Trade.Price.ExchangeCalculatedYield</name>
+		<designername>PriceExchangeCalculatedYield</designername>
+		<type>float32</type>
+		<description><![CDATA[This field contains a Yield value that is calculated by the exchange for a security that is primarily valued with a Price.]]></description>
+	</field>
+	<field>
+		<name>Trade.Sell.Broker.Bloomberg</name>
+		<designername>SellBroker</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic for the selling broker on a trade.]]></description>
+	</field>
+	<field>
+		<name>Trade.Sell.Broker.Source</name>
+		<designername>SellBrokerSource</designername>
+		<type>string</type>
+		<description><![CDATA[Source mnemonic for the selling broker on a trade.]]></description>
+	</field>
+	<field>
+		<name>Trade.Session</name>
+		<designername>Session</designername>
+		<type>string</type>
+		<description><![CDATA[Bloomberg mnemonic indicating what session the trade occurred in.
+Trading Sessions
+Value Description
+DAY Regular Day Session
+POST Post-Market Session
+PRE Pre-Market Session]]></description>
+	</field>
+	<field>
+		<name>Trade.Size</name>
+		<designername>Size</designername>
+		<type>uint32</type>
+		<description><![CDATA[Size of the trade.]]></description>
+	</field>
+	<field>
+		<name>Trade.Size.IsBloombergCalculation</name>
+		<designername>SizeIsBloombergCalculation</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that the size is a Bloomberg calculated value.
+If the source is snapshot record based broadcast mechanism, the size may not be actual.]]></description>
+	</field>
+	<field>
+		<name>Trade.Spread</name>
+		<designername>Spread</designername>
+		<type>float32</type>
+		<description><![CDATA[Trade spread.]]></description>
+	</field>
+	<field>
+		<name>Trade.Time</name>
+		<designername>Time</designername>
+		<type>time</type>
+		<description><![CDATA[The time that the trade occurred.]]></description>
+	</field>
+	<field>
+		<name>Trade.UpdateActions</name>
+		<designername>UpdateActions</designername>
+		<type>uint32</type>
+		<description><![CDATA[Bit array with flags indicating which fields in the intraday cache are eligible to be updated based on information in the
+trade message.
+Trade Update Actions
+Name Description
+IncrementNumberTrades The Increment Number of Trades flag indicates that the Total Trades value in the
+intraday summary cache should be incremented by 1 if this is a new trade and
+decremented by 1 if it is a cancelled trade.
+UpdateClose The Update Close flag indicates that the value in this trade updates the Close value in
+the intraday summary. Intraday closing price updates will depend on condition codes
+and exchange rules for official closing price.
+UpdateCumulativeVolume The Update Cumulative Volume flag indicates that the value in the Size field of the trade
+should be added to the intraday Cumulative Volume in intraday summary cache.
+UpdateHigh The Update High flag indicates that this trade is eligible to update the intraday High
+value if the price is greater than the current intraday High.
+UpdateHighTrade The UpdateHighTrade flag indicates that the value in the trade message is eligible to be
+copied into the High Trade fields in the intraday summary cache if the current value is
+higher than the existing value.
+UpdateLastPrice The UpdateLastPrice flag indicates that the Value and time shown in the trade message
+should be used to update the Last Price in the intraday summary cache.
+UpdateLastTrade The UpdateLastTrade flag indicates that the entire set of information in the trade
+message should be copied into the Summary.Last.Trade.* fields in the intraday
+summary cache.
+UpdateLow The Update Low flag indicates that this trade is eligible to update the intraday Low value
+if the price is less than the current intraday Low.
+UpdateLowTrade The UpdateLowTrade flag indicates that the value in the trade message is eligible to be
+copied into the Low Trade fields in the intraday summary cache if the current value is
+less than the existing value.
+UpdateOpen The Update Open flag indicates that the price in this trade should be entered as the
+Open price in the intraday summary cache if there has been no prior eligible trade since
+the start of the session.
+UpdateOpenTrade The UpdateOpenTrade flag indicates that the value in the trade message is eligible
+to be copied into the Open Trade fields in the intraday summary cache if there is no
+current value.
+UpdateVWAP The Update VWAP flag indicates that this trade is eligible for inclusion in the Bloomberg
+VWAP calculation.
+UpdateValueTraded The Update Value Traded flag indicates that (Price x Size) should be added to the Value
+Traded in the intraday summary cache.]]></description>
+	</field>
+	<field>
+		<name>Trade.Value.NotAvailable</name>
+		<designername>ValueNotAvailable</designername>
+		<type>bool</type>
+		<description><![CDATA[TRUE in this field indicates that zero, negative, and NAN values represent unavailable pricing.]]></description>
+	</field>
+	<field>
+		<name>Trade.Yield</name>
+		<designername>Yield</designername>
+		<type>float32</type>
+		<description><![CDATA[Trade yield.]]></description>
+	</field>
+	<field>
+		<name>MD.Destination</name>
+		<designername>Destination</designername>
+		<type>uint32</type>
+		<description><![CDATA[The Destination ID for the client application.]]></description>
+	</field>
+	<field>
+		<name>MD.EntitlementsArray</name>
+		<designername>EntitlementsArray</designername>
+		<type>uint32</type>
+		<description><![CDATA[An array of Entitlement IDs.]]></description>
+	</field>
+	<field>
+		<name>MD.Feed.Provider</name>
+		<designername>FeedProvider</designername>
+		<type>string</type>
+		<description><![CDATA[The code for the data provider versus the source.   The provider may be a regulatory entity such as NASD, OPRA or SIAC in the case of US feeds.  In the case the provider is the same as the source, this field is unnecessary.]]></description>
+	</field>
+	<field>
+		<name>SecRef:Future.Contract.Size</name>
+		<designername>FutureContractSize</designername>
+		<type>float32</type>
+		<description><![CDATA[    The smallest available value of tradable contract. .]]></description>
+	</field>
+	<field>
+		<name>SecRef:Future.ContractSize</name>
+		<designername>FutureContractSize</designername>
+		<type>uint32</type>
+		<description><![CDATA[    The smallest available value of tradable contract. .]]></description>
+	</field>
+	<field>
+		<name>Summary.CumulativeVolume.Date</name>
+		<designername>CumulativeVolumeDate</designername>
+		<type>date</type>
+		<description><![CDATA[Date of Summary.CumulativeVolume field.]]></description>
+	</field>
+	<field>
+		<name>Tkrmon:AskConditionCode</name>
+		<designername>AskConditionCode</designername>
+		<type>uint8</type>
+		<description><![CDATA[Conditon code number for the local ask quote.]]></description>
+	</field>
+	<field>
+		<name>Tkrmon:AskExByte</name>
+		<designername>AskExByte</designername>
+		<type>uint16</type>
+		<description><![CDATA[2-byte frontend exchange code for local ask exchange.]]></description>
+	</field>
+	<field>
+		<name>Tkrmon:BankAndBroker</name>
+		<designername>BankAndBroker</designername>
+		<type>uint32</type>
+		<description><![CDATA[Binary integer representing a bank and broker record in the bloomberg systems.]]></description>
+	</field>
+	<field>
+		<name>Tkrmon:BidConditionCode</name>
+		<designername>BidConditionCode</designername>
+		<type>uint8</type>
+		<description><![CDATA[Conditon code number for the local bid quote.]]></description>
+	</field>
+	<field>
+		<name>Tkrmon:BidExByte</name>
+		<designername>BidExByte</designername>
+		<type>uint16</type>
+		<description><![CDATA[2-byte frontend exchange code for local bid exchange.]]></description>
+	</field>
+	<field>
+		<name>Tkrmon:TradeDateOccured</name>
+		<designername>TradeDateOccured</designername>
+		<type>date</type>
+		<description><![CDATA[    @RQ297]]></description>
+	</field>
+</fields>

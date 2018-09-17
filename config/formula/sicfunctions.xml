@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="SIC_IsValidCharSet_n">
+        <description>Validates if all characters in the string belong to the SIC character set 'n' i.e., if all characters are digits.</description>
+        <signature>SIC_IsValidCharSet_n (str)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICCharSets"/>
+        <property name="method" value="SIC_IsValidCharSet_n"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_IsValidCharSet_x">
+        <description>Validates if all characters in the string belong to the SIC character set 'x' and that the string is not all spaces. Only if allowTZ3 is true, character '\n' is included in the permitted character set.</description>
+        <signature>SIC_IsValidCharSet_x (str, allowTZ3)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICCharSets"/>
+        <property name="method" value="SIC_IsValidCharSet_x"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+
+    <formula name="SIC_IsValidCharSet_a">
+        <description>Validates if all characters in the string belong to the SIC character set 'a' i.e. if all characters are upper case alphabets.</description>
+        <signature>SIC_IsValidCharSet_a (str)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICCharSets"/>
+        <property name="method" value="SIC_IsValidCharSet_a"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="sicrt"/>
+    </formula>    
+    <formula name="SIC_IsValidAmount">
+        <description>Validates if the given double field is a valid SIC amount: Must contain decimal point, at least one digit before, at most two digits after decimal point and total length should be less than given max len. Only if allowNegative is true, values lesser than zero are permitted.</description>
+        <signature>SIC_IsValidAmount (amt, maxLen, allowNegative)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICMiscFunctions"/>
+        <property name="method" value="SIC_IsValidAmount"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="double"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_IsValidAmount">
+        <description>Validates if the given double field is a valid SIC amount: Must contain decimal point, at least one digit before, at most five digits after decimal point and total length should be less than given max len. Only if allowNegative is true, values lesser than zero are permitted.</description>
+        <signature>SIC_IsValidAmount (amt, maxLen, mantissa, allowNegative)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICMiscFunctions"/>
+        <property name="method" value="SIC_IsValidAmount"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="double"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_GetMultiLineFieldLength">
+        <description>Returns one plus the field length of the upcoming multi-line field: the number of characters until first occurrence of expected termination identifier ('\n&lt;' if isLastFieldOfTag is true, '#' otherwise) or if absent, length of the input string.</description>
+        <signature>SIC_GetMultiLineFieldLength (str, isLastFieldOfTag)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICMiscFunctions"/>
+        <property name="method" value="SIC_GetMultiLineFieldLength"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_IsValidMultiLineField">
+        <description>Validates the given multi-line field: no line should have more than maxCharsPerLine, if lineCountFixed is true, number of lines should be maxLines else number of lines can at most be maxLines, at least one line should be non-empty (length greater than zero and not all spaces).</description>
+        <signature>SIC_IsValidMultiLineField (str, maxLines, maxCharsPerLine, lineCountFixed)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICMiscFunctions"/>
+        <property name="method" value="SIC_IsValidMultiLineField"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_ParseAmount">
+        <description>Parses the double value from the given input string. After replacing comma (,) with dot (.), if it is not a valid SIC double (as described in SIC_IsValidAmt), throws Transform Exception. The decimal component may contain a maximum of 5 numeric positions, else throws Transform Exception. If allowTrailingMinus is true, a trailing minus sign is accepted and the value is treated as a negative value. If allowTrailingMinus is false but if a trailing minus sign is found, Transform Exception is thrown.</description>
+        <signature>SIC_ParseAmount (str, maxLen, mantissa, allowTrailingMinus)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICParsersandSerializers"/>
+        <property name="method" value="SIC_ParseAmount"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="arg4" value="boolean"/>
+        <property name="returns" value="double"/>
+        <property name="lib" value="sicrt"/>
+    </formula>    
+    <formula name="SIC_ParseAmount">
+        <description>Parses the double value from the given input string. After replacing comma (,) with dot (.), if it is not a valid SIC double (as described in SIC_IsValidAmt), throws Transform Exception. The decimal component may contain a maximum of 2 numeric positions, else throws Transform Exception. If allowTrailingMinus is true, a trailing minus sign is accepted and the value is treated as a negative value. If allowTrailingMinus is false but if a trailing minus sign is found, Transform Exception is thrown.</description>
+        <signature>SIC_ParseAmount (str, maxLen, allowTrailingMinus)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICParsersandSerializers"/>
+        <property name="method" value="SIC_ParseAmount"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="boolean"/>
+        <property name="returns" value="double"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_SerializeAmount">
+        <description>Serializes the given double value by replacing the decimal point with comma (,) and places a trailing minus sign if the value is negative. If padLen is negative or if it is greater than length of given double, serialized value is returned without any changes. Else, pads with zeros to the left such that the final serialized value is padLen characters long.</description>
+        <signature>SIC_SerializeAmount (val, padLen)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICParsersandSerializers"/>
+        <property name="method" value="SIC_SerializeAmount"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="double"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_ParseInteger">
+        <description>If the first character is either '+', or '-' throws an exception. If allowTrailingMinus is true snd if trailing negative sign is present, moves it to the front. Otherwise, returns the parameter as is.</description>
+        <signature>SIC_ParseInteger (str, allowTrailingMinus)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICParsersandSerializers"/>
+        <property name="method" value="SIC_ParseInteger"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_ParseMultiLineField">
+        <description>If the last character is the termination identifier ('\n&lt;' if isLastFieldOfTag is true, '#' otherwise), eliminates it and returns the rest. Otherwise, returns the input string as is.</description>
+        <signature>SIC_ParseMultiLineField (str, isLastFieldOfTag)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICParsersandSerializers"/>
+        <property name="method" value="SIC_ParseMultiLineField"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_SerializeMultiLineField">
+        <description>Appends the termination identifier ('\n' if isLastFieldOfTag is true, '#' otherwise) to the input string and returns the resultant string.</description>
+        <signature>SIC_SerializeMultiLineField (str, isLastFieldOfTag)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICParsersandSerializers"/>
+        <property name="method" value="SIC_SerializeMultiLineField"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_SerializeInteger">
+        <description>Serializes the given integer value and places a trailing minus sign if the value is negative. If padLen is negative of if it is greater than length of given integer, serialized value is returned without any changes. Else, pads with zeros to the left such that the final serialized value is padLen characters long.</description>
+        <signature>SIC_SerializeInteger (val, padLen)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICParsersandSerializers"/>
+        <property name="method" value="SIC_SerializeInteger"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="int"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+    <formula name="SIC_SerializeLong">
+        <description>Serializes the given long value and places a trailing minus sign if the value is negative. If padLen is negative of if it is greater than length of given integer, serialized value is returned without any changes. Else, pads with zeros to the left such that the final serialized value is padLen characters long.</description>
+        <signature>SIC_SerializeLong (val, padLen)</signature>
+        <category>SIC</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.sic.SICParsersandSerializers"/>
+        <property name="method" value="SIC_SerializeLong"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="long"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="sicrt"/>
+    </formula>
+</formulae>

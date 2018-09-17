@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TervelaMessageFormat name="OPRA">
+	<DescriptiveName><![CDATA[OPRA V1]]></DescriptiveName>
+	<standard-version><![CDATA[]]></standard-version>
+	<Category>Market Data</Category>
+	<Tervelafields>
+		<headerfields>
+		</headerfields>
+		<datafields>
+			<field>
+				<name>OPRAbbo</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Best bid and offer]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbbpartid</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Best bid participant id]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbopartid</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Best offer participant id]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbbpremiumdc</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Decimal placement indicator]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbopremiumdc</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Best offer decimal position]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbestbidprice</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Best bid price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbestbidsize</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Best bid size]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbestofferprice</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Best offer price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbestoffersize</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Offer size == quantity of contracts]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbidindexvalue</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Bid index value]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbidprice</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Bid price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAbidsize</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Bid size == quantity of contracts]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAdpi</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Decimal placement indicator]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAexpdate</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Expiration date]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAstrikeprice</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Strike price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAfcosym</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Foreign currency option symbol]]></description>
+				<required>false</required>
+				<tervela-type>String</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAfcospot</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Foreign currency option spot price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAhigh</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Current high price for the day]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAindexsym</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Index symbol]]></description>
+				<required>false</required>
+				<tervela-type>String</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAindexvalue</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Index Value]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAlast</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Last price of the option]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAlow</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Low price of the day for the option]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAnetchge</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Net change in price for the option]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAnetchgesign</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Net change sign +]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAcategory</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[OPRA message category]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAtype</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[OPRA message type within category]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAofferindexvalue</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Underlying value-last sale price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAofferprice</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Offer Price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAoffersize</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Offer Size]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAopeninterest</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Open Interest]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAopen</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Open Price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRApremium</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Premium Price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRApremiumdc</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Premium Display Character]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAres</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Opra reserved]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAsecuritysymbol</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Security Symbol]]></description>
+				<required>false</required>
+				<tervela-type>bytes</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAsession</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Session]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAstrikepricecode</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Strike Price Code]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAstrikepricedc</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Strike Price Display Character]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAunderlyingpricedc</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Undelying Price Display Character]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAunderlyingprice</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Undelying Price]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAvolume</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Volume]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAtime</name>
+				<datatype>Integer</datatype>
+				<description><![CDATA[Time]]></description>
+				<required>false</required>
+				<tervela-type>int</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAyear</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Year]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRApartid</name>
+				<datatype>Character</datatype>
+				<description><![CDATA[Participant Id]]></description>
+				<required>false</required>
+				<tervela-type>byte</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAcontrolmessage</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Control Message]]></description>
+				<required>false</required>
+				<tervela-type>bytes</tervela-type>
+				<key></key>
+			</field>
+			<field>
+				<name>OPRAadminmessage</name>
+				<datatype>String</datatype>
+				<description><![CDATA[Admin Message]]></description>
+				<required>false</required>
+				<tervela-type>bytes</tervela-type>
+				<key></key>
+			</field>
+		</datafields>
+		<trailerfields>
+		</trailerfields>
+	</Tervelafields>
+	<validationrules name="Default">
+		<hdrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</hdrvalidationrules>
+		<datavalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</datavalidationrules>
+		<tlrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</tlrvalidationrules>
+	</validationrules>
+</TervelaMessageFormat>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="DSE_ParseDate">
+        <description>Returns empty string if text has value -99...9 (total length including minus sign should equal given length). If not, returns input value.</description>
+        <signature>DSE_ParseDate (text, length)</signature>
+        <category>DSE</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.dse.DSEFunctions"/>
+        <property name="method" value="parseDate"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="dsert"/>
+    </formula>
+    
+    <formula name="DSE_ParseDecimal">
+        <description>Returns empty string if text has value -99...90...0 (number of 9's should equal integerPartLen and number of 0's should equal decimalPartLen). The last three 9's may also be '401', '402', '403' or '301'. If not, returns input value.</description>
+        <signature>DSE_ParseDecimal (text, integerPartLen, decimalPartLen)</signature>
+        <category>DSE</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.dse.DSEFunctions"/>
+        <property name="method" value="parseDecimal"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="dsert"/>
+    </formula>
+    
+    <formula name="DSE_ParseInt">
+        <description>Returns empty string if text has value -99...9 (total length including minus sign should equal given length). The last three 9's may also be '401', '402', '403' or '301'. If not, returns input value.</description>
+        <signature>DSE_ParseInt (text, length)</signature>
+        <category>DSE</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.dse.DSEFunctions"/>
+        <property name="method" value="parseInt"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="dsert"/>
+    </formula>
+
+    <formula name="DSE_ParseString">
+        <description>Returns empty string if text has value -99...9 (total length including minus sign should equal given length). If not, returns input value.</description>
+        <signature>DSE_ParseString (text, length)</signature>
+        <category>DSE</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.dse.DSEFunctions"/>
+        <property name="method" value="parseString"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="dsert"/>
+    </formula>
+
+</formulae>

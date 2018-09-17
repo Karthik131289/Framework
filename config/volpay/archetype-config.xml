@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<archetypeConfig>
+
+    <variables>
+
+        <variable name="msgFormatCode" mandatory="true"/>
+
+        <variable name="fieldName" exclude="true"/>
+
+    </variables>
+
+</archetypeConfig>

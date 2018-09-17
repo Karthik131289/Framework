@@ -1,0 +1,150 @@
+#set ( $INCLUDE_DIR = "${REDIST}/include" )
+#set ( $LIBS= "${REDIST}/lib/vc2003/release" )
+#set ( $RFA_HOME= "E:/Reuters/Reuters Foundation API 6 - C++ Edition" )
+#set ( $BLOOMBERG_HOME= "E:/volante/2007/BLOOMBERG/SDK" )
+#set ( $THIRD_PARTY_INCLUDE_DIRS= "${BLOOMBERG_HOME}/include;${RFA_HOME}/include;${RFA_HOME}/include/rwf" )
+#set ( $THIRD_PARTY_LIBS= "MDSI.lib bdd.lib reutersrt.lib RFA6_Data71.lib RFA6_Config71.lib RFA6_Common71.lib RFA6_SessionLayer71.lib RFA6_Connections71.lib RFA6_Connections_OMM71.lib RFA6_Logger71.lib" )
+#set ( $THIRD_PARTY_LIB_DIR= "${RFA_HOME}/libs/WIN_32_VS71;${BLOOMBERG_HOME}/lib" )
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="${CARTRIDGE}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="${INCLUDE_DIR}"
+				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;${PROJECT_MACRO}"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough=""
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="transformrt.lib cp.lib"
+				OutputFile="$(OutDir)/${CARTRIDGE}.exe"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="${LIBS}"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="$(OutDir)/${CARTRIDGE}.pdb"
+				SubSystem="1"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="${INCLUDE_DIR};${THIRD_PARTY_INCLUDE_DIRS}"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;${PROJECT_MACRO}"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="transformrt.lib cp.lib ${THIRD_PARTY_LIBS}"
+				OutputFile="$(OutDir)/${CARTRIDGE}.exe"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="${LIBS};${THIRD_PARTY_LIB_DIR}"
+				GenerateDebugInformation="TRUE"
+				SubSystem="1"
+				OptimizeReferences="0"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			#foreach($cppfile in $CPPFILES)
+			<File 
+                RelativePath="${SRCDIR}\\${cppfile}.cpp">
+			</File>
+			#end
+
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl">
+			#foreach($headerfile in $HEADERFILES)
+			<File
+				RelativePath="${SRCDIR}\\${headerfile}.h">
+			</File>
+			#end
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

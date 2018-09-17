@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="selectNode">
+        <description>Returns particular node specified in the relative location path.</description>
+        <signature>selectNode(node, expr)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="selectNode"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.Node"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="org.w3c.dom.Node"/>
+    </formula>
+    <formula name="selectNode">
+        <description>Returns particular node specified in the relative location path.</description>
+        <signature>selectNode(nodeList, expr)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="selectNode"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="org.w3c.dom.Node"/>
+    </formula>
+
+       <formula name="selectString">
+        <description>Returns particular node specified in the relative location path.</description>
+        <signature>selectString(node, expr)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="selectString"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.Node"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="String"/>
+    </formula>
+    <formula name="selectString">
+        <description>Returns particular node specified in the relative location path.</description>
+        <signature>selectString(nodeList, expr)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="selectString"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="String"/>
+    </formula>
+    <formula name="selectNodeList">
+        <description>Returns NodeList as given in relative path from the Node given.</description>
+        <signature>selectNodeList(node, expr)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="selectNodeList"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.Node"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="org.w3c.dom.NodeList"/>
+    </formula>
+
+    <formula name="selectNodeList">
+        <description>Returns NodeList as given in relative path from the Node given.</description>
+        <signature>selectNodeList(nodeList, expr)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="selectNodeList"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="String"/>
+        <property name="returns" value="org.w3c.dom.NodeList"/>
+    </formula>
+    
+    <formula name="toText">
+        <description>Returns the value of the node only if the value is present for the current node.</description>
+        <signature>toText(node)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="getNodeText"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="org.w3c.dom.Node"/>
+        <property name="returns" value="String"/>
+    </formula>
+    <formula name="toHTMLText">
+        <description>Returns the value of the node from the root level</description>
+        <signature>toHTMLText(node)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="getHTMLText"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="org.w3c.dom.Node"/> <!--org.w3c.dom.Node -->
+        <property name="returns" value="String"/>
+    </formula>
+    <formula name="toXMLString">
+        <description>Returns the original xml String instead of its value</description>
+        <signature>toXMLString(node)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="toXMLString"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="org.w3c.dom.Node"/> <!--org.w3c.dom.Node -->
+        <property name="returns" value="String"/>
+    </formula>
+    <formula name="getNodeCount">
+        <description>Returns the number of nodes in the nodeList</description>
+        <signature>getNodeCount(nodelist)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="getNodeCount"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="returns" value="int"/>
+    </formula>
+    <formula name="getNodeAt">
+        <description>Returns the node at given index (1 based)</description>
+        <signature>getNodeAt(nodeList, index)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="getNodeAt"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="org.w3c.dom.Node"/>
+    </formula>
+    <formula name="Plus">
+        <description>Combines a node with another node and returns a nodeList</description>
+        <signature>plus(node, node)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="add"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.Node"/>
+        <property name="arg2" value="org.w3c.dom.Node"/>
+        <property name="returns" value="org.w3c.dom.NodeList"/>
+    </formula>
+
+    <formula name="Plus">
+        <description>Combines nodelist with another node and returns a nodeList</description>
+        <signature>plus(nodelist, node)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="add"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="org.w3c.dom.Node"/>
+        <property name="returns" value="org.w3c.dom.NodeList"/>
+    </formula>
+    <formula name="Plus">
+        <description>Combines nodelist with another nodelist and returns a nodeList</description>
+        <signature>plus(nodelist, nodelist)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="add"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="org.w3c.dom.NodeList"/>
+        <property name="returns" value="org.w3c.dom.NodeList"/>
+    </formula>
+    <formula name="Plus">
+        <description>Combines node with another nodelist and returns a nodeList</description>
+        <signature>plus(node, nodelist)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="add"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.Node"/>
+        <property name="arg2" value="org.w3c.dom.NodeList"/>
+        <property name="returns" value="org.w3c.dom.NodeList"/>
+    </formula>
+    <formula name="position">
+        <description>Returns the Position of the Node or NodeList from the NodeList.</description>
+        <signature>Position(nodelist, node)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="position"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="org.w3c.dom.Node"/>
+        <property name="returns" value="int"/>
+    </formula>
+    <formula name="position">
+        <description>Returns the Position of the Node or NodeList from the NodeList.</description>
+        <signature>Position(node, node)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="position"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.Node"/>
+        <property name="arg2" value="org.w3c.dom.Node"/>
+        <property name="returns" value="int"/>
+    </formula>
+    <formula name="position">
+        <description>Returns the Position of the Node or NodeList from the NodeList.</description>
+        <signature>Position(nodelist, nodelist)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="position"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="org.w3c.dom.NodeList"/>
+        <property name="returns" value="int"/>
+    </formula>
+    <formula name="Remove">
+        <description>Returns the nodelist in which a particular Node is removed from the given NodeList</description>
+        <signature>Remove(nodeList, node)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="remove"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="org.w3c.dom.Node"/>
+        <property name="returns" value="org.w3c.dom.NodeList"/>
+    </formula>
+    <formula name="Remove">
+        <description>Returns the nodelist in which a particular NodeList is removed from the given NodeList</description>
+        <signature>Remove(nodeList, nodeList)</signature>
+        <category>XPATH</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.document.XPathFunctions"/>
+        <property name="method" value="remove"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="org.w3c.dom.NodeList"/>
+        <property name="arg2" value="org.w3c.dom.NodeList"/>
+        <property name="returns" value="org.w3c.dom.NodeList"/>
+    </formula>
+</formulae>

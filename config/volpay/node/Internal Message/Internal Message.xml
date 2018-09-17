@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<internalmessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="${messageName}" type="InternalMessage">
+	<version>1.0</version>
+	<normalizedformat>
+		<xpath-namespaces>
+			<namespace value="http://www.w3.org/2005/xpath-functions" prefix="fn"/>
+			<namespace value="http://www.w3.org/2001/XMLSchema" prefix="xs"/>
+			<namespace value="java:com.tplus.transform.runtime.swift.SwiftXPathFunctions" prefix="swift"/>
+		</xpath-namespaces>
+		<fields>
+			<field xsi:type="InternalMessageFieldType">
+				<name>${statusField}</name>
+				<type>String</type>
+				<notnull>true</notnull>
+				<length>-1</length>
+			</field>
+			<field xsi:type="InternalMessageFieldType">
+				<name>${timeField}</name>
+				<type>String</type>
+				<notnull>true</notnull>
+				<length>-1</length>
+			</field>
+		</fields>
+	</normalizedformat>
+	<validationrules name="Default" type="ValidationRules">
+	</validationrules>
+	<elementproperties>
+		<propertymap>
+		</propertymap>
+	</elementproperties>
+</internalmessage>
+

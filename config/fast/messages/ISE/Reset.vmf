@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FastMessageFormat name="Reset">
+	<standard>FAST</standard>
+	<standard-name>Reset</standard-name>
+	<DescriptiveName><![CDATA[Reset]]></DescriptiveName>
+	<Category>ISE</Category>
+	<Fastfields>
+		<defaultencoding>
+			<fastencoding>
+				<name>FastReset</name>
+				<id>120</id>
+			</fastencoding>
+		</defaultencoding>
+		<headerfields>
+		</headerfields>
+		<datafields>
+			<field>
+				<name>TID</name>
+				<datatype>Integer</datatype>
+				<required>true</required>
+				<fastencoding>
+					<fast-type>uInt32</fast-type>
+					<encode-operator>copy</encode-operator>
+					<dictionary>global</dictionary>
+				</fastencoding>
+			</field>
+		</datafields>
+		<trailerfields>
+		</trailerfields>
+	</Fastfields>
+	<validationrules name="Default">
+		<hdrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</hdrvalidationrules>
+		<datavalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</datavalidationrules>
+		<tlrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</tlrvalidationrules>
+	</validationrules>
+</FastMessageFormat>
+

@@ -1,0 +1,58 @@
+## ######################################################################################
+##  These variables are passed from the code generator
+##  $CARTRIDGE - Name of the cartridge
+##  $REDIST - CS redist directory = volante\redist\csharp
+##  $REFERENCEASSEMBLIES - List of DLLs that should be referenced
+##  $CSFILES - List of cs files without extension (name only - no path)
+##  $SRCDIR - relative path of  source directory (WRT this make file)
+## ######################################################################################
+
+#if( $PLATFORM == "WINDOWS_MSVS2010" )
+LIBS= ${REDIST}/lib/2010
+#elseif( $PLATFORM == "WINDOWS_MSVS2008" )
+LIBS= ${REDIST}/lib/2008
+#elseif ( $PLATFORM == "WINDOWS_MSVS2003" )
+LIBS= ${REDIST}/lib/2003
+#end
+TRANSFORM_LIB= $(LIBS)/transformrt.dll
+OUTPUT_LIB = ${CARTRIDGE}.dll
+OUTPUT_EXE = ${CARTRIDGE}Test.exe
+OBJ_DIR = ${SRCDIR}
+
+CC  = csc
+CCOPTIONS = /nologo /debug "/lib:$(LIBS)" /reference:transformrt.dll #foreach($REFCART in ${REFERENCEASSEMBLIES}) "/reference:${REFCART}"  #end
+
+
+
+res = resgen
+
+
+## File listing
+
+CS_FILES = #foreach($csfile in ${CSFILES}) \
+	${SRCDIR}\\${csfile}.cs #end
+
+
+#if ( $TXTFILES.size() > 0 )
+TXT_FILES = #foreach($txtfile in ${TXTFILES}) \
+	${SRCDIR}\\${txtfile}.txt #end
+
+RESX_FILES = #foreach($txtfile in ${TXTFILES}) \
+	${SRCDIR}\\${txtfile}.resources #end
+#end
+
+## Targets
+all: $(OUTPUT_LIB) $(OUTPUT_EXE)
+
+#if ( $TXTFILES.size() > 0 )
+$(RESX_FILES) : $(TXT_FILES)
+	resgen /compile $(TXT_FILES)
+#end
+
+$(OUTPUT_LIB) : $(RESX_FILES) $(CS_FILES) "$(TRANSFORM_LIB)" #foreach($REFCART in ${REFERENCEASSEMBLIES}) "${REFCART}"  #end
+
+	@$(CC) /target:library /out:$(OUTPUT_LIB) $(CCOPTIONS) $(CS_FILES) #foreach($txtfile in ${TXTFILES}) /resource:${SRCDIR}\\${txtfile}.resources #end
+
+$(OUTPUT_EXE) : $(OUTPUT_LIB) 
+	@$(CC) /target:exe /out:$(OUTPUT_EXE) $(CCOPTIONS) src\\${MAIN_FILE}
+

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<SIACCanonicalMessageFormat name="CANONICAL_NYSE_REJECT">
+	<DescriptiveName><![CDATA[CANONICAL_NYSE_REJECT]]></DescriptiveName>
+	<category><![CDATA[General]]></category>
+	<siaccanonicalfields>
+		<options>
+			<checksum>false</checksum>
+			<allowunknown>false</allowunknown>
+		</options>
+		<headerfields>
+			<field tag="10001">
+				<name>CFT_CanonicalVersion</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10002">
+				<name>CFT_BodyLength</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10003">
+				<name>CFT_SIACMsgType</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10004">
+				<name>CFT_MsgSubtype</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10005">
+				<name>CFT_MsgOrigin</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10006">
+				<name>CFT_MsgDest</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10007">
+				<name>CFT_MsgSeqNo</name>
+				<type>int</type>
+				<description>Set to 0</description>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10010">
+				<name>CFT_MsgSendTime</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10021">
+				<name>CFT_MsgPriority</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10022">
+				<name>CFT_MsgSeverity</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10023">
+				<name>CFT_SourceMsgFmt</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10024">
+				<name>CFT_SessionID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10025">
+				<name>CFT_HostMsgID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10030">
+				<name>CFT_AuthorizeHandle</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10031">
+				<name>CFT_LogMsgPtr</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10032">
+				<name>CFT_DeliveryTimeout</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10038">
+				<name>CFT_MsgOrigSystem</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10039">
+				<name>CFT_MsgDestSystem</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10040">
+				<name>CFT_ReplyToAddr</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10046">
+				<name>CFT_EventID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10047">
+				<name>CFT_RefID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+		</headerfields>
+		<datafields>
+			<field tag="10648">
+				<name>CFT_FIXMsgType</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10783">
+				<name>CFT_SenderCompID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10785">
+				<name>CFT_TargetCompID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10644">
+				<name>CFT_DeliverToCompID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10709">
+				<name>CFT_DeliverToSubID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10796">
+				<name>CFT_DeliverToLocationID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10714">
+				<name>CFT_RefFIXSeqNum</name>
+				<type>int</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10264">
+				<name>CFT_Text</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+			<field tag="10664">
+				<name>CFT_OnBehalfOfSubID</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10726">
+				<name>CFT_RefFIXMsgType</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10727">
+				<name>CFT_BusinessRejectReason</name>
+				<type>int</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+		</datafields>
+		<trailerfields>
+			<field tag="93">
+				<name>SignatureLength</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="89">
+				<name>Signature</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>false</required>
+			</field>
+			<field tag="10">
+				<name>Checksum</name>
+				<type>String</type>
+				<standard>false</standard>
+				<required>true</required>
+			</field>
+		</trailerfields>
+	</siaccanonicalfields>
+	<validationrules>
+		<hdrvalidationrules>
+			<fieldvalidations>
+				<fieldvalidation>
+					<name>E1</name>
+					<fieldname>CFT_SourceMsgFmt</fieldname>
+					<formula><![CDATA[CFT_SourceMsgFmt == "FIX.4.1" || CFT_SourceMsgFmt == "FIX.4.2"]]></formula>
+					<additionalflag>2</additionalflag>
+					<actionmessage><![CDATA[CFT_SourceMsgFmt + "must be FIX.4.1 or FIX.4.2"]]></actionmessage>
+				</fieldvalidation>
+			</fieldvalidations>
+		</hdrvalidationrules>
+		<datavalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</datavalidationrules>
+		<tlrvalidationrules>
+			<fieldvalidations>
+			</fieldvalidations>
+		</tlrvalidationrules>
+	</validationrules>
+</SIACCanonicalMessageFormat>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<archetypeConfig>
+
+<variables>
+
+    <variable name="cartridgeName" mandatory ="true">
+        <documentation>
+            <description>Cartridge is a model that captures Formats,
+                Transformations and workflows. Use a meaningful
+                cartridge name.
+            </description>
+        </documentation>
+
+    </variable>
+
+</variables>
+
+</archetypeConfig>

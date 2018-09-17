@@ -1,0 +1,36 @@
+## #######################################################
+## The following variables are made available by the code generator
+## OutputFormat
+## InputFormat
+## BusinessTransaction
+## Cartridge
+## #######################################################
+
+
+using System;
+using System.IO;
+using com.tplus.transform.runtime;
+using com.tplus.transform.runtime.io;
+
+namespace test
+{
+	
+
+	/// <summary>
+	/// Summary description for Class1.
+	/// </summary>
+	class MainClass
+	{
+		static com.tplus.transform.runtime.log.Logger log = com.tplus.transform.runtime.log.LogFactory.getLog("Main");
+		/// <summary>
+		/// The main entry point for the application.
+		/// </summary>
+		[STAThread]
+		static void Main(string[] args)
+		{
+			Cartridge.loadCart("${Cartridge}");
+			com.tplus.transform.runtime.client.execute.Execute.Main(args);
+		}
+	}
+}
+

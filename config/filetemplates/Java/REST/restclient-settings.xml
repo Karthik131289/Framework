@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<restclient-settings>
+	<!-- Configure default & node specific REST client settings-->
+    <restclient
+            maxconnection="50"
+            maxconnectionperhost="50"
+            connectiontimeout="1000"
+            sockettimeout="1000">
+        	<!-- Modify below tag to configure SSL Certificate details.
+        	This will be applied for all REST Client nodes if that particular node doesn't have any specific settings.
+        	file - path to certificate file in classpath. path should contain file extension.
+        	type - can be jks or p12-->
+            <keystore file="localhost.keystore" type="jks" password="volante"/>
+				
+        <!-- Client node specific settings -->
+        <node name="${REST_CLIENT_NODE}"
+              maxconnection="50"
+              maxconnectionperhost="50"
+              connectiontimeout="1000"
+              sockettimeout="1000">
+            <!-- Modify below tag to override default SSL Certificate details which is configured at top level.
+            file - path to certificate file in classpath. path should contain file extension.
+        	type - can be jks or p12-->
+            <keystore file="localIP.keystore" type="jks" password="volante"/>
+        </node>
+    </restclient>
+</restclient-settings>

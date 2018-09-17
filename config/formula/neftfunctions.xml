@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="NEFT_IsValidCharSet_x">
+        <description>Checks if every character in the given input string belongs to the SWIFT character set 'x'. If 'allowCRLF' is true, the substring "\r\n" is allowed, else they are not allowed. 'allowCRLF' is typically set to true while validating multi-line fields.</description>
+        <signature>NEFT_IsCharSet_x (str, allowCRLF)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTCharSets"/>
+        <property name="method" value="NEFT_IsValidCharSet_x"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="boolean"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_IsValidCharSet_a">
+        <description>Checks if every character in the given input string belongs to the SWIFT character set 'a' i.e. all characters should be upper case alphabets.</description>
+        <signature>NEFT_IsCharSet_a (str)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTCharSets"/>
+        <property name="method" value="NEFT_IsValidCharSet_a"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_IsValidCharSet_z">
+        <description>Checks if every character in the given input string belongs to the SWIFT character set 'z'.</description>
+        <signature>NEFT_IsCharSet_z (str)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTCharSets"/>
+        <property name="method" value="NEFT_IsValidCharSet_z"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_IsValidAmount">
+        <description>Checks if the given value is a valid SWIFT amount for the currency INR - decimal point must be present, at least one digit should be present before and at most two difits after.</description>
+        <signature>NEFT_IsValidAmount (BigDecimal)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTFunctions"/>
+        <property name="method" value="NEFT_IsValidAmount"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_IsValidMultiLineField">
+        <description>Returns true if the given string is a valid multi-line field: can contain at most 'maxLines' number of lines and the length of each line can at most be 'maxCharsPerLine'. In addition, all characters excepting the line delimiter ("\r\n") should belong to the SWIFT character set 'x'.</description>
+        <signature>NEFT_IsValidMultiLineField (str, maxLines, maxCharsPerLine)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTFunctions"/>
+        <property name="method" value="NEFT_IsValidMultiLineField"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="int"/>
+        <property name="arg3" value="int"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_IsNoRepeatInList">
+        <description>Returns true if no string in the given string list is repeated.</description>
+        <signature>NEFT_IsNoRepeatInList (strList)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTFunctions"/>
+        <property name="method" value="NEFT_IsNoRepeatInList"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="com.tplus.transform.runtime.collection.StringList"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_GetMultiLineFieldLength">
+        <description>This function takes in the yet to be parsed part of the message as input and returns the number of characters till the end of the upcoming multi-line field.</description>
+        <signature>NEFT_GetMultiLineFieldLength (peekStr)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTFunctions"/>
+        <property name="method" value="NEFT_GetMultiLineFieldLength"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="int"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_EliminateTrailingNewLine">
+        <description>If the input text ends with "\r\n", eliminates the same and returns the rest. If not, the input string is returned as is.</description>
+        <signature>NEFT_EliminateTrailingNewLine (str)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTFunctions"/>
+        <property name="method" value="NEFT_EliminateTrailingNewLine"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_AppendNewLine">
+        <description>Appends "\r\n" to the input string and returns the resultant string.</description>
+        <signature>NEFT_AppendNewLine (str)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTFunctions"/>
+        <property name="method" value="NEFT_AppendNewLine"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.String"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+    <formula name="NEFT_SerializeAmount">
+        <description>Amount fields need to follow swift specifications for currency INR: decimal point (comma) should be present and there must be at least one digit before the decimal point. If more than two digits are present after the decimal point, the value is rounded off to two digits after decimal point. This function returns a value with these conditions satisfied.</description>
+        <signature>NEFT_SerializeAmount (amount)</signature>
+        <category>NEFT</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.neft.NEFTFunctions"/>
+        <property name="method" value="NEFT_SerializeAmount"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.math.BigDecimal"/>
+        <property name="returns" value="java.lang.String"/>
+        <property name="lib" value="neftrt"/>
+    </formula>
+</formulae>

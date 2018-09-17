@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulae>
+    <formula name="MongoDBFindOne">
+        <description>Returns one document that satisfies the specified query/template criteria. If multiple documents satisfy the query, this method returns the first document according to the natural order which reflects the order of documents on the disk</description>
+        <signature>MongoDBFindOne (dataSourceName, collectionName, referenceObj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBFindOne"/>
+        <property name="args" value="3"/>
+		<property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBFindOne">
+        <description>Returns one document that satisfies the specified query criteria. If multiple documents satisfy the query, this method returns the first document according to the natural order which reflects the order of documents on the disk</description>
+        <signature>MongoDBFindOne (dataSourceName, collectionName, query, referenceObj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBFindOne"/>
+        <property name="args" value="4"/>
+		<property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+
+    <formula name="MongoDBFind">
+        <description>Selects documents in a collection and returns a collection of the selected documents.</description>
+        <signature>MongoDBFind (dataSourceName, collectionName, referenceObj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBFind"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBFind">
+        <description>Selects documents in a collection and returns a collection of the selected documents.</description>
+        <signature>MongoDBFind (dataSourceName, collectionName, query, referenceObj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBFind"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+	<formula name="MongoDBFind">
+        <description>Selects documents in a collection and returns a collection of the selected documents.</description>
+        <signature>MongoDBFind (dataSourceName, collectionName, query, projection, referenceObj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBFind"/>
+        <property name="args" value="5"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+		<property name="arg4" value="java.lang.String"/>
+        <property name="arg5" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBFindIterate">
+        <description>Selects documents in a collection and returns a cursor to the selected documents.</description>
+        <signature>MongoDBFindIterate (dataSourceName, collectionName, query, referenceObj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBFindIterate"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="java.lang.Object"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+
+    <formula name="MongoDBNext">
+        <description>The next document in the cursor returned by the find() method. See MongoDBHasNext related functionality.</description>
+        <signature>MongoDBNext (cursor)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBNext"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBHasNext">
+        <description>Returns true if the cursor returned by the findIterate() query can iterate further to return more documents</description>
+        <signature>MongoDBHasNext (cursor)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBHasNext"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="boolean"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBSort">
+        <description>Specifies the order in which the query returns matching documents. You must apply sort() to the cursor before retrieving any documents from the database.</description>
+        <signature>MongoDBSort (cursor, sortOrder)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBSort"/>
+        <property name="args" value="1"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="returns" value="java.lang.Object"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBSnapshot">
+        <description>Creates a snapshot which ensures that the query will not return a document multiple times, even if intervening write operations result in a move of the document due to the growth in document size</description>
+        <signature>MongoDBSnapshot (cursor)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBSnapshot"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="java.lang.Object"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBLimit">
+        <description>Use the limit() method on a cursor to specify the maximum number of documents the cursor will return. limit() is analogous to the LIMIT statement in a SQL database.</description>
+        <signature>MongoDBLimit (cursor, limit)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBLimit"/>
+        <property name="args" value="1"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.Object"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBSkip">
+        <description>Call the cursor.skip() method on a cursor to control where MongoDB begins returning results. This approach may be useful in implementing "paged" results.</description>
+        <signature>MongoDBSkip (cursor, skip)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBSkip"/>
+        <property name="args" value="2"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="arg2" value="int"/>
+        <property name="returns" value="java.lang.Object"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+
+    <formula name="MongoDBInsert">
+        <description>Inserts a document or documents into a collection</description>
+        <signature>MongoDBInsert (dataSourceName, collectionName, obj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBInsert"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    
+    <formula name="MongoDBInsert">
+        <description>Inserts documents into a collection</description>
+        <signature>MongoDBInsert (dataSourceName, collectionName, section)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBInsert"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBUpdate">
+        <description>Updates an existing document or documents in a collection. The method replaces an existing document entirely</description>
+        <signature>MongoDBUpdate (dataSourceName, collectionName, objCondition, obj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBUpdate"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg4" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBUpdate">
+        <description>Updates an existing document or documents in a collection. The method replaces an existing document entirely</description>
+        <signature>MongoDBUpdate (dataSourceName, collectionName, condition, obj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBUpdate"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+
+    <formula name="MongoDBUpdate">
+        <description>Updates an existing document or documents in a collection. The method replaces an existing document entirely</description>
+        <signature>MongoDBUpdate (dataSourceName, collectionName, condition, updateStr)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBUpdate"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="java.lang.String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+
+    <formula name="MongoDBReplace">
+        <description>Modifies an existing document or documents in a collection. The method can modify specific fields of an existing document.</description>
+        <signature>MongoDBReplace (dataSourceName, collectionName, objCondition, obj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBReplace"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg4" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBReplace">
+        <description>Modifies an existing document or documents in a collection. The method can modify specific fields of an existing document</description>
+        <signature>MongoDBReplace (dataSourceName, collectionName, condtion, obj)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBReplace"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+
+    <formula name="MongoDBRemove">
+        <description>Removes documents that matches the query from a collection.</description>
+        <signature>MongoDBRemove (dataSourceName, collectionName, conditionStr)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBRemove"/>
+        <property name="args" value="3"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBAggregateIterate">
+        <description>Calculates aggregate values for the data in a collection.</description>
+        <signature>MongoDBAggregateIterate (dataSourceName, collectionName, referenceObj, pipelines)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBAggregateIterate"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg4" value="com.tplus.transform.runtime.collection.StringList"/>
+        <property name="returns" value="java.lang.Object"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="mongoDBAggregate">
+        <description>Calculates aggregate values for the data in a collection returns a cursor to the selected documents.</description>
+        <signature>mongoDBAggregate (dataSourceName, collectionName, referenceObj, pipelines)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBAggregate"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="com.tplus.transform.runtime.DataObject"/>
+        <property name="arg4" value="com.tplus.transform.runtime.collection.StringList"/>
+        <property name="returns" value="com.tplus.transform.runtime.DataObjectSection"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBDistinctStrings">
+        <description>Finds the distinct values for a specified field across a single collection and returns the results in an array.</description>
+        <signature>MongoDBDistinctStrings (dataSourceName, collectionName, key, query)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBDistinctStrings"/>
+        <property name="args" value="4"/>
+        <property name="arg1" value="java.lang.String"/>
+		<property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="arg4" value="java.lang.String"/>
+        <property name="returns" value="com.tplus.transform.runtime.collection.StringList"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBCount">
+        <description>Returns the count of documents that would match a find() query. This method does not perform the find() operation but instead counts and returns the number of results that match a query.</description>
+        <signature>MongoDBCount (dataSourceName, collectionName, query)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBCount"/>
+        <property name="args" value="3"/>
+		<property name="arg1" value="java.lang.String"/>
+        <property name="arg2" value="java.lang.String"/>
+        <property name="arg3" value="java.lang.String"/>
+        <property name="returns" value="long"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+    <formula name="MongoDBClose">
+        <description>Kills the current cursor on the server.</description>
+        <signature>MongoDBClose (cursor)</signature>
+        <category>MongoDB</category>
+        <Class>com.tplus.transform.design.formula.functions.StaticMethodFunction</Class>
+        <property name="class" value="com.tplus.transform.runtime.mongodb.MongoDBFunctions"/>
+        <property name="method" value="mongoDBClose"/>
+        <property name="args" value="1"/>
+        <property name="arg1" value="java.lang.Object"/>
+        <property name="returns" value="void"/>
+        <property name="lib" value="volante-mongodbrt"/>
+    </formula>
+</formulae>

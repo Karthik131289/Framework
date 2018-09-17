@@ -1,0 +1,157 @@
+<siaccanonical>
+	<field tag="26001">
+		<name>CFR_JMS_PROPERTYGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26002">
+		<name>CFR_JMS_STREAMMSGBODYGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26003">
+		<name>CFR_JMS_MAPMSGBODYGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26004">
+		<name>CFR_EQI_QUOTEERROR</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26005">
+		<name>CFR_ULORDERIDGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26006">
+		<name>CFR_STOCKSYMBOLSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26007">
+		<name>CFR_BUYPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26008">
+		<name>CFR_SELLPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26009">
+		<name>CFR_CAPBUYPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26010">
+		<name>CFR_CAPSELLPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26011">
+		<name>CFR_CQUOTEBUYPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26012">
+		<name>CFR_CQUOTESELLPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26013">
+		<name>CFR_SQUOTEBUYPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26014">
+		<name>CFR_SQUOTESELLPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26015">
+		<name>CFR_AWAYQUOTESGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26016">
+		<name>CFR_EXCLUDEDBUYMKTCENTERSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26017">
+		<name>CFR_EXCLUDEDSELLMKTCENTERSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26018">
+		<name>CFR_CONTRAGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26019">
+		<name>CFR_TRADEINFOGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26020">
+		<name>CFR_BUYSTOPPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26021">
+		<name>CFR_SELLSTOPPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26022">
+		<name>CFR_MDINFOGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26023">
+		<name>CFR_REGEXECUTIONRPTGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26024">
+		<name>CFR_PRINPARTICIPATIONGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26025">
+		<name>CFR_ALGODISPOSITIONREJECTGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26026">
+		<name>CFR_ALGOCONFIRMATIONGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26027">
+		<name>CFR_GUNAMESANDSIZESGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26028">
+		<name>CFR_BUYOPGPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26029">
+		<name>CFR_SELLOPGPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26030">
+		<name>CFR_BUYCLOPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+	<field tag="26031">
+		<name>CFR_SELLCLOPRICEPOINTSGRP</name>
+		<type>fieldgroup</type>
+		<description><![CDATA[]]></description>
+	</field>
+</siaccanonical>
