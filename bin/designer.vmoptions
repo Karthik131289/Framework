@@ -1,0 +1,9 @@
+# Enter one VM parameter per line
+# To include another file, uncomment the following line:
+# -include-options [path to other .vmoption file]
+
+-Xmx1250m
+-Xms250m
+-XX:PermSize=128m
+-XX:MaxPermSize=312m
+-Djava.net.preferIPv4Stack=true
